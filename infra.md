@@ -23,7 +23,7 @@
 - [Règles d’approbation des concours d’architecture](https://www.oaq.com/fileadmin/Fichiers/Concours_architecture/OAQ-Regles_concours_architecture.pdf)
 
 ## Articles
-- 2018-08-17 [Plus bas soumissionnaire : Québec revient sur sa décision](http://www.portailconstructo.com/actualites/plus_bas_soumissionnaire_quebec_revient_sur_sa_decision), Portail Constructo :small_red_triangle:
+- 2018-08-17 [Plus bas soumissionnaire : Québec revient sur sa décision](http://www.portailconstructo.com/actualites/plus_bas_soumissionnaire_quebec_revient_sur_sa_decision), Portail Constructo 
 - 2018-08-16 [Concours d'architecture, Des cadres raffinés](https://www.oaq.com/esquisses/design_actif/actualites/concours_darchitecture.html), OAQ
 - 2018-08-15 [École Curé-Paquin, Oser le carbone zéro](https://www.oaq.com/esquisses/innovation/actualites/ecole_cure_paquin.html), OAQ
 - 2018-08-15 [Rénovation des écoles, Travaux majeurs](https://www.oaq.com/esquisses/innovation/actualites/renovation_des_ecoles.html), OAQ
