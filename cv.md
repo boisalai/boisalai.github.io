@@ -7,24 +7,24 @@ Gestionnaire ayant réalisé plusieurs mandats stratégiques au gouvernement du 
 
 ### EXPÉRIENCE PROFESSIONNELLE
 **Directeur de la gouvernance des projets d’infrastructures** (depuis 2017/09)<br>
-Ministère de l’Éducation et de l’Enseignement supérieur<br>
+[Ministère de l’Éducation et de l’Enseignement supérieur](http://www.education.gouv.qc.ca/)<br>
 - Suivre les projets majeurs d‘infrastructures (> 50 M$) et le Fonds fédéral d'investissement stratégique pour les établissements postsecondaires.
 - Proposer des améliorations en matière d’organisation du travail, d’optimisation des processus et d’information de gestion.
 
 **Directeur du bureau de projets** (2017/04 – 2017/08)<br>
 **Conseiller-cadre à la Direction générale des acquisitions** (2016/06 – 2017/03)<br>
-Centre de services partagés du Québec
+[Centre de services partagés du Québec](http://www.cspq.gouv.qc.ca/)
 - Élaborer et coordonner un plan de consolidation et d’amélioration des services en acquisition.
 - Prendre en charge divers dossiers stratégiques (communications, recommandations du VGQ, développement durable, orientations en gestion contractuelle, relations fédérales-provinciales).
 
 **Directeur des projets spéciaux et de la modélisation** (2009/01 – 2016/05)<br>
-Ministère des Finances, Québec
+[Ministère des Finances](http://www.finances.gouv.qc.ca/), Québec
 - Appuyer le Groupe d’experts pour un financement axé sur les patients et le Comité consultatif sur l’économie et les finances publiques.
 - Prendre en charge divers projets spéciaux, dont l’élaboration de la première édition des Comptes de la santé pour le ministère de la Santé et des Services sociaux et la projection à long terme du cadre financier du gouvernement.
 
 **Analyste expert** (2001/04 – 2008/12)<br>
 Politiques budgétaires, fiscales et finances publiques<br>
-Ministère des Finances, Québec
+[Ministère des Finances](http://www.finances.gouv.qc.ca/), Québec
 - Conseiller le ministère sur divers sujets de politique budgétaire, politique fiscale et finance publique.
 - Appuyer le Groupe de travail sur le financement du système de santé (Rapport Castonguay).
 - Élaborer la position gouvernementale lors des négociations sur la rémunération des médecins spécialistes.
@@ -58,7 +58,7 @@ École secondaire Louis-Philippe-Paré, Chateauguay
 **Stagiaire** (1988/05 – 1988/08)<br>
 Defence Research Establishment Pacific, Victoria, Colombie-Britannique
 - Optimiser un programme informatique déterminant la trajectoire d'un sous-marin ou d'une torpille à partir des données d'un
-nouveau tyoe de sonar (Fortran 77).
+nouveau type de sonar (Fortran 77).
 
 **Stagiaire** (1987/01 – 1987/04)<br>
 Hydro-Québec, Montréal
@@ -73,7 +73,7 @@ Énergie, Mines et Ressources Canada, Ottawa
 - Caporal d'infanterie, exercices militaires, certifié "armes antichars" et "communication radio".
 
 ### CONSEIL D’ADMINISTRATION ET ACTIVITÉS COMMUNAUTAIRES
-Ordre des dentistes du Québec
+[Ordre des dentistes du Québec](http://www.odq.qc.ca/)
 - Membre du conseil d’administration à titre de représentant du public (2016/11 – 2020/10)
 - Membre du comité de vérification (2017/01 – 2019/01)
 - Membre du comité des communications	(2017/09 – 2020/09)
@@ -82,12 +82,12 @@ Association des étudiant(e)s en mathématiques de l’Université de Sherbrooke
 - Président	(1986 – 1987)
 
 ### ÉDUCATION 
-- MBA, Gestion des technologies de l’information, Université Laval (1999 – 2006)<br>
+- [MBA, Gestion des technologies de l’information](images/Releve_notes_Alain_Boisvert.pdf), [Université Laval](https://www.ulaval.ca/) (1999 – 2006)<br>
 Mention d'excellence des Facultés des études supérieures et des sciences de l’administration 
-- B. Sc., Mathématiques appliquées, Université de Sherbrooke (1985 – 1988)
+- B. Sc., Mathématiques appliquées, [Université de Sherbrooke](https://www.usherbrooke.ca/) (1985 – 1988)
 - Quatre examens de la [Casualty Actuarial Society](https://www.casact.org/) (1986 – 1991)
 
-### Cours en ligne (MOOC)
+### COURS EN LIGNE (MOOC)
 <!--
 - [Cutting Edge Deep Learning For Coders, Part 2](http://course.fast.ai/part2.html), fast.ai (En cours)
 -->
@@ -98,7 +98,7 @@ Mention d'excellence des Facultés des études supérieures et des sciences de l
   - [Structuring Machine Learning Projects](https://www.coursera.org/account/accomplishments/verify/BHCQ4SE5U3LA).
   - [Convolutional Neural Networks](https://www.coursera.org/account/accomplishments/verify/EN6E23EVB6X6).
   - [Certificate of completion](https://www.coursera.org/account/accomplishments/specialization/UHH4Y7VAF8EA) (January 20, 2018).
-- [Full Stack Web Developer Nanodegree](https://github.com/boisalai/public/blob/master/Udacity2007.md), Udacity (2017)
+- [Full Stack Web Developer Nanodegree](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004), Udacity (2017)
   - First project, [Movie Trailer Website](https://github.com/boisalai/udacity-movie-trailer-website) (Python).
   - Second project, [Build a Portfolio Site](https://github.com/boisalai/udacity-portfolio-site) (HTML, CSS Flexbox).
   - Third project, [Logs Analysis Project](https://github.com/boisalai/udacity-logs-analysis-project) (Python, Vagrant, PostgreSQL).
@@ -149,4 +149,4 @@ Canadian Provinces Income Tax Calculator for Individuals. Web application built 
 **API** : Google Maps API, Foursquare API.<br>
 **Cloud** : [Amazon Lightsail](https://aws.amazon.com/lightsail/).
 
-Dernière mise à jour : 6 juillet 2018.
+Dernière mise à jour : 19 août 2018.
