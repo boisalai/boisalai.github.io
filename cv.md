@@ -91,12 +91,13 @@ Mention d'excellence des Facultés des études supérieures et des sciences de l
 <!--
 - [Cutting Edge Deep Learning For Coders, Part 2](http://course.fast.ai/part2.html), fast.ai (En cours)
 -->
-- [Practical Deep Learning For Coders, Part 1](https://github.com/boisalai/fastai), fast.ai (In progress)
+- [Practical Deep Learning For Coders, Part 1](fastai_part1/index.md), fast.ai (In progress)
 - [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning), Coursera (2018)
   - [Neural Networks and Deep Learning](https://www.coursera.org/account/accomplishments/verify/CXTSPLZUFKTK).
   - [Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization](https://www.coursera.org/account/accomplishments/verify/3FDWD3A8A96A).
   - [Structuring Machine Learning Projects](https://www.coursera.org/account/accomplishments/verify/BHCQ4SE5U3LA).
   - [Convolutional Neural Networks](https://www.coursera.org/account/accomplishments/verify/EN6E23EVB6X6).
+  - [Sequence Models](https://www.coursera.org/account/accomplishments/verify/FV56YAUCHVL3).
   - [Certificate of completion](https://www.coursera.org/account/accomplishments/specialization/UHH4Y7VAF8EA) (January 20, 2018).
 - [Full Stack Web Developer Nanodegree](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004), Udacity (2017)
   - First project, [Movie Trailer Website](https://github.com/boisalai/udacity-movie-trailer-website) (Python).
