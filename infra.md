@@ -23,6 +23,10 @@
 - [Règles d’approbation des concours d’architecture](https://www.oaq.com/fileadmin/Fichiers/Concours_architecture/OAQ-Regles_concours_architecture.pdf)
 
 ## Articles
+- 2018-08-27 [Les élèves du secondaire de plus en plus à l’étroit à Québec](https://ici.radio-canada.ca/nouvelle/1119960/ecoles-secondaires-quebec-levis-pleine-capacite?utm_source=dlvr.it&utm_medium=twitter), Radio-Canada
+- 2018-08-27 [Commission scolaire Marguerite-Bourgeoys: les inscriptions explosent](http://www.lapresse.ca/actualites/education/201808/26/01-5194319-commission-scolaire-marguerite-bourgeoys-les-inscriptions-explosent.php), La Presse
+- 2018-08-21 [Lab-École: un premier exercice positif](https://www.lequotidien.com/actualites/lab-ecole-un-premier-exercice-positif-89635ffbfe11fd3297b70fc1cbe332b8), Le Quotidien
+- 2018-08-20 [L’École Antoine-de-Saint-Exupéry sous la loupe de Ricardo et de Pierre Lavoie](https://ici.radio-canada.ca/premiere/emissions/ya-des-matins/segments/entrevue/83766/pierre-lavoie-ricardo-larrivee-lab-ecole-chicoutimi), Radio-Canada
 - 2018-08-23 [Des classes neuves, climatisées et préfabriquées pour la rentrée scolaire](https://ici.radio-canada.ca/nouvelle/1119648/csdm-ecole-classe-modulaire-harel-bourdon-immigration-developpement-residentiel-montreal-education)
 - 2018-08-17 [Plus bas soumissionnaire : Québec revient sur sa décision](http://www.portailconstructo.com/actualites/plus_bas_soumissionnaire_quebec_revient_sur_sa_decision), Portail Constructo 
 - 2018-08-16 [Concours d'architecture, Des cadres raffinés](https://www.oaq.com/esquisses/design_actif/actualites/concours_darchitecture.html), OAQ
