@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="/stylesheets/main.css">
+<link rel="stylesheet" href="/stylesheets/main2.css">
 
-# Alain Boisvert, MBA
+# Alain Boisvert, MBA, 18:06
 
 - [Curriculum vitae](cv.md)
 - [Apprentissages](learning/index.md)
