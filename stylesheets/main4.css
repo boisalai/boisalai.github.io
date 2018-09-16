@@ -5,3 +5,8 @@
 .markdown-body h1 a {
   display: none;
 }
+
+.my-5 {
+  margin-top: 0px !important; 
+  margin-bottom: 0px !important;
+}
