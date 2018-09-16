@@ -2,6 +2,7 @@
 
 ## 2018
 
+- []
 - [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning), Coursera (2018)
   - [Neural Networks and Deep Learning](https://www.coursera.org/account/accomplishments/verify/CXTSPLZUFKTK).
   - [Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization](https://www.coursera.org/account/accomplishments/verify/3FDWD3A8A96A).
@@ -19,4 +20,4 @@
   - Fourth project, [Catalog App](https://github.com/boisalai/udacity-catalog-app) (Python, Flask, SQLAlchemy, SQLite, oauth2client, Bootstrap v4, jQuery).
   - Fifth project, [Neighborhood map](https://github.com/boisalai/udacity-neighborhood-map) (Knockout.js, Google Maps API, Foursquare API).
   - Final project, [Linux Server Configuration](https://github.com/boisalai/udacity-linux-server-configuration) (Ubuntu, Amazon Lighsail, PostgreSQL).
-  - [Certificate of completion](images/udacity/nd004.pdf) (November 5, 2017).
+  - [Certificate of completion](2017_udacity/nd004.pdf) (November 5, 2017).

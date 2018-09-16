@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="styles.css"  type="text/css"/>
 # Alain Boisvert, MBA
 
 - [Curriculum vitae](cv.md)

@@ -1,7 +1,5 @@
 # Références utiles sur les infrastructures
 
-## Table des matières
-
 - [Ministère de l'Éducation et de l'Enseignement supérieur](#mees)
   - [Scolaire](#scol)
   - [Enseignement supérieur](#es)

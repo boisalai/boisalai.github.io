@@ -4,7 +4,6 @@
 -->
 # Références utiles sur l'apprentissage automatique
 
-## Table des matières
 1. [Courses]()
 2. [Books]()
 3. [Depp Neural Networks]()

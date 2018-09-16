@@ -1,7 +1,5 @@
 # Références utiles concernant les ordres professionnels
 
-## Table des matières
-
 - [Cadre normatif](#cn)
 - [Office des professions du Québec](#opq)
 - [Conseil interprofessionnel du Québec](#ciq)
