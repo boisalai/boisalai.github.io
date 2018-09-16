@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/stylesheets/main.css">
+
 # Références utiles sur les infrastructures
 
 - [Ministère de l'Éducation et de l'Enseignement supérieur](#mees)

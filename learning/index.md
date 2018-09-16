@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/stylesheets/main.css">
+
 # Formation continue
 
 ## 2018

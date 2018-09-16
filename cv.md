@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/stylesheets/main.css">
+
 # Alain Boisvert, MBA
 
 Courriel : ay.boisvert@gmail.com<br>
@@ -86,7 +88,7 @@ Énergie, Mines et Ressources Canada, Ottawa
 
 - Caporal d'infanterie, exercices militaires, certifié "armes antichars" et "communication radio".
 
-### Conseil d'administration et activités communautaires
+## Conseil d'administration et activités communautaires
 
 [Ordre des dentistes du Québec](http://www.odq.qc.ca/)
 
