@@ -5,8 +5,8 @@
 - [Conseil interprofessionnel du Québec](#ciq)
 - [Qualifications Québec](#qc)
 - [Réseaux sociaux](#rs)
-- [Documents intéressants](#di)
-- [Articles intéressants](#ai)
+- [Documents](#di)
+- [Articles](#ai)
 - [Ordres professionnels](#op)
 
 <a name="cn"></a>
@@ -45,17 +45,17 @@
 
 <a name="di"></a>
 
-## Documents intéressants
+## Documents
 
 - [20 Questions que les administrateurs devraient poser sur les évaluations de la gouvernance](https://www.cas.ulaval.ca/files/content/sites/college/files/documents/references/top-10/icca_20-evaluations_top10.pdf),  Richard W. Leblanc, Ph.D., L'Institut canadien des comptables agréés, 2005
 - [L'efficacité du conseil d'administration d'un OBNL](https://www2.deloitte.com/ca/fr/pages/public-sector/articles/lefficacite-du-conseil-dadministration-dun-obnl.html), Un catalyseur de valeur, Deloitte
 
 <a name="ai"></a>
 
-## Articles intéressants
+## Articles
 
 - 2018 [Le Top 10 du Tribunal des professions](https://edoctrine.caij.qc.ca/developpements-recents/444/368990788/), Développements récents en déontologie, droit professionnel et disciplinaire
-- 2018-08-22 [Trois ordres professionnels proposent l’infonuagique à leurs membres | Le Barreau du Québec](https://www.barreau.qc.ca/fr/medias/communiques-2018/trois-ordres-professionnels-proposent-infonuagique-membres/)
+- 2018-08-22 [Trois ordres professionnels proposent l’infonuagique à leurs membres](https://www.barreau.qc.ca/fr/medias/communiques-2018/trois-ordres-professionnels-proposent-infonuagique-membres/), Le Barreau du Québec
 
 <a name="op"></a>
 

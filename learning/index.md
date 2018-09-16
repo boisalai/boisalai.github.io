@@ -1,9 +1,13 @@
-# Apprentissages
+# Formation continue
 
 ## 2018
 
-- []
-- [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning), Coursera (2018)
+<!--
+- [Cutting Edge Deep Learning For Coders, Part 2](http://course.fast.ai/part2.html), fast.ai (En cours)
+-->
+
+- [Practical Deep Learning For Coders, Part 1](fastai2018/index.md), fast.ai (In progress)
+- [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning), Coursera
   - [Neural Networks and Deep Learning](https://www.coursera.org/account/accomplishments/verify/CXTSPLZUFKTK).
   - [Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization](https://www.coursera.org/account/accomplishments/verify/3FDWD3A8A96A).
   - [Structuring Machine Learning Projects](https://www.coursera.org/account/accomplishments/verify/BHCQ4SE5U3LA).
@@ -13,7 +17,7 @@
 
 ## 2017
 
-- [Full Stack Web Developer Nanodegree](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004), Udacity (2017)
+- [Full Stack Web Developer Nanodegree](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004), Udacity
   - First project, [Movie Trailer Website](https://github.com/boisalai/udacity-movie-trailer-website) (Python).
   - Second project, [Build a Portfolio Site](https://github.com/boisalai/udacity-portfolio-site) (HTML, CSS Flexbox).
   - Third project, [Logs Analysis Project](https://github.com/boisalai/udacity-logs-analysis-project) (Python, Vagrant, PostgreSQL).

@@ -6,7 +6,7 @@
 - [Secrétariat du Conseil du trésor](#sct)
 - [Société québécoise des infrastructures](#sqi)
 - [Ordre des architectes du Québec](#oaq)
-- [Articles intéressants](#ai)
+- [Articles](#ai)
 
 <a name="mees"></a>
 
@@ -49,10 +49,10 @@
 
 <a name="ai"></a>
 
-## Articles sélectionnés
+## Articles
 
 - 2018-09-16 [Legault promet «les plus belles écoles du monde» en investissant moins que le PLQ](http://www.lapresse.ca/actualites/elections-quebec-2018/201809/16/01-5196731-legault-promet-les-plus-belles-ecoles-du-monde-en-investissant-moins-que-le-plq.php)
-- 2018-09-06 [Les écoles surchauffent, les élèves endurent](http://www.lapresse.ca/actualites/201809/06/01-5195430-les-ecoles-surchauffent-les-eleves-endurent.php) | Nicolas Bérubé | Actualités
+- 2018-09-06 [Les écoles surchauffent, les élèves endurent](http://www.lapresse.ca/actualites/201809/06/01-5195430-les-ecoles-surchauffent-les-eleves-endurent.php), Nicolas Bérubé | Actualités
 - 2018-08-27 [Les élèves du secondaire de plus en plus à l’étroit à Québec](https://ici.radio-canada.ca/nouvelle/1119960/ecoles-secondaires-quebec-levis-pleine-capacite?utm_source=dlvr.it&utm_medium=twitter), Radio-Canada
 - 2018-08-27 [Commission scolaire Marguerite-Bourgeoys: les inscriptions explosent](http://www.lapresse.ca/actualites/education/201808/26/01-5194319-commission-scolaire-marguerite-bourgeoys-les-inscriptions-explosent.php), La Presse
 - 2018-08-21 [Lab-École: un premier exercice positif](https://www.lequotidien.com/actualites/lab-ecole-un-premier-exercice-positif-89635ffbfe11fd3297b70fc1cbe332b8), Le Quotidien

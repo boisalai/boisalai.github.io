@@ -1,12 +1,12 @@
-# ALAIN BOISVERT, MBA
+# Alain Boisvert, MBA
 
 Courriel : ay.boisvert@gmail.com<br>
 LinkedIn : https://www.linkedin.com/in/alain-boisvert-mba-98b058156/<br>
 GitHub : https://github.com/boisalai
 
-Gestionnaire ayant réalisé plusieurs mandats stratégiques au gouvernement du Québec. Reconnu pour sa persévérance, son esprit d’équipe, son côté analytique, rigoureux et « touche à tout ». Cherche à créer des choses utiles et rendre simple ce qui est compliqué. 
+Gestionnaire ayant réalisé plusieurs mandats stratégiques au gouvernement du Québec. Reconnu pour sa persévérance, son esprit d’équipe, son côté analytique, rigoureux et « touche à tout ». Cherche à créer des choses utiles et rendre simple ce qui est compliqué.
 
-## EXPÉRIENCE PROFESSIONNELLE
+## Expérience professionnelle
 
 **Directeur de la gouvernance des projets d’infrastructures** (depuis 2017/09)<br>
 [Ministère de l’Éducation et de l’Enseignement supérieur](http://www.education.gouv.qc.ca/)
@@ -86,7 +86,8 @@ Énergie, Mines et Ressources Canada, Ottawa
 
 - Caporal d'infanterie, exercices militaires, certifié "armes antichars" et "communication radio".
 
-### CONSEIL D’ADMINISTRATION ET ACTIVITÉS COMMUNAUTAIRES
+### Conseil d'administration et activités communautaires
+
 [Ordre des dentistes du Québec](http://www.odq.qc.ca/)
 
 - Membre du conseil d’administration à titre de représentant du public (2016/11 – 2020/10)
@@ -97,13 +98,13 @@ Association des étudiant(e)s en mathématiques de l’Université de Sherbrooke
 
 - Président (1986 – 1987)
 
-## ÉDUCATION
+## Scolarité
 
 - [MBA, Gestion des technologies de l’information](images/Releve_notes_Alain_Boisvert.pdf), [Université Laval](https://www.ulaval.ca/) (1999 – 2006)<br>Mention d'excellence des Facultés des études supérieures et des sciences de l’administration
 - B. Sc., Mathématiques appliquées, [Université de Sherbrooke](https://www.usherbrooke.ca/) (1985 – 1988)
 - Quatre examens de la [Casualty Actuarial Society](https://www.casact.org/) (1986 – 1991)
 
-## COURS EN LIGNE (MOOC)
+## Formation continue
 
 <!--
 - [Cutting Edge Deep Learning For Coders, Part 2](http://course.fast.ai/part2.html), fast.ai (En cours)
@@ -118,7 +119,7 @@ Association des étudiant(e)s en mathématiques de l’Université de Sherbrooke
 Canadian Provinces Income Tax Calculator for Individuals. Web application built with Javascript, [Vue.js](https://vuejs.org/), [Bootstrap](https://getbootstrap.com/) and a Javascript Chart Library (not yet chosen).
 -->
 
-## COMPÉTENCES INFORMATIQUES
+## Connaissances informatiques
 
 **Développement Web** :
   HTML+CSS, 
