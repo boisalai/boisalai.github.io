@@ -1,30 +1,36 @@
-##  ALAIN BOISVERT, MBA<br>
+# ALAIN BOISVERT, MBA
+
 Courriel : ay.boisvert@gmail.com<br>
 LinkedIn : https://www.linkedin.com/in/alain-boisvert-mba-98b058156/<br>
 GitHub : https://github.com/boisalai
 
 Gestionnaire ayant réalisé plusieurs mandats stratégiques au gouvernement du Québec. Reconnu pour sa persévérance, son esprit d’équipe, son côté analytique, rigoureux et « touche à tout ». Cherche à créer des choses utiles et rendre simple ce qui est compliqué. 
 
-### EXPÉRIENCE PROFESSIONNELLE
+## EXPÉRIENCE PROFESSIONNELLE
+
 **Directeur de la gouvernance des projets d’infrastructures** (depuis 2017/09)<br>
-[Ministère de l’Éducation et de l’Enseignement supérieur](http://www.education.gouv.qc.ca/)<br>
+[Ministère de l’Éducation et de l’Enseignement supérieur](http://www.education.gouv.qc.ca/)
+
 - Suivre les projets majeurs d‘infrastructures (> 50 M$) et le Fonds fédéral d'investissement stratégique pour les établissements postsecondaires.
 - Proposer des améliorations en matière d’organisation du travail, d’optimisation des processus et d’information de gestion.
 
 **Directeur du bureau de projets** (2017/04 – 2017/08)<br>
 **Conseiller-cadre à la Direction générale des acquisitions** (2016/06 – 2017/03)<br>
 [Centre de services partagés du Québec](http://www.cspq.gouv.qc.ca/)
+
 - Élaborer et coordonner un plan de consolidation et d’amélioration des services en acquisition.
 - Prendre en charge divers dossiers stratégiques (communications, recommandations du VGQ, développement durable, orientations en gestion contractuelle, relations fédérales-provinciales).
 
 **Directeur des projets spéciaux et de la modélisation** (2009/01 – 2016/05)<br>
 [Ministère des Finances](http://www.finances.gouv.qc.ca/), Québec
+
 - Appuyer le Groupe d’experts pour un financement axé sur les patients et le Comité consultatif sur l’économie et les finances publiques.
 - Prendre en charge divers projets spéciaux, dont l’élaboration de la première édition des Comptes de la santé pour le ministère de la Santé et des Services sociaux et la projection à long terme du cadre financier du gouvernement.
 
 **Analyste expert** (2001/04 – 2008/12)<br>
 Politiques budgétaires, fiscales et finances publiques<br>
 [Ministère des Finances](http://www.finances.gouv.qc.ca/), Québec
+
 - Conseiller le ministère sur divers sujets de politique budgétaire, politique fiscale et finance publique.
 - Appuyer le Groupe de travail sur le financement du système de santé (Rapport Castonguay).
 - Élaborer la position gouvernementale lors des négociations sur la rémunération des médecins spécialistes.
@@ -33,64 +39,76 @@ Politiques budgétaires, fiscales et finances publiques<br>
 
 **Analyste expert** (1992/02 – 2001/04)<br>
 Ministère de la Solidarité sociale, Québec
+
 - Produire les statistiques officielles sur les prestataires de l'aide sociale.
 - Mettre en place un entrepôt de données (SAS) et développer diverses macros pour faciliter son exploitation (SAS, JCL).
 - Agir comme "analyste de données" pour le secteur des politiques.
 
 **Analyste en informatique** (1991/02 – 1992/02)<br>
 Ministère de l’Enseignement supérieur et de la science, Québec
+
 - Maintenir l'infrastructure bureautique d'une équipe et développer des applications en milieu utilisateur.
 
 **Analyste en informatique** (1990/08 – 1991/02)<br>
 SOBECO, Montréal
+
 - Développer des applications en Fortran 77 dans le domaine actuariel.
 
 **Analyste en actuariat** (1989/06 – 1990/06)<br>
 Société nationale d’assurances, Montréal
+
 - Introduire SAS au département d'actuariat et convertir des programmes PL/1 en SAS.
 - Comparer les primes d'assurance auto et habitation des concurrents.
 - Contribuer à établir l'IBNR (*Incurred But Not Reported*).
 
 **Professeur** (1988/10 – 1989/02)<br>
 École secondaire Louis-Philippe-Paré, Chateauguay
+
 - Professeur suppléant de mathématique de niveau secondaire 3 et 5.
 
 **Stagiaire** (1988/05 – 1988/08)<br>
 Defence Research Establishment Pacific, Victoria, Colombie-Britannique
-- Optimiser un programme informatique déterminant la trajectoire d'un sous-marin ou d'une torpille à partir des données d'un
-nouveau type de sonar (Fortran 77).
+
+- Optimiser un programme informatique déterminant la trajectoire d'un sous-marin ou d'une torpille à partir des données d'un nouveau type de sonar (Fortran 77).
 
 **Stagiaire** (1987/01 – 1987/04)<br>
 Hydro-Québec, Montréal
+
 - Recencer les modèles mathématiques (méthodes des éléments finis) sur la dispersion des polluants dans l'eau.
 
 **Stagiaire** (1986/05 – 1986/08)<br>
 Énergie, Mines et Ressources Canada, Ottawa
+
 - Poursuivre le développement d'un logiciel déterminant des fractures possibles d'une pièce métalique à partir des données d'un microscope électronique (Fortran sur DEC PDP-11).
 
 **Réserviste** (1982 – 1985)<br>
 [Les Fusiliers de Sherbrooke](http://www.army-armee.forces.gc.ca/fr/fus-sherbrooke/index.page), Forces Canadiennes
+
 - Caporal d'infanterie, exercices militaires, certifié "armes antichars" et "communication radio".
 
 ### CONSEIL D’ADMINISTRATION ET ACTIVITÉS COMMUNAUTAIRES
 [Ordre des dentistes du Québec](http://www.odq.qc.ca/)
+
 - Membre du conseil d’administration à titre de représentant du public (2016/11 – 2020/10)
 - Membre du comité de vérification (2017/01 – 2019/01)
-- Membre du comité des communications	(2017/09 – 2020/09)
+- Membre du comité des communications (2017/09 – 2020/09)
 
 Association des étudiant(e)s en mathématiques de l’Université de Sherbrooke
-- Président	(1986 – 1987)
 
-### ÉDUCATION 
-- [MBA, Gestion des technologies de l’information](images/Releve_notes_Alain_Boisvert.pdf), [Université Laval](https://www.ulaval.ca/) (1999 – 2006)<br>
-Mention d'excellence des Facultés des études supérieures et des sciences de l’administration 
+- Président (1986 – 1987)
+
+## ÉDUCATION
+
+- [MBA, Gestion des technologies de l’information](images/Releve_notes_Alain_Boisvert.pdf), [Université Laval](https://www.ulaval.ca/) (1999 – 2006)<br>Mention d'excellence des Facultés des études supérieures et des sciences de l’administration
 - B. Sc., Mathématiques appliquées, [Université de Sherbrooke](https://www.usherbrooke.ca/) (1985 – 1988)
 - Quatre examens de la [Casualty Actuarial Society](https://www.casact.org/) (1986 – 1991)
 
-### COURS EN LIGNE (MOOC)
+## COURS EN LIGNE (MOOC)
+
 <!--
 - [Cutting Edge Deep Learning For Coders, Part 2](http://course.fast.ai/part2.html), fast.ai (En cours)
 -->
+
 - [Practical Deep Learning For Coders, Part 1](fastai2018/index.md), fast.ai (In progress)
 - [Deep Learning Specialization](coursera2018.md), Coursera (2018)
 - [Full Stack Web Developer Nanodegree](udacity2017.md), Udacity (2017)
@@ -100,26 +118,27 @@ Mention d'excellence des Facultés des études supérieures et des sciences de l
 Canadian Provinces Income Tax Calculator for Individuals. Web application built with Javascript, [Vue.js](https://vuejs.org/), [Bootstrap](https://getbootstrap.com/) and a Javascript Chart Library (not yet chosen).
 -->
 
-### COMPÉTENCES INFORMATIQUES
-**Développement Web** : 
+## COMPÉTENCES INFORMATIQUES
+
+**Développement Web** :
   HTML+CSS, 
-  [Angular.js](https://angular.io/), 
-  [Backbone.js](http://backbonejs.org/), 
-  [Knockout.js](http://knockoutjs.com/), 
-  [Vue.js](https://vuejs.org/), 
-  [Flask](http://flask.pocoo.org/), 
-  [Bootstrap](https://getbootstrap.com/), 
-  Markdown, 
+  [Angular.js](https://angular.io/),
+  [Backbone.js](http://backbonejs.org/),
+  [Knockout.js](http://knockoutjs.com/),
+  [Vue.js](https://vuejs.org/),
+  [Flask](http://flask.pocoo.org/),
+  [Bootstrap](https://getbootstrap.com/),
+  Markdown,
   [MathJax](https://www.mathjax.org/).<br>
 **Editor & IDE** : 
   [Jupyter Notebook](http://jupyter.org/),
   [JupyterLab](http://jupyterlab.readthedocs.io/en/stable/),
-  [Visual Studio Code](https://code.visualstudio.com/), 
+  [Visual Studio Code](https://code.visualstudio.com/),
   [Eclipse](https://www.eclipse.org/ide/).<br>
-**Languages** : 
-  Java, 
-  Javascript, 
-  [Python](https://www.python.org/), 
+**Languages** :
+  Java,
+  Javascript,
+  [Python](https://www.python.org/),
   [SAS](https://www.sas.com/),
   SQL,
   [VBA](https://msdn.microsoft.com/vba/office-vba-reference).<br>
@@ -127,14 +146,14 @@ Canadian Provinces Income Tax Calculator for Individuals. Web application built 
   [Numpy](http://www.numpy.org/),
   [SciPy](https://www.scipy.org/),
   [Matplotlib](https://matplotlib.org/).<br>
-**Deep Learning Libraries** : 
+**Deep Learning Libraries** :
   [scikit-learn](http://scikit-learn.org/stable/).<br>
-**Databases & ORM** : 
-  [Hibernate](http://hibernate.org/), 
-  SQLAlchemy, 
-  SQLite, 
+**Databases & ORM** :
+  [Hibernate](http://hibernate.org/),
+  SQLAlchemy,
+  SQLite,
   PostgreSQL.<br>
 **API** : Google Maps API, Foursquare API.<br>
 **Cloud** : [Amazon Lightsail](https://aws.amazon.com/lightsail/).
 
-Dernière mise à jour : 19 août 2018.
+Dernière mise à jour : 16 septembre 2018.

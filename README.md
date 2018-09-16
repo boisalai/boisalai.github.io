@@ -1,6 +1,7 @@
-# Alain Boisvert, MBA 
+# Alain Boisvert, MBA
 
 - [Curriculum vitae](cv.md)
-- [Références utiles pour les infrastructures](infra.md)
-- [Références utiles concernant les ordres professionnels](op.md)
-- [Présence sur Internet des ordres professionnels](opq.md)
+- [Apprentissages](learning/index.md)
+- [Références utiles sur l'apprentissage automatique](deep.md)
+- [Références utiles sur les infrastructures](infra.md)
+- [Références utiles sur les ordres professionnels](opq/index.md)

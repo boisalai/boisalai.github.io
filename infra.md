@@ -1,28 +1,60 @@
 # Références utiles sur les infrastructures
 
+## Table des matières
+
+- [Ministère de l'Éducation et de l'Enseignement supérieur](#mees)
+  - [Scolaire](#scol)
+  - [Enseignement supérieur](#es)
+- [Secrétariat du Conseil du trésor](#sct)
+- [Société québécoise des infrastructures](#sqi)
+- [Ordre des architectes du Québec](#oaq)
+- [Articles intéressants](#ai)
+
+<a name="mees"></a>
+
 ## Ministère de l'Éducation et de l'Enseignement supérieur
 
+<a name="scol"></a>
+
 ### Scolaire
+
 - [Schola](https://schola.ca/), Plateforme d'expertise en architecture scolaire, [Facebook](https://www.facebook.com/ULSchola/), [LinkedIn](https://www.linkedin.com/company/schola-ul/)
 - [LAB-École](https://www.lab-ecole.com/)
 
+<a name="es"></a>
+
 ### Enseignement supérieur
+
 - [Cadre normatif des investissements universitaires](http://www.education.gouv.qc.ca/universites/professeurs-et-personnel-duniversite/infrastructures/cadre-normatif-des-investissements/)
 - [Système d'information sur les locaux des universités (SILU)](http://www.education.gouv.qc.ca/universites/professeurs-et-personnel-duniversite/infrastructures/systeme-dinformation-sur-les-locaux-des-universites/)
 
+<a name="sct"></a>
+
 ## Secrétariat du Conseil du trésor
+
 - [Gouvernance des projets d'infrastructure](https://www.tresor.gouv.qc.ca/infrastructures-publiques/gouvernance-des-projets-dinfrastructure/)
 - [Directive sur la gestion des projets majeurs d’infrastructure publique](https://www.tresor.gouv.qc.ca/fileadmin/PDF/infrastructures_publiques/directive_gestion_projets_majeurs.pdf)
 - [Tableau de bord des projets d'infrastructure de 50 M$ et plus](https://www.tresor.gouv.qc.ca/infrastructures-publiques/tableau-de-bord/)
 - [Plan québécois des infrastructures 2018-2028 (PQI)](https://www.tresor.gouv.qc.ca/fileadmin/PDF/budget_depenses/18-19/fr/8-Infrastructures_publiques_du_Quebec.pdf)
 
+<a name="sqi"></a>
+
 ## Société québécoise des infrastructures
+
 - [Directive sur la gestion des projets majeurs d’infrastructure publique](https://www.sqi.gouv.qc.ca/vision/Pages/politique_cadre.aspx)
 
-## Ordre des architectes
+<a name="oaq"></a>
+
+## Ordre des architectes du Québec
+
 - [Règles d’approbation des concours d’architecture](https://www.oaq.com/fileadmin/Fichiers/Concours_architecture/OAQ-Regles_concours_architecture.pdf)
 
-## Articles
+<a name="ai"></a>
+
+## Articles sélectionnés
+
+- 2018-09-16 [Legault promet «les plus belles écoles du monde» en investissant moins que le PLQ](http://www.lapresse.ca/actualites/elections-quebec-2018/201809/16/01-5196731-legault-promet-les-plus-belles-ecoles-du-monde-en-investissant-moins-que-le-plq.php)
+- 2018-09-06 [Les écoles surchauffent, les élèves endurent](http://www.lapresse.ca/actualites/201809/06/01-5195430-les-ecoles-surchauffent-les-eleves-endurent.php) | Nicolas Bérubé | Actualités
 - 2018-08-27 [Les élèves du secondaire de plus en plus à l’étroit à Québec](https://ici.radio-canada.ca/nouvelle/1119960/ecoles-secondaires-quebec-levis-pleine-capacite?utm_source=dlvr.it&utm_medium=twitter), Radio-Canada
 - 2018-08-27 [Commission scolaire Marguerite-Bourgeoys: les inscriptions explosent](http://www.lapresse.ca/actualites/education/201808/26/01-5194319-commission-scolaire-marguerite-bourgeoys-les-inscriptions-explosent.php), La Presse
 - 2018-08-21 [Lab-École: un premier exercice positif](https://www.lequotidien.com/actualites/lab-ecole-un-premier-exercice-positif-89635ffbfe11fd3297b70fc1cbe332b8), Le Quotidien
