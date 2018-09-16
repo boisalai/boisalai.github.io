@@ -1,15 +1,9 @@
-<!--
-- Classer tous les articles recommandés par Coursera
-- Classer tous mes favoris
--->
+<link rel="stylesheet" href="/stylesheets/main.css">
+
 # Références utiles sur l'apprentissage automatique
 
-1. [Courses]()
-2. [Books]()
-3. [Depp Neural Networks]()
-...
+## Courses
 
-## 1. Courses
 - [Coursera Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning)
 - [Fast.ai](http://www.fast.ai/)
 - [CS229: Machine Learning](http://cs229.stanford.edu/)
@@ -18,38 +12,32 @@
 - [Kaggle Courses](https://www.kaggle.com/learn/overview)
 - [Over 200 of the Best Machine Learning, NLP, and Python Tutorials — 2018 Edition](https://medium.com/machine-learning-in-practice/over-200-of-the-best-machine-learning-nlp-and-python-tutorials-2018-edition-dd8cf53cb7dc)
 
+## Books
 
-
-## 2 Books
 - [Deep Learning](http://www.deeplearningbook.org/)
 - [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/)
 
+## Deep Neural Networks
 
+### Learning Rates
 
-## 3 Deep Neural Networks
-
-
-### 3.1 Learning Rates
 - [Understanding Learning Rates and How It Improves Performance in Deep Learning](https://towardsdatascience.com/understanding-learning-rates-and-how-it-improves-performance-in-deep-learning-d0d4059c1c10),
 - [Setting the learning rate of your neural network](https://www.jeremyjordan.me/nn-learning-rate/)
 - [Exploring Stochastic Gradient Descent with Restarts (SGDR)](https://medium.com/38th-street-studios/exploring-stochastic-gradient-descent-with-restarts-sgdr-fa206c38a74e)
 
+### Activation functions
 
-
-### 3.2 Activation functions
 - ReLU
 - Softmax (single label)
 - Sigmoid (multi label)
 - Tanh
 
+### Regularization
 
-
-### 3.3 Regularization
 - [L2 Regularization](https://jamesmccaffrey.wordpress.com/2017/02/19/l2-regularization-and-back-propagation/)
 
+### Optimizer (gradient descent optimization algorithms)
 
-
-### 3.4 Optimizer (gradient descent optimization algorithms)
 - [An overview of gradient descent optimization algorithms](http://ruder.io/optimizing-gradient-descent/)
 - [Optimization for Deep Learning Highlights in 2017](http://ruder.io/deep-learning-optimization-2017/)
 - [Coursera, Mini Batch Gradient Descent](https://www.youtube.com/watch?v=4qJaSmvhxi8)
@@ -64,21 +52,18 @@
 - RMSprop
   - [Coursera](https://www.youtube.com/watch?v=_e-LFe_igno)
 
+### Metrics
 
-### 3.5 Metrics
 - [Accuracy, Precision, Recall or F1?](https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9)
 - F2?
 - [Root Mean Square Percentage Error (RMSPE)](https://www.kaggle.com/c/rossmann-store-sales)
 
+### Validation set
 
-### 3.6 Validation set
 - [How (and why) to create a good validation set](http://www.fast.ai/2017/11/13/validation-sets/)
 
+### Building blocks
 
-
-## 4 Architecture
-
-### 4.1 Building blocks
 - Fully connected layer
 - Batch normalization
 - Dropout
@@ -92,31 +77,29 @@
   - [Entity Embeddings of Categorical Variables](https://arxiv.org/abs/1604.06737)
   - PCA to simplify them down to just 3 vectors. See this [video](https://www.youtube.com/watch?v=sHcLkfRrgoQ&feature=youtu.be) at 20:34.
 
+### Convolutional Neural Networks (CNN)
 
-
-### 4.2 Convolutional Neural Networks (CNN)
 - [Visualizing and Understanding Convolutional Networks](https://arxiv.org/abs/1311.2901)
 - [CS231n: Convolutional Neural Networks for Visual Recognition](http://vision.stanford.edu/teaching/cs231n/)
 
-### 4.3 Recurrent neural network
+### Recurrent neural network (RNN)
 
+### Natural Language Processing (NLP)
 
-
-### 4.4 Natural Language Processing (NLP)
 - [Deep Learning, NLP, and Representations](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/)
 - [NLP's ImageNet moment has arrived](http://ruder.io/nlp-imagenet/)
 - [Archived: CS224n: Natural Language Processing with Deep Learning (2016-2017)](http://web.stanford.edu/class/cs224n/archive/WWW_1617/index.html)
 
+### Generative Adversarial Network (GAN)
 
-
-### Generative Adversarial Networks (GANs) 
 - [Ian Goodfellow: Generative Adversarial Networks (NIPS 2016 tutorial)](https://www.youtube.com/watch?v=HGYYEUSm-0Q)
 
 ### Deep Reinforcement Learning
 
-### 4.5 Bayesian Deep Learning
+### Bayesian Deep Learning
 
-### 4.6 Neural Network Architectures
+### Some Neural Network Architectures
+
 - [Neural Network Architectures](https://towardsdatascience.com/neural-network-architectures-156e5bad51ba)
 - ResNets
 - ResNet-34
@@ -129,12 +112,13 @@
 - AlexNet
 - InceptionV3
 
-## 5 Data Cleaning / Features Engineering
-- [Structured and times series data](https://www.youtube.com/watch?v=gbceqO8PpBg&feature=youtu.be) between 25:10 and ???
+## Data Cleaning / Features Engineering
+
+- [Structured and times series data](https://www.youtube.com/watch?v=gbceqO8PpBg&feature=youtu.be) between 25:10 and ??
 - [Structured Deep Learning](https://towardsdatascience.com/structured-deep-learning-b8ca4138b848), with embeddings
 
+## Kaggle
 
-## 6 Kaggle
 - [Dog Breed Identification](https://www.kaggle.com/c/dog-breed-identification)
 - [Planet: Understanding the Amazon from Space](https://www.kaggle.com/c/planet-understanding-the-amazon-from-space)
 - [Corporación Favorita Grocery Sales Forecasting](https://www.kaggle.com/c/favorita-grocery-sales-forecasting)
@@ -142,66 +126,72 @@
 - [Plant Seedlings Classification](https://www.kaggle.com/c/plant-seedlings-classification/leaderboard)
 - [Jeremy Howard](https://www.kaggle.com/jhoward)
 
-## 7 Datasets
+## Datasets
+
 - MINST
 - CIFAR-10
 - CIFAR-100 datasets
 - VGG19
 
-## 8 Tools
+## Tools
 
-### 8.1 Python 
+### Python
+
 - [Python Dictionary Comprehension Tutorial](https://www.datacamp.com/community/tutorials/python-dictionary-comprehension)
 - [Learning Python: From Zero to Hero](https://medium.freecodecamp.org/learning-python-from-zero-to-hero-120ea540b567)
 
+### Numpy
 
-### 8.2 Numpy
 - [Python Numpy Tutorial](http://cs231n.github.io/python-numpy-tutorial)
 
-### 8.3 Pendas
+### Pendas
 
-### 8.4 Scipy
+### Scipy
+
 - [Scipy Lecture Notes](http://www.scipy-lectures.org/)
 
-### 8.5 Matplotlib
+### Matplotlib
 
-### 8.6 Seaborn
+### Seaborn
 
-### 8.7 Anaconda
+### Anaconda
 
-### 8.8 Jupyter
+### Jupyter
 
-### 8.9 Google Colab
+### Google Colab
 
-### 8.10 Hadoop
+### Hadoop
 
 - [Extending Hadoop for Data Science: Streaming, Spark, Storm, and Kafka](https://www.lynda.com/Hadoop-tutorials/Extending-Hadoop-Data-Science-Streaming-Spark-Storm-Kafka/516574-2.html)
 
+### Spark
 
+## AI Framework
 
+### Pytorch
 
-
-## 9 AI Framework
-
-### 9.1 Pytorch
 - https://github.com/ritchieng/the-incredible-pytorch
 - [PyTorch Tutorial](https://github.com/yunjey/pytorch-tutorial/blob/master/README.md)
 - [Source code](https://github.com/RedditSota/state-of-the-art-result-for-machine-learning-problems)
 
-### 9.2 TensorFlow
+### TensorFlow
+
 - [TensorFlow in Anaconda](https://www.anaconda.com/blog/developer-blog/tensorflow-in-anaconda/)
 - https://tf.wiki/en/preface.html et https://github.com/snowkylin/TensorFlow-cn 
 
-### 9.3 Keras
+### Keras
 
-### 9.4 AutoML
+### AutoML
+
 - [Cloud AutoML](https://cloud.google.com/automl/)
 
-### 9.5 Auto Keras
+### Auto Keras
+
 - [Auto Keras](https://autokeras.com/)
 
-## 10 Cloud
+## Cloud
 
-### 10.1 AWS
+### AWS
+
 - See [video](http://course.fast.ai/lessons/lesson2.html) between 1:59:17 to 2:07:29.
 - [AWS fastami GPU Image Setup](https://github.com/reshamas/fastai_deeplearn_part1/blob/master/tools/aws_ami_gpu_setup.md)
