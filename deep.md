@@ -17,6 +17,10 @@
 - [Deep Learning](http://www.deeplearningbook.org/)
 - [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/)
 
+## Articles
+
+- [What are you reading](https://www.reddit.com/r/MachineLearning/comments/8tnnez/d_machine_learning_wayr_what_are_you_reading_week/) 
+
 ## Deep Neural Networks
 
 ### Learning Rates
@@ -49,13 +53,14 @@
   - [Coursera](https://www.youtube.com/watch?v=JXQT_vxqwIs)
 - Adagrad
 - Stochastic Gradient Descent (SGD)
-- RMSprop
+- Nesterov-SGD
+- RMSProp
   - [Coursera](https://www.youtube.com/watch?v=_e-LFe_igno)
 
 ### Metrics
 
 - [Accuracy, Precision, Recall or F1?](https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9)
-- F2?
+- [Indicateurs principaux](http://stanford.edu/~shervine/l/fr/teaching/cs-229/pense-bete-machine-learning-petites-astuces)
 - [Root Mean Square Percentage Error (RMSPE)](https://www.kaggle.com/c/rossmann-store-sales)
 
 ### Validation set
@@ -125,6 +130,7 @@
 - [Rossmann Store Sales](https://www.kaggle.com/c/rossmann-store-sales)
 - [Plant Seedlings Classification](https://www.kaggle.com/c/plant-seedlings-classification/leaderboard)
 - [Jeremy Howard](https://www.kaggle.com/jhoward)
+- [Rachael Tatman](https://www.kaggle.com/rtatman/kernels)
 
 ## Datasets
 
@@ -156,6 +162,13 @@
 
 ### Anaconda
 
+Pour mettre à jour Anaconda:
+
+```bash
+conda update conda
+conda update anaconda
+```
+
 ### Jupyter
 
 ### Google Colab
@@ -171,6 +184,7 @@
 ### Pytorch
 
 - https://github.com/ritchieng/the-incredible-pytorch
+- [PyTorch Tutorial](http://web.cs.ucdavis.edu/~yjlee/teaching/ecs289g-winter2018/Pytorch_Tutorial.pdf)
 - [PyTorch Tutorial](https://github.com/yunjey/pytorch-tutorial/blob/master/README.md)
 - [Source code](https://github.com/RedditSota/state-of-the-art-result-for-machine-learning-problems)
 
@@ -195,3 +209,6 @@
 
 - See [video](http://course.fast.ai/lessons/lesson2.html) between 1:59:17 to 2:07:29.
 - [AWS fastami GPU Image Setup](https://github.com/reshamas/fastai_deeplearn_part1/blob/master/tools/aws_ami_gpu_setup.md)
+
+### Google Cloud Platform
+

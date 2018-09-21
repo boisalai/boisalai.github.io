@@ -2,9 +2,10 @@
 
 # Alain Boisvert, MBA
 
-Courriel : ay.boisvert@gmail.com<br>
-LinkedIn : https://www.linkedin.com/in/alain-boisvert-mba-98b058156/<br>
-GitHub : https://github.com/boisalai
+Courriel : [ay.boisvert@gmail.com](ay.boisvert@gmail.com)<br>
+LinkedIn : [https://www.linkedin.com/in/alain-boisvert-mba-98b058156](https://www.linkedin.com/in/alain-boisvert-mba-98b058156/)<br>
+GitHub : [https://github.com/boisalai](https://github.com/boisalai)<br>
+Kaggle : [https://www.kaggle.com/boisalai](https://www.kaggle.com/boisalai)
 
 Gestionnaire ayant réalisé plusieurs mandats stratégiques au gouvernement du Québec. Reconnu pour sa persévérance, son esprit d’équipe, son côté analytique, rigoureux et « touche à tout ». Cherche à créer des choses utiles et rendre simple ce qui est compliqué.
 
