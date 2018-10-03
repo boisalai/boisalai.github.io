@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="/stylesheets/main.css">
 
-# Références utiles sur les infrastructures
+# Alain Boisvert, MBA
+
+## Références utiles sur les infrastructures
 
 - [Ministère de l'Éducation et de l'Enseignement supérieur](#mees)
   - [Scolaire](#scol)
@@ -72,3 +74,5 @@
 - 2018-07-04 [Un concept d’école modulable en aluminium](http://www.portailconstructo.com/infoconstructo/concept_ecole_modulable_aluminium), Portail Constructo
 - 2018-06-05 [Sept projets retenus pour le Lab-École](https://ici.radio-canada.ca/nouvelle/1105109/projets-lab-ecole-etablissements-scolaires-education-jeunes)
 - 2018-01-30 [Schola – Plateforme d’expertise en architecture scolaire dirigée par Carole Després](https://www.faaad.ulaval.ca/actualites/schola-plateforme-dexpertise-architecture-scolaire.html)
+
+[Home](README.md) | [Accueil](README.md)

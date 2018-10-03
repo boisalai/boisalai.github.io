@@ -160,4 +160,4 @@ Canadian Provinces Income Tax Calculator for Individuals. Web application built 
   [scikit-learn](http://scikit-learn.org/stable/),
   [PyTorch](https://pytorch.org/).
 
-Dernière mise à jour : 3 octobre 2018.
+[Home](README.md) | [Accueil](README.md)

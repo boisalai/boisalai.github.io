@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="/stylesheets/main.css">
 
-# Références utiles sur l'apprentissage automatique
+# Alain Boisvert, MBA
+
+## Références utiles sur l'apprentissage automatique
 
 ## Guides
 
@@ -502,3 +504,5 @@ jupyter lab
 
 - [Why building your own Deep Learning Computer is 10x cheaper than AWS](https://medium.com/the-mission/why-building-your-own-deep-learning-computer-is-10x-cheaper-than-aws-b1c91b55ce8c)
 - [RTX 2080 Ti Deep Learning Benchmarks](https://lambdalabs.com/blog/2080-ti-deep-learning-benchmarks/)
+
+[Home](README.md) | [Accueil](README.md)
