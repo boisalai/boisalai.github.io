@@ -2,7 +2,7 @@
 
 # Alain Boisvert, MBA
 
-[LinkedIn]([https://www.linkedin.com/in/alain-boisvert-mba-98b058156]) | [GitHub](https://github.com/boisalai) | [Kaggle](https://www.kaggle.com/boisalai) | [Email](ay.boisvert@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/alain-boisvert-mba-98b058156) | [GitHub](https://github.com/boisalai) | [Kaggle](https://www.kaggle.com/boisalai) | [Email](mailto:ay.boisvert@gmail.com)
 
 Gestionnaire ayant réalisé plusieurs mandats stratégiques au gouvernement du Québec. Reconnu pour sa persévérance, son esprit d’équipe, son côté analytique, rigoureux et « touche à tout ». Cherche à créer des choses utiles et rendre simple ce qui est compliqué.
 
@@ -100,7 +100,7 @@ Association des étudiant(e)s en mathématiques de l’Université de Sherbrooke
 
 ## Scolarité
 
-- [MBA, Gestion des technologies de l’information](images/Releve_notes_Alain_Boisvert.pdf), [Université Laval](https://www.ulaval.ca/) (1999 – 2006)<br>Mention d'excellence des Facultés des études supérieures et des sciences de l’administration
+- MBA, Gestion des technologies de l’information, [Université Laval](https://www.ulaval.ca/) (1999 – 2006)<br>Mention d'excellence des Facultés des études supérieures et des sciences de l’administration
 - B. Sc., Mathématiques appliquées, [Université de Sherbrooke](https://www.usherbrooke.ca/) (1985 – 1988)
 - Quatre examens de la [Casualty Actuarial Society](https://www.casact.org/) (1986 – 1991)
 
@@ -110,9 +110,9 @@ Association des étudiant(e)s en mathématiques de l’Université de Sherbrooke
 - [Cutting Edge Deep Learning For Coders, Part 2](http://course.fast.ai/part2.html), fast.ai (En cours)
 -->
 
-- [Practical Deep Learning For Coders, Part 1](fastai2018/index.md), fast.ai (In progress)
-- [Deep Learning Specialization](coursera2018.md), Coursera (2018)
-- [Full Stack Web Developer Nanodegree](udacity2017.md), Udacity (2017)
+- [Practical Deep Learning For Coders, Part 1](http://course.fast.ai/), fast.ai (In progress)
+- [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning), Coursera (2018)
+- [Full Stack Web Developer Nanodegree](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004), Udacity (2017)
 
 <!--
 - [Responsive Web Design Fundamentals](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893), Udacity (2016)
@@ -158,4 +158,4 @@ Canadian Provinces Income Tax Calculator for Individuals. Web application built 
   [scikit-learn](http://scikit-learn.org/stable/),
   [PyTorch](https://pytorch.org/).
 
-Dernière mise à jour : 26 septembre 2018.
+Dernière mise à jour : 3 octobre 2018.

@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="/stylesheets/main.css">
 
-# Formation continue
+# Alain Boisvert, MBA
+
+## Continuing Education | Formation continue
 
 ## 2018
 
@@ -8,7 +10,7 @@
 - [Cutting Edge Deep Learning For Coders, Part 2](http://course.fast.ai/part2.html), fast.ai (En cours)
 -->
 
-- [Practical Deep Learning For Coders, Part 1](fastai2018/index.md), fast.ai (In progress)
+- [Practical Deep Learning For Coders, Part 1](2018_fastai/index.md), fast.ai (In progress)
 - [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning), Coursera
   - [Neural Networks and Deep Learning](https://www.coursera.org/account/accomplishments/verify/CXTSPLZUFKTK).
   - [Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization](https://www.coursera.org/account/accomplishments/verify/3FDWD3A8A96A).
@@ -27,3 +29,5 @@
   - Fifth project, [Neighborhood map](https://github.com/boisalai/udacity-neighborhood-map) (Knockout.js, Google Maps API, Foursquare API).
   - Final project, [Linux Server Configuration](https://github.com/boisalai/udacity-linux-server-configuration) (Ubuntu, Amazon Lighsail, PostgreSQL).
   - [Certificate of completion](2017_udacity/nd004.pdf) (November 5, 2017).
+
+  [Home](../README.md) | [Accueil](../README.md)
