@@ -2,10 +2,7 @@
 
 # Alain Boisvert, MBA
 
-Courriel : [ay.boisvert@gmail.com](ay.boisvert@gmail.com)<br>
-LinkedIn : [https://www.linkedin.com/in/alain-boisvert-mba-98b058156](https://www.linkedin.com/in/alain-boisvert-mba-98b058156/)<br>
-GitHub : [https://github.com/boisalai](https://github.com/boisalai)<br>
-Kaggle : [https://www.kaggle.com/boisalai](https://www.kaggle.com/boisalai)
+[LinkedIn]([https://www.linkedin.com/in/alain-boisvert-mba-98b058156]) | [GitHub](https://github.com/boisalai) | [Kaggle](https://www.kaggle.com/boisalai) | [Email](ay.boisvert@gmail.com)
 
 Gestionnaire ayant réalisé plusieurs mandats stratégiques au gouvernement du Québec. Reconnu pour sa persévérance, son esprit d’équipe, son côté analytique, rigoureux et « touche à tout ». Cherche à créer des choses utiles et rendre simple ce qui est compliqué.
 
@@ -118,6 +115,14 @@ Association des étudiant(e)s en mathématiques de l’Université de Sherbrooke
 - [Full Stack Web Developer Nanodegree](udacity2017.md), Udacity (2017)
 
 <!--
+- [Responsive Web Design Fundamentals](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893), Udacity (2016)
+- [Intro to jQuery](https://www.udacity.com/course/intro-to-jquery--ud245), Udacity (2016)
+- [Object-Oriented JavaScript](https://www.udacity.com/course/object-oriented-javascript--ud015), Udacity (2016)
+- [How to Use Git and GitHub](https://www.udacity.com/course/how-to-use-git-and-github--ud775), Udacity (2016)
+- [The complete guide to Angular 2](https://www.udemy.com/the-complete-guide-to-angular-2/), Udemy (2016)
+-->
+
+<!--
 ### RÉALISATIONS
 Canadian Provinces Income Tax Calculator for Individuals. Web application built with Javascript, [Vue.js](https://vuejs.org/), [Bootstrap](https://getbootstrap.com/) and a Javascript Chart Library (not yet chosen).
 -->
@@ -125,7 +130,7 @@ Canadian Provinces Income Tax Calculator for Individuals. Web application built 
 ## Connaissances informatiques
 
 **Développement Web** :
-  HTML+CSS, 
+  JavaScript/HTML5/CSS,
   [Angular.js](https://angular.io/),
   [Backbone.js](http://backbonejs.org/),
   [Knockout.js](http://knockoutjs.com/),
@@ -134,30 +139,23 @@ Canadian Provinces Income Tax Calculator for Individuals. Web application built 
   [Bootstrap](https://getbootstrap.com/),
   Markdown,
   [MathJax](https://www.mathjax.org/).<br>
-**Editor & IDE** : 
+**Environnement de développement** : 
   [Jupyter Notebook](http://jupyter.org/),
   [JupyterLab](http://jupyterlab.readthedocs.io/en/stable/),
   [Visual Studio Code](https://code.visualstudio.com/),
   [Eclipse](https://www.eclipse.org/ide/).<br>
-**Languages** :
+**Programmation** :
   Java,
-  Javascript,
   [Python](https://www.python.org/),
   [SAS](https://www.sas.com/),
   SQL,
   [VBA](https://msdn.microsoft.com/vba/office-vba-reference).<br>
-**Python Librairies** :
+**Librairies Python** :
   [Numpy](http://www.numpy.org/),
   [SciPy](https://www.scipy.org/),
-  [Matplotlib](https://matplotlib.org/).<br>
-**Deep Learning Libraries** :
-  [scikit-learn](http://scikit-learn.org/stable/).<br>
-**Databases & ORM** :
-  [Hibernate](http://hibernate.org/),
-  SQLAlchemy,
-  SQLite,
-  PostgreSQL.<br>
-**API** : Google Maps API, Foursquare API.<br>
-**Cloud** : [Amazon Lightsail](https://aws.amazon.com/lightsail/).
+  [Pandas](https://pandas.pydata.org/),
+  [Matplotlib](https://matplotlib.org/),
+  [scikit-learn](http://scikit-learn.org/stable/),
+  [PyTorch](https://pytorch.org/).
 
-Dernière mise à jour : 16 septembre 2018.
+Dernière mise à jour : 26 septembre 2018.
