@@ -21,21 +21,23 @@
   - [Cutting Edge Deep Learning For Coders, Part 2](http://course.fast.ai/part2.html)
   - [Introduction to Machine Learning for Coders](http://course.fast.ai/ml)
   - [Hiromi Suenaga](https://medium.com/@hiromi_suenaga)
-- CS224n
-  - [CS224n Videos](https://www.youtube.com/watch?v=OQQ-W_63UgQ&list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6)
-  - [CS224n Reddit](https://www.reddit.com/r/CS224n/)
-- CS229
-  - [CS229: Machine Learning](http://cs229.stanford.edu/)
-  - [Resources for CS229 - Machine Learning](https://stanford.edu/~shervine/teaching/cs-229.html)
-  - [Machine Learning cheatsheets for Stanford's CS 229](https://github.com/afshinea/stanford-cs-229-machine-learning)
-- CS294
-  - [CS294-112 at UC Berkeley, Deep Reinforcement Learning](http://rail.eecs.berkeley.edu/deeprlcourse/)
-  - [CS 294: Fairness in Machine Learning](https://fairmlclass.github.io/#statistical)
-- CS231n
-  - [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/)
-  - http://cs231n.github.io/
-  - http://cs231n.github.io/neural-networks-2/#datapre
-  - http://cs231n.github.io/neural-networks-3/#sanitycheck
+- Stanford
+  - [Lecture Collection | Convolutional Neural Networks for Visual Recognition (Spring 2017)](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)
+  - CS224n
+    - [CS224n Videos](https://www.youtube.com/watch?v=OQQ-W_63UgQ&list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6)
+    - [CS224n Reddit](https://www.reddit.com/r/CS224n/)
+  - CS229
+    - [CS229: Machine Learning](http://cs229.stanford.edu/)
+    - [Resources for CS229 - Machine Learning](https://stanford.edu/~shervine/teaching/cs-229.html)
+    - [Machine Learning cheatsheets for Stanford's CS 229](https://github.com/afshinea/stanford-cs-229-machine-learning)
+  - CS294
+    - [CS294-112 at UC Berkeley, Deep Reinforcement Learning](http://rail.eecs.berkeley.edu/deeprlcourse/)
+    - [CS 294: Fairness in Machine Learning](https://fairmlclass.github.io/#statistical)
+  - CS231n
+    - [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/)
+    - http://cs231n.github.io/
+    - http://cs231n.github.io/neural-networks-2/#datapre
+    - http://cs231n.github.io/neural-networks-3/#sanitycheck
 - [Over 200 of the Best Machine Learning, NLP, and Python Tutorials — 2018 Edition](https://medium.com/machine-learning-in-practice/over-200-of-the-best-machine-learning-nlp-and-python-tutorials-2018-edition-dd8cf53cb7dc)
 
 ### Books
@@ -279,6 +281,11 @@ Notions:
       - [Example imitated utterances for each approach](https://sample-efficient-adaptive-tts.github.io/demo/)
   - SqueezeNet
   - GoogLeNet
+  - TernausNetV2
+    - [TernausNetV2: Fully Convolutional Network for Instance Segmentation](https://arxiv.org/abs/1806.00844)
+  - U-Net
+    - [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/pdf/1505.04597.pdf)
+    - [Contextual Hourglass Networks for Segmentation and Density Estimation](https://openreview.net/pdf?id=S1F-dpjjM)
 
 ## Features Engineering
 
@@ -315,6 +322,8 @@ Notions:
 - [Neural Style Transfer: Creating Art with Deep Learning using tf.keras and eager execution](https://medium.com/tensorflow/neural-style-transfer-creating-art-with-deep-learning-using-tf-keras-and-eager-execution-7d541ac31398)
 - [Tinker With a Neural Network Right Here in Your Browser](http://playground.tensorflow.org)
 - [The Sound of Pixels](http://sound-of-pixels.csail.mit.edu/)
+- [Keras vs. PyTorch: Alien vs. Predator recognition with transfer learning](https://deepsense.ai/keras-vs-pytorch-avp-transfer-learning/) and [GitHub](https://github.com/deepsense-ai/Keras-PyTorch-AvP-transfer-learning)
+- [Neural Style Transfer with PyTorch](https://heartbeat.fritz.ai/neural-style-transfer-with-pytorch-49e7c1fe3bea)
 
 ## Popular datasets
 
@@ -328,6 +337,10 @@ Notions:
 - MNIST
   - [The MNIST Database of handwritten digits](http://yann.lecun.com/exdb/mnist/)
   - [pytorch/examples/.../mnist](https://github.com/pytorch/examples/blob/master/mnist/main.py)
+
+## Images
+
+- [pixabay](https://pixabay.com/)
 
 ## Tools
 
@@ -426,12 +439,16 @@ Pour installer PyTorch, faire ```conda install pytorch torchvision -c pytorch```
 - https://tf.wiki/en/preface.html et https://github.com/snowkylin/TensorFlow-cn
 - [A Concise Handbook of TensorFlow](https://tf.wiki/)
 - [Train your first neural network: basic classification](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/keras/basic_classification.ipynb#scrollTo=jYysdyb-CaWM)
+- [How To Classify Images with TensorFlow - a Step-By-Step Tutorial](https://lambdalabs.com/blog/how-to-classify-images-with-tensorflow-a-step-by-step-tutorial/)
 
 ### TensorboardX
 
 ### MXNet
 
 ### Keras
+
+- [Keras Documentation](http://keras.io/)
+- [GitHub](https://github.com/keras-team/keras)
 
 ### AutoML
 
@@ -486,6 +503,12 @@ jupyter lab
 - [Get Productive with Python in Visual Studio Code](https://www.youtube.com/watch?time_continue=5&v=6YLMWU-5H9o)
 
 ## 90. Cloud and buidling DL Computer
+
+### 90.1 Google Colab
+
+### 90.1 Neptune
+
+https://app.neptune.ml/-/organization/7a92dc4f-48b3-42bf-a2a8-efbd32d25b7c
 
 ### 90.1. AWS
 
