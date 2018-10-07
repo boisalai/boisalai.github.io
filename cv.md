@@ -2,7 +2,7 @@
 
 # Alain Boisvert, MBA
 
-[LinkedIn](https://www.linkedin.com/in/alain-boisvert-mba-98b058156) | [GitHub](https://github.com/boisalai) | [Kaggle](https://www.kaggle.com/boisalai) | [Email](mailto:ay.boisvert@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/alain-boisvert-mba-98b058156) &#8402; [GitHub](https://github.com/boisalai) &#8402; [Kaggle](https://www.kaggle.com/boisalai) &#8402; [Email](mailto:ay.boisvert@gmail.com)
 
 Gestionnaire ayant réalisé plusieurs mandats stratégiques au gouvernement du Québec. Reconnu pour sa persévérance, son esprit d’équipe, son côté analytique, rigoureux et « touche à tout ». Cherche à créer des choses utiles et rendre simple ce qui est compliqué.
 
@@ -160,4 +160,4 @@ Canadian Provinces Income Tax Calculator for Individuals. Web application built 
   [scikit-learn](http://scikit-learn.org/stable/),
   [PyTorch](https://pytorch.org/).
 
-[Home](README.md) | [Accueil](README.md)
+[Home](README.md) &#8402; [Accueil](README.md)

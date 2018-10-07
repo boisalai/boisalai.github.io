@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/stylesheets/main.css">
 
-# Alain Boisvert, MBA, test1
+# Alain Boisvert, MBA
 
 - [Curriculum vitae](cv.md)
 - [Continuing Education](learning/index.md) &#8402; [Formation continue](learning/index.md)

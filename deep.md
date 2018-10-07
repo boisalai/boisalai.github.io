@@ -528,4 +528,4 @@ https://app.neptune.ml/-/organization/7a92dc4f-48b3-42bf-a2a8-efbd32d25b7c
 - [Why building your own Deep Learning Computer is 10x cheaper than AWS](https://medium.com/the-mission/why-building-your-own-deep-learning-computer-is-10x-cheaper-than-aws-b1c91b55ce8c)
 - [RTX 2080 Ti Deep Learning Benchmarks](https://lambdalabs.com/blog/2080-ti-deep-learning-benchmarks/)
 
-[Home](README.md) | [Accueil](README.md)
+[Home](README.md) &#8402; [Accueil](README.md)

@@ -30,4 +30,4 @@
   - Final project, [Linux Server Configuration](https://github.com/boisalai/udacity-linux-server-configuration) (Ubuntu, Amazon Lighsail, PostgreSQL).
   - [Certificate of completion](2017_udacity/nd004.pdf) (November 5, 2017).
 
-[Home](../README.md) | [Accueil](../README.md)
+[Home](../README.md) &#8402; [Accueil](../README.md)

@@ -75,4 +75,4 @@
 - 2018-06-05 [Sept projets retenus pour le Lab-École](https://ici.radio-canada.ca/nouvelle/1105109/projets-lab-ecole-etablissements-scolaires-education-jeunes)
 - 2018-01-30 [Schola – Plateforme d’expertise en architecture scolaire dirigée par Carole Després](https://www.faaad.ulaval.ca/actualites/schola-plateforme-dexpertise-architecture-scolaire.html)
 
-[Home](README.md) | [Accueil](README.md)
+[Home](README.md) &#8402; [Accueil](README.md)
