@@ -4,7 +4,17 @@
 
 ## Références utiles sur l'apprentissage automatique
 
+- [Guides](#guides)
+- [Concepts](#concepts)
+- [Popular Model Architectures](#architectures)
+- [Popular Datasets](#datasets)
+- [Fun Projects](#fun)
+- [Kaggle](#kaggle)
+- [Tools](#tools)
+- [AI Framework](#ai)
 - [Cloud and Buiding Deep Learning Computer](#cloud)
+
+<a name="guides"></a>
 
 ## Guides
 
@@ -83,6 +93,8 @@
 ### Conferences
 
 - [CVPR 2018](http://cvpr2018.thecvf.com/)
+
+<a name="concepts"></a>
 
 ## Concepts
 
@@ -283,7 +295,25 @@ Notions:
 
 - [Understanding Hinton’s Capsule Networks](https://medium.com/ai%C2%B3-theory-practice-business/understanding-hintons-capsule-networks-part-i-intuition-b4b559d1159b)
 
-### Popular Model Architectures (pretrained)
+### Features Engineering
+
+- [Structured and times series data](https://www.youtube.com/watch?v=gbceqO8PpBg&feature=youtu.be) between 25:10 and ??
+- [Structured Deep Learning](https://towardsdatascience.com/structured-deep-learning-b8ca4138b848), with embeddings
+
+### Data Augmentation Approaches
+
+- Normalize
+- Scale
+- CenterCrop
+- Pad
+- RandomCrop
+- RandomFlip
+
+### Ensemble Methods
+
+<a name="architectures"></a>
+
+## Popular Model Architectures
 
 - [Neural Network Architectures](https://towardsdatascience.com/neural-network-architectures-156e5bad51ba)
 - [Key Deep Learning Architectures for Visual Object Recognition](https://github.com/pechyonkin/key-dl-architectures)
@@ -329,43 +359,7 @@ Notions:
     - [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/pdf/1505.04597.pdf)
     - [Contextual Hourglass Networks for Segmentation and Density Estimation](https://openreview.net/pdf?id=S1F-dpjjM)
 
-## Features Engineering
-
-- [Structured and times series data](https://www.youtube.com/watch?v=gbceqO8PpBg&feature=youtu.be) between 25:10 and ??
-- [Structured Deep Learning](https://towardsdatascience.com/structured-deep-learning-b8ca4138b848), with embeddings
-
-## Data Augmentation Approaches
-
-- Normalize
-- Scale
-- CenterCrop
-- Pad
-- RandomCrop
-- RandomFlip
-
-## Ensemble Methods
-
-## Kaggle
-
-- [Dog Breed Identification](https://www.kaggle.com/c/dog-breed-identification)
-- [Planet: Understanding the Amazon from Space](https://www.kaggle.com/c/planet-understanding-the-amazon-from-space)
-- [Corporación Favorita Grocery Sales Forecasting](https://www.kaggle.com/c/favorita-grocery-sales-forecasting)
-- [Rossmann Store Sales](https://www.kaggle.com/c/rossmann-store-sales)
-- [Plant Seedlings Classification](https://www.kaggle.com/c/plant-seedlings-classification/leaderboard)
-- [Jeremy Howard](https://www.kaggle.com/jhoward)
-- [Rachael Tatman](https://www.kaggle.com/rtatman/kernels)
-
-## Fun Projects
-
-- [PaintsTransfer-Euclid](https://github.com/lllyasviel/style2paints)
-- [ML4A](https://github.com/ml4a/ml4a-guides)
-- [Collection of Interactive Machine Learning Examples](https://tools.google.com/seedbank/)
-  - Neural Style Transfer with tf.keras, Variational auto-encoder for music, Neural Translation with Attention.
-- [Neural Style Transfer: Creating Art with Deep Learning using tf.keras and eager execution](https://medium.com/tensorflow/neural-style-transfer-creating-art-with-deep-learning-using-tf-keras-and-eager-execution-7d541ac31398)
-- [Tinker With a Neural Network Right Here in Your Browser](http://playground.tensorflow.org)
-- [The Sound of Pixels](http://sound-of-pixels.csail.mit.edu/)
-- [Keras vs. PyTorch: Alien vs. Predator recognition with transfer learning](https://deepsense.ai/keras-vs-pytorch-avp-transfer-learning/) and [GitHub](https://github.com/deepsense-ai/Keras-PyTorch-AvP-transfer-learning)
-- [Neural Style Transfer with PyTorch](https://heartbeat.fritz.ai/neural-style-transfer-with-pytorch-49e7c1fe3bea)
+<a name="datasets"></a>
 
 ## Popular datasets
 
@@ -381,10 +375,35 @@ Notions:
 - MNIST
   - [The MNIST Database of handwritten digits](http://yann.lecun.com/exdb/mnist/)
   - [pytorch/examples/.../mnist](https://github.com/pytorch/examples/blob/master/mnist/main.py)
+- [Pixabay](https://pixabay.com/)
 
-## Images
+<a name="fun"></a>
 
-- [pixabay](https://pixabay.com/)
+## Fun Projects
+
+- [PaintsTransfer-Euclid](https://github.com/lllyasviel/style2paints)
+- [ML4A](https://github.com/ml4a/ml4a-guides)
+- [Collection of Interactive Machine Learning Examples](https://tools.google.com/seedbank/)
+  - Neural Style Transfer with tf.keras, Variational auto-encoder for music, Neural Translation with Attention.
+- [Neural Style Transfer: Creating Art with Deep Learning using tf.keras and eager execution](https://medium.com/tensorflow/neural-style-transfer-creating-art-with-deep-learning-using-tf-keras-and-eager-execution-7d541ac31398)
+- [Tinker With a Neural Network Right Here in Your Browser](http://playground.tensorflow.org)
+- [The Sound of Pixels](http://sound-of-pixels.csail.mit.edu/)
+- [Keras vs. PyTorch: Alien vs. Predator recognition with transfer learning](https://deepsense.ai/keras-vs-pytorch-avp-transfer-learning/) and [GitHub](https://github.com/deepsense-ai/Keras-PyTorch-AvP-transfer-learning)
+- [Neural Style Transfer with PyTorch](https://heartbeat.fritz.ai/neural-style-transfer-with-pytorch-49e7c1fe3bea)
+
+<a name="kaggle"></a>
+
+## Kaggle
+
+- [Dog Breed Identification](https://www.kaggle.com/c/dog-breed-identification)
+- [Planet: Understanding the Amazon from Space](https://www.kaggle.com/c/planet-understanding-the-amazon-from-space)
+- [Corporación Favorita Grocery Sales Forecasting](https://www.kaggle.com/c/favorita-grocery-sales-forecasting)
+- [Rossmann Store Sales](https://www.kaggle.com/c/rossmann-store-sales)
+- [Plant Seedlings Classification](https://www.kaggle.com/c/plant-seedlings-classification/leaderboard)
+- [Jeremy Howard](https://www.kaggle.com/jhoward)
+- [Rachael Tatman](https://www.kaggle.com/rtatman/kernels)
+
+<a name="tools"></a>
 
 ## Tools
 
@@ -460,6 +479,43 @@ conda update anaconda
 
 - https://github.com/ujjwalkarn/DataSciencePython
 
+### Jupyter
+
+- [Jupyter Notebook Commands & Shortcuts](https://github.com/reshamas/fastai_deeplearn_part1/blob/master/tools/jupyter_notebook.md)
+- [Jupyter Python Notebook Keyboard Shortcuts and Text Snippets for Beginners](http://maxmelnick.com/2016/04/19/python-beginner-tips-and-tricks.html)
+- [A gallery of interesting Jupyter Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks)
+
+### JupyterLab
+
+- [Installation](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html)
+
+Ce [livre](https://mlbook.explained.ai/prep.html#sec:3.2) explique les instructions pour installer JupyterLab.
+
+```
+conda install -c conda-forge jupyterlab
+jupyter serverextension enable --py jupyterlab --sys-prefix
+
+cd /Users/YOURID 
+mkdir mlbook
+cd mlbook
+mkdir src
+cd src
+mkdir data
+
+jupyter lab
+```
+
+### PyCharm
+
+- [Download](https://www.jetbrains.com/pycharm/)
+
+### VS Code
+
+- [Use Visual Studio Code To Develop Python Programs](https://medium.com/the-artificial-impostor/use-visual-studio-code-to-develop-python-programs-717d849c7106)
+- [Get Productive with Python in Visual Studio Code](https://www.youtube.com/watch?time_continue=5&v=6YLMWU-5H9o)
+
+<a name="ai"></a>
+
 ## AI Framework
 
 ### Pytorch
@@ -525,43 +581,6 @@ Pour installer PyTorch, faire ```conda install pytorch torchvision -c pytorch```
 An open source format to move models between tools.
 
 - https://onnx.ai/
-
-## Environment Development
-
-### Jupyter
-
-- [Jupyter Notebook Commands & Shortcuts](https://github.com/reshamas/fastai_deeplearn_part1/blob/master/tools/jupyter_notebook.md)
-- [Jupyter Python Notebook Keyboard Shortcuts and Text Snippets for Beginners](http://maxmelnick.com/2016/04/19/python-beginner-tips-and-tricks.html)
-- [A gallery of interesting Jupyter Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks)
-
-### JupyterLab
-
-- [Installation](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html)
-
-Ce [livre](https://mlbook.explained.ai/prep.html#sec:3.2) explique les instructions pour installer JupyterLab.
-
-```
-conda install -c conda-forge jupyterlab
-jupyter serverextension enable --py jupyterlab --sys-prefix
-
-cd /Users/YOURID 
-mkdir mlbook
-cd mlbook
-mkdir src
-cd src
-mkdir data
-
-jupyter lab
-```
-
-### PyCharm
-
-- [Download](https://www.jetbrains.com/pycharm/)
-
-### VS Code
-
-- [Use Visual Studio Code To Develop Python Programs](https://medium.com/the-artificial-impostor/use-visual-studio-code-to-develop-python-programs-717d849c7106)
-- [Get Productive with Python in Visual Studio Code](https://www.youtube.com/watch?time_continue=5&v=6YLMWU-5H9o)
 
 <a name="cloud"></a>
 
