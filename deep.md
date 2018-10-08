@@ -4,6 +4,8 @@
 
 ## Références utiles sur l'apprentissage automatique
 
+- [Cloud and Buiding Deep Learning Computer](#cloud)
+
 ## Guides
 
 ### Courses
@@ -14,6 +16,9 @@
 - Coursera
   - [Coursera Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning)
   - [Neural Networks for Machine Learning](https://www.coursera.org/learn/neural-networks), Geoffrey Hinton, Professor
+  - [Spécialisation Advanced Data Science with IBM](https://www.coursera.org/specializations/advanced-data-science-ibm)
+  - [How to Win a Data Science Competition: Learn from Top Kagglers](https://www.coursera.org/learn/competitive-data-science)
+  - [Spécialisation Advanced Machine Learning with TensorFlow on Google Cloud Platform](https://www.coursera.org/specializations/advanced-machine-learning-tensorflow-gcp)
 - Udacity
   - [Udacity, AI programming with Python](https://www.udacity.com/course/ai-programming-python-nanodegree--nd089)
 - [Fast.ai](http://www.fast.ai/)
@@ -21,8 +26,11 @@
   - [Cutting Edge Deep Learning For Coders, Part 2](http://course.fast.ai/part2.html)
   - [Introduction to Machine Learning for Coders](http://course.fast.ai/ml)
   - [Hiromi Suenaga](https://medium.com/@hiromi_suenaga)
+  - [Announcing fast.ai part 1 now available as Kaggle Kernels](https://medium.com/@hortonhearsafoo/announcing-fast-ai-part-1-now-available-as-kaggle-kernels-8ef4ca3b9ce6)
+- Udemy
+  - [Practical Deep Learning with PyTorch](https://www.udemy.com/practical-deep-learning-with-pytorch/)
 - Stanford
-  - [Lecture Collection | Convolutional Neural Networks for Visual Recognition (Spring 2017)](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)
+  - [Lecture Collection, Convolutional Neural Networks for Visual Recognition (Spring 2017)](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)
   - CS224n
     - [CS224n Videos](https://www.youtube.com/watch?v=OQQ-W_63UgQ&list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6)
     - [CS224n Reddit](https://www.reddit.com/r/CS224n/)
@@ -42,7 +50,8 @@
 
 ### Books
 
-- [Deep Learning](http://www.deeplearningbook.org/)
+- Goodfellow, I., Bengio, Y., & Courville, A. (2016). [Deep Learning](http://www.deeplearningbook.org/). MIT press.
+  - https://hadrienj.github.io/deep-learning-book-series-home/
 - [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/)
 - [Deep Learning with Python, by Francois Chollet](https://www.amazon.com/Deep-Learning-Python-Francois-Chollet/dp/1617294438) (Python, Keras)
 - [The Matrix Cookbook](http://www2.imm.dtu.dk/pubdb/views/edoc_download.php/3274/pdf/imm3274.pdf)
@@ -56,6 +65,17 @@
 - [MONTRÉAL.AI | Montréal Artificial Intelligence](https://montrealartificialintelligence.com/academy/#0-Getting-Started)
 - https://blog.goodaudience.com/2018-new-years-resolution-learn-deep-learning-42c63f0bc87d
 
+- 2018
+  - [The Unreasonable Effectiveness of (Zero) Initialization in Deep Residual Learning](https://openreview.net/forum?id=H1gsz30cKX), 27 Sep 2018
+  - [Deep Learning: The Super-Convergence phenomenon](https://www.linkedin.com/pulse/deep-learning-super-convergence-phenomenon-ibrahim-sobh/), 19 Aug 2018
+  - [The 1cycle policy](https://sgugger.github.io/the-1cycle-policy.html), Sylvain Gugger, 7 Apr 2018 ([notebook](https://github.com/sgugger/Deep-Learning/blob/master/Cyclical%20LR%20and%20momentums.ipynb))
+  - [A disciplined approach to neural network hyper-parameters: Part 1 -- learning rate, batch size, momentum, and weight decay](https://arxiv.org/abs/1803.09820), Leslie N. Smith, 26 Mar 2018
+- 2017
+  - [Super-Convergence: Very Fast Training of Neural Networks Using Large Learning Rates](https://arxiv.org/abs/1708.07120), Leslie N. Smith, Nicholay Topin, 23 Aug 2017
+  - [Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour](https://arxiv.org/abs/1706.02677), Priya Goyal, Piotr Dollár, Ross Girshick, Pieter Noordhuis, Lukasz Wesolowski, Aapo Kyrola, Andrew Tulloch, Yangqing Jia, Kaiming He, 8 Jun 2017
+- 2016
+  - [Understanding deep learning requires rethinking generalization](https://arxiv.org/abs/1611.03530), Chiyuan Zhang, Samy Bengio, Moritz Hardt, Benjamin Recht, Oriol Vinyals, 10 Nov 2016
+
 ### References
 
 - [Machine Learning Cheatsheet](https://ml-cheatsheet.readthedocs.io/en/latest/index.html)
@@ -66,15 +86,17 @@
 
 ## Concepts
 
-### classification, regression, unsupervised methods
+### Classification, regression, unsupervised methods
 
 ### Learning Rates
 
 - [Understanding Learning Rates and How It Improves Performance in Deep Learning](https://towardsdatascience.com/understanding-learning-rates-and-how-it-improves-performance-in-deep-learning-d0d4059c1c10),
 - [Setting the learning rate of your neural network](https://www.jeremyjordan.me/nn-learning-rate/)
 - [Exploring Stochastic Gradient Descent with Restarts (SGDR)](https://medium.com/38th-street-studios/exploring-stochastic-gradient-descent-with-restarts-sgdr-fa206c38a74e)
-- Weight decay
-- Cosine annealing learning rate
+- Weight decay.
+- Cosine annealing.
+- [Cyclical Learning Rates for Training Neural Networks](https://arxiv.org/pdf/1506.01186.pdf)
+- [Super-Convergence: Very Fast Training of Neural Networks Using Large Learning Rates](https://arxiv.org/pdf/1708.07120.pdf)
 
 ### Backpropagation
 
@@ -82,49 +104,66 @@
 
 ### Activation functions
 
-- ReLU
-- Softmax (single label)
 - Sigmoid (multi label)
 - Tanh
+- ReLU
+- Leaky ReLU
+- Softmax (single label)
 
 ### Data augmentation
 
-### Regularization
+### Regularization techniques
 
-Regularization refers to imposing constraints on our neural network in order to prevent overfitting or otherwise discourage undesirable properties.
+Preventing overfitting. Regularization refers to imposing constraints on our neural network in order to prevent overfitting or otherwise discourage undesirable properties.
 
 - Dropout
+  - For each iteration on sample, some nodes are randomly dropped.
+  - [Dropout: A Simple Way to Prevent Neural Networks from Overfitting](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf)
 - Batch Normalization
-  - [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167.pdf)
+  - [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167)
 - Weight/Bias
-- [L1 Regularization]
-- [L2 Regularization](https://jamesmccaffrey.wordpress.com/2017/02/19/l2-regularization-and-back-propagation/)
+- L1 Regularization
+  - Penalize large weights.
+- L2 Regularization
+  - Penalize large weights.
+  - [L2 Regularization and Back-Propagation](https://jamesmccaffrey.wordpress.com/2017/02/19/l2-regularization-and-back-propagation/)
 - Data augmentation (see below)
+- Early stopping
 
-### Optimization (gradient descent optimization algorithms)
+### Optimization ()
 
 - [An overview of gradient descent optimization algorithms](http://ruder.io/optimizing-gradient-descent/)
 - [Optimization for Deep Learning Highlights in 2017](http://ruder.io/deep-learning-optimization-2017/)
 - [Coursera, Mini Batch Gradient Descent](https://www.youtube.com/watch?v=4qJaSmvhxi8)
 - [Coursera, Understanding Mini-Batch Gradient Dexcent](https://www.youtube.com/watch?v=-_4Zi8fCZO4)
 - [Practical Recommendations for Gradient-Based Training of Deep Architectures, Yoshua Bengio, Version 2, Sept. 16th, 2012](https://arxiv.org/pdf/1206.5533v2.pdf)
-- [ptimizing convolutional networks (CS231n)](https://cs231n.github.io/neural-networks-3/) by Andrej Karpathy
-- Stochastic Gradient Descent (SGD)
-- Momentum
-  - [Coursera, Gradient Descent With Momentum](https://www.youtube.com/watch?v=k8fTYJPd3_I)
-  - [Why Momentum Really Works](https://distill.pub/2017/momentum/)
-  - Nesterov-SGD
-  - Nesterov accelerated gradient descent (NAG)
-- Adaptive methods
-  - Adam, AdamW (adaptive moment estimation)
-    - [Fixing Weight Decay Regularization in Adam](https://arxiv.org/pdf/1711.05101.pdf)
-    - [Coursera](https://www.youtube.com/watch?v=JXQT_vxqwIs)
-    - [AdamW and Super-convergence is now the fastest way to train neural nets](http://www.fast.ai/2018/07/02/adam-weight-decay/)
-  - AdaGrad
-  - AdaDelta
-  - RMSProp
-    - [Coursera](https://www.youtube.com/watch?v=_e-LFe_igno)
-- XGBoost
+- [Optimizing convolutional networks (CS231n)](https://cs231n.github.io/neural-networks-3/) by Andrej Karpathy
+
+- Normalizing inputs.
+- Dealing with vanishing/exploding gradients.
+- Gradient checking (for debugging).
+- Optimization algorithms.
+- Learning rate decay.
+- Grid search or random search.
+
+- Gradient descent optimization algorithms
+  - Stochastic Gradient Descent (SGD)
+    - SGD with restarts
+  - Momentum
+    - [Coursera, Gradient Descent With Momentum](https://www.youtube.com/watch?v=k8fTYJPd3_I)
+    - [Why Momentum Really Works](https://distill.pub/2017/momentum/)
+    - Nesterov-SGD
+    - Nesterov accelerated gradient descent (NAG)
+  - Adaptive methods
+    - Adam, AdamW (adaptive moment estimation)
+      - [Fixing Weight Decay Regularization in Adam](https://arxiv.org/pdf/1711.05101.pdf)
+      - [Coursera](https://www.youtube.com/watch?v=JXQT_vxqwIs)
+      - [AdamW and Super-convergence is now the fastest way to train neural nets](http://www.fast.ai/2018/07/02/adam-weight-decay/)
+    - AdaGrad
+    - AdaDelta
+    - RMSProp
+      - [Coursera](https://www.youtube.com/watch?v=_e-LFe_igno)
+  - XGBoost
 
 ### Transfer Learning
 
@@ -222,6 +261,7 @@ Notions:
 - [Archived: CS224n: Natural Language Processing with Deep Learning (2016-2017)](http://web.stanford.edu/class/cs224n/archive/WWW_1617/index.html)
 - [Neural Approaches to Conversational AI](https://arxiv.org/abs/1809.08267)
 - [A Review of the Neural History of Natural Language Processing](http://blog.aylien.com/a-review-of-the-recent-history-of-natural-language-processing/)
+- [Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/) and [book](https://web.stanford.edu/~jurafsky/slp3/ed3book.pdf) and [slides](https://web.stanford.edu/~jurafsky/NLPCourseraSlides.html)
 
 ### Variational autoencoders (VAEs)
 
@@ -230,6 +270,7 @@ Notions:
 - [Ian Goodfellow: Generative Adversarial Networks (NIPS 2016 tutorial)](https://www.youtube.com/watch?v=HGYYEUSm-0Q)
 - [Introduction to GANs, NIPS 2016 | Ian Goodfellow, OpenAI](https://www.youtube.com/watch?v=9JpdAg6uMXs)
 - [Teaching Machines to Draw](https://tools.google.com/seedbank/seed/5729313835974656)
+- [Playing a game of GANstruction](https://thegradient.pub/playing-a-game-of-ganstruction/)
 
 ### Deep Reinforcement Learning
 
@@ -252,6 +293,7 @@ Notions:
 - GoogLeNet (2014)
 - Inception (2014)
 - VGG (2014)
+  - [Very deep convolutional networks for large-scale image recognition](https://arxiv.org/abs/1409.1556)
   - VGG-16
     - https://www.kaggle.com/keras/vgg16
   - VGG-19
@@ -328,10 +370,12 @@ Notions:
 ## Popular datasets
 
 - ImageNet
+  - http://www.image-net.org/
 - CIFAR-10
   - [The CIFAR-10 dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
-  - ```wget http://pjreddie.com/media/files/cifar.tgz```
+  - [Wikipedia](https://en.wikipedia.org/wiki/CIFAR-10)
 - CIFAR-100
+  - [The CIFAR-100 dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
 - COCO
 - LSUN
 - MNIST
@@ -343,6 +387,10 @@ Notions:
 - [pixabay](https://pixabay.com/)
 
 ## Tools
+
+### Bash
+
+- [Show Hidden Files on macOS](https://www.lifewire.com/display-hidden-files-in-os-x-153332)
 
 ### Virtualenv
 
@@ -371,13 +419,19 @@ Mais je crois que conda vient avec sa propre machine virtuelle. À vérifier.
 
 - [Python Numpy Tutorial](http://cs231n.github.io/python-numpy-tutorial)
 
-### Pendas
+### Pandas
+
+- [Pandas Crosstab Explained](http://pbpython.com/pandas-crosstab.html)
+- [Pandas Pivot Table Explained](http://pbpython.com/pandas-pivot-table-explained.html)
+- [Pandas by Solutions](http://www.pythonprogramming.in/pandas-examples.html)
 
 ### Scipy
 
 - [Scipy Lecture Notes](http://www.scipy-lectures.org/)
 
 ### Matplotlib
+
+- [Effectively Using Matplotlib](http://pbpython.com/effective-matplotlib.html)
 
 ### Seaborn
 
@@ -423,12 +477,16 @@ conda update anaconda
 - [Practical PyTorch](https://github.com/spro/practical-pytorch)
 - [PyTorch Tutorial for Deep Learning Researchers](https://github.com/yunjey/pytorch-tutorial)
 - [How to code The Transformer in Pytorch](https://towardsdatascience.com/how-to-code-the-transformer-in-pytorch-24db27c8f9ec)
+- [Introduction to PyTorch for Deep Learning](https://heartbeat.fritz.ai/introduction-to-pytorch-for-deep-learning-5b437cea90ac)
+- [Deep Learning with PyTorch](https://github.com/PacktPublishing/Deep-Learning-with-PyTorch)
 
 Pour installer PyTorch, faire ```conda install pytorch torchvision -c pytorch```.
 
 ### fastai
 
 - [docs](http://docs.fast.ai/)
+- [Google Compute Engine Now Has Images With PyTorch 1.0.0 and FastAi 1.0.2](https://blog.kovalevskyi.com/google-compute-engine-now-has-images-with-pytorch-1-0-0-and-fastai-1-0-2-57c49efd74bb)
+- [Ten Techniques Learned From fast.ai](https://blog.floydhub.com/ten-techniques-from-fast-ai/)
 
 ### scikit-learn
 
@@ -440,6 +498,7 @@ Pour installer PyTorch, faire ```conda install pytorch torchvision -c pytorch```
 - [A Concise Handbook of TensorFlow](https://tf.wiki/)
 - [Train your first neural network: basic classification](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/keras/basic_classification.ipynb#scrollTo=jYysdyb-CaWM)
 - [How To Classify Images with TensorFlow - a Step-By-Step Tutorial](https://lambdalabs.com/blog/how-to-classify-images-with-tensorflow-a-step-by-step-tutorial/)
+- [Stop Installing Tensorflow using pip for performance sake!](https://towardsdatascience.com/stop-installing-tensorflow-using-pip-for-performance-sake-5854f9d9eb0c)
 
 ### TensorboardX
 
@@ -449,6 +508,8 @@ Pour installer PyTorch, faire ```conda install pytorch torchvision -c pytorch```
 
 - [Keras Documentation](http://keras.io/)
 - [GitHub](https://github.com/keras-team/keras)
+- [Fashion MNIST with Keras and TPUs](https://colab.research.google.com/github/tensorflow/tpu/blob/master/tools/colab/fashion_mnist.ipynb#scrollTo=Ot79jiI7GiHR)
+- [Companion Jupyter notebooks for the book "Deep Learning with Python"](https://github.com/fchollet/deep-learning-with-python-notebooks)
 
 ### AutoML
 
@@ -502,15 +563,15 @@ jupyter lab
 - [Use Visual Studio Code To Develop Python Programs](https://medium.com/the-artificial-impostor/use-visual-studio-code-to-develop-python-programs-717d849c7106)
 - [Get Productive with Python in Visual Studio Code](https://www.youtube.com/watch?time_continue=5&v=6YLMWU-5H9o)
 
-## 90. Cloud and buidling DL Computer
+<a name="cloud"></a>
 
-### 90.1 Google Colab
+## Cloud and Buiding Deep Learning Computer
 
-### 90.1 Neptune
+### Neptune
 
 https://app.neptune.ml/-/organization/7a92dc4f-48b3-42bf-a2a8-efbd32d25b7c
 
-### 90.1. AWS
+### AWS
 
 - See [video](http://course.fast.ai/lessons/lesson2.html) between 1:59:17 to 2:07:29.
 - [AWS fastami GPU Image Setup](https://github.com/reshamas/fastai_deeplearn_part1/blob/master/tools/aws_ami_gpu_setup.md)
@@ -521,9 +582,12 @@ https://app.neptune.ml/-/organization/7a92dc4f-48b3-42bf-a2a8-efbd32d25b7c
 - [Analyzing 4 Million Yelp Reviews with Python on AWS](http://www.developintelligence.com/blog/2017/02/analyzing-4-million-yelp-reviews-python-aws-ec2-instance/)
 - [(guide) Install Fastai in any AWS region](https://medium.com/@pierre_guillou/guide-install-fastai-in-any-aws-region-8f4fe29132e5)
 
-### 90.2. Google Cloud Platform
+### Google Cloud Platform
 
-### 90.3. Building Deep Learning Computer
+- [Launching a PyTorch Deep Learning VM Instance](https://cloud.google.com/deep-learning-vm/docs/pytorch_start_instance)
+- [Google Compute Engine Now Has Images With PyTorch 1.0.0 and FastAi 1.0.2](https://blog.kovalevskyi.com/google-compute-engine-now-has-images-with-pytorch-1-0-0-and-fastai-1-0-2-57c49efd74bb)
+
+### Building Deep Learning Computer
 
 - [Why building your own Deep Learning Computer is 10x cheaper than AWS](https://medium.com/the-mission/why-building-your-own-deep-learning-computer-is-10x-cheaper-than-aws-b1c91b55ce8c)
 - [RTX 2080 Ti Deep Learning Benchmarks](https://lambdalabs.com/blog/2080-ti-deep-learning-benchmarks/)
