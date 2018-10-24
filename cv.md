@@ -114,7 +114,7 @@ Association des étudiant(e)s en mathématiques de l’Université de Sherbrooke
 - [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning), Coursera (2018)
 - [Full Stack Web Developer Nanodegree](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004), Udacity (2017)
 
-[More information here](learning/index.md) | [Plus d'information ici](learning/index.md)
+[More information here](learning/index.md) &#8402; [Plus d'information ici](learning/index.md)
 
 <!--
 - [Responsive Web Design Fundamentals](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893), Udacity (2016)
