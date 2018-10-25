@@ -8,4 +8,4 @@
 - [Références utiles sur les infrastructures](infra.md)
 - [Références utiles sur les ordres professionnels](opq/index.md)
 
-[LinkedIn](https://www.linkedin.com/in/alain-boisvert-mba-98b058156) &#8402; [GitHub](https://github.com/boisalai) &#8402; [Kaggle](https://www.kaggle.com/boisalai) &#8402; [Email](mailto:ay.boisvert@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/alain-boisvert-mba-98b058156) / [GitHub](https://github.com/boisalai) / [Kaggle](https://www.kaggle.com/boisalai) / [Email](mailto:ay.boisvert@gmail.com)
