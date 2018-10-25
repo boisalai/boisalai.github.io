@@ -1,22 +1,44 @@
 var app = new Vue({ 
     el: '#app',
     data: {
-        message: 'Hello Vue4!'
+        locale: "en",
+        language: "FR",
+        title: "Revenu disponible 5",
+        isCouple: false,
+        numberOfChildren: 0,
+        table1: "<span style='color: red'>This should be red.</span>"
+    },
+    created: function () {
+        console.log("created!");
+    },
+    beforeUpdate: function () {
+        console.log("beforeUpdate!");
+    },
+    updated: function () {
+        console.log("updated!");
+    },
+    methods: {
+        changeLanguage: function () {
+            this.locale = this.locale === 'en' ? 'fr' : 'en'
+            this.language = this.locale === 'en' ? 'FR' : 'EN'
+        },
+        calculate: function () {
+            console.log("calculate!");
+        }
     }
 });
 
-$('#alain1').on('changed.bs.select', function (e, clickedIndex, newValue, oldValue) {
-    var selected = $(e.currentTarget).val();
-    alert("alain1")
-});
+app.calculate();
 
 $("#alain2").change(function(){
     var selected = $('#alain1 option:selected').val();
     alert(selected);           
 });
 
-$("#alain1").on("change", function () {
-    alert("alain1")
+$("#years").on("change", function() {
+    var value = $(this).val();
+    var index = $(this).index();
+    console.log("years=" + value + ", " + index);
     /*
     switch ($(this).val()) {
         case 'Pop':
@@ -41,4 +63,10 @@ $("#alain1").on("change", function () {
             break;
     }
     */
+});
+
+$("#family").on("change", function() {
+    var value = $(this).val();
+    var index = $(this).index();
+    console.log("family=" + value + ", " + index);
 });
