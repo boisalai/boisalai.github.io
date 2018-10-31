@@ -67,6 +67,7 @@
 
 2018
 
+- 2018-10-27 ["Je sais où je m'en vais" Le ministre Roberge a beaucoup d’idées pour l’éducation… qu’il veut implanter rapidement. Patrick Lagacé](http://plus.lapresse.ca/screens/bee55241-9a19-47f5-9e76-43e34da5157b__7C___0.html)
 - 2018-10-19 [Voici quelles sont les priorités du nouveau ministre de l’Éducation](https://www.journaldemontreal.com/2018/10/19/voici-quelles-sont-les-priorites-du-nouveau-ministre-de-leducation)
 - 2018-10-16 [Augmentation des élèves à la CSPÎ: l’école Sainte-Marguerite-Bourgeoys, agrandie et améliorée](http://journalmetro.com/local/saint-leonard/actualites-saint-leonard/1864728/augmentation-des-eleves-a-la-cspi-lecole-sainte-marguerite-bourgeoys-agrandie-et-amelioree/)
 - 2018-10-12 [La Commission scolaire Marguerite-Bourgeoys pourrait cesser d'admettre de nouveaux élèves](https://ici.radio-canada.ca/nouvelle/1129455/commission-scolaire-marguerite-bourgeoys-eleves-immigration-situation-irreguliere)

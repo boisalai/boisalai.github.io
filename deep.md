@@ -35,6 +35,7 @@
   - [Udacity, AI programming with Python](https://www.udacity.com/course/ai-programming-python-nanodegree--nd089)
 - fast.ai
   - [Fast.ai](http://www.fast.ai/)
+    - [forums](https://forums.fast.ai/)
     - [fastai_docs notebooks](https://github.com/fastai/fastai_docs)
   - [Practical Deep Learning For Coders, Part 1](http://course.fast.ai/)
     - [Practical Deep Learning for Coders, v3](http://course-v3.fast.ai/index.html)
@@ -242,6 +243,7 @@ Liens:
 - [Object Detection with R-CNN](https://www.mihaileric.com/posts/object-detection-with-rcnn)
 - [Fast Object Detection with Fast R-CNN](https://www.mihaileric.com/posts/fast-object-detection-with-fast-rcnn/)
 - [Recent Advances in Object Detection in the Age of Deep Convolutional Neural Networks](https://arxiv.org/abs/1809.03193)
+- [Faster R-CNN and Mask R-CNN in PyTorch 1.0](https://github.com/facebookresearch/maskrcnn-benchmark)
 
 Notions:
 
@@ -318,6 +320,8 @@ Notions:
 - [SLING - A natural language frame semantics parser](https://github.com/google/sling)
 - An [Apache 2.0](https://github.com/allenai/allennlp) NLP research library, built on PyTorch, for developing state-of-the-art deep learning models on a wide variety of linguistic tasks.
 - [Open-SESAME](https://github.com/swabhs/open-sesame)
+- [Summarization](https://github.com/sebastianruder/NLP-progress/blob/master/english/summarization.md)
+- https://github.com/yandexdataschool/nlp_course
 
 ### Variational autoencoders (VAEs)
 
@@ -459,6 +463,8 @@ Notions:
 - [Style-transfer/setup_first_alia_styletransfer.ipynb](https://github.com/vinayakpahalwan7/Style-transfer/blob/master/setup_first_alia_styletransfer.ipynb)
 - [Towards Natural Language Semantic Code Search](https://githubengineering.com/towards-natural-language-semantic-code-search/)
 - [Clara, A Neural Net Music Generator](http://christinemcleavey.com/clara-a-neural-net-music-generator/)
+- [Generating custom photo-realistic faces using AI](https://blog.insightdatascience.com/generating-custom-photo-realistic-faces-using-ai-d170b1b59255)
+- [Generating Memoji from Photos](https://patniemeyer.github.io/2018/10/29/generating-memoji-from-photos.html)
 
 <a name="kaggle"></a>
 
@@ -679,10 +685,11 @@ https://app.neptune.ml/-/organization/7a92dc4f-48b3-42bf-a2a8-efbd32d25b7c
 
 - [Launching a PyTorch Deep Learning VM Instance](https://cloud.google.com/deep-learning-vm/docs/pytorch_start_instance)
 - [Google Compute Engine Now Has Images With PyTorch 1.0.0 and FastAi 1.0.2](https://blog.kovalevskyi.com/google-compute-engine-now-has-images-with-pytorch-1-0-0-and-fastai-1-0-2-57c49efd74bb)
+- [Python sur Google Cloud Platform](https://cloud.google.com/python/)
 
 ### Building Deep Learning Computer
 
 - [Why building your own Deep Learning Computer is 10x cheaper than AWS](https://medium.com/the-mission/why-building-your-own-deep-learning-computer-is-10x-cheaper-than-aws-b1c91b55ce8c)
 - [RTX 2080 Ti Deep Learning Benchmarks](https://lambdalabs.com/blog/2080-ti-deep-learning-benchmarks/)
 
-[Home](README.md) &#8402; [Accueil](README.md)
+[Home](README.md) / [Accueil](README.md)
