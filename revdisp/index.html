@@ -8,29 +8,33 @@
         <meta name="description" content="Revenu disponible">
         <meta name="author" content="Alain Boisvert">
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="index.css">
 
-        <!-- development version, includes helpful console warnings -->
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <!-- production version, optimized for size and speed 
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-        -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-i18n/8.3.0/vue-i18n.min.js"></script>
+        
+        <!-- Load the d3.js library. -->
+        <script src="https://d3js.org/d3.v5.min.js"></script>
 
-        <script src="https://unpkg.com/vue/dist/vue.js"></script>
-        <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
+        <!-- Load the moment.js library. -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+        <!-- Load the model of the Ministry of Financethe Finance -->
+        <script src="revenu-disponible_janv2018.js"></script>
     </head>
     <body class="bg-light">
-
         <div class="container" id="app">
             <div class="text-right mb-2">
                 <a class="nav-link" href="#" v-on:click="changeLanguage">{{ $t("language") }}</a>
             </div>
 
             <div class="text-center mb-3">
-                <!-- See https://fr.m.wikipedia.org/wiki/Liste_de_drapeaux_canadiens#Drapeaux_provinciaux_et_territoriaux -->
+                <!-- See https://fr.m.wikipedia.org/wiki/Liste_de_drapeaux_canadiens#Drapeaux_provinciaux_et_territoriaux 
                 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Flag_of_British_Columbia.svg" alt="" height="40">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Ontario.svg" alt="" height="40">
+                -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg" alt="" height="40">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Flag_of_Quebec.svg" alt="" height="40">
                 
                 <h2 class="mt-2">{{ $t("title") }}</h2>
@@ -38,31 +42,29 @@
             </div>
             
             <div class="row">
-                <div class="col-md-8 order-md-1">
+                <div class="col-md-6 order-md-1">
                     <form class="needs-validation" novalidate>
 
                         <!-- Provinces et régimes fiscaux. -->
                         <h4 class="mb-2">{{ $t("text2") }}</h4>
                         <div class="row mb-3">
                             <div class="col-md-6 mb-2 form-group">
-                                <label for="provinces">{{ $t("province.text3") }}</label>
-                                <select multiple class="form-control" id="provinces" v-model="provinces">
-                                    <option value="BC">{{ $t("province.bc") }}</option>
-                                    <option value="ON">{{ $t("province.on") }}</option>
+                                <label for="provinces">{{ $t("province.title") }}</label><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>..
+                                <select class="form-control" id="provinces" v-model="provinces" disabled>
                                     <option value="QC">{{ $t("province.qc") }}</option>
                                 </select>
-                                <div class="invalid-feedback" id="provinces-invalid">{{ $t("province.error") }}</div>
+                                <div class="invalid-feedback" id="provinces-invalid">{{ $t("province.invalid") }}</div>
                             </div>
                             <div class="col-md-6 form-group">
-                                <label for="years">{{ $t("fiscal.text4") }}</label>
-                                <select multiple class="form-control" id="years" v-model="years">
+                                <label for="years">{{ $t("year.title") }}</label>
+                                <select class="form-control" id="years" v-model="years">
                                     <option>2019</option>
                                     <option>2018</option>
                                     <option>2017</option>
                                     <option>2016</option>
                                     <option>2015</option>
                                 </select>
-                                <div class="invalid-feedback" id="years-invalid">{{ $t("fiscal.error") }}</div>
+                                <div class="invalid-feedback" id="years-invalid">{{ $t("year.invalid") }}</div>
                             </div>
                         </div>
 
@@ -92,8 +94,8 @@
                         </div>
 
                         <!-- Âge des adultes. -->
-                        <div class="row mb-2">
-                            <div class="col-md-6 form-group mb-3">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
                                 <label for="age1">{{ $t("text7") }}</label>
                                 <select class="form-control" id="age1" v-model="age1">
                                     <option value="1">{{ $t("adult.a1") }}</option>
@@ -102,7 +104,7 @@
                                     <option value="4">{{ $t("adult.a4") }}</option>
                                 </select>
                             </div>
-                            <div class="col-md-6 form-group" v-show="isCouple">
+                            <div class="col-md-6 form-group" v-show="couple">
                                 <label for="age2">{{ $t("text8") }}</label>
                                 <select class="form-control" id="age2" v-model="age2">
                                     <option value="1">{{ $t("adult.a1") }}</option>
@@ -113,8 +115,88 @@
                             </div>
                         </div>
 
+                        <!-- Revenus bruts de l'adulte 1. -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="work1">{{ $t("income.work1") }}</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend" v-show="i18n.locale == 'en'">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="work1" v-model="work1" placeholder="" value="" required>
+                                        <div class="input-group-append" v-show="i18n.locale == 'fr'">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                    </div>
+                                    <div class="invalid-feedback" id="work1-invalid">{{ $t("income.invalid") }}</div>
+                                </div>
+                                <div class="form-group" v-show="choice3 == false && choice4 == false">
+                                    <input type="range" class="form-control-range" id="workRange1" min="0" max="250000" v-model="work1">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="pension1">{{ $t("income.retirement1") }}</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend" v-show="i18n.locale == 'en'">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="pension1" v-model="pension1" placeholder="" value="" required>
+                                        <div class="input-group-append" v-show="i18n.locale == 'fr'">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                    </div>
+                                    <div class="invalid-feedback" id="pension1-invalid">{{ $t("income.invalid") }}</div>
+                                </div>
+                                <div class="form-group" v-show="choice3 == false && choice4 == false">
+                                    <input type="range" class="form-control-range" id="pensionRange1" min="0" max="250000" v-model="pension1">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Revenus bruts de l'adulte 2. -->
+                        <div class="row" v-show="couple">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="work2">{{ $t("income.work2") }}</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend" v-show="i18n.locale == 'en'">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="work2" v-model="work2" placeholder="" value="" required>
+                                        <div class="input-group-append" v-show="i18n.locale == 'fr'">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                    </div>
+                                    <div class="invalid-feedback" id="work2-invalid">{{ $t("income.invalid") }}</div>
+                                </div> 
+                                <div class="form-group">
+                                    <input type="range" class="form-control-range" id="workRange2" min="0" max="250000" v-model="work2">
+                                </div> 
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="pension2">{{ $t("income.retirement2") }}</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend" v-show="i18n.locale == 'en'">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="pension2" v-model="pension2" placeholder="" value="" required>
+                                        <div class="input-group-append" v-show="i18n.locale == 'fr'">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                    </div>
+                                    <div class="invalid-feedback" id="pension2-invalid">{{ $t("income.invalid") }}</div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="range" class="form-control-range" id="pensionRange2" min="0" max="250000" v-model="pension2">
+                                </div>  
+                            </div>
+                        </div>
+
                         <!-- Âge du premier enfant. -->
-                        <div class="row mb-2" v-show="numberOfChildren >= 1">
+                        <div class="row" v-show="numberOfChildren >= 1">
                             <div class="col-md-6 form-group mb-3">
                                 <label for="childAge1">{{ $t("child.age1") }}</label>
                                 <select class="form-control" id="childAge1">
@@ -126,8 +208,15 @@
                             <div class="col-md-6">
                                 <div class="form-group mb-1">
                                     <label for="childCare1">{{ $t("child.care1") }}</label>
-                                    <input type="text" class="form-control" id="childCare1"
-                                        placeholder="" value="" required>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend" v-show="i18n.locale == 'en'">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="childCare1" v-model="childCare1" placeholder="" value="0" required>
+                                        <div class="input-group-append" v-show="i18n.locale == 'fr'">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                    </div>
                                     <div class="invalid-feedback">Valid first name is required.</div>
                                 </div>
 
@@ -138,29 +227,43 @@
                             </div>
                         </div>
 
-                        <h4 class="mb-2">{{ $t("table.text1") }}</h4>
+                        <h4 class="mt-2 mb-2">{{ $t("table.title") }}</h4>
                         <div class="row mb-2">
                             <div class="col-md-12 form-group">
+                                <!--
                                 <div class="form-group">
-                                    <label for="tables">{{ $t("table.text2") }}</label>
+                                    <label for="tables">{{ $t("table.subtitle") }}</label>
                                     <select multiple class="form-control" id="tables" v-model="tables">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
+                                        <option value="T1">{{ $t("table.table1") }}</option>
+                                        <option value="T2">{{ $t("table.table2") }}</option>
+                                        <option value="T3">{{ $t("table.graph1") }}</option>
+                                        <option value="T4">{{ $t("table.graph2") }}</option>
                                     </select>
-                                    <div class="invalid-feedback">{{ $t("table.text3") }}</div>
+                                    <div class="invalid-feedback">{{ $t("table.invalid") }}</div>
                                 </div>
+                                -->
 
-                                <div class="form-group form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                                    <label class="form-check-label" for="gridCheck">{{ $t("table.text4") }}</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="choice1" v-model="choice1">
+                                    <label class="form-check-label" for="choice1">{{ $t("table.choice1") }}</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="choice2" v-model="choice2">
+                                    <label class="form-check-label" for="choice3">{{ $t("table.choice2") }}</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="choice3" v-model="choice3">
+                                    <label class="form-check-label" for="choice3">{{ $t("table.choice3") }}</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="choice4" v-model="choice4">
+                                    <label class="form-check-label" for="choice4">{{ $t("table.choice4") }}</label>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="row">
+                        <!--
+                        <div class="row mb-4">
                             <div class="col pr-1">
                                 <button type="button" class="btn btn-warning btn-lg btn-block" v-on:click="initialize">{{ $t("button.text2") }}</button>
                             </div>
@@ -168,50 +271,286 @@
                                 <button type="button" class="btn btn-primary btn-lg btn-block" v-on:click="calculate">{{ $t("button.text1") }}</button>
                             </div>
                         </div>
+                        -->
+
+                        <button type="button" class="btn btn-outline-primary btn-lg btn-block mb-5" v-on:click="initialize">{{ $t("button.text2") }}</button>
                     </form>
 
-                    <hr class="mb-4">
-                    <h4 class="mb-3">Résultats</h4>
-
-                    <div v-html="table1"></div>
+                    
                 </div>
 
-                <div class="col-md-4 order-md-2">
-                    <ul class="list-group mb-3">
-                        <li class="list-group-item d-flex justify-content-between lh-condensed">
-                        <div>
-                            <h6 class="my-0">Product name</h6>
-                            <small class="text-muted">Brief description</small>
-                        </div>
-                        <span class="text-muted">$12</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between lh-condensed">
-                        <div>
-                            <h6 class="my-0">Second product</h6>
-                            <small class="text-muted">Brief description</small>
-                        </div>
-                        <span class="text-muted">$8</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between lh-condensed">
-                        <div>
-                            <h6 class="my-0">Third item</h6>
-                            <small class="text-muted">Brief description</small>
-                        </div>
-                        <span class="text-muted">$5</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between bg-light">
-                        <div class="text-success">
-                            <h6 class="my-0">Promo code</h6>
-                            <small>EXAMPLECODE</small>
-                        </div>
-                        <span class="text-success">-$5</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between">
-                        <span>Total (USD)</span>
-                        <strong>$20</strong>
-                        </li>
-                    </ul>
+                <div class="col-md-6 order-md-2">
+                    <div class="alert alert-danger" role="alert" v-show="invalid > 0">
+                        {{ $t("table.invalid") }}
+                    </div>
 
+                    <div v-show="choice1">
+                        <p class="number" v-show="false">{{ $t("table.table") }} 1</p>
+                        <h4 class="mb-0">{{ $t("table.choice1") }} - {{ result.year }}</h4>
+                        <p class="parenthesis">{{ $t("table.dollars") }}</p>
+        
+                        <table class="mfq">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <td style="min-width: 65px;">Montant</td>
+                                    <td style="min-width: 65px;">Taux marginal</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="line bold">
+                                    <th>Revenu total</th>
+                                    <td>{{ $n(result.grossIncome, "amount") }}</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="line bold" style="background-color: rgb(226, 227, 229);">
+                                    <th><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Flag_of_Quebec.svg" alt="" height="16" style="vertical-align: text-top;"> {{ $t("qc.title") }}</th>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("qc.pit") }}</th>
+                                    <td>{{ $n(result.qc.qc.pit.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.qc.pit.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("qc.ttp") }}</th>
+                                    <td>{{ $n(result.qc.qc.ttp.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.qc.ttp.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr class="subtotal bold">
+                                    <th>{{ $t("qc.total") }}</th>
+                                    <td>{{ $n(result.qc.qc.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.qc.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr class="bold line" style="background-color: rgb(226, 227, 229);">
+                                    <th><img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg" alt="" height="16" style="vertical-align: text-top;"> {{ $t("ca.title") }}</th>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("ca.pit") }}</th>
+                                    <td>{{ $n(result.qc.ca.pit.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.ca.pit.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("ca.ttp") }}</th>
+                                    <td>{{ $n(result.qc.ca.ttp.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.ca.ttp.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr class="subtotal bold">
+                                    <th>{{ $t("ca.total") }}</th>
+                                    <td>{{ $n(result.qc.ca.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.ca.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("ctb.title") }}</th>
+                                    <td>{{ $n(result.qc.ctb.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.ctb.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr class="line">
+                                    <th>Frais de garde</th>
+                                    <td>{{ $n(result.childCare, "amount") }}</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="line bold">
+                                    <th>Revenu disponible</th>
+                                    <td>{{ $n(result.qc.disposableIncome, "amount") }}</td>
+                                    <td>{{ $n(result.qc.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div v-show="choice2">
+                        <p class="number" v-show="false">{{ $t("table.table") }} 2</p>
+                        <h4 class="mb-0">{{ $t("table.choice2") }} - {{ result.year }}</h4>
+                        <p class="parenthesis">{{ $t("table.dollars") }}</p>
+        
+                        <table class="mfq">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <td style="min-width: 65px;">Montant</td>
+                                    <td style="min-width: 65px;">Taux marginal</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="line bold">
+                                    <th>Revenu total</th>
+                                    <td>{{ $n(result.grossIncome, "amount") }}</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="line bold" style="background-color: rgb(226, 227, 229);">
+                                    <th><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Flag_of_Quebec.svg" alt="" height="16" style="vertical-align: text-top;"> {{ $t("qc.title") }}</th>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("qc.pit") }}</th>
+                                    <td>{{ $n(result.qc.qc.pit.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.qc.pit.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("qc.sa") }}</th>
+                                    <td>{{ $n(result.qc.qc.sa.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.qc.sa.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("qc.ca") }}</th>
+                                    <td>{{ $n(result.qc.qc.ca.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.qc.ca.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("qc.spss") }}</th>
+                                    <td>{{ $n(result.qc.qc.spss.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.qc.spss.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("qc.wp") }}</th>
+                                    <td>{{ $n(result.qc.qc.wp.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.qc.wp.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("qc.stc") }}</th>
+                                    <td>{{ $n(result.qc.qc.stc.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.qc.stc.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("qc.tcce") }}</th>
+                                    <td>{{ $n(result.qc.qc.tcce.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.qc.tcce.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("qc.sap") }}</th>
+                                    <td>{{ $n(result.qc.qc.sap.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.qc.sap.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("qc.rtcme") }}</th>
+                                    <td>{{ $n(result.qc.qc.rtcme.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.qc.rtcme.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr class="subtotal bold">
+                                    <th>{{ $t("qc.total") }}</th>
+                                    <td>{{ $n(result.qc.qc.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.qc.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr class="bold line" style="background-color: rgb(226, 227, 229);">
+                                    <th><img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg" alt="" height="16" style="vertical-align: text-top;"> {{ $t("ca.title") }}</th>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th><a href="" target="_blank">{{ $t("ca.pit") }}</a></th>
+                                    <td>{{ $n(result.qc.ca.pit.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.ca.pit.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("ca.ccb") }}</th>
+                                    <td>{{ $n(result.qc.ca.ccb.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.ca.ccb.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("ca.gst") }}</th>
+                                    <td>{{ $n(result.qc.ca.gst.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.ca.gst.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("ca.witb") }}</th>
+                                    <td>{{ $n(result.qc.ca.witb.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.ca.witb.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("ca.oasp") }}</th>
+                                    <td>{{ $n(result.qc.ca.oasp.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.ca.oasp.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("ca.rmes") }}</th>
+                                    <td>{{ $n(result.qc.ca.rmes.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.ca.rmes.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr class="subtotal bold">
+                                    <th>{{ $t("ca.total") }}</th>
+                                    <td>{{ $n(result.qc.ca.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.ca.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr class="bold line" style="background-color: rgb(226, 227, 229);">
+                                    <th>{{ $t("ctb.title") }}</th>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("ctb.ei") }}</th>
+                                    <td>{{ $n(result.qc.ctb.ei.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.ctb.ei.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("ctb.qpip") }}</th>
+                                    <td>{{ $n(result.qc.ctb.qpip.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.ctb.qpip.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("ctb.qpp") }}</th>
+                                    <td>{{ $n(result.qc.ctb.qpp.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.ctb.qpp.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("ctb.hsf") }}</th>
+                                    <td>{{ $n(result.qc.ctb.hsf.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.ctb.hsf.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("ctb.hc") }}</th>
+                                    <td>{{ $n(result.qc.ctb.hc.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.ctb.hc.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{{ $t("ctb.pdip") }}</th>
+                                    <td>{{ $n(result.qc.ctb.pdip.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.ctb.pdip.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr class="subtotal bold">
+                                    <th>{{ $t("ctb.total") }}</th>
+                                    <td>{{ $n(result.qc.ctb.total, "amount") }}</td>
+                                    <td>{{ $n(result.qc.ctb.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                                <tr class="line">
+                                    <th>Frais de garde</th>
+                                    <td>{{ $n(result.childCare, "amount") }}</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="line bold">
+                                    <th>Revenu disponible</th>
+                                    <td>{{ $n(result.qc.disposableIncome, "amount") }}</td>
+                                    <td>{{ $n(result.qc.marginalTaxRate, "percent") }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">Well done!</h4>
+                                <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                                <hr>
+                                <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                              </div>
+
+                    </div>
+
+                    <div v-show="choice3">
+                        <p class="number" v-show="false">{{ $t("table.chart") }} 1</p>
+                        <h4 class="mb-0">{{ $t("table.choice3") }} - {{ result.year }}</h4>
+                        <p class="parenthesis">{{ $t("table.dollars") }}</p>
+                        <svg id="chart1" width="100%"></svg>
+                    </div>
+
+                    <div v-show="choice4">
+                        <p class="number" v-show="false">{{ $t("table.chart") }} 2</p>
+                        <h4 class="mb-0">{{ $t("table.choice4") }} - {{ result.year }}</h4>
+                        <p class="parenthesis">{{ $t("table.dollars") }}</p>
+                        <div id="chart2" width="100%"></div>
+                    </div>
                 </div>
             </div>
 

@@ -3,33 +3,60 @@ html, body {
     padding: 0;
 }
 
-
 /* 
 https://www.gov.uk/government/news/winners-of-51-million-government-competition-to-develop-world-leading-self-driving-car-testing-infrastructure-unveiled 
 */
-p.number { font-variant: small-caps; margin-bottom: 0px; }
-p.title { font-weight: bold; margin: 0px; }
+p.number { text-transform: uppercase; margin-bottom: 0px; }
+p.title { font-size: 18px; font-weight: bold; margin: 0px; }
 p.subtitle { font-weight: normal; margin: 0px; }
 p.parenthesis { margin: -4px 0px 2px 0px; }
-table.mfq { border-top: 2px solid black; border-bottom: 2px solid black; width: 100%; }
+table.mfq { border-top: 2px solid black; border-bottom: 2px solid black; width: 100%; max-width: 100%; margin-bottom: 30px; }
 table.mfq thead { color: black; font-weight: normal; vertical-align: bottom; }
-table.mfq thead tr th { font-size: 14px; font-weight: bold; text-align: left; white-space: normal; }
-table.mfq thead tr td { font-size: 14px; font-weight: bold; text-align: right; white-space: normal; width: 80px; }
+table.mfq thead tr th { font-size: 16px; font-weight: bold; text-align: left; white-space: normal; }
+table.mfq thead tr td { font-size: 16px; font-weight: bold; text-align: right; white-space: normal; width: 80px; }
 table.mfq thead tr td.center { text-align: center; border-bottom: 1px solid black; }
-table.mfq tbody tr th { font-size: 14px; font-weight: normal; text-align: left; vertical-align: bottom; white-space: nowrap; }
+table.mfq tbody tr th { font-size: 16px; font-weight: normal; text-align: left; vertical-align: bottom; word-wrap: break-word; }
 table.mfq tbody tr th.normal { white-space: normal; }
-table.mfq tbody tr td { font-size: 14px; font-weight: normal; text-align: right; vertical-align: bottom; padding-left: 10px; white-space: nowrap; }
+table.mfq tbody tr td { font-size: 16px; font-weight: normal; text-align: right; vertical-align: bottom; padding-left: 10px; white-space: nowrap; }
 table.mfq tbody tr.bold th { font-weight: bold; }
 table.mfq tbody tr.bold td { font-weight: bold; }
 table.mfq tbody tr.grey th { background-color: #EEEEEE; }
 table.mfq tbody tr.grey td { background-color: #EEEEEE; }
 table.mfq tbody tr.line th { border-top: 1px solid black; }
 table.mfq tbody tr.line td { border-top: 1px solid black; }
-table.mfq tbody tr.subtotal th { border-top: 0px solid rgba(0,0,0,.15); font-weight: bold; }
-table.mfq tbody tr.subtotal td { border-top: 1px solid rgba(0,0,0,.15); font-weight: bold; }
-table.mfq tbody tr.total th { border-top: 1px solid rgba(0,0,0,.15); font-weight: bold; }
-table.mfq tbody tr.total td { border-top: 1px solid rgba(0,0,0,.15); font-weight: bold; }
+table.mfq tbody tr.subtotal th { border-top: 0px solid black; font-weight: bold; }
+table.mfq tbody tr.subtotal td { border-top: 1px solid black; font-weight: bold; }
+table.mfq tbody tr.total th { border-top: 1px solid black; font-weight: bold; }
+table.mfq tbody tr.total td { border-top: 1px solid black; font-weight: bold; }
 img.chart { margin-top: 3px; margin-bottom: 3px; }
 table.footnote { font-size: 12px; border-collapse: collapse; margin-top: 2px; }
 table.footnote tbody tr th { font-weight: normal; text-align: left; vertical-align: top; padding: 0px 4px 0px 0px; }
 table.footnote tbody tr td { text-align: left; vertical-align: top; padding: 0px 4px 0px 0px; }
+
+/*
+D3.js
+*/
+
+
+/* Style the lines by removing the fill and applying a stroke */
+.line {
+    fill: none;
+    stroke: black;
+    stroke-width: 3;
+}
+
+.area {
+    fill: rgba(0,128,255,0.2);
+}
+
+.chart:hover .line {
+    stroke: rgba(0,128,255,1);
+}
+
+.axis {
+    font-family: "Segoe UI","Helvetica Neue",Arial,sans-serif
+}
+
+.g_main {
+    pointer-events: all;
+}

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="revenu-disponible_janv2018.js"></script>
+    <script type="text/javascript" src="calculator.js"></script>
+    <style>
+    body { font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
+    select, input { margin: 2px; width: 150px; }
+    table input { margin: 2px; display: block; width: 50px; }
+    button { background-color: coral}
+    table { margin-bottom: 100px; }
+    </style>
+  </head>
+  <body>
+    <select name="Ecart_An" id="Ecart_An">
+			<option data-value="s:2018-2016" value="s:2018-2016" selected>2018 et 2016</option>
+			<option data-value="s:2018-2017" value="s:2018-2017">2018 et 2017</option>
+			<option data-value="s:2017-2016" value="s:2017-2016">2017 et 2016</option>
+		</select>
+
+    <select name="Situation" id="Situation">
+			<option data-value="s:Personne vivant seule" value="s:Personne vivant seule" selected>Personne vivant seule</option>
+			<option data-value="s:Famille monoparentale" value="s:Famille monoparentale">Famille monoparentale</option>
+			<option data-value="s:Couple" value="s:Couple">Couple</option>
+			<option data-value="s:Retraité vivant seul" value="s:Retraité vivant seul">Retraité vivant seul</option>
+			<option data-value="s:Couple de retraités" value="s:Couple de retraités">Couple de retraités</option>
+    </select>
+    
+    <select name="NbEnfants" id="NbEnfants">
+      <option data-value="s:0" value="s:0" selected>Aucun enfant</option>
+      <option data-value="s:1" value="s:1">Un seul enfant</option>
+      <option data-value="s:2" value="s:2">Deux enfants</option>
+      <option data-value="s:3" value="s:3">Trois enfants</option>
+      <option data-value="s:4" value="s:4">Quatre enfants</option>
+      <option data-value="s:5" value="s:5">Cinq enfants</option>
+    </select>
+
+    <button type="button" onclick="go(0)">Click Me!</button><br>
+
+    <input id="Revenu1" type="number" value="50000"/>
+    <input id="AgeAdulte1" type="number" value="35"/><br>
+    <input type="range" min="5" max="10" step="1" onchange="setRevenu1(this.value)"><br>
+
+    <input id="Revenu2" type="number" value="0"/>
+    <input id="AgeAdulte2" type="number" value="0"/><br>
+
+    <input id="AgeEnfant1" type="number" value="0"/>
+    <input id="Frais1" type="number" value="0"/>
+    <select name="type_garde1" id="type_garde1">
+      <option data-value="s:Subventionnée" value="s:Subventionnée" selected>Subventionné</option>
+      <option data-value="s:Non subventionnée" value="s:Non subventionnée">Non subventionné</option>
+    </select><br>
+
+    <input id="AgeEnfant2" type="number" value="0"/>
+    <input id="Frais2" type="number" value="0"/>
+    <select name="type_garde2" id="type_garde2">
+      <option data-value="s:Subventionnée" value="s:Subventionnée" selected>Subventionné</option>
+      <option data-value="s:Non subventionnée" value="s:Non subventionnée">Non subventionné</option>
+    </select><br>
+
+    <input id="AgeEnfant3" type="number" value="0"/>
+    <input id="Frais3" type="number" value="0"/>
+    <select name="type_garde3" id="type_garde3">
+      <option data-value="s:Subventionnée" value="s:Subventionnée" selected>Subventionné</option>
+      <option data-value="s:Non subventionnée" value="s:Non subventionnée">Non subventionné</option>
+    </select><br>
+
+    <input id="AgeEnfant4" type="number" value="0"/>
+    <input id="Frais4" type="number" value="0"/>
+    <select name="type_garde4" id="type_garde4">
+      <option data-value="s:Subventionnée" value="s:Subventionnée" selected>Subventionné</option>
+      <option data-value="s:Non subventionnée" value="s:Non subventionnée">Non subventionné</option>
+    </select><br>
+
+    <input id="AgeEnfant5" type="number" value="0"/>
+    <input id="Frais5" type="number" value="0"/>
+    <select name="type_garde5" id="type_garde5">
+      <option data-value="s:Subventionnée" value="s:Subventionnée" selected>Subventionné</option>
+      <option data-value="s:Non subventionnée" value="s:Non subventionnée">Non subventionné</option>
+    </select><br>
+    
+    <table>
+      <tr>
+        <td></td>
+        <td>2016</td>
+        <td>2017</td>
+        <td>2018</td>
+        <td>Écart</td>
+        <td id="year"></td>
+        <td>Écart</td>
+      </tr>
+      <tr>
+        <td>Revenu disponible</td>
+        <td><input id="RD_vold"/></td>
+        <td><input id="RD_old"/></td>
+        <td><input id="RD_new"/></td>
+        <td><input id="RD_ecart"/></td>
+        <td><input id="rd"/></td>
+        <td><input id="rd_delta"/></td>
+      </tr>
+      <tr>
+        <td><b>Québec</b></td>
+      </tr>
+      <tr>
+        <td>Impôt sur le revenu</td>
+        <td><input id="QC_impot_vold"/></td>
+        <td><input id="QC_impot_old"/></td>
+        <td><input id="QC_impot_new"/></td>
+        <td><input id="QC_impot_ecart"/></td>
+        <td><input id="qc_impot"/></td>
+        <td><input id="qc_impot_delta"/></td>
+      </tr>
+      <tr>
+        <td>Aide sociale</td>
+        <td><input id="QC_adr_vold"/></td>
+        <td><input id="QC_adr_old"/></td>
+        <td><input id="QC_adr_new"/></td>
+        <td><input id="QC_adr_ecart"/></td>
+        <td><input id="qc_sa"/></td>
+        <td><input id="qc_sa_delta"/></td>
+      </tr>
+      <tr>
+        <td>Soutien aux enfants</td>
+        <td><input id="QC_sae_vold"/></td>
+        <td><input id="QC_sae_old"/></td>
+        <td><input id="QC_sae_new"/></td>
+        <td><input id="QC_sae_ecart"/></td>
+      </tr>
+      <tr>
+        <td>Supplément pour l'achat<br>de matériel scolaire</td>
+        <td><input id="SFS_vold"/></td>
+        <td><input id="SFS_old"/></td>
+        <td><input id="SFS_new"/></td>
+        <td><input id="SFS_ecart"/></td>
+      </tr>
+      <tr>
+        <td>Prime au travail</td>
+        <td><input id="QC_pt_vold"/></td>
+        <td><input id="QC_pt_old"/></td>
+        <td><input id="QC_pt_new"/></td>
+        <td><input id="QC_pt_ecart"/></td>
+        <td><input id="qc_wp"/></td>
+        <td><input id="qc_wp_delta"/></td>
+      </tr>
+      <tr>
+        <td>Crédit d'impôt pour la solidarité</td>
+        <td><input id="QC_sol_vold"/></td>
+        <td><input id="QC_sol_old"/></td>
+        <td><input id="QC_sol_new"/></td>
+        <td><input id="QC_sol_ecart"/></td>
+      </tr>
+      <tr>
+        <td>Crédit d'impôt pour frais de garde</td>
+        <td><input id="QC_garde_vold"/></td>
+        <td><input id="QC_garde_old"/></td>
+        <td><input id="QC_garde_new"/></td>
+        <td><input id="QC_garde_ecart"/></td>
+      </tr>
+      <tr>
+        <td>Allocation logement</td>
+        <td><input id="QC_al_vold"/></td>
+        <td><input id="QC_al_old"/></td>
+        <td><input id="QC_al_new"/></td>
+        <td><input id="QC_al_ecart"/></td>
+      </tr>
+      <tr>
+        <td>Crédit d'impôt remboursable<br>pour frais médicaux</td>
+        <td><input id="QC_medic_vold"/></td>
+        <td><input id="QC_medic_old"/></td>
+        <td><input id="QC_medic_new"/></td>
+        <td><input id="QC_medic_ecart"/></td>
+      </tr>
+      <tr>
+        <td>Total - Québec</td>
+        <td><input id="QC_total_vold"/></td>
+        <td><input id="QC_total_old"/></td>
+        <td><input id="QC_total_new"/></td>
+        <td><input id="QC_total_ecart"/></td>
+        <td><input id="qc_total"/></td>
+        <td><input id="qc_total_delta"/></td>
+      </tr>
+      <tr>
+        <td><b>Canada</b></td>
+      </tr>
+      <tr>
+        <td>Impôt sur le revenu</td>
+        <td><input id="CA_impot_vold"/></td>
+        <td><input id="CA_impot_old"/></td>
+        <td><input id="CA_impot_new"/></td>
+        <td><input id="CA_impot_ecart"/></td>
+      </tr>
+      <tr>
+        <td>Allocation canadienne pour enfants</td>
+        <td><input id="CA_ace_vold"/></td>
+        <td><input id="CA_ace_old"/></td>
+        <td><input id="CA_ace_new"/></td>
+        <td><input id="CA_ace_ecart"/></td>
+      </tr>
+      <tr>
+        <td>Crédit pour la TPS</td>
+        <td><input id="CA_tps_vold"/></td>
+        <td><input id="CA_tps_old"/></td>
+        <td><input id="CA_tps_new"/></td>
+        <td><input id="CA_tps_ecart"/></td>
+      </tr>
+      <tr>
+        <td>Prestation fiscale pour le revenu de travail</td>
+        <td><input id="CA_pfrt_vold"/></td>
+        <td><input id="CA_pfrt_old"/></td>
+        <td><input id="CA_pfrt_new"/></td>
+        <td><input id="CA_pfrt_ecart"/></td>
+      </tr>
+      <tr>
+        <td>Programme de la Sécurité de la vieillesse</td>
+        <td><input id="CA_psv_vold"/></td>
+        <td><input id="CA_psv_old"/></td>
+        <td><input id="CA_psv_new"/></td>
+        <td><input id="CA_psv_ecart"/></td>
+      </tr>
+      <tr>
+        <td>Supplément remboursable pour frais médicaux</td>
+        <td><input id="CA_medic_vold"/></td>
+        <td><input id="CA_medic_old"/></td>
+        <td><input id="CA_medic_new"/></td>
+        <td><input id="CA_medic_ecart"/></td>
+      </tr>
+      <tr>
+        <td>Total - Canada</td>
+        <td><input id="CA_total_vold"/></td>
+        <td><input id="CA_total_old"/></td>
+        <td><input id="CA_total_new"/></td>
+        <td><input id="CA_total_ecart"/></td>
+        <td><input id="ca_total"/></td>
+        <td><input id="ca_total_delta"/></td>
+      </tr>
+      <tr>
+        <td><b>Cotisations</b></td>
+      </tr>
+      <tr>
+        <td>Assurance emploi</td>
+        <td><input id="CA_ae_vold"/></td>
+        <td><input id="CA_ae_old"/></td>
+        <td><input id="CA_ae_new"/></td>
+        <td><input id="CA_ae_ecart"/></td>
+        <td><input id="ctb_ei"/></td>
+        <td><input id="ctb_ei_delta"/></td>
+      </tr>
+      <tr>
+        <td>Régime québécois d'assurance parentale</td>
+        <td><input id="QC_rqap_vold"/></td>
+        <td><input id="QC_rqap_old"/></td>
+        <td><input id="QC_rqap_new"/></td>
+        <td><input id="QC_rqap_ecart"/></td>
+        <td><input id="ctb_qpip"/></td>
+        <td><input id="ctb_qpip_delta"/></td>
+      </tr>
+      <tr>
+        <td>Régime des rentes du Québec</td>
+        <td><input id="CA_rrq_vold"/></td>
+        <td><input id="CA_rrq_old"/></td>
+        <td><input id="CA_rrq_new"/></td>
+        <td><input id="CA_rrq_ecart"/></td>
+        <td><input id="ctb_qpp"/></td>
+        <td><input id="ctb_qpp_delta"/></td>
+      </tr>
+      <tr>
+        <td>Fonds des services de santé</td>
+        <td><input id="QC_fss_vold"/></td>
+        <td><input id="QC_fss_old"/></td>
+        <td><input id="QC_fss_new"/></td>
+        <td><input id="QC_fss_ecart"/></td>
+        <td><input id="ctb_hsf"/></td>
+        <td><input id="ctb_hsf_delta"/></td>
+      </tr>
+      <tr>
+        <td>Contribution santé</td>
+        <td><input id="QC_cs_vold"/></td>
+        <td><input id="QC_cs_old"/></td>
+        <td><input id="QC_cs_new"/></td>
+        <td><input id="QC_cs_ecart"/></td>
+        <td><input id="ctb_hc"/></td>
+        <td><input id="ctb_hc_delta"/></td>
+      </tr>
+      <tr>
+        <td>Régime d'assurance médicaments du Québec</td>
+        <td><input id="QC_ramq_vold"/></td>
+        <td><input id="QC_ramq_old"/></td>
+        <td><input id="QC_ramq_new"/></td>
+        <td><input id="QC_ramq_ecart"/></td>
+        <td><input id="ctb_pdip"/></td>
+        <td><input id="ctb_pdip_delta"/></td>
+      </tr>
+      <tr>
+        <td>Total - Cotisations</td>
+        <td><input id="Cotisation_vold"/></td>
+        <td><input id="Cotisation_old"/></td>
+        <td><input id="Cotisation_new"/></td>
+        <td><input id="Cotisation_ecart"/></td>
+        <td><input id="ctb_total"/></td>
+        <td><input id="ctb_total_delta"/></td>
+      </tr>
+      <tr>
+        <td>Frais de garde</td>
+        <td><input id="Frais_garde_vold"/></td>
+        <td><input id="Frais_garde_old"/></td>
+        <td><input id="Frais_garde_new"/></td>
+        <td><input id="Frais_garde_ecart"/></td>
+      </tr>
+    </table>
+
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    
+    <script>
+      var _Ecart_An = ["s:2018-2016", "s:2018-2017", "s:2017-2016"];
+      var _Situation = ["s:Personne vivant seule", "s:Famille monoparentale", "s:Couple", "s:Retraité vivant seul", "s:Couple de retraités"];
+ 			var _nbEnfants = ["s:0", "s:1", "s:2", "s:3", "s:4", "s:5"];
+			var _type_garde = ["s:Subventionnée", "s:Non subventionnée"];
+      var _Ecart_AN = ["s:2018-2016", "s:2018-2017", "s:2017-2016"];
+      
+      let input2 = {
+        year1: '2017',
+        year2: 'NIL',
+        numberOfAdults: 1,
+        single: true,
+        withSpouse: false,
+        numberOfChildren: 0,
+        age1: 35,
+        age2: 0,
+        employmentIncome1: 50000,
+        employmentIncome2: 0,
+        employmentIncome: 50000,
+        pension1: 0,
+        pension2: 0,
+        pension: 0,
+        capital1: 0,
+        capital2: 0,
+        capital: 0,
+        dividendsEligible1: 0,
+        dividendsEligible2: 0,
+        dividendsEligible: 0,
+        dividendsNonEligible1: 0,
+        dividendsNonEligible2: 0,
+        dividendsNonEligible: 0,
+        grossIncome1: 0,
+        grossIncome2: 0,
+        grossIncome: 0,
+        childAge1: 0,
+        childAge2: 0,
+        childAge3: 0,
+        childAge4: 0,
+        childAge5: 0,
+        childCare1: 0,
+        childCare2: 0,
+        childCare3: 0,
+        childCare4: 0,
+        childCare5: 0,
+        childType1: 0,
+        childType2: 0,
+        childType3: 0,
+        childType4: 0,
+        childType5: 0
+      }
+
+      let result2 = {
+        rd: 0,
+        qc: {
+          total: 0,
+          impot: {
+            totalIncome1: 0,
+            totalIncome2: 0,
+            deductionForWorkers1: 0,
+            deductionForWorkers2: 0,
+            netIncome1: 0,
+            netIncome2: 0,
+            netIncome: 0,
+            taxableIncome1: 0,
+            taxableIncome2: 0,
+            basicPersonalAmount1: 0,
+            basicPersonalAmount2: 0,
+            ageAmount1: 0,
+            ageAmount2: 0,
+            nonRefundableTaxCredits1: 0,
+            nonRefundableTaxCredits2: 0,
+            pitBeforeCredits1: 0,
+            pitBeforeCredits2: 0,
+            pit1: 0,
+            pit2: 0,
+            pit: 0
+          },
+          sa: {
+            total: 0
+          },
+          ca: {
+            total: 0
+          },
+          spss: {
+            total: 0
+          },
+          wp: {
+            total: 0
+          },
+          stc: {
+            total: 0
+          },
+          tcce: {
+            total: 0
+          },
+          sap: {
+            total: 0
+          },
+          rtcme: {
+            total: 0
+          }
+        },
+        ca: {
+          total: 0,
+          pit: {
+            total: 0
+          },
+          uccb: {
+            total: 0
+          },
+          cctb: {
+            total: 0
+          },
+          ncb: {
+            total: 0
+          },
+          ccb: {
+            total: 0
+          },
+          gst: {
+            total: 0
+          },
+          witb: {
+            total: 0
+          },
+          oasp: {
+            total: 0
+          },
+          rmes: {
+            total: 0
+          }
+        },
+        ctb: {
+          total: 0,
+          ei: {
+            adult1: 0,
+            adult2: 0,
+            total: 0
+          },
+          qpip: {
+            total: 0
+          },
+          qpp: {
+            total: 0
+          },
+          hsf: {
+            total: 0
+          },
+          hc: {
+            total: 0
+          },
+          pdip: {
+            income: 0,
+            total: 0
+          }
+        }
+      }
+
+      document.onkeydown = checkKey;
+
+      var year = 2016;
+
+      /*
+      function setRevenu1(val) {
+        console.log(val);
+      }
+      */
+
+      function checkKey(e) {
+        e = e || window.event
+        if (e.keyCode == '38') {
+          // up arrow
+        } else if (e.keyCode == '40') {
+          // down arrow
+        } else if (e.keyCode == '37') {
+          go(-1000)
+        } else if (e.keyCode == '39') {
+          go(1000)
+        } else if (e.keyCode == '81' || e.keyCode == '113') {
+          year = 2016
+          go(0)
+        } else if (e.keyCode == '87' || e.keyCode == '119') {
+          year = 2017
+          go(0)
+        } else if (e.keyCode == '69' || e.keyCode == '101') {
+          year = 2018
+          go(0)
+        }
+      }
+
+      function go(delta) {
+        document.getElementById("Situation").value = _Situation[0];
+        document.getElementById("AgeAdulte1").value = 35;
+        document.getElementById("AgeAdulte2").value = 0;
+
+        document.getElementById("Revenu1").value = Math.max(p(document.getElementById("Revenu1").value) + delta, 0)
+        document.getElementById("year").innerHTML = year.toString()
+
+        recalc_onclick("");
+
+        input2.year1 = year.toString()
+        input2.year2 = 'NIL'
+        input2.numberOfAdults = 1
+        input2.single = true
+        input2.withSpouse = false
+        input2.numberOfChildren = 0
+        input2.age1 = 35
+        input2.age2 = 0
+        input2.employmentIncome1 = p(document.getElementById("Revenu1").value)
+        input2.employmentIncome2 = 0
+        input2.employmentIncome = input2.employmentIncome1 + input2.employmentIncome2
+        input2.pension1 = 0
+        input2.pension2 = 0
+        input2.pension = 0
+        input2.capital1 = 0
+        input2.capital2 = 0
+        input2.capital = 0
+        input2.dividendsEligible1 = 0
+        input2.dividendsEligible2 = 0
+        input2.dividendsEligible = 0
+        input2.dividendsNonEligible1 = 0
+        input2.dividendsNonEligible2 = 0
+        input2.dividendsNonEligible = 0
+        input2.grossIncome1 = 0
+        input2.grossIncome2 = 0
+        input2.grossIncome = 0
+        input2.childAge1 = 0
+        input2.childAge2 = 0
+        input2.childAge3 = 0
+        input2.childAge4 = 0
+        input2.childAge5 = 0
+        input2.childCare1 = 0
+        childCare2 = 0
+        input2.childCare3 = 0
+        input2.childCare4 = 0
+        input2.childCare5 = 0
+        input2.childType1 = 0
+        input2.childType2 = 0
+        input2.childType3 = 0
+        input2.childType4 = 0
+        input2.childType5 = 0
+
+        compute(input2, result2);
+
+        var suffix = ""
+        if (input2.year1 === "2016") {
+          suffix = "_vold"
+        } else if (input2.year1 === "2017") {
+          suffix = "_old"
+        } else if (input2.year1 === "2018") {
+          suffix = "_new"
+        }
+
+        document.getElementById("rd").value = result2.rd
+        document.getElementById("rd_delta").value = round10(result2.rd - p(document.getElementById("RD" + suffix).value))
+
+        document.getElementById("qc_impot").value = result2.qc.impot.incomeTax
+        document.getElementById("qc_impot_delta").value = round10(result2.qc.impot.incomeTax - p(document.getElementById("QC_impot" + suffix).value))
+
+        document.getElementById("qc_sa").value = result2.qc.sa.total
+        document.getElementById("qc_sa_delta").value = round10(result2.qc.sa.total - p(document.getElementById("QC_adr" + suffix).value))
+
+        document.getElementById("qc_wp").value = result2.qc.wp.total
+        document.getElementById("qc_wp_delta").value = round10(result2.qc.wp.total - p(document.getElementById("QC_pt" + suffix).value))
+
+        document.getElementById("qc_total").value = result2.qc.total
+        document.getElementById("qc_total_delta").value = round10(result2.qc.total - p(document.getElementById("QC_total" + suffix).value))
+
+        document.getElementById("ca_total").value = result2.ca.total
+        document.getElementById("ca_total_delta").value = round10(result2.ca.total - p(document.getElementById("CA_total" + suffix).value))
+
+        document.getElementById("ctb_ei").value = result2.ctb.ei.total
+        document.getElementById("ctb_ei_delta").value = round10(result2.ctb.ei.total - p(document.getElementById("CA_ae" + suffix).value))
+
+        document.getElementById("ctb_qpip").value = result2.ctb.qpip.total
+        document.getElementById("ctb_qpip_delta").value = round10(result2.ctb.qpip.total - p(document.getElementById("QC_rqap" + suffix).value))
+
+        document.getElementById("ctb_qpp").value = result2.ctb.qpp.total
+        document.getElementById("ctb_qpp_delta").value = round10(result2.ctb.qpp.total - p(document.getElementById("CA_rrq" + suffix).value))
+
+        document.getElementById("ctb_hsf").value = result2.ctb.hsf.total
+        document.getElementById("ctb_hsf_delta").value = round10(result2.ctb.hsf.total - p(document.getElementById("QC_fss" + suffix).value))
+
+        document.getElementById("ctb_hc").value = result2.ctb.hc.total
+        document.getElementById("ctb_hc_delta").value = round10(result2.ctb.hc.total - p(document.getElementById("QC_cs" + suffix).value))
+
+        document.getElementById("ctb_pdip").value = result2.ctb.pdip.total
+        document.getElementById("ctb_pdip_delta").value = round10(result2.ctb.pdip.total - p(document.getElementById("QC_ramq" + suffix).value))
+
+        document.getElementById("ctb_total").value = result2.ctb.total
+        document.getElementById("ctb_total_delta").value = round10(result2.ctb.total - p(document.getElementById("Cotisation" + suffix).value))
+      }
+
+      function p(text) {
+        // return parseInt(text.replace(' ', ''))
+        return round10(parseFloat(text.replace(' ', '')), 0)
+      }
+    </script>
+  </body>
+</html>	

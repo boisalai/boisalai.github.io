@@ -33,10 +33,12 @@
   - [Spécialisation Advanced Machine Learning with TensorFlow on Google Cloud Platform](https://www.coursera.org/specializations/advanced-machine-learning-tensorflow-gcp)
 - Udacity
   - [Udacity, AI programming with Python](https://www.udacity.com/course/ai-programming-python-nanodegree--nd089)
+  - [Intro to Deep Learning with PyTorch](https://www.udacity.com/course/deep-learning-pytorch--ud188)
 - fast.ai
   - [Fast.ai](http://www.fast.ai/)
     - [forums](https://forums.fast.ai/)
     - [fastai_docs notebooks](https://github.com/fastai/fastai_docs)
+    - [Getting started](https://course-v3.fast.ai/start_colab#step-2-configuring-your-notebook-instance)
   - [Practical Deep Learning For Coders, Part 1](http://course.fast.ai/)
     - [Practical Deep Learning for Coders, v3](http://course-v3.fast.ai/index.html)
     - [Video 23 octobre 2018](https://www.youtube.com/watch?v=7hX8yKCX6xM)
@@ -95,6 +97,7 @@
 - [Applying Machine Learning to Physics](https://physicsml.github.io/pages/papers.html)
 - [The Matrix Calculus You Need For Deep Learning](http://explained.ai/matrix-calculus/index.html)
 - [MONTRÉAL.AI | Montréal Artificial Intelligence](https://montrealartificialintelligence.com/academy/#0-Getting-Started)
+- [Awesome - Most Cited Deep Learning Papers](https://github.com/terryum/awesome-deep-learning-papers)
 
 - 2018
   - [The Unreasonable Effectiveness of (Zero) Initialization in Deep Residual Learning](https://openreview.net/forum?id=H1gsz30cKX), 27 Sep 2018
@@ -115,6 +118,7 @@
 
 - [Machine Learning Cheatsheet](https://ml-cheatsheet.readthedocs.io/en/latest/index.html)
 - [Glossary of Machine Learning Terms](https://semanti.ca/blog/?glossary-of-machine-learning-terms)
+- [ML Resources](https://sgfin.github.io/learning-resources/)
 
 ### Conferences
 
@@ -510,6 +514,7 @@ Mais je crois que conda vient avec sa propre machine virtuelle. À vérifier.
 - [Learning Python: From Zero to Hero](https://medium.freecodecamp.org/learning-python-from-zero-to-hero-120ea540b567)
 - [Python Dictionary Comprehension Tutorial](https://www.datacamp.com/community/tutorials/python-dictionary-comprehension)
 - [Learn X in Y minutes (Where X=python3) — Louie Dinh](https://www.kaggle.com/keras/vgg16)
+- [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
 
 ### Numpy
 

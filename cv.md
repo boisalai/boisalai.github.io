@@ -74,12 +74,12 @@ Defence Research Establishment Pacific, Victoria, Colombie-Britannique
 **Stagiaire** (1987/01 – 1987/04)<br>
 Hydro-Québec, Montréal
 
-- Recencer les modèles mathématiques (méthodes des éléments finis) sur la dispersion des polluants dans l'eau.
+- Recenser les modèles mathématiques (méthodes des éléments finis) sur la dispersion des polluants dans l'eau.
 
 **Stagiaire** (1986/05 – 1986/08)<br>
 Énergie, Mines et Ressources Canada, Ottawa
 
-- Poursuivre le développement d'un logiciel déterminant des fractures possibles d'une pièce métalique à partir des données d'un microscope électronique (Fortran sur DEC PDP-11).
+- Poursuivre le développement d'un logiciel déterminant des fractures possibles d'une pièce métallique à partir des données d'un microscope électronique (Fortran sur DEC PDP-11).
 
 **Réserviste** (1982 – 1985)<br>
 [Les Fusiliers de Sherbrooke](http://www.army-armee.forces.gc.ca/fr/fus-sherbrooke/index.page), Forces Canadiennes
@@ -91,8 +91,9 @@ Énergie, Mines et Ressources Canada, Ottawa
 [Ordre des dentistes du Québec](http://www.odq.qc.ca/)
 
 - Membre du conseil d’administration à titre de représentant du public (2016/11 – 2020/10)
-- Membre du comité de vérification (2017/01 – 2019/01)
-- Membre du comité des communications (2017/09 – 2020/09)
+- Membre du comité exécutif (2018/11 - 2019/11)
+- Membre du comité d'audit (2017/01 – 2019/01)
+- Membre du comité des communications (2017/09 – 2019/01)
 
 Association des étudiant(e)s en mathématiques de l’Université de Sherbrooke
 
@@ -106,11 +107,8 @@ Association des étudiant(e)s en mathématiques de l’Université de Sherbrooke
 
 ## Formation continue
 
-<!--
-- [Cutting Edge Deep Learning For Coders, Part 2](http://course.fast.ai/part2.html), fast.ai (En cours)
--->
-
-- [Practical Deep Learning For Coders, Part 1](http://course.fast.ai/), fast.ai (In progress)
+- [Cutting Edge Deep Learning For Coders, Part 2](https://course.fast.ai/part2.html), fast.ai (En cours)
+- [Practical Deep Learning For Coders, Part 1](http://course.fast.ai/), fast.ai (En cours)
 - [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning), Coursera (2018)
 - [Full Stack Web Developer Nanodegree](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004), Udacity (2017)
 
@@ -157,7 +155,6 @@ Canadian Provinces Income Tax Calculator for Individuals. Web application built 
   [SciPy](https://www.scipy.org/),
   [Pandas](https://pandas.pydata.org/),
   [Matplotlib](https://matplotlib.org/),
-  [scikit-learn](http://scikit-learn.org/stable/),
   [PyTorch](https://pytorch.org/).
 
 [Home](README.md) &#8402; [Accueil](README.md)
