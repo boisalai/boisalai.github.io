@@ -2,7 +2,7 @@
 
 # Alain Boisvert, MBA
 
-[LinkedIn](https://www.linkedin.com/in/alain-boisvert-mba-98b058156) &#8402; [GitHub](https://github.com/boisalai) &#8402; [Kaggle](https://www.kaggle.com/boisalai) &#8402; [Email](mailto:ay.boisvert@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/alain-boisvert-mba-98b058156) / [GitHub](https://github.com/boisalai) / [Kaggle](https://www.kaggle.com/boisalai) / [Email](mailto:ay.boisvert@gmail.com)
 
 Gestionnaire ayant réalisé plusieurs mandats stratégiques au gouvernement du Québec. Reconnu pour sa persévérance, son esprit d’équipe, son côté analytique, rigoureux et « touche à tout ». Cherche à créer des choses utiles et rendre simple ce qui est compliqué.
 
@@ -112,7 +112,7 @@ Association des étudiant(e)s en mathématiques de l’Université de Sherbrooke
 - [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning), Coursera (2018)
 - [Full Stack Web Developer Nanodegree](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004), Udacity (2017)
 
-[More information here](learning/index.md) &#8402; [Plus d'information ici](learning/index.md)
+[More information here](learning/index.md) / [Plus d'information ici](learning/index.md)
 
 <!--
 - [Responsive Web Design Fundamentals](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893), Udacity (2016)
@@ -157,4 +157,4 @@ Canadian Provinces Income Tax Calculator for Individuals. Web application built 
   [Matplotlib](https://matplotlib.org/),
   [PyTorch](https://pytorch.org/).
 
-[Home](README.md) &#8402; [Accueil](README.md)
+[Home](README.md) / [Accueil](README.md)
