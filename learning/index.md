@@ -2,13 +2,18 @@
 
 # Alain Boisvert, MBA
 
-## Continuing Education | Formation continue
-
-## 2018
+## Continuing Education / Formation continue
 
 <!--
-- [Cutting Edge Deep Learning For Coders, Part 2](http://course.fast.ai/part2.html), fast.ai (En cours)
 -->
+
+## 2019
+
+- [Intro to Deep Learning with PyTorch by Facebook AI](https://www.udacity.com/course/deep-learning-pytorch--ud188), Udacity (In progress)
+- [Cutting Edge Deep Learning For Coders, Part 2](http://course.fast.ai/part2.html), fast.ai (In progress)
+- [Practical Deep Learning For Coders, Part 1](2018_fastai/index.md), fast.ai (Still in progress)
+
+## 2018
 
 - [Practical Deep Learning For Coders, Part 1](2018_fastai/index.md), fast.ai (In progress)
 - [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning), Coursera
@@ -30,4 +35,4 @@
   - Final project, [Linux Server Configuration](https://github.com/boisalai/udacity-linux-server-configuration) (Ubuntu, Amazon Lighsail, PostgreSQL).
   - [Certificate of completion](2017_udacity/nd004.pdf) (November 5, 2017).
 
-[Home](../README.md) &#8402; [Accueil](../README.md)
+[Home](../README.md)  / [Accueil](../README.md)
