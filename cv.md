@@ -20,8 +20,8 @@ M'inspirer de http://crocodoyle.ca/#projects
 **Directeur de la gouvernance des projets d’infrastructures** (depuis 2017/09)<br>
 [Ministère de l’Éducation et de l’Enseignement supérieur](http://www.education.gouv.qc.ca/)
 
-- Suivre les projets majeurs d‘infrastructures (> 50 M$) et le Fonds fédéral d'investissement stratégique pour les établissements postsecondaires.
-- Proposer des améliorations en matière d’organisation du travail, d’optimisation des processus et d’information de gestion.
+- Suivre les projets majeurs d‘infrastructure (> 50 M$, totalisant 5 G$) et le Fonds fédéral d'investissement stratégique pour les établissements postsecondaires.
+- Proposer des améliorations en matière de gouvernance, d’organisation du travail et d’optimisation des processus.
 
 **Directeur du bureau de projets** (2017/04 – 2017/08)<br>
 **Conseiller-cadre à la Direction générale des acquisitions** (2016/06 – 2017/03)<br>
@@ -51,7 +51,7 @@ Ministère de la Solidarité sociale, Québec
 
 - Produire les statistiques officielles sur les prestataires de l'aide sociale.
 - Mettre en place un entrepôt de données (SAS) et développer diverses macros pour faciliter son exploitation (SAS, JCL).
-- Agir comme "analyste de données" pour le secteur des politiques.
+- Agir comme « analyste de données » pour le secteur des politiques.
 
 **Analyste en informatique** (1991/02 – 1992/02)<br>
 Ministère de l’Enseignement supérieur et de la science, Québec
@@ -93,7 +93,7 @@ Énergie, Mines et Ressources Canada, Ottawa
 **Réserviste** (1982 – 1985)<br>
 [Les Fusiliers de Sherbrooke](http://www.army-armee.forces.gc.ca/fr/fus-sherbrooke/index.page), Forces Canadiennes
 
-- Caporal d'infanterie, exercices militaires, certifié "armes antichars" et "communication radio".
+- Caporal d'infanterie, exercices militaires, certifié « armes antichars » et « communication radio ».
 
 ## Conseil d'administration et activités communautaires
 
@@ -149,7 +149,7 @@ Canadian Provinces Income Tax Calculator for Individuals. Web application built 
   [Bootstrap](https://getbootstrap.com/),
   Markdown,
   [MathJax](https://www.mathjax.org/).<br>
-**Environnement de développement** : 
+**Environnement de développement** :
   [Jupyter Notebook](http://jupyter.org/),
   [JupyterLab](http://jupyterlab.readthedocs.io/en/stable/),
   [Visual Studio Code](https://code.visualstudio.com/),
