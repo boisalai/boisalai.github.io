@@ -119,8 +119,14 @@ Association des étudiant(e)s en mathématiques de l’Université de Sherbrooke
 
 - [Cutting Edge Deep Learning For Coders, Part 2](https://course.fast.ai/part2.html), fast.ai (En cours)
 - [Practical Deep Learning For Coders, Part 1](http://course.fast.ai/), fast.ai (En cours)
+- [Intro to Deep Learning with PyTorch](https://www.udacity.com/course/deep-learning-pytorch--ud188), Udacity (2019)
 - [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning), Coursera (2018)
 - [Full Stack Web Developer Nanodegree](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004), Udacity (2017)
+
+## Projets
+
+<!-- Pick one project. Do it really well. Make it fantastic. -->
+
 
 [More information here](learning/index.md) / [Plus d'information ici](learning/index.md)
 

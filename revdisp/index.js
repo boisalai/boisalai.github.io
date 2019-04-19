@@ -332,32 +332,102 @@ https://ca.rbcwealthmanagement.com/documents/634020/634036/PWC+Tax+Facts+%26+Fig
 https://www.pwc.com/ca/fr/services/tax/publications/guides-and-books/facts-figures.html
 https://home.kpmg.com/ca/en/home/insights/2016/06/tax-facts-2016-2017.html
 https://www.mess.gouv.qc.ca/solidarite-sociale/simulation-revenu/categorie3.asp
+https://www.sunlife.ca/ca/Learn+and+Plan/Tools+and+Calculators/Retirement+savings+calculator?vgnLocale=fr_CA
 */
 
 let params = [
     {
-        year: '2018',
-        name: '2018 Scénario préliminaire',
+        year: "2018",
+        name: "2018",
+        ca: {
+            ccd: { // Déduction pour frais de garde. P76.
+
+            },
+            pit: { // Impôt sur le revenu des particuliers.
+                thresold1: 46605,
+                thresold2: 93208,
+                thresold3: 144489,
+                thresold4: 205842,
+                rate1: 0.15,
+                rate2: 0.205,
+                rate3: 0.26,
+                rate4: 0.29,
+                rate5: 0.33,
+                abattement: 0.165,
+                basicPersonalAmount: 11809, // Montant personnel de base.
+                creditRate: 0.15 // Taux du crédit.
+            },
+            ttp: { // Transferts aux particuliers.
+            },
+            ccb: { // Allocation canadienne pour enfants.
+                childAmountUnder6: 6639,
+                childAmount: 5602,
+                threshold1: 31120,
+                threshold2: 67426,
+                reductionRate11: 0.07,
+                reductionRate12: 0.135,
+                reductionRate13: 0.19,
+                reductionRate14: 0.23,
+                reductionRate21: 0.032,
+                reductionRate22: 0.057,
+                reductionRate23: 0.08,
+                reductionRate24: 0.095
+            },
+            gst: { // Crédit pour la TPS.
+                baseAmount: 290, // Montant de base.
+                spouseAmount: 290, // Montant pour conjoint.
+                childAmount: 153, // Montant pour enfant.
+                plusAmount: 153, // Montant additionnel.
+                plusThreshold: 9412, // Seuil de réduction pour montant additionnel.
+                plusReductionRate: 0.02, // Taux de réduction pour montant additionnel.
+                singleFamilyAmount: 153, // Montant additionnel pour famille monoparentale.
+                threshold: 37789, // Seuil de réduction.
+                reductionRate: 0.05 // Taux de réduction.
+            },
+            witb: { // Prestation fiscale pour le revenu de travail.
+            },  
+            oasp: { // Programme de la Sécurité de la vieillesse.
+            },
+            rmes: { // Supplément remboursable pour frais médicaux.
+            }
+        },
         qc: {
-            pit: {
-                thresold1: 99999,
-                thresold2: 99999,
-                thresold3: 99999,
-                rate1: 0.16,
+            pit: {  // Impôt sur le revenu des particuliers.
+                thresold1: 43055,
+                thresold2: 86105,
+                thresold3: 104765,
+                rate1: 0.15,
                 rate2: 0.20,
                 rate3: 0.24,
                 rate4: 0.2575,
-                basicPersonalAmount: 99999,
+                basicPersonalAmount: 15012, // Montant personnel de base.
                 deductionForWorkersRate: 0.06,
                 deductionForWorkersMax: 9999,
-                aloneAmount: 9999,
-                singleFamilyAmount: 9999,
-                ageAmount: 9999,
-                ageReductionThresold: 9999,
-                ageReductionRate: 0.15,
-                creditRate: 0.20
+                aloneAmount: 1721, // Montant pour personne vivant seule.
+                singleFamilyAmount: 2124, // Montant additionel pour famille monoparentale.
+                pensionAmount: 0, // Montant pour revenus de retraite.
+                ageAmount: 0, // Montant en raison de l'âge.
+                ageReductionThresold: 34030, // Seuil de réduction.
+                ageReductionRate: 0.1875, // Taux de réduction.
+                creditRate: 0.15 // Taux du crédit.
             },
-            wp: { // Work Premium 2018.
+            ttp: { // Transferts aux particuliers.
+            },
+            sa: { // Aide sociale.
+            },
+            ca: { // Allocation famille (Soutien aux enfants).
+                amount1: 2430,
+                amount2: 1214,
+                amount3: 1821,
+                amount4: 852,
+                threshold1: 48246,
+                threshold2: 35096,
+                reductionRate: 0.04,
+                fournituresScolaire: 100
+            },
+            spss: { // Supplément pour l'achat de fournitures scolaires.
+            },
+            wp: { // Work Premium 2018. Prime au travail.
                 thresold1: 10574,  // Seuil pour personne seule.
                 thresold2: 16356,  // Seuil pour couple.
                 deduction1: 2400,  // Déduction pour personne seule.
@@ -366,6 +436,33 @@ let params = [
                 rate2: 0.25,  // Taux d'augmentation couple avec enfants.
                 rate3: 0.30,  // Taux d'augmentation monoparentale.
                 reductionRate: 0.10  // Taux de réduction.
+            }, 
+            stc: { // Crédit d'impôt pour la solidarité.
+                baseAmount1: 287, // Juillet 2018 à juin 2019.
+                spouceAmount1: 287,
+                aloneAmount1: 137,
+                reductionRate11: 0.03,
+                reductionRate12: 0.06,
+                threshold1: 34215,
+                baseAmount2: 292, // Juillet 2019 à juin 2019.
+                spouceAmount2: 292,
+                aloneAmount2: 139,
+                reductionRate21: 0.03,
+                reductionRate22: 0.06,
+                threshold2: 34800
+            },
+            tcce: { // Crédit d'impôt pour frais de garde d'enfants. P83
+                threshold: [
+                    [35345, 0.75],
+                    [36655, 0.74],
+                    [37970, 0.73],
+                    [39270, 0.72],
+                    [40580, 0.71]
+                ]
+            }, 
+            sap: { // Allocation-logement.
+            },
+            rtcme: { // Crédit d'impôt remboursable pour frais médicaux.
             }
         },
         ctb: {

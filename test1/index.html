@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Alain Boisvert, MBA</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Alain Boisvert">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css">
+
+        <!--
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+        -->
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    </head>
+    <body class="bg-light">
+        <div id="app">
+            <nav class="navbar navbar-expand-lg navbar-light bg-red">
+                <a class="navbar-brand" href="#"><b>Alain Boisvert, MBA</b></a>
+                <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#" v-on:click="beta">Curriculum vitæ<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" v-on:click="beta">VBA</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        
+            <section>
+                <span v-if="cv">Mon Curriculum vitea</span>
+                <h2>Expansion du programme des chaires...</h2>
+                <p>D’éminents scientifiques et chercheurs du monde entier ont maintenant accès à de nouvelles possibilités de collaboration suite à l’annonce par le CIFAR de son nouveau portefeuille de recherche et de l’expansion du programme des chaires en IA Canada-CIFAR. Les treize programmes de recherche du CIFAR se penchent sur des questions essentielles qui englobent quatre domaines thématiques interdisciplinaires&nbsp;: Vie et santé, Individus et société, Information et matière, et Terre et espace.</p>
+            </section>
+
+            
+                <h1>Hello App!</h1>
+                <p>
+                  <!-- use router-link component for navigation. -->
+                  <!-- specify the link by passing the `to` prop. -->
+                  <!-- <router-link> will be rendered as an `<a>` tag by default -->
+                  <router-link to="/foo">Go to Foo</router-link>
+                  <router-link to="/bar">Go to Bar</router-link>
+                  <router-link to="/home">Go to Home</router-link>
+                </p>
+                <!-- route outlet -->
+                <!-- component matched by the route will render here -->
+                <router-view></router-view>
+
+        </div>
+         
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
+
+<!--
+    Une page pour 
+    - intelligence artificielle
+    - VBA
+    - SAS
+    - Mes cours coursera et udacity
+    vue.js
+-->

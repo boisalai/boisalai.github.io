@@ -1,0 +1,28 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.bg-red { background-color: #ED1C24; }
+.bg-red a { color: #FFFFFF !important; }
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+  
+.custom-toggler.navbar-toggler {
+    border-color: #FFFFFF;
+} 
+
+nav .navbar-nav li a { 
+    color: #FFFFFF !important; 
+}
+
+section {
+    background-color: yellow;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 1.625rem;
+    font-weight: 900;
+}

@@ -25,6 +25,8 @@
   - [École IVADO/MILA en apprentissage profond (2e édition)](https://ivado.ca/formations/ecole-ivado-mila-apprentissage-profond/)
 - Toronto
   - [Videos of the Deep Learning and Reinforcement Learning Summer School, Toronto 2018](http://videolectures.net/DLRLsummerschool2018_toronto/?fbclid=IwAR2yGwNZ7TCIkltCDjFpM30dKENK-AbC3l2u6kF-JFIhJ6Qn7VLcEePFVJs)
+- Imperial College London
+  - [Online MSc in Machine Learning](https://www.apnews.com/Business%20Wire/41c944224c9547ff8e169931933d0c1d) and [here](https://www.coursera.org/degrees/msc-machine-learning-imperial).
 - Coursera
   - [Coursera Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning)
     - [Youtube 112 videos](https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN)
@@ -41,6 +43,7 @@
   - [Intro to Deep Learning with PyTorch](https://www.udacity.com/course/deep-learning-pytorch--ud188)
   - [The school of Artificial Intelligence](https://www.udacity.com/school-of-ai)
   - [Deep Reinforcement Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893)
+  - [C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213)
 - fast.ai
   - [Fast.ai](http://www.fast.ai/)
     - [forums](https://forums.fast.ai/)
@@ -73,12 +76,15 @@
     - [CS229 - Machine Learning](https://see.stanford.edu/Course/CS229)
   - CS230
     - [CS230 Deep Learning](https://cs230-stanford.github.io/) and [here](http://cs230.stanford.edu/)
+    - https://www.youtube.com/playlist?list=PLoROMvodv4rOABXSygHTsbvUz4G_YQhOb&fbclid=IwAR2TzG7BbmwKz6tG2ubgb2eZtruOFzc1kNJJvygGuJYgQbsISt7PhidCDFk
   - CS231n
     - [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/)
     - http://cs231n.github.io/
     - http://cs231n.github.io/neural-networks-2/#datapre
     - http://cs231n.github.io/neural-networks-3/#sanitycheck
     - [Youtube CS231n Winter 2016](https://www.youtube.com/watch?v=NfnWJUyUJYU&list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC)
+  - CS234: REINFORCEMENT LEARNING
+    - [Youtube](http://onlinehub.stanford.edu/cs234/stanford-cs234-reinforcement-learning-winter-2019-lecture-1-introduction)
   - CS294
     - [CS294-112 at UC Berkeley, Deep Reinforcement Learning](http://rail.eecs.berkeley.edu/deeprlcourse/)
     - [CS294: Fairness in Machine Learning](https://fairmlclass.github.io/#statistical)
@@ -373,19 +379,28 @@ Notions:
 
 ### Recurrent Neural Network (RNN)
 
-- [A Beginner's Guide to LSTMs](https://skymind.ai/wiki/lstm)
-- [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
-- [GRU (Gated Recurrent Unit](https://towardsdatascience.com/understanding-gru-networks-2ef37df6c9be)
-- [Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling](https://arxiv.org/pdf/1412.3555v1.pdf)
-- https://www.topbots.com/exploring-lstm-tutorial-part-1-recurrent-neural-network-deep-learning/
-- https://www.topbots.com/exploring-lstm-tutorial-part-2-recurrent-neural-network-deep-learning/
-- [Composing Music With Recurrent Neural Networks](http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/)
-- [Fundamentals of Recurrent Neural Network (RNN) and Long Short-Term Memory (LSTM) Network](https://arxiv.org/abs/1808.03314)
+- [PyTorch documentation of three main types: RNN, LSTM, and GRU](https://pytorch.org/docs/stable/nn.html#recurrent-layers)
 - [The Annotated Transformer](http://nlp.seas.harvard.edu/2018/04/03/attention.html)
 - [How to code The Transformer in Pytorch](https://towardsdatascience.com/how-to-code-the-transformer-in-pytorch-24db27c8f9ec)
-- [Understanding GRU networks](https://towardsdatascience.com/understanding-gru-networks-2ef37df6c9be)
-- [Towards End-to-End Speech Recognition with Recurrent Neural Networks](http://proceedings.mlr.press/v32/graves14.pdf)
-- [Illustrated Guide to LSTM’s and GRU’s: A step by step explanation](https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21)
+- RNN
+  - [Towards End-to-End Speech Recognition with Recurrent Neural Networks](http://proceedings.mlr.press/v32/graves14.pdf)
+  - [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)
+  - [Composing Music With Recurrent Neural Networks](http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/)
+  - https://www.topbots.com/exploring-lstm-tutorial-part-1-recurrent-neural-network-deep-learning/
+  - https://www.topbots.com/exploring-lstm-tutorial-part-2-recurrent-neural-network-deep-learning/
+  - [Sketch RNN](https://magenta.tensorflow.org/assets/sketch_rnn_demo/index.html) 
+- LSTM
+  - [A Beginner's Guide to LSTMs](https://skymind.ai/wiki/lstm)
+  - [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)*
+  - [Exploring LSTMs](http://blog.echen.me/2017/05/30/exploring-lstms/)*
+  - [CS231n Lecture 10 - Recurrent Neural Networks, Image Captioning, LSTM](https://www.youtube.com/watch?v=iX5V1WpxxkY)
+  - [Fundamentals of Recurrent Neural Network (RNN) and Long Short-Term Memory (LSTM) Network](https://arxiv.org/abs/1808.03314)
+- GRU
+  - [Illustrated Guide to LSTM’s and GRU’s: A step by step explanation](https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21)
+  - [Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling](https://arxiv.org/pdf/1412.3555v1.pdf)
+  - [GRU (Gated Recurrent Unit](https://towardsdatascience.com/understanding-gru-networks-2ef37df6c9be)
+  - [Understanding GRU networks](https://towardsdatascience.com/understanding-gru-networks-2ef37df6c9be)
+  - [Gated Recurrent Units (GRU)](http://www.cs.toronto.edu/~guerzhoy/321/lec/W09/rnn_gated.pdf)
 
 ### Ordinary Differential Equations (ODE) Networks
 
@@ -559,28 +574,32 @@ Notions:
 
 ## Fun Projects
 
-- [PaintsTransfer-Euclid](https://github.com/lllyasviel/style2paints)
+- Style Transfert
+  - [Image Style Transfer Using Convolutional Neural Networks](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf)
+  - [PaintsTransfer-Euclid](https://github.com/lllyasviel/style2paints)
+  - [Neural Style Transfer: Creating Art with Deep Learning using tf.keras and eager execution](https://medium.com/tensorflow/
+  - [Neural Style Transfer with PyTorch](https://heartbeat.fritz.ai/neural-style-transfer-with-pytorch-49e7c1fe3bea)
+  - [Style transfer, deep learning, feature transform](https://github.com/nvidia/fastphotostyle)
+  - [Style Transfer as Optimal Transport](https://github.com/VinceMarron/style_transfer)
+  - [Style-transfer/setup_first_alia_styletransfer.ipynb](https://github.com/vinayakpahalwan7/Style-transfer/blob/master/setup_first_alia_styletransfer.ipynb)
 - [ML4A](https://github.com/ml4a/ml4a-guides)
 - [Collection of Interactive Machine Learning Examples](https://tools.google.com/seedbank/)
   - Neural Style Transfer with tf.keras, Variational auto-encoder for music, Neural Translation with Attention.
-- [Neural Style Transfer: Creating Art with Deep Learning using tf.keras and eager execution](https://medium.com/tensorflow/neural-style-transfer-creating-art-with-deep-learning-using-tf-keras-and-eager-execution-7d541ac31398)
 - [Tinker With a Neural Network Right Here in Your Browser](http://playground.tensorflow.org)
 - [The Sound of Pixels](http://sound-of-pixels.csail.mit.edu/)
 - [Keras vs. PyTorch: Alien vs. Predator recognition with transfer learning](https://deepsense.ai/keras-vs-pytorch-avp-transfer-learning/) and [GitHub](https://github.com/deepsense-ai/Keras-PyTorch-AvP-transfer-learning)
-- [Neural Style Transfer with PyTorch](https://heartbeat.fritz.ai/neural-style-transfer-with-pytorch-49e7c1fe3bea)
 - [Machine Learning for Visualization](https://medium.com/@enjalot/machine-learning-for-visualization-927a9dff1cab)
 - [Reinforcement Learning: Playing Doom with PyTorch](https://brandonlmorris.com/2018/10/09/dql-vizdoom/)
 - [Found in translation: Building a language translator from scratch with deep learning](https://blog.floydhub.com/language-translator/)
 - [Image-to-Image Translation with Conditional Adversarial Nets](https://phillipi.github.io/pix2pix/)
 - [Piano Genie: An Intelligent Musical Interface](https://magenta.tensorflow.org/pianogenie)
-- [Style-transfer/setup_first_alia_styletransfer.ipynb](https://github.com/vinayakpahalwan7/Style-transfer/blob/master/setup_first_alia_styletransfer.ipynb)
 - [Towards Natural Language Semantic Code Search](https://githubengineering.com/towards-natural-language-semantic-code-search/)
 - [Clara, A Neural Net Music Generator](http://christinemcleavey.com/clara-a-neural-net-music-generator/)
 - [Generating custom photo-realistic faces using AI](https://blog.insightdatascience.com/generating-custom-photo-realistic-faces-using-ai-d170b1b59255)
 - [Generating Memoji from Photos](https://patniemeyer.github.io/2018/10/29/generating-memoji-from-photos.html)
-- [Style transfer, deep learning, feature transform](https://github.com/nvidia/fastphotostyle)
-- [Style Transfer as Optimal Transport](https://github.com/VinceMarron/style_transfer)
-- [https://github.com/1991viet](CNN)
+- https://github.com/1991viet
+- https://github.com/eriklindernoren/Fast-Neural-Style-Transfer
+- https://medium.com/@aqsakausar30/neural-style-transfer-remixing-visual-concepts-b2ff98f69ea?sk=5506b723a042f35ed38c09972a52d0ff&fbclid=IwAR1Qo_M3n0H0UrU7EcAHl4jVFc4hdrhzFjq9NnglEvRaeyaV1eVK1sFte_I
 
 <a name="kaggle"></a>
 
@@ -776,6 +795,8 @@ Pour installer PyTorch, faire ```conda install pytorch torchvision -c pytorch```
 - [How To Classify Images with TensorFlow - a Step-By-Step Tutorial](https://lambdalabs.com/blog/how-to-classify-images-with-tensorflow-a-step-by-step-tutorial/)
 - [Stop Installing Tensorflow using pip for performance sake!](https://towardsdatascience.com/stop-installing-tensorflow-using-pip-for-performance-sake-5854f9d9eb0c)
 - [A collection of datasets ready to use with TensorFlow](https://github.com/tensorflow/datasets)
+- [I ranked the Best TensorFlow Courses on the internet, based on your reviews](https://sinxloud.com/best-tensorflow-courses-beginners-experts/)
+- [CS20: Tensorflow for Deep Learning Research](http://web.stanford.edu/class/cs20si/index.html)
 
 ### TensorboardX
 
@@ -848,5 +869,6 @@ https://app.neptune.ml/-/organization/7a92dc4f-48b3-42bf-a2a8-efbd32d25b7c
 - [Build and Setup Your Own Deep Learning Server From Scratch](https://towardsdatascience.com/build-and-setup-your-own-deep-learning-server-from-scratch-e771dacaa252)
 - [Setting up a Ubuntu 18.04.1 LTS system for deep learning and scientific computing](https://medium.com/@IsaacJK/setting-up-a-ubuntu-18-04-1-lts-system-for-deep-learning-and-scientific-computing-fab19f7ca39d)
 - [Accessing your Deep Learning station remotely and setting up wake on lan](https://medium.com/@fabiograetz/accessing-your-deep-learning-station-remotely-and-setting-up-wake-on-lan-1e708c50fdd8)
+- [The Best 4-GPU Deep Learning Rig only costs $7000 not $11,000.](http://l7.curtisnorthcutt.com/the-best-4-gpu-deep-learning-rig?fbclid=IwAR3KaCgfcHQ9azjIJTiiw5vFs8QcQYG1p5_OLfy-Z6XGsB_JsN3Bf-mJ4QY)
 
 [Home](README.md) / [Accueil](README.md)
