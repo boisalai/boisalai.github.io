@@ -163,4 +163,5 @@ Canadian Provinces Income Tax Calculator for Individuals. Web application built 
 **Librairies Java** :
   [Hibernate](https://hibernate.org/),
 
-[LinkedIn](https://www.linkedin.com/in/alain-boisvert-mba-98b058156) / [GitHub](https://github.com/boisalai) / [Kaggle](https://www.kaggle.com/boisalai) / [Email](mailto:alain.boisvert@education.gouv.qc.ca)
+[LinkedIn](www.linkedin.com/in/alain-boisvert-98b058156) / [GitHub](https://github.com/boisalai) / [Kaggle](https://www.kaggle.com/boisalai) / [Email](mailto:alain.boisvert@education.gouv.qc.ca)
+
