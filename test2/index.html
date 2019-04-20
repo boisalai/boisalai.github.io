@@ -9,59 +9,210 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="index.css">
-
-        <!--
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
-        -->
-        <script src="https://unpkg.com/vue/dist/vue.js"></script>
-        <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     </head>
-    <body class="bg-light">
-        <div id="app">
-            <nav class="navbar navbar-expand-lg navbar-light bg-red">
-                <a class="navbar-brand" href="#"><b>Alain Boisvert, MBA</b></a>
-                <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <router-link to="/foo" class="nav-link">Curriculum vitæ</router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link to="/bar" class="nav-link">VBA</router-link>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#"><b>Alain Boisvert, MBA</b></a>
+            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         
-            <section>
-                <span v-if="cv">Mon Curriculum vitea</span>
-                <h2>Expansion du programme des chaires...</h2>
-                <p>D’éminents scientifiques et chercheurs du monde entier ont maintenant accès à de nouvelles possibilités de collaboration suite à l’annonce par le CIFAR de son nouveau portefeuille de recherche et de l’expansion du programme des chaires en IA Canada-CIFAR. Les treize programmes de recherche du CIFAR se penchent sur des questions essentielles qui englobent quatre domaines thématiques interdisciplinaires&nbsp;: Vie et santé, Individus et société, Information et matière, et Terre et espace.</p>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">CV <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="link.html">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <article>
+            <h2>Alain Boisvert, MBA - Curriculum vitea</h2>
+                        
+            <p>Gestionnaire ayant réalisé plusieurs mandats stratégiques au gouvernement du Québec. 
+                Reconnu pour sa persévérance, son esprit d’équipe, son côté analytique, rigoureux et 
+                «&nbsp;touche à tout&nbsp;». Cherche à créer des choses utiles et rendre simple ce qui est compliqué.</p>
             
+            <h3>Expérience professionnelle</h3>
+            
+            <p><strong>Directeur de la gouvernance des projets d’infrastructures</strong> (depuis 2017/09)<br>
+            <a href="http://www.education.gouv.qc.ca/" target="_blank">Ministère de l’Éducation et de l’Enseignement supérieur</a></p>
+            <ul>
+            <li>Suivre les projets majeurs d‘infrastructure (&gt; 50 M$, totalisant 5 G$) et le Fonds fédéral d'investissement stratégique pour les établissements postsecondaires.</li>
+            <li>Proposer des améliorations en matière de gouvernance, d’organisation du travail et d’optimisation des processus.</li>
+            </ul>
+            
+            <p><strong>Directeur du bureau de projets</strong> (2017/04 – 2017/08)<br>
+            <strong>Conseiller-cadre à la Direction générale des acquisitions</strong> (2016/06 – 2017/03)<br>
+            <a href="http://www.cspq.gouv.qc.ca/" target="_blank">Centre de services partagés du Québec</a></p>
+            <ul>
+            <li>Élaborer et coordonner un plan de consolidation et d’amélioration des services en acquisition.</li>
+            <li>Prendre en charge divers dossiers stratégiques (communications, recommandations du VGQ, développement durable, orientations en gestion contractuelle, relations fédérales-provinciales).</li>
+            </ul>
+            
+            <p><strong>Directeur des projets spéciaux et de la modélisation</strong> (2009/01 – 2016/05)<br>
+            <a href="http://www.finances.gouv.qc.ca/" target="_blank">Ministère des Finances du Québec</a>, Québec</p>
+            <ul>
+            <li>Appuyer le Groupe d’experts pour un financement axé sur les patients et le Comité consultatif sur l’économie et les finances publiques.</li>
+            <li>Prendre en charge divers projets spéciaux, dont l’élaboration de la première édition des Comptes de la santé pour le ministère de la Santé et des Services sociaux et la projection à long terme du cadre financier du gouvernement.</li>
+            </ul>
+            
+            <p><strong>Analyste expert</strong> (2001/04 – 2008/12)<br>
+            Politiques budgétaires, fiscales et finances publiques<br>
+            <a href="http://www.finances.gouv.qc.ca/" target="_blank">Ministère des Finances du Québec</a>, Québec</p>
+            <ul>
+            <li>Conseiller le ministère sur divers sujets de politique budgétaire, politique fiscale et finance publique.</li>
+            <li>Appuyer le Groupe de travail sur le financement du système de santé (Rapport Castonguay).</li>
+            <li>Élaborer la position gouvernementale lors des négociations sur la rémunération des médecins spécialistes.</li>
+            <li>Proposer le premier plan de retour à l'équilibre budgétaire.</li>
+            <li>Développer un modèle de simulation du revenu disponible (après transferts, impôts et cotisations) des ménages de toutes les provinces canadiennes (VBA/Excel).</li>
+            </ul>
+            
+            <p><strong>Analyste expert</strong> (1992/02 – 2001/04)<br>
+            Ministère de la Solidarité sociale, Québec</p>
+            <ul>
+            <li>Produire les statistiques officielles sur les prestataires de l'aide sociale.</li>
+            <li>Mettre en place un entrepôt de données (SAS) et développer diverses macros pour faciliter son exploitation (SAS, JCL).</li>
+            <li>Agir comme « analyste de données » pour le secteur des politiques.</li>
+            </ul>
+            
+            <p><strong>Analyste en informatique</strong> (1991/02 – 1992/02)<br>
+            Ministère de l’Enseignement supérieur et de la science, Québec</p>
+            <ul>
+            <li>Maintenir l'infrastructure bureautique d'une équipe et développer des applications en milieu utilisateur.</li>
+            </ul>
+            
+            <p><strong>Analyste en informatique</strong> (1990/08 – 1991/02)<br>
+            SOBECO, Montréal</p>
+            <ul>
+            <li>Développer des applications en Fortran 77 dans le domaine actuariel.</li>
+            </ul>
+            
+            <p><strong>Analyste en actuariat</strong> (1989/06 – 1990/06)<br>
+            Société nationale d’assurances, Montréal</p>
+            <ul>
+            <li>Introduire SAS au département d'actuariat et convertir des programmes PL/1 en SAS.</li>
+            <li>Comparer les primes d'assurance auto et habitation des concurrents.</li>
+            <li>Contribuer à établir l'IBNR (<em>Incurred But Not Reported</em>).</li>
+            </ul>
+            
+            <p><strong>Professeur</strong> (1988/10 – 1989/02)<br>
+            École secondaire Louis-Philippe-Paré, Commission scolaire des Grandes-Seigneuries, Chateauguay</p>
+            <ul>
+            <li>Professeur suppléant de mathématique de niveau secondaire 3 et 5.</li>
+            </ul>
+            
+            <p><strong>Stagiaire de recherche</strong> (1988/05 – 1988/08)<br>
+            Defence Research Establishment Pacific, Victoria, Colombie-Britannique</p>
+            <ul>
+            <li>Optimiser un programme informatique déterminant la trajectoire d'un sous-marin ou d'une torpille à partir des données d'un nouveau type de sonar (Fortran 77).</li>
+            </ul>
+            
+            <p><strong>Stagiaire de recherche</strong> (1987/01 – 1987/04)<br>
+            Hydro-Québec, Montréal</p>
+            <ul>
+            <li>Recenser les modèles mathématiques (méthodes des éléments finis) sur la dispersion des polluants dans l'eau.</li>
+            </ul>
+            
+            <p><strong>Stagiaire de recherche</strong> (1986/05 – 1986/08)<br>
+            Énergie, Mines et Ressources Canada, Ottawa</p>
+            <ul>
+            <li>Poursuivre le développement d'un logiciel déterminant des fractures possibles d'une pièce métallique à partir des données d'un microscope électronique (Fortran sur DEC PDP-11).</li>
+            </ul>
+            
+            <p><strong>Réserviste</strong> (1982 – 1985)<br>
+            <a href="http://www.army-armee.forces.gc.ca/fr/fus-sherbrooke/index.page" target="_blank">Les Fusiliers de Sherbrooke</a>, Forces Canadiennes</p>
+            <ul>
+            <li>Caporal d'infanterie, exercices militaires, certifié « armes antichars » et « communication radio ».</li>
+            </ul>
+            
+            <h3>Conseil d'administration et activités communautaires</h3>
+            
+            <p><strong>Administrateur au conseil d'administration</strong> (depuis 2016/11)<br>
+            <a href="http://www.odq.qc.ca/" target="_blank">Ordre des dentistes du Québec</a></p>
+            <ul>
+            <li>Membre du conseil d’administration à titre de représentant du public (2016/11 – 2020/10)</li>
+            <li>Membre du comité exécutif (2018/11 - 2019/11)</li>
+            <li>Président du comité d'audit (2019/02 - 2021/01)</li>
+            <li>Membre du comité d'audit (2017/01 – 2019/01)</li>
+            <li>Membre du comité des communications (2017/09 – 2020/09)</li>
+            </ul>
+            
+            <p><strong>Président</strong> (1986 – 1987)<br>
+            Association des étudiant(e)s en mathématiques de l’Université de Sherbrooke</p>
+            
+            <h3>Scolarité</h3>
+            
+            <ul>
+            <li>MBA, Gestion des technologies de l’information, <a href="https://www.ulaval.ca/" target="_blank">Université Laval</a> (1999 – 2006)<br>Mention d'excellence des Facultés des études supérieures et des sciences de l’administration</li>
+            <li>B. Sc., Mathématiques appliquées, <a href="https://www.usherbrooke.ca/" target="_blank">Université de Sherbrooke</a> (1985 – 1988)</li>
+            <li>Quatre examens de la <a href="https://www.casact.org/" target="_blank">Casualty Actuarial Society</a> (1986 – 1991)</li>
+            </ul>
+            
+            <h3>Formation continue</h3>
+            
+            <ul>
+            <li><a href="https://course.fast.ai/part2.html" target="_blank">Cutting Edge Deep Learning For Coders, Part 2</a>, fast.ai (En cours)</li>
+            <li><a href="https://github.com/boisalai/fastai/blob/master/part1.md" target="_blank">Practical Deep Learning For Coders, Part 1</a>, fast.ai (En cours).</li>
+            <li><a href="https://www.udacity.com/course/deep-learning-pytorch--ud188" target="_blank">Intro to Deep Learning with PyTorch</a>, Udacity (2019)</li>
+            <li><a href="https://www.coursera.org/specializations/deep-learning" target="_blank">Deep Learning Specialization</a>, Coursera (2018)</li>
+            <li><a href="https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004" target="_blank">Full Stack Web Developer Nanodegree</a>, Udacity (2017)</li>
+            </ul>
+            
+            <h3>Projets</h3>
+            
+            <p><a href="/boisalai/boisalai.github.io/blob/master/learning/index.md">More information here</a> / <a href="/boisalai/boisalai.github.io/blob/master/learning/index.md">Plus d'information ici</a></p>
+            
+            <h3>Connaissances informatiques</h3>
+            
+            <p><strong>Développement Web</strong> :
+            HTML5/CSS, JavaScript,
+            <a href="https://angular.io/" target="_blank">Angular.js</a>,
+            <a href="http://backbonejs.org/" target="_blank">Backbone.js</a>,
+            <a href="http://knockoutjs.com/" target="_blank">Knockout.js</a>,
+            <a href="https://vuejs.org/" target="_blank">Vue.js</a>,
+            <a href="http://flask.pocoo.org/" target="_blank">Flask</a>,
+            <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>,
+            Markdown,
+            <a href="https://www.mathjax.org/" target="_blank">MathJax</a>.<br>
+            
+            <strong>Environnement de développement</strong> :
+            Google Colab,
+            <a href="http://jupyter.org/" target="_blank">Jupyter Notebook</a>,
+            <a href="http://jupyterlab.readthedocs.io/en/stable/" target="_blank">JupyterLab</a>,
+            <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>,
+            <a href="https://www.eclipse.org/ide/" target="_blank">Eclipse</a>.<br>
+            
+            <strong>Programmation</strong> :
+            Fortran, Java,
+            <a href="https://www.python.org/" target="_blank">Python</a>,
+            <a href="https://www.sas.com/" target="_blank">SAS</a> et %macro SAS (niveau expert),
+            SQL,
+            <a href="https://msdn.microsoft.com/vba/office-vba-reference" target="_blank">VBA</a> (niveau expert).<br>
+            
+            <strong>Librairies Python</strong> :
+            <a href="http://www.numpy.org/" target="_blank">Numpy</a>,
+            <a href="https://www.scipy.org/" target="_blank">SciPy</a>,
+            <a href="https://pandas.pydata.org/" target="_blank">Pandas</a>,
+            <a href="https://matplotlib.org/" target="_blank">Matplotlib</a>,
+            <a href="https://pytorch.org/" target="_blank">PyTorch</a>.<br>
 
-            
-                <h1>Hello App!</h1>
-                <p>
-                  <!-- use router-link component for navigation. -->
-                  <!-- specify the link by passing the `to` prop. -->
-                  <!-- <router-link> will be rendered as an `<a>` tag by default -->
-                  <router-link to="/foo">Go to Foo</router-link>
-                  <router-link to="/bar">Go to Bar</router-link>
-                  <router-link to="/home">Go to Home</router-link>
-                </p>
-                <!-- route outlet -->
-                <!-- component matched by the route will render here -->
-                <router-view></router-view>
-            </section>
-        </div>
+            <strong>Librairies Java</strong> :
+            <a href="https://hibernate.org/" target="_blank">Hibernate</a>.
+            </p>
+
+            <p><a href="https://www.linkedin.com/in/alain-boisvert-mba-98b058156" target="_blank">LinkedIn</a> 
+                / <a href="https://github.com/boisalai" target="_blank">GitHub</a>
+                / <a href="https://www.kaggle.com/boisalai" target="_blank">Kaggle</a> 
+                / <a href="mailto:alain.boisvert@education.gouv.qc.ca">Email</a></p>
+        </article>
          
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="index.js"></script>
     </body>
 </html>
 
@@ -69,7 +220,7 @@
     Une page pour 
     - intelligence artificielle
     - VBA
-    - SAS
+    - SAS ou est histo.sas?
     - Mes cours coursera et udacity
     vue.js
 -->
