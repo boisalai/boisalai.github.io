@@ -159,9 +159,10 @@ Canadian Provinces Income Tax Calculator for Individuals. Web application built 
   [SciPy](https://www.scipy.org/),
   [Pandas](https://pandas.pydata.org/),
   [Matplotlib](https://matplotlib.org/),
-  [PyTorch](https://pytorch.org/).<br>
+  [PyTorch](https://pytorch.org/),
+  [fastai](https://docs.fast.ai/).<br>
 **Librairies Java** :
-  [Hibernate](https://hibernate.org/),
+  [Hibernate](https://hibernate.org/).
 
 [LinkedIn](www.linkedin.com/in/alain-boisvert-98b058156) / [GitHub](https://github.com/boisalai) / [Kaggle](https://www.kaggle.com/boisalai) / [Email](mailto:alain.boisvert@education.gouv.qc.ca)
 
