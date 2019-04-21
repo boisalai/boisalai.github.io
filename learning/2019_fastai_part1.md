@@ -21,7 +21,8 @@ Pour charger un notebook du repo github de fastai dans colab, suivre les étapes
 
 [This lesson](https://course.fast.ai/videos/?lesson=1),
 [youtube](https://www.youtube.com/watch?v=XfoYk_Z5AkI),
-[notebook](https://colab.research.google.com/drive/1FUlv0jkxSiVwmU73kFHY5bSNgSc2Nr3I).
+[notebook1](https://colab.research.google.com/drive/1FUlv0jkxSiVwmU73kFHY5bSNgSc2Nr3I),
+[notebook2](https://colab.research.google.com/drive/1yiF_lAwdHleFvw_r1zsjywz-h9F3iBWf).
 
 ```python
 # Before you start using your notebook, you need to install the necessary packages. 
@@ -120,7 +121,6 @@ Links:
 - [iNaturalist API](https://www.inaturalist.org/pages/api+reference) and [here](https://api.inaturalist.org/v1/docs/).
 
 Deux façons d'afficher la documentation d'une méthode: ```accuracy??``` et ```doc(accuracy)```.
-
 
 ## Lesson 3
 

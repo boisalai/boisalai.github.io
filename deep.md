@@ -292,6 +292,8 @@ Liens:
 - [A guide to convolution arithmetic for deep learning](https://arxiv.org/abs/1603.07285), Vincent Dumoulin and Francesco Visin
   - Transposed convolution arithmetic
   - [Convolution arithmetic tutorial](http://deeplearning.net/software/theano/tutorial/conv_arithmetic.html), with an added emphasis on Theano’s interface.
+- Octave convolution
+  - [Pytorch implementation](https://github.com/lxtGH/OctaveConv_pytorch)
 
 Notions:
 
