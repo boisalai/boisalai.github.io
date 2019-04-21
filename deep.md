@@ -83,7 +83,7 @@
     - http://cs231n.github.io/neural-networks-2/#datapre
     - http://cs231n.github.io/neural-networks-3/#sanitycheck
     - [Youtube CS231n Winter 2016](https://www.youtube.com/watch?v=NfnWJUyUJYU&list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC)
-  - CS234: REINFORCEMENT LEARNING
+  - CS234: Reinforcement Learning
     - [Youtube](http://onlinehub.stanford.edu/cs234/stanford-cs234-reinforcement-learning-winter-2019-lecture-1-introduction)
   - CS294
     - [CS294-112 at UC Berkeley, Deep Reinforcement Learning](http://rail.eecs.berkeley.edu/deeprlcourse/)

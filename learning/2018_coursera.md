@@ -8,6 +8,6 @@ In five courses, I learned the foundations of Deep Learning, understood how to b
 - Cours 4: Convolutional Neural Networks
 - Cours 5: Sequence Models
 
-<img src="https://github.com/boisalai/boisalai.github.io/blob/master/images/2018_coursera.png" width="400">
+<img src="https://github.com/boisalai/boisalai.github.io/blob/master/images/2018_coursera.png" width="500">
 
 [Course site](https://www.coursera.org/specializations/deep-learning).

@@ -118,14 +118,6 @@ Mention d'excellence des Facultés des études supérieures et des sciences de l
 <!-- Pick one project. Do it really well. Make it fantastic. -->
 
 <!--
-- [Responsive Web Design Fundamentals](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893), Udacity (2016)
-- [Intro to jQuery](https://www.udacity.com/course/intro-to-jquery--ud245), Udacity (2016)
-- [Object-Oriented JavaScript](https://www.udacity.com/course/object-oriented-javascript--ud015), Udacity (2016)
-- [How to Use Git and GitHub](https://www.udacity.com/course/how-to-use-git-and-github--ud775), Udacity (2016)
-- [The complete guide to Angular 2](https://www.udemy.com/the-complete-guide-to-angular-2/), Udemy (2016)
--->
-
-<!--
 ### RÉALISATIONS
 Canadian Provinces Income Tax Calculator for Individuals. Web application built with Javascript, [Vue.js](https://vuejs.org/), [Bootstrap](https://getbootstrap.com/) and a Javascript Chart Library (not yet chosen).
 -->
@@ -151,9 +143,9 @@ Canadian Provinces Income Tax Calculator for Individuals. Web application built 
 **Programmation** :
   Fortran, Java,
   [Python](https://www.python.org/),
-  [SAS](https://www.sas.com/) et %macro SAS (niveau expert),
+  [SAS](https://www.sas.com/) et %macro SAS,
   SQL,
-  [VBA](https://msdn.microsoft.com/vba/office-vba-reference) (niveau expert).<br>
+  [VBA](https://msdn.microsoft.com/vba/office-vba-reference).<br>
 **Librairies Python** :
   [Numpy](http://www.numpy.org/),
   [SciPy](https://www.scipy.org/),

@@ -13,6 +13,6 @@
 - [Linux Server Configuration](https://github.com/boisalai/udacity-linux-server-configuration)
   - This is the final project for Udacity's Full Stack Web Developer Nanodegree. This page explains how to secure and set up a Linux distribution on a virtual machine, install and configure a web and database server to host a web application.
 
-<img src="https://github.com/boisalai/boisalai.github.io/blob/master/images/2017_udacity.png" width="400">
+<img src="https://github.com/boisalai/boisalai.github.io/blob/master/images/2017_udacity.png" width="500">
 
 [Course site](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004).
