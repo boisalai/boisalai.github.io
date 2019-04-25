@@ -111,7 +111,7 @@ Mention d'excellence des Facultés des études supérieures et des sciences de l
 - [Practical Deep Learning For Coders, Part 1](https://github.com/boisalai/boisalai.github.io/blob/master/learning/2019_fastai_part1.md), fast.ai (En cours)
 - [Intro to Deep Learning with PyTorch](https://www.udacity.com/course/deep-learning-pytorch--ud188), Udacity (2019)
 - [Deep Learning Specialization](https://github.com/boisalai/boisalai.github.io/blob/master/learning/2018_coursera.md), Coursera (2018)
-- [Full Stack Web Developer Nanodegree](https://github.com/boisalai/boisalai.github.io/blob/master/learning/2017_udacity.md), Udacity (2017)
+- [Full Stack Web Developer Nanodegree](learning/2017_udacity.md), Udacity (2017)
 
 ## Projets
 
