@@ -21,8 +21,7 @@ Pour charger un notebook du repo github de fastai dans colab, suivre les étapes
 
 [This lesson](https://course.fast.ai/videos/?lesson=1),
 [youtube](https://www.youtube.com/watch?v=XfoYk_Z5AkI),
-[notebook1](https://colab.research.google.com/drive/1FUlv0jkxSiVwmU73kFHY5bSNgSc2Nr3I),
-[notebook2](https://colab.research.google.com/drive/1yiF_lAwdHleFvw_r1zsjywz-h9F3iBWf).
+[lesson1-pets.ipynb](https://colab.research.google.com/drive/1FUlv0jkxSiVwmU73kFHY5bSNgSc2Nr3I)
 
 ```python
 # Before you start using your notebook, you need to install the necessary packages. 
@@ -90,7 +89,8 @@ data = ImageDataBunch.from_lists(path, fn_paths, labels=labels, ds_tfms=tfms, si
 
 [This lesson](https://course.fast.ai/videos/?lesson=2),
 [youtube](https://www.youtube.com/watch?v=ccMHJeQU4Qw),
-[notebook](https://colab.research.google.com/drive/1JRpOLtsmuFoK_2zPvBQNZcoN8vCm-h4a).
+[lesson2-download.ipynb](https://colab.research.google.com/drive/1JRpOLtsmuFoK_2zPvBQNZcoN8vCm-h4a),
+[lasson2-sgd.ipynb](https://colab.research.google.com/drive/1yiF_lAwdHleFvw_r1zsjywz-h9F3iBWf).
 
 Links:
 
@@ -113,26 +113,49 @@ window.open('data:text/csv;charset=utf-8,' + escape(urls.join('\n')));
 
 Install wget on macOS:
 
-- Install Homebrew (https://brew.sh/)
-- Install wget ```$ brew install wget```
+- Install Homebrew (https://brew.sh/).
+- Install wget `$ brew install wget`.
 
 Links:
 
 - [iNaturalist API](https://www.inaturalist.org/pages/api+reference) and [here](https://api.inaturalist.org/v1/docs/).
 
-Deux façons d'afficher la documentation d'une méthode: ```accuracy??``` et ```doc(accuracy)```.
+Deux façons d'afficher une méthode: `accuracy??` for source code and ```doc(accuracy)``` for documentation.
 
-## Lesson 3
+## Lesson 3: Data blocks; Multi-label classification; Segmentation
 
 [This lesson](https://course.fast.ai/videos/?lesson=3),
-[youtube](https://www.youtube.com/watch?v=MpZxV6DVsmM),
-[notebook](https://colab.research.google.com/drive/1FUlv0jkxSiVwmU73kFHY5bSNgSc2Nr3I).
+[youtube](https://www.youtube.com/watch?v=MpZxV6DVsmM).
+[lesson3-planet.ipynb](https://colab.research.google.com/drive/11ERE5MQNwRcq1To6A5XCymDKwuyG7w7w),
+[lesson3-camvid.ipynb](https://colab.research.google.com/drive/1E98tTVJ1oS_PTnXhFtiOgiGrWsBE4oZX),
+[lesson3-head-pose.ipynb](https://colab.research.google.com/drive/1nc139IVpLeYt_nOBcqKg_p5MoaHw-ICR),
+[lesson3-imdb.ipynb](https://colab.research.google.com/drive/1fqsitMKyV2L90ecqSVa6lvZC6Ge6qVPL).
 
-## Lesson 4
+Links:
+
+- Kaggle competition, [Planet: Understanding the Amazon from Space](https://www.kaggle.com/c/planet-understanding-the-amazon-from-space).
+- [Data block API](https://docs.fast.ai/data_block.html)
+- [data_block.ipynb](https://github.com/fastai/fastai/blob/master/docs_src/data_block.ipynb)
+- [fast.ai Datasets](https://course.fast.ai/datasets)
+- [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/)
+- [Setting the learning rate of your neural network](https://www.jeremyjordan.me/nn-learning-rate/)
+- [Simon Jégou, Michal Drozdzal, David Vazquez, Adriana Romero, Yoshua Bengio, The One Hundred Layers Tiramisu: Fully Convolutional DenseNets for Semantic Segmentation](https://arxiv.org/abs/1611.09326)
+- [RTX 2060 Vs GTX 1080Ti Deep Learning Benchmarks: Cheapest RTX card Vs Most Expensive GTX card](https://towardsdatascience.com/rtx-2060-vs-gtx-1080ti-in-deep-learning-gpu-benchmarks-cheapest-rtx-vs-most-expensive-gtx-card-cd47cd9931d2)
+- [Sagar Sharma, Activation Functions in Neural Networks](https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6)
+- [Introduction to Kaggle API in Google Colab (Part-I)](https://mmiakashs.github.io/blog/2018-09-20-kaggle-api-google-colab/)
+
+## Lesson 4: NLP; Tabular data; Collaborative filtering; Embeddings
 
 [This lesson](https://course.fast.ai/videos/?lesson=4),
 [youtube](https://www.youtube.com/watch?v=qqt3aMPB81c),
-[notebook](https://colab.research.google.com/drive/1FUlv0jkxSiVwmU73kFHY5bSNgSc2Nr3I).
+[lesson4-tabular.ipynb](https://colab.research.google.com/drive/17536GGJ-U9I3qOIiholYGuY4JndBqrNH),
+[lesson4-collab.ipynb](https://colab.research.google.com/drive/16YvRgrSor_7acGZ5_B-b_kbyF-CVCR9m).
+
+Links:
+
+- [Universal Language Model Fine-tuning for Text Classification](https://arxiv.org/abs/1801.06146), ULMFiT
+- [MovieLens](https://grouplens.org/datasets/movielens/)
+- [An Exploration of Word Embedding Initialization in Deep-Learning Tasks](https://arxiv.org/abs/1711.09160)
 
 ## Lesson 5
 

@@ -10,6 +10,7 @@
   - This application provides a list of items within a variety of categories. This app is based upon: Python, Flask, SQLAlchemy, SQLite, oauth2client, Bootstrap v4.0.0-beta, jQuery.
 - [Neighborhood map](https://github.com/boisalai/udacity-neighborhood-map).
   - Udacity project with Knockout.js, Google Maps API and Foursquare API.
+  - [Demo](../neighborhood-map-master/index.html).
 - [Linux Server Configuration](https://github.com/boisalai/udacity-linux-server-configuration)
   - This is the final project for Udacity's Full Stack Web Developer Nanodegree. This page explains how to secure and set up a Linux distribution on a virtual machine, install and configure a web and database server to host a web application.
 

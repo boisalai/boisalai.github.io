@@ -138,7 +138,7 @@ Canadian Provinces Income Tax Calculator for Individuals. Web application built 
   Google Colab,
   [Jupyter Notebook](http://jupyter.org/),
   [JupyterLab](http://jupyterlab.readthedocs.io/en/stable/),
-  [Visual Studio Code](https://code.visualstudio.com/),
+  [VSCode](https://code.visualstudio.com/),
   [Eclipse](https://www.eclipse.org/ide/).<br>
 **Programmation** :
   Fortran, Java,

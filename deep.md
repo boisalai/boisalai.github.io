@@ -33,11 +33,12 @@
     - [ilarum19](https://github.com/ilarum19)
   - [Neural Networks for Machine Learning](https://www.coursera.org/learn/neural-networks), Geoffrey Hinton, Professor
   - [Spécialisation Advanced Data Science with IBM](https://www.coursera.org/specializations/advanced-data-science-ibm)
-  - [How to Win a Data Science Competition: Learn from Top Kagglers](https://www.coursera.org/learn/competitive-data-science)
+  - [How to Win a Data Science Competition: Learn from Top Kagglers](https://www.coursera.org/learn/
+  competitive-data-science)
   - [Spécialisation Advanced Machine Learning with TensorFlow on Google Cloud Platform](https://www.coursera.org/specializations/advanced-machine-learning-tensorflow-gcp) et en [français](https://www.coursera.org/specializations/machine-learning-tensorflow-gcp-fr)
   - [Spécialisation Big Data for Data Engineers](https://www.coursera.org/specializations/big-data-engineering)
   - [**Spécialisation Advanced Machine Learning](https://www.coursera.org/specializations/aml)
-  - [**Spécialisation Applied Data Science with Python](https://www.coursera.org/specializations/data-science-python?)
+  - [**Spécialisation Applied Data Science with Python](https://www.coursera.org/specializations/data-science-python)
 - Udacity
   - [GitHub](https://github.com/udacity)
   - [Intro to Deep Learning with PyTorch](https://www.udacity.com/course/deep-learning-pytorch--ud188)
@@ -122,10 +123,8 @@
 - [Awesome - Most Cited Deep Learning Papers](https://github.com/terryum/awesome-deep-learning-papers)
 - [Deep Learning Papers Reading Roadmap](https://github.com/floodsung/Deep-Learning-Papers-Reading-Roadmap)
 - [Best Paper Awards in Computer Science (since 1996)](https://jeffhuang.com/best_paper_awards.html)
-
 - 2019
   - [NLP 2018 Highlights](https://github.com/omarsar/nlp_highlights/blob/master/NLP_2018_Highlights.pdf)
-
 - 2018
   - [***Learn Machine Learning from Top 50 Articles for the Past Year (v.2019)](https://medium.mybridge.co/learn-machine-learning-from-top-50-articles-for-the-past-year-v-2019-15842d0b82f6)
   - [The Unreasonable Effectiveness of (Zero) Initialization in Deep Residual Learning](https://openreview.net/forum?id=H1gsz30cKX), 27 Sep 2018
@@ -136,14 +135,12 @@
   - [The Matrix Calculus You Need For Deep Learning](https://arxiv.org/abs/1802.01528v2)
   - [***Learn to Build a Machine Learning Application from Top Articles of 2017](https://medium.mybridge.co/learn-to-build-a-machine-learning-application-from-top-articles-of-2017-cdd5638453fc)
   - [A Unified Architecture for Natural Language Processing: Deep Neural Networks with Multitask Learning](https://ronan.collobert.com/pub/matos/2008_nlp_icml.pdf)
-
 - 2017
   - [Super-Convergence: Very Fast Training of Neural Networks Using Large Learning Rates](https://arxiv.org/abs/1708.07120), Leslie N. Smith, Nicholay Topin, 23 Aug 2017
     - [Cyclical LR and momentums.ipynb](https://github.com/sgugger/Deep-Learning/blob/master/Cyclical%20LR%20and%20momentums.ipynb)
   - [Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour](https://arxiv.org/abs/1706.02677), Priya Goyal, Piotr Dollár, Ross Girshick, Pieter Noordhuis, Lukasz Wesolowski, Aapo Kyrola, Andrew Tulloch, Yangqing Jia, Kaiming He, 8 Jun 2017
   - [Mask R-CNN](https://arxiv.org/abs/1703.06870), Kaiming He, Georgia Gkioxari, Piotr Dollár, Ross Girshick, 20 Mar 2017
   - [A novel approach to neural machine translation](https://code.fb.com/ml-applications/a-novel-approach-to-neural-machine-translation/)
-
 - 2016
   - [Understanding deep learning requires rethinking generalization](https://arxiv.org/abs/1611.03530), Chiyuan Zhang, Samy Bengio, Moritz Hardt, Benjamin Recht, Oriol Vinyals, 10 Nov 2016
 
@@ -225,14 +222,12 @@ Preventing overfitting. Regularization refers to imposing constraints on our neu
 - [Coursera, Understanding Mini-Batch Gradient Dexcent](https://www.youtube.com/watch?v=-_4Zi8fCZO4)
 - [Practical Recommendations for Gradient-Based Training of Deep Architectures, Yoshua Bengio, Version 2, Sept. 16th, 2012](https://arxiv.org/pdf/1206.5533v2.pdf)
 - [Optimizing convolutional networks (CS231n)](https://cs231n.github.io/neural-networks-3/) by Andrej Karpathy
-
 - Normalizing inputs.
 - Dealing with vanishing/exploding gradients.
 - Gradient checking (for debugging).
 - Optimization algorithms.
 - Learning rate decay.
 - Grid search or random search.
-
 - Gradient descent optimization algorithms
   - Stochastic Gradient Descent (SGD)
     - SGD with restarts
@@ -540,7 +535,7 @@ Notions:
 - TernausNetV2
   - [TernausNetV2: Fully Convolutional Network for Instance Segmentation](https://arxiv.org/abs/1806.00844)
 - U-Net
-  - [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/pdf/1505.04597.pdf)
+  - [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/pdf/1505.04597.pdf) and [here](https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/).
   - [Contextual Hourglass Networks for Segmentation and Density Estimation](https://openreview.net/pdf?id=S1F-dpjjM)
 
 <a name="datasets"></a>
@@ -571,6 +566,7 @@ Notions:
 - [Fast.ai Datasets](http://course.fast.ai/datasets)
 - [The 50 Best Free Datasets for Machine Learning](https://gengo.ai/datasets/the-50-best-free-datasets-for-machine-learning/)
 - [Pixabay](https://pixabay.com/)
+- [COCO](http://cocodataset.org/)
 
 <a name="fun"></a>
 
@@ -732,7 +728,7 @@ Ce [livre](https://mlbook.explained.ai/prep.html#sec:3.2) explique les instructi
 ```conda install -c conda-forge jupyterlab
 jupyter serverextension enable --py jupyterlab --sys-prefix
 
-cd /Users/YOURID 
+cd /Users/YOURID
 mkdir mlbook
 cd mlbook
 mkdir src
