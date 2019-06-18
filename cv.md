@@ -4,7 +4,7 @@
 
 Gestionnaire ayant réalisé plusieurs mandats stratégiques au gouvernement du Québec. Reconnu pour sa persévérance, son esprit d’équipe, son côté analytique, rigoureux et « touche à tout ». Cherche à créer des choses utiles et rendre simple ce qui est compliqué.
 
-## Expérience professionnelle
+## Expériences professionnelles
 
 **Directeur de la gouvernance des projets d’infrastructures** (depuis 2017/09)<br>
 [Ministère de l’Éducation et de l’Enseignement supérieur](http://www.education.gouv.qc.ca/)
@@ -95,25 +95,26 @@ Énergie, Mines et Ressources Canada, Ottawa
 - Membre du comité d'audit (2017/01 – 2019/01)
 - Membre du comité des communications (2017/09 – 2019/05)
 
-**Président** (1986 – 1987)<br>
-Association des étudiant(e)s en mathématiques de l’Université de Sherbrooke
+**Association des étudiant(e)s en mathématiques de l’Université de Sherbrooke**<br>
 
-## Scolarité
+- Président (1986 – 1987)
 
-- MBA, Gestion des technologies de l’information, [Université Laval](https://www.ulaval.ca/) (1999 – 2006)<br>
+## Formation académique
+
+- **MBA, Gestion des technologies de l’information**, [Université Laval](https://www.ulaval.ca/) (1999 – 2006)<br>
 Mention d'excellence des Facultés des études supérieures et des sciences de l’administration
-- B. Sc., Mathématiques appliquées, [Université de Sherbrooke](https://www.usherbrooke.ca/) (1985 – 1988)
+- **B. Sc., Mathématiques appliquées**, [Université de Sherbrooke](https://www.usherbrooke.ca/) (1985 – 1988)
 - Quatre examens de la [Casualty Actuarial Society](https://www.casact.org/) (1986 – 1991)
 
 ## Formation continue
 
-- [Cutting Edge Deep Learning For Coders, Part 2](https://github.com/boisalai/fastai/blob/master/part2.md), fast.ai (En cours)
-- [Practical Deep Learning For Coders, Part 1](https://github.com/boisalai/boisalai.github.io/blob/master/learning/2019_fastai_part1.md), fast.ai (En cours)
+- [Cutting Edge Deep Learning For Coders, Part 2](learning/2019_fastai_part2.md), fast.ai (En cours)
+- [Practical Deep Learning For Coders, Part 1](learning/2019_fastai_part1.md), fast.ai (En cours)
 - [Intro to Deep Learning with PyTorch](https://www.udacity.com/course/deep-learning-pytorch--ud188), Udacity (2019)
-- [Deep Learning Specialization](https://github.com/boisalai/boisalai.github.io/blob/master/learning/2018_coursera.md), Coursera (2018)
+- [Deep Learning Specialization](learning/2018_coursera.md), Coursera (2018)
 - [Full Stack Web Developer Nanodegree](learning/2017_udacity.md), Udacity (2017.)
 
-<!-- Pick one project. Do it really well. Make it fantastic. -->
+<!-- Pick one project. Do it really well. Make it fantastic. 
 ## Projets
 
 <!--
@@ -125,7 +126,7 @@ Canadian Provinces Income Tax Calculator for Individuals. Web application built 
 
 **Développement Web** :
   HTML5/CSS, JavaScript,
-  [Angular.js](https://angular.io/),
+  [Angular](https://angular.io/),
   [Backbone.js](http://backbonejs.org/),
   [Knockout.js](http://knockoutjs.com/),
   [Vue.js](https://vuejs.org/),
@@ -135,8 +136,7 @@ Canadian Provinces Income Tax Calculator for Individuals. Web application built 
   [MathJax](https://www.mathjax.org/).<br>
 **Environnement de développement** :
   Google Colab,
-  [Jupyter Notebook](http://jupyter.org/),
-  [JupyterLab](http://jupyterlab.readthedocs.io/en/stable/),
+  [Jupyter](http://jupyter.org/),
   [VSCode](https://code.visualstudio.com/),
   [Eclipse](https://www.eclipse.org/ide/).<br>
 **Programmation** :
@@ -150,7 +150,4 @@ Canadian Provinces Income Tax Calculator for Individuals. Web application built 
   [SciPy](https://www.scipy.org/),
   [Pandas](https://pandas.pydata.org/),
   [Matplotlib](https://matplotlib.org/),
-  [PyTorch](https://pytorch.org/),
-  [fastai](https://docs.fast.ai/).<br>
-**Librairies Java** :
-  [Hibernate](https://hibernate.org/).
+  [PyTorch](https://pytorch.org/).
