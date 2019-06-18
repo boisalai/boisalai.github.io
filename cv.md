@@ -9,7 +9,7 @@ Gestionnaire ayant réalisé plusieurs mandats stratégiques au gouvernement du 
 **Directeur de la gouvernance des projets d’infrastructures** (depuis 2017/09)<br>
 [Ministère de l’Éducation et de l’Enseignement supérieur](http://www.education.gouv.qc.ca/)
 
-- Suivre les projets majeurs d‘infrastructure (> 50 M$, totalisant 5 G$) et le Fonds fédéral d'investissement stratégique pour les établissements postsecondaires.
+- Suivre les projets majeurs d‘infrastructure (> 50 M$, totalisant près de 6 G$) et le Fonds fédéral d'investissement stratégique pour les établissements postsecondaires.
 - Proposer des améliorations en matière de gouvernance, d’organisation du travail et d’optimisation des processus.
 
 **Directeur du bureau de projets** (2017/04 – 2017/08)<br>
@@ -50,13 +50,13 @@ Ministère de l’Enseignement supérieur et de la science, Québec
 **Analyste en informatique** (1990/08 – 1991/02)<br>
 SOBECO, Montréal
 
-- Développer des applications en Fortran 77 dans le domaine actuariel.
+- Développer des applications en Fortran dans le domaine actuariel.
 
 **Analyste en actuariat** (1989/06 – 1990/06)<br>
 Société nationale d’assurances, Montréal
 
 - Introduire SAS au département d'actuariat et convertir des programmes PL/1 en SAS.
-- Comparer les primes d'assurance auto et habitation des concurrents.
+- Comparer les primes d'assurance IARD auto et habitation des concurrents.
 - Contribuer à établir l'IBNR (*Incurred But Not Reported*).
 
 **Professeur** (1988/10 – 1989/02)<br>
@@ -67,7 +67,7 @@ École secondaire Louis-Philippe-Paré, Commission scolaire des Grandes-Seigne
 **Stagiaire** (1988/05 – 1988/08)<br>
 Defence Research Establishment Pacific, Victoria, Colombie-Britannique
 
-- Optimiser un programme informatique déterminant la trajectoire d'un sous-marin ou d'une torpille à partir des données d'un nouveau type de sonar (Fortran 77).
+- Optimiser un programme informatique déterminant la trajectoire d'un sous-marin ou d'une torpille à partir des données d'un nouveau type de sonar (Fortran).
 
 **Stagiaire** (1987/01 – 1987/04)<br>
 Hydro-Québec, Montréal
@@ -93,7 +93,7 @@ Énergie, Mines et Ressources Canada, Ottawa
 - Membre du comité exécutif (2018/11 - 2019/11)
 - Président du comité d'audit (2019/02 - 2021/01)
 - Membre du comité d'audit (2017/01 – 2019/01)
-- Membre du comité des communications (2017/09 – 2020/09)
+- Membre du comité des communications (2017/09 – 2019/05)
 
 **Président** (1986 – 1987)<br>
 Association des étudiant(e)s en mathématiques de l’Université de Sherbrooke
@@ -113,9 +113,8 @@ Mention d'excellence des Facultés des études supérieures et des sciences de l
 - [Deep Learning Specialization](https://github.com/boisalai/boisalai.github.io/blob/master/learning/2018_coursera.md), Coursera (2018)
 - [Full Stack Web Developer Nanodegree](learning/2017_udacity.md), Udacity (2017.)
 
-## Projets
-
 <!-- Pick one project. Do it really well. Make it fantastic. -->
+## Projets
 
 <!--
 ### RÉALISATIONS
@@ -155,6 +154,3 @@ Canadian Provinces Income Tax Calculator for Individuals. Web application built 
   [fastai](https://docs.fast.ai/).<br>
 **Librairies Java** :
   [Hibernate](https://hibernate.org/).
-
-[LinkedIn](www.linkedin.com/in/alain-boisvert-98b058156) / [GitHub](https://github.com/boisalai) / [Kaggle](https://www.kaggle.com/boisalai) / [Email](mailto:alain.boisvert@education.gouv.qc.ca)
-

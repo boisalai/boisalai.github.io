@@ -31,6 +31,7 @@
   - [Coursera Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning)
     - [Youtube 112 videos](https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN)
     - [ilarum19](https://github.com/ilarum19)
+  - [Neural Networks for Machine Learning by Geoffrey Hinton (2013)](https://www.youtube.com/watch?v=2fRnHVVLf1Y&list=PLiPvV5TNogxKKwvKb1RKwkq2hm7ZvpHz0)
   - [Neural Networks for Machine Learning](https://www.coursera.org/learn/neural-networks), Geoffrey Hinton, Professor
   - [Spécialisation Advanced Data Science with IBM](https://www.coursera.org/specializations/advanced-data-science-ibm)
   - [How to Win a Data Science Competition: Learn from Top Kagglers](https://www.coursera.org/learn/
@@ -55,12 +56,17 @@
     - [Video 23 octobre 2018](https://www.youtube.com/watch?v=7hX8yKCX6xM)
     - [GitHub](https://github.com/fastai/course-v3)
   - [Cutting Edge Deep Learning For Coders, Part 2](http://course.fast.ai/part2.html)
+    - [TWiML x Fast.ai v3 Deep Learning Part 2 Study Group - Lesson 8](https://twimlai.com/meetups/twiml-x-fast-ai-v3-deep-learning-part-2-study-group-lesson-1/) and [here](https://www.youtube.com/watch?v=3t6Jn9ImrQs)
+    - [TWiML x Fast.ai v3 Deep Learning Part 2 Study Group – Lesson 9](https://twimlai.com/meetups/twiml-x-fast-ai-v3-deep-learning-part-2-study-group-lesson-9/)
+    - [TWiML x Fast.ai v3 Deep Learning Part 2 Study Group – Lesson 10](https://twimlai.com/meetups/twiml-x-fast-ai-v3-deep-learning-part-2-study-group-lesson-10/)
+    - [TWiML x Fast.ai v3 Deep Learning Part 2 Study Group – Lesson 11](https://twimlai.com/meetups/twiml-x-fast-ai-v3-deep-learning-part-2-study-group-lesson-11/) and [here](https://www.youtube.com/watch?v=3EFwfIv7Oeg)
+    - [Lesson 12](https://www.youtube.com/watch?v=rWDi8ePjl2U)
+    - [Lesson 13](https://www.youtube.com/watch?v=8HHAMS74EPo)
+    - [Lesson 14](https://www.youtube.com/watch?v=Q6pp2KY24Bc)
+  - [Computational Linear Algebra for Coders](https://github.com/fastai/numerical-linear-algebra)
   - [Introduction to Machine Learning for Coders](http://course.fast.ai/ml)
   - [Hiromi Suenaga](https://medium.com/@hiromi_suenaga)
-  - [Announcing fast.ai part 1 now available as Kaggle Kernels](https://medium.com/@hortonhearsafoo/announcing-fast-ai-part-1-now-available-as-kaggle-kernels-8ef4ca3b9ce6)
   - [Ten Techniques Learned From fast.ai](https://blog.floydhub.com/ten-techniques-from-fast-ai/)
-  - http://course-v3.fast.ai/
-  - https://github.com/fastai/course-v3
 - Udemy
   - [Practical Deep Learning with PyTorch](https://www.udemy.com/practical-deep-learning-with-pytorch/)
 - Stanford University
@@ -89,6 +95,7 @@
   - CS294
     - [CS294-112 at UC Berkeley, Deep Reinforcement Learning](http://rail.eecs.berkeley.edu/deeprlcourse/)
     - [CS294: Fairness in Machine Learning](https://fairmlclass.github.io/#statistical)
+    - [CS294: Deep Reinforcement Learning, Fall 2017](http://rail.eecs.berkeley.edu/deeprlcourse-fa17/index.html#lecture-videos)
 - MIT
   - [6.S191: Introduction to Deep Learning](http://introtodeeplearning.com/)
   - [MIT Deep Learning GitHub Repo](https://www.reddit.com/r/MachineLearning/comments/adkjpo/d_mit_deep_learning_github_repo/)
@@ -192,6 +199,7 @@
 - ReLU (rectified linear unit)
 - Leaky ReLU
 - Softmax (single label)
+- [Activation Functions in Neural Networks](https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6)
 
 ### Data augmentation
 
@@ -208,7 +216,7 @@ Preventing overfitting. Regularization refers to imposing constraints on our neu
 - L1 Regularization
   - Penalize large weights.
 - L2 Regularization
-  - Penalize large weights. 
+  - Penalize large weights.
   - [L2 Regularization and Back-Propagation](https://jamesmccaffrey.wordpress.com/2017/02/19/l2-regularization-and-back-propagation/)
 - Data augmentation (see below)
 - Early stopping
@@ -385,7 +393,7 @@ Notions:
   - [Composing Music With Recurrent Neural Networks](http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/)
   - https://www.topbots.com/exploring-lstm-tutorial-part-1-recurrent-neural-network-deep-learning/
   - https://www.topbots.com/exploring-lstm-tutorial-part-2-recurrent-neural-network-deep-learning/
-  - [Sketch RNN](https://magenta.tensorflow.org/assets/sketch_rnn_demo/index.html) 
+  - [Sketch RNN](https://magenta.tensorflow.org/assets/sketch_rnn_demo/index.html)
 - LSTM
   - [A Beginner's Guide to LSTMs](https://skymind.ai/wiki/lstm)
   - [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)*
@@ -398,6 +406,8 @@ Notions:
   - [GRU (Gated Recurrent Unit](https://towardsdatascience.com/understanding-gru-networks-2ef37df6c9be)
   - [Understanding GRU networks](https://towardsdatascience.com/understanding-gru-networks-2ef37df6c9be)
   - [Gated Recurrent Units (GRU)](http://www.cs.toronto.edu/~guerzhoy/321/lec/W09/rnn_gated.pdf)
+- Rotational Unit of Memory (RUM)
+  - [Rotational Unit of Memory](https://www.google.com/search?q=rotational+unit+of+memory+(RUM).&rlz=1C1GCEB_enCA775CA775&oq=rotational+unit+of+memory+(RUM).&aqs=chrome..69i57.1679j0j7&sourceid=chrome&ie=UTF-8)
 
 ### Ordinary Differential Equations (ODE) Networks
 
@@ -431,7 +441,9 @@ Notions:
 
 ### Generative Adversarial Networks (GANs)
 
-- [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661) 
+- Lectures suggérées
+  - [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)
+  - [Generative Adversarial Networks — A Theoretical Walk-Through](https://medium.com/@samramasinghe/generative-adversarial-networks-a-theoretical-walk-through-5889d5a8f2bb)
 - [Ian Goodfellow: Generative Adversarial Networks (NIPS 2016 tutorial)](https://www.youtube.com/watch?v=HGYYEUSm-0Q)
 - [Introduction to GANs, NIPS 2016 | Ian Goodfellow, OpenAI](https://www.youtube.com/watch?v=9JpdAg6uMXs)
 - [Teaching Machines to Draw](https://tools.google.com/seedbank/seed/5729313835974656)
@@ -442,6 +454,15 @@ Notions:
 - [GANs as a loss function](https://medium.com/vitalify-asia/gans-as-a-loss-function-72d994dde4fb)
 - [The GAN Zoo](https://github.com/hindupuravinash/the-gan-zoo)
 - [Attacking Machine Learning with Adversarial Examples](https://blog.openai.com/adversarial-example-research/)
+- [FGO StyleGAN: This Heroic Spirit Doesn’t Exist](https://towardsdatascience.com/fgo-stylegan-this-heroic-spirit-doesnt-exist-23d62fbb680e)
+- [StyleGAN - Official TensorFlow Implementation](https://github.com/NVlabs/stylegan)
+- [Making Anime Faces With StyleGAN](https://www.gwern.net/Faces#)
+- [Explained: A Style-Based Generator Architecture for GANs - Generating and Tuning Realistic Artificial Faces](https://towardsdatascience.com/explained-a-style-based-generator-architecture-for-gans-generating-and-tuning-realistic-6cb2be0f431)
+- [AI & Architecture, An Experimental Perspective](https://towardsdatascience.com/ai-architecture-f9d78c6958e0)
+- [GANS awesome applications](https://github.com/nashory/gans-awesome-applications)
+- [GANs from Scratch 1: A deep introduction. With code in PyTorch and TensorFlow](https://github.com/diegoalejogm/gans)
+- [art-DCGAN](https://github.com/robbiebarrat/art-DCGAN)
+- [Training language GANs from Scratch](https://arxiv.org/abs/1905.09922)
 
 ### Deep Reinforcement Learning
 
@@ -537,6 +558,7 @@ Notions:
 - U-Net
   - [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/pdf/1505.04597.pdf) and [here](https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/).
   - [Contextual Hourglass Networks for Segmentation and Density Estimation](https://openreview.net/pdf?id=S1F-dpjjM)
+  - [FastAI Image Segmentation](https://towardsdatascience.com/fastai-image-segmentation-eacad8543f6f)
 
 <a name="datasets"></a>
 
@@ -567,6 +589,8 @@ Notions:
 - [The 50 Best Free Datasets for Machine Learning](https://gengo.ai/datasets/the-50-best-free-datasets-for-machine-learning/)
 - [Pixabay](https://pixabay.com/)
 - [COCO](http://cocodataset.org/)
+- [Google Data Search](https://toolbox.google.com/datasetsearch) and [here](https://www.blog.google/products/search/making-it-easier-discover-datasets/).
+- [The 50 Best Free Datasets for Machine Learning](https://lionbridge.ai/datasets/the-50-best-free-datasets-for-machine-learning/)
 
 <a name="fun"></a>
 
@@ -598,6 +622,10 @@ Notions:
 - https://github.com/1991viet
 - https://github.com/eriklindernoren/Fast-Neural-Style-Transfer
 - https://medium.com/@aqsakausar30/neural-style-transfer-remixing-visual-concepts-b2ff98f69ea?sk=5506b723a042f35ed38c09972a52d0ff&fbclid=IwAR1Qo_M3n0H0UrU7EcAHl4jVFc4hdrhzFjq9NnglEvRaeyaV1eVK1sFte_I
+- https://nvlabs.github.io/SPADE/
+- https://towardsdatascience.com/implementing-spade-using-fastai-6ad86b94030a
+- https://medium.com/huggingface/how-to-build-a-state-of-the-art-conversational-ai-with-transfer-learning-2d818ac26313?fbclid=IwAR28CGRs8SwFh1EIeugkSyEJXv1kV28U7NMeE5eRIPbx3KCk0zoAXbQV88A et https://github.com/huggingface/transfer-learning-conv-ai?fbclid=IwAR1lbTd_5cWIjoQcK1VBGa6rN8t-TL8SWvIzw_BCUnyK8ivMPj0kS7OuMb8
+- [Papers with code](https://paperswithcode.com/?fbclid=IwAR2AE5jLLA9qfodLSxzFXPUDfRz5HdC-Q744VzwRLbFC6kWbnea3ty3hdvw)
 
 <a name="kaggle"></a>
 
@@ -612,6 +640,7 @@ Notions:
 - [Jeremy Howard](https://www.kaggle.com/jhoward)
 - [Rachael Tatman](https://www.kaggle.com/rtatman/kernels)
 - [How to Win a Data Science Competition: Learn from Top Kagglers](https://www.coursera.org/learn/competitive-data-science)
+- [Deep learning to identify Malaria cells using CNN on Kaggle](https://towardsdatascience.com/deep-learning-to-identify-malaria-cells-using-cnn-on-kaggle-b9a987f55ea5)
 
 <a name="tools"></a>
 
@@ -636,7 +665,7 @@ Mais je crois que conda vient avec sa propre machine virtuelle. À vérifier.
 
 ### Git
 
-[Git](https://git-scm.com/) is a version control program for saving the changes you make to files over time. 
+[Git](https://git-scm.com/) is a version control program for saving the changes you make to files over time.
 
 ### Python
 
@@ -689,16 +718,24 @@ conda update anaconda
 - [An Introduction to Julia (Beginner Level)](https://pyvideo.org/scipy-2018/an-introduction-to-julia-beginner-level.html)
 - [Julia Academy](https://academy.juliabox.com/)
 - [Lectures in Quantitative Economics](https://lectures.quantecon.org/)
+- https://people.smp.uq.edu.au/YoniNazarathy/julia-stats/StatisticsWithJulia.pdf
 
 ### Google Colab
 
 - [Colab: An easy way to learn and use TensorFlow](https://medium.com/tensorflow/colab-an-easy-way-to-learn-and-use-tensorflow-d74d1686e309)
+
+### C++
+
+- [A curated list of awesome C++ things](https://github.com/fffaraz/awesome-cpp)
 
 ### Hadoop
 
 - [Extending Hadoop for Data Science: Streaming, Spark, Storm, and Kafka](https://www.lynda.com/Hadoop-tutorials/Extending-Hadoop-Data-Science-Streaming-Spark-Storm-Kafka/516574-2.html)
 
 ### Spark
+
+- [An Introduction to Apache, PySpark and Dataframe Transformations](https://towardsdatascience.com/an-introduction-to-apache-pyspark-and-dataframe-transformations-2a6d4229f0e3)
+- [A Neanderthal’s Guide to Apache Spark in Python](https://towardsdatascience.com/a-neanderthals-guide-to-apache-spark-in-python-9ef1f156d427)
 
 ### Shell Scripting
 
@@ -868,5 +905,6 @@ https://app.neptune.ml/-/organization/7a92dc4f-48b3-42bf-a2a8-efbd32d25b7c
 - [Setting up a Ubuntu 18.04.1 LTS system for deep learning and scientific computing](https://medium.com/@IsaacJK/setting-up-a-ubuntu-18-04-1-lts-system-for-deep-learning-and-scientific-computing-fab19f7ca39d)
 - [Accessing your Deep Learning station remotely and setting up wake on lan](https://medium.com/@fabiograetz/accessing-your-deep-learning-station-remotely-and-setting-up-wake-on-lan-1e708c50fdd8)
 - [The Best 4-GPU Deep Learning Rig only costs $7000 not $11,000.](http://l7.curtisnorthcutt.com/the-best-4-gpu-deep-learning-rig?fbclid=IwAR3KaCgfcHQ9azjIJTiiw5vFs8QcQYG1p5_OLfy-Z6XGsB_JsN3Bf-mJ4QY)
+- [How to crete your own deep learning](https://hackernoon.com/how-to-create-your-own-deep-learning-rig-a-complete-hardware-guide-7cdc71e174aa)
 
 [Home](README.md) / [Accueil](README.md)

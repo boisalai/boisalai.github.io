@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../stylesheets/main.css">
+
 # Fast.ai, Practical Deep Learning For Coders, Part 1 (v3.2019)
 
 Links
@@ -19,9 +21,12 @@ Pour charger un notebook du repo github de fastai dans colab, suivre les étapes
 
 ## Lesson 1: Image classification
 
-[This lesson](https://course.fast.ai/videos/?lesson=1),
-[youtube](https://www.youtube.com/watch?v=XfoYk_Z5AkI),
-[lesson1-pets.ipynb](https://colab.research.google.com/drive/1FUlv0jkxSiVwmU73kFHY5bSNgSc2Nr3I)
+Links:
+
+- [This lesson](https://course.fast.ai/videos/?lesson=1)
+- [Youtube](https://www.youtube.com/watch?v=XfoYk_Z5AkI)
+- [lesson1-pets.ipynb](https://colab.research.google.com/drive/1FUlv0jkxSiVwmU73kFHY5bSNgSc2Nr3I)
+- [A disciplined approach to neural network hyper-parameters: Part 1 -- learning rate, batch size, momentum, and weight decay, Leslie N. Smith](https://arxiv.org/abs/1803.09820)
 
 ```python
 # Before you start using your notebook, you need to install the necessary packages. 
@@ -87,13 +92,12 @@ data = ImageDataBunch.from_lists(path, fn_paths, labels=labels, ds_tfms=tfms, si
 
 ## Lesson 2: Data cleaning and production; SGD from scratch
 
-[This lesson](https://course.fast.ai/videos/?lesson=2),
-[youtube](https://www.youtube.com/watch?v=ccMHJeQU4Qw),
-[lesson2-download.ipynb](https://colab.research.google.com/drive/1JRpOLtsmuFoK_2zPvBQNZcoN8vCm-h4a),
-[lasson2-sgd.ipynb](https://colab.research.google.com/drive/1yiF_lAwdHleFvw_r1zsjywz-h9F3iBWf).
-
 Links:
 
+- [This lesson](https://course.fast.ai/videos/?lesson=2)
+- [Youtube](https://www.youtube.com/watch?v=ccMHJeQU4Qw)
+- [lesson2-download.ipynb](https://colab.research.google.com/drive/1JRpOLtsmuFoK_2zPvBQNZcoN8vCm-h4a)
+- [lesson2-sgd.ipynb](https://colab.research.google.com/drive/1yiF_lAwdHleFvw_r1zsjywz-h9F3iBWf)
 - [Audacity](https://www.audacityteam.org/)
 - [Deep Convolutional Neural Networks and Data Augmentation for Environmental Sound Classification](https://arxiv.org/abs/1608.04363)
 - [The Mystery of the Origin — Cancer Type Classification using Fast.AI Library](https://towardsdatascience.com/the-mystery-of-the-origin-cancer-type-classification-using-fast-ai-libray-212eaf8d3f4e)
@@ -124,15 +128,15 @@ Deux façons d'afficher une méthode: `accuracy??` for source code and ```doc(ac
 
 ## Lesson 3: Data blocks; Multi-label classification; Segmentation
 
-[This lesson](https://course.fast.ai/videos/?lesson=3),
-[youtube](https://www.youtube.com/watch?v=MpZxV6DVsmM).
-[lesson3-planet.ipynb](https://colab.research.google.com/drive/11ERE5MQNwRcq1To6A5XCymDKwuyG7w7w),
-[lesson3-camvid.ipynb](https://colab.research.google.com/drive/1E98tTVJ1oS_PTnXhFtiOgiGrWsBE4oZX),
-[lesson3-head-pose.ipynb](https://colab.research.google.com/drive/1nc139IVpLeYt_nOBcqKg_p5MoaHw-ICR),
-[lesson3-imdb.ipynb](https://colab.research.google.com/drive/1fqsitMKyV2L90ecqSVa6lvZC6Ge6qVPL).
-
 Links:
 
+- [This lesson](https://course.fast.ai/videos/?lesson=3)
+- [Youtube](https://www.youtube.com/watch?v=MpZxV6DVsmM)
+- [lesson3-planet.ipynb](https://colab.research.google.com/drive/11ERE5MQNwRcq1To6A5XCymDKwuyG7w7w)
+- [lesson3-camvid.ipynb](https://colab.research.google.com/drive/1E98tTVJ1oS_PTnXhFtiOgiGrWsBE4oZX)
+- [lesson3-camvid-tiramisu.ipynb](https://colab.research.google.com/drive/1EaLdewQarSKas8nfB0nHO0FdeI1fv-0v)
+- [lesson3-head-pose.ipynb](https://colab.research.google.com/drive/1nc139IVpLeYt_nOBcqKg_p5MoaHw-ICR)
+- [lesson3-imdb.ipynb](https://colab.research.google.com/drive/1fqsitMKyV2L90ecqSVa6lvZC6Ge6qVPL)
 - Kaggle competition, [Planet: Understanding the Amazon from Space](https://www.kaggle.com/c/planet-understanding-the-amazon-from-space).
 - [Data block API](https://docs.fast.ai/data_block.html)
 - [data_block.ipynb](https://github.com/fastai/fastai/blob/master/docs_src/data_block.ipynb)
@@ -146,31 +150,57 @@ Links:
 
 ## Lesson 4: NLP; Tabular data; Collaborative filtering; Embeddings
 
-[This lesson](https://course.fast.ai/videos/?lesson=4),
-[youtube](https://www.youtube.com/watch?v=qqt3aMPB81c),
-[lesson4-tabular.ipynb](https://colab.research.google.com/drive/17536GGJ-U9I3qOIiholYGuY4JndBqrNH),
-[lesson4-collab.ipynb](https://colab.research.google.com/drive/16YvRgrSor_7acGZ5_B-b_kbyF-CVCR9m).
-
 Links:
 
+- [This lesson](https://course.fast.ai/videos/?lesson=4).
+- [Youtube](https://www.youtube.com/watch?v=qqt3aMPB81c).
+- [lesson4-tabular.ipynb](https://colab.research.google.com/drive/17536GGJ-U9I3qOIiholYGuY4JndBqrNH)
+- [lesson4-collab.ipynb](https://colab.research.google.com/drive/16YvRgrSor_7acGZ5_B-b_kbyF-CVCR9m)
 - [Universal Language Model Fine-tuning for Text Classification](https://arxiv.org/abs/1801.06146), ULMFiT
 - [MovieLens](https://grouplens.org/datasets/movielens/)
 - [An Exploration of Word Embedding Initialization in Deep-Learning Tasks](https://arxiv.org/abs/1711.09160)
 
-## Lesson 5
+## Lesson 5: Back propagation; Accelerated SGD; Neural net from scratch
 
-[This lesson](https://course.fast.ai/videos/?lesson=5),
-[youtube](https://www.youtube.com/watch?v=CJKnDu2dxOE),
-[notebook](https://colab.research.google.com/drive/1FUlv0jkxSiVwmU73kFHY5bSNgSc2Nr3I).
+Links:
 
-## Lesson 6
+- [This lesson](https://course.fast.ai/videos/?lesson=5).
+- [Youtube](https://www.youtube.com/watch?v=CJKnDu2dxOE).
+- [lesson5-sgd-mnist.ipynb](https://colab.research.google.com/drive/1i_ie9bIq-f-X9qKpYFZtMUkmqRxtigc5).
+- [Entity Embeddings of Categorical Variables](https://arxiv.org/abs/1604.06737).
+- [An overview of gradient descent optimization algorithms](http://ruder.io/optimizing-gradient-descent/).
+- [Jeremy Howard, fast.ai, What is Torch.nn really?](https://pytorch.org/tutorials/beginner/nn_tutorial.html).
 
-[This lesson](https://course.fast.ai/videos/?lesson=6),
-[youtube](https://www.youtube.com/watch?v=hkBa9pU-H48),
-[notebook](https://colab.research.google.com/drive/1FUlv0jkxSiVwmU73kFHY5bSNgSc2Nr3I).
+## Lesson 6: Regularization; Convolutions; Data ethics
 
-## Lesson 7
+Links:
 
-[This lesson](https://course.fast.ai/videos/?lesson=7),
-[youtube](https://www.youtube.com/watch?v=9spwoDYwW_I),
-[notebook](https://colab.research.google.com/drive/1FUlv0jkxSiVwmU73kFHY5bSNgSc2Nr3I).
+- [This lesson](https://course.fast.ai/videos/?lesson=6).
+- [Youtube](https://www.youtube.com/watch?v=hkBa9pU-H48).
+- [Kaggle competition Rossman Store Sales](https://www.kaggle.com/c/rossmann-store-sales).
+- [lesson6_rossman_data_clean.ipynb](https://colab.research.google.com/drive/1_1Od0-YOZVJJQJWY2ZvfP5jSHwYQ4EQL).
+- [lesson6-rossmann.ipynb](https://colab.research.google.com/drive/1NMQV0EKLlzVX-2GbH4amir6P1jwtDqKw).
+- [Dropout: A Simple Way to Prevent Neural Networks from Overfitting](https://www.cs.toronto.edu/~rsalakhu/papers/srivastava14a.pdf).
+- [lesson6-pets-more.ipynb](https://colab.research.google.com/drive/1DcGbK4S6goM1qXYmkNQt3Jdkf3mbYbgG).
+- fast.ai, [List of transforms](https://docs.fast.ai/vision.transform.html#List-of-transforms).
+- [Some Healthy Principles About Ethics & Bias in AI](https://www.youtube.com/watch?v=WC1kPtG8Iz8).
+- [Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy](https://www.amazon.ca/Weapons-Math-Destruction-Increases-Inequality/dp/0553418815).
+
+## Lesson 7: Resnets from scratch; U-net; Generative (adversarial) networks
+
+Links:
+
+- [This lesson](https://course.fast.ai/videos/?lesson=7),
+- [Youtube](https://www.youtube.com/watch?v=9spwoDYwW_I),
+- [lesson7-resnet-mnist.ipynb](https://colab.research.google.com/drive/1pETqZWAiDfleptKA5SE_GQCT00S-P1ke).
+- [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385).
+- [Visualizing the Loss Landscape of Neural Nets](https://arxiv.org/abs/1712.09913).
+- [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597).
+- Vincent Dumoulin and Francesco Visin, [A guide to convolution arithmetic for deep learning](https://arxiv.org/abs/1603.07285).
+- [lesson7-superres-gan.ipynb](https://colab.research.google.com/drive/10ucRWhPb0DaFTVzcCAQqVBPcMPYMOU1T)
+- [lesson7-superres-imagenet.ipynd](https://colab.research.google.com/drive/1QXu-jS4_3VQvUO4peJHiucNuu6xaTpZG).
+- [lesson7-wgan.ipynb](https://colab.research.google.com/drive/1-jhL2y5DxaUWsMzG6Td1WCZSZ0h4rXEW)
+- [Perceptual Losses for Real-Time Style Transfer and Super-Resolution](https://cs.stanford.edu/people/jcjohns/papers/eccv16/JohnsonECCV16.pdf)
+- [lesson7-superres.ipynb](https://colab.research.google.com/drive/1iqbGch_ys6R0bbVFIRDHwhyZG3p31DjY)
+- [jantic/DeOldify](https://github.com/jantic/DeOldify)
+- [lesson7-human-numbers.ipynb](https://colab.research.google.com/drive/1qm3CM4HevHoao9Brxz2iHchsGJifXGtl). 

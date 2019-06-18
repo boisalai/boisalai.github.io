@@ -1,0 +1,350 @@
+body, html {
+  margin: 24px 64px;
+  padding: 0;
+  width: calc(100% - 128px);
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  color: #212121;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0; 
+}
+
+header, nav, footer, section, article, div {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hide {
+  display: none;
+}
+
+/*
+ *
+ * Header 
+ *
+ */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start; 
+}
+
+.header-left {
+  width: 140px;
+  min-width: 140px;
+}
+
+.header-right {
+  flex-grow: 1;
+
+  padding-bottom: 14px;
+  border-bottom: 4px solid #678899;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start; 
+}
+
+.header-figure {
+  width: 120px;
+  margin: 0;
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.header-owner {
+  flex-grow: 1;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.header-name {
+  font-weight: 200;
+  font-size: 64px;
+}
+
+.header-title {
+  font-size: 24px;
+}
+
+/*
+ *
+ * Color Palette
+ *
+ */
+
+.color {
+  display: flex;
+  flex-direction: column; 
+  padding-right: 36px;
+}
+
+.color-box {
+  width: 72px;
+  height: 72px;
+  margin-left: auto;
+}
+
+.color-1 {
+  background-color: #889966;
+}
+
+.color-2 {
+  background-color: #678899;
+}
+
+.color-3 {
+  background-color: #996788;
+}
+
+.color-hex {
+  font-size: 24px;
+  font-weight: 300;
+  margin-top: 0.3em;
+  text-align: right;
+}
+
+/*
+ * 
+ * Content Row
+ *
+ */
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start; 
+}
+
+.content-left {
+  width: 140px;
+  min-width: 140px;
+}
+
+.content-right {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column; 
+}
+
+/*
+ *
+ * Content
+ *
+ */
+
+.poster-image {
+  width: 100%;
+  height: auto;
+  margin: 24px 0 20px 0;
+}
+
+.featered-work {
+  font-weight: 400;
+  font-size: 36px;
+  color: #678899;
+}
+
+.work-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.work-item { 
+  margin: 1rem;
+  flex: 1; 
+  align-self: flex-start;
+  text-align: center;
+}
+
+.work-figure {
+  margin: 0;
+}
+
+.work-image {
+  width: 100%;
+  min-width: 200px;
+  height: auto;
+}
+
+.work-title {
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* https://codepen.io/anon/pen/YWZWJV */
+.work-link {
+  font-size: 14px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+/*
+ *
+ * Footer
+ *
+ */
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start; 
+}
+
+.footer-left {
+  width: 140px;
+  min-width: 140px;
+}
+
+.footer-right {
+  flex-grow: 1;
+
+  padding-top: 14px;
+  border-top: 1px solid #678899;
+}
+
+@media screen and (max-width: 1000px) {
+  .header-figure { 
+    width: 90px; 
+  }
+  
+  .header-name { 
+    font-size: 48px; 
+  }
+  
+  .header-title { 
+    font-size: 21px; 
+  }
+  
+  .color-hex { 
+    font-size: 21px; 
+  }
+  
+  .featered-work { 
+    font-size: 24px; 
+  }
+  
+  .work-title { 
+    font-size: 18px; 
+  }
+  
+  .work-link { 
+    font-size: 14px; 
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body, html {
+    margin: 12px 24px;
+    width: calc(100% - 48px);
+  }
+
+  .header-name { 
+    font-size: 36px; 
+  }
+  
+  .header-left { 
+    display: none; 
+  }
+
+  .content { 
+    flex-direction: column; 
+  }
+  
+  .content-left { 
+    order: 2;
+    width: 100%;
+  }
+  
+  .content-right { 
+    order: 1; 
+  }
+
+  .color { 
+    flex-direction: row; 
+    justify-content: center;
+    padding-right: 0; 
+    margin: 16px 0;
+  }
+
+  .color-item {
+    margin: 0px 4px;
+  }
+
+  .footer-left { 
+    display: none; 
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body, html {
+    margin: 12px;
+    width: calc(100% - 24px);
+  }
+
+  .header-figure { 
+    width: 70px; 
+  }
+  
+  .header-name { 
+    font-size: 24px; 
+  }
+  
+  .header-title { 
+    font-size: 18px; 
+  }
+  
+  .color-hex { 
+    font-size: 18px; 
+  }
+  
+  .poster-image { 
+    margin: 12px 0 12px 0; 
+  }
+  
+  .featered-work { 
+    font-size: 21px; 
+  }
+  
+  .work-title { 
+    font-size: 16px; 
+  }
+  
+  .work-link { 
+    font-size: 12px; 
+  }
+  
+  .work-items { 
+    flex-direction: column; 
+  }
+  
+  .work-item { 
+    margin: 1rem 0; 
+  }
+}
+

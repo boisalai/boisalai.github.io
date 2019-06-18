@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../stylesheets/main.css">
+
 # Coursera, Deep Learning Specialization (2018)
 
 In five courses, I learned the foundations of Deep Learning, understood how to build neural networks, and learned how to lead machine learning projects. I learned about Convolutional networks (CNNs), RNNs, LSTM, Adam, Dropout, BatchNorm, Xavier/He initialization, etc.. I worked on case studies from healthcare, autonomous driving, sign language reading, music generation, and natural language processing. I learned not only the theory, but also see how it is applied in industry. I practiced these ideas in Python and in TensorFlow.
