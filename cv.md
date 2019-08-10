@@ -108,13 +108,14 @@ Mention d'excellence des Facultés des études supérieures et des sciences de l
 
 ## Formation continue
 
-- [Cutting Edge Deep Learning For Coders, Part 2](learning/2019_fastai_part2.md), fast.ai (En cours)
-- [Practical Deep Learning For Coders, Part 1](learning/2019_fastai_part1.md), fast.ai (En cours)
+- [Cutting Edge Deep Learning For Coders, Part 2, v2](learning/2019_fastai_part2.md), fast.ai (En cours)
+- [How to Win a Data Science Competition](), Coursera (2019)
+- [Practical Deep Learning For Coders, Part 1, v3](learning/2019_fastai_part1.md), fast.ai (2019)
 - [Intro to Deep Learning with PyTorch](https://www.udacity.com/course/deep-learning-pytorch--ud188), Udacity (2019)
 - [Deep Learning Specialization](learning/2018_coursera.md), Coursera (2018)
 - [Full Stack Web Developer Nanodegree](learning/2017_udacity.md), Udacity (2017.)
 
-<!-- Pick one project. Do it really well. Make it fantastic. 
+<!-- Pick one project. Do it really well. Make it fantastic.
 ## Projets
 
 <!--

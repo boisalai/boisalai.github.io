@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <title>Test</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Une boulangerie artisanal qui offre aussi des pizzas au four &agrave; bois et des produits du terroir de Charlevoix, des plats sant&eacute; et une terrasse.">
+
+        <link rel="icon" href="https://achacunsonpain.ca/image/favicon.ico"/>
+
+        <!-- See https://fonts.google.com/ -->
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-i18n/8.12.0/vue-i18n.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+                <!-- Navbar brand -->
+                <a class="navbar-brand" href="#" v-on:click="moveto('accueil')">
+                    <img src="images/top.png" height="60" alt="">
+                </a>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                    
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" v-on:click="moveto('boulangerie')">{{ $t("boulangerie.title1") }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" v-on:click="moveto('produits')">{{ $t("produits.title1") }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" v-on:click="moveto('pizzeria')">{{ $t("pizzeria.title1") }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" v-on:click="moveto('qui_sommes_nous')">{{ $t("qui_sommes_nous.title1") }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" v-on:click="moveto('on_nous_aime')">{{ $t("on_nous_aime.title1") }}</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ language }}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#" v-on:click="changeLanguage('fr', 'Français')">Français</a>
+                                <a class="dropdown-item" href="#" v-on:click="changeLanguage('en', 'English')">English</a>
+                                <a class="dropdown-item" href="#" v-on:click="changeLanguage('zh', '中文网')">中文网</a>
+                                <a class="dropdown-item" href="#" v-on:click="changeLanguage('es', 'Espanol')">Espanol</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container">
+                <br><br><br>
+
+                <!-- Accueil -->
+                <div v-if="page === 'accueil'">
+                    <div class="row" style="background-color: black;">
+                        <div class="col-sm-5 nopadding">
+                            <a href="https://goo.gl/maps/RSw197U94JeaTAh98" target="_blank">
+                                <img src="images/accueil_bsp.jpg" style="width:100%;">
+                            </a>
+                            <a href="https://goo.gl/maps/EKrdCmVRuCjQPZnk7" target="_blank">
+                                <img src="images/accueil_beaupre.jpg" style="width:100%;">
+                            </a>
+                        </div>
+                        <div class="col-sm-7 nopadding">
+                            <img src="images/1.jpg" style="width:100%;" alt="">
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <h1 v-html="$t('accueil.title2')"></h1>
+                            <p class="lead" v-html="$t('accueil.text1')"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Boulangerie -->
+                <div v-if="page === 'boulangerie'">
+                    <div class="row" style="background-color: black;">
+                        <div class="col-sm-5 nopadding">
+                            <a href="https://goo.gl/maps/RSw197U94JeaTAh98" target="_blank">
+                                <img src="images/accueil_bsp.jpg" style="width:100%;">
+                            </a>
+                            <a href="https://goo.gl/maps/EKrdCmVRuCjQPZnk7" target="_blank">
+                                <img src="images/accueil_beaupre.jpg" style="width:100%;">
+                            </a>
+                        </div>
+                        <div class="col-sm-7 nopadding">
+                            <img src="images/1.jpg" style="width:100%;" alt="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 v-html="$t('boulangerie.title2')"></h1>
+                            <p class="lead" v-html="$t('boulangerie.text1')"></p>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-auto">
+                            <img src="images/6.jpg" class="img-fluid">
+                        </div>
+                        <div class="col">
+                            <p><b>Pain blanc à l'ancienne</b><br>
+                            farine blanche (non blanchie) cultivée au Québec • eau • sel de mer • levure fraiche • malt
+                            </p>          
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-sm-auto">
+                            <img src="images/9.jpg" class="img-fluid">
+                        </div>
+                        <div class="col">
+                            <p><b>Pain blé entier</b><br>
+                                farine intégrale bio • farine  de blé entier • farine blanche (non blanchie) cultivé au Québec • eau • son de blé • sel de mer • levure fraiche                            </p>          
+                        </div>
+                    </div>
+
+                    <div class="row mt-1">
+                        <div class="col-sm-auto">
+                            <img src="images/10.jpg" class="img-fluid">
+                        </div>
+                        <div class="col">
+                            <p><b>Pain campagnard </b><br>
+                                farine blanche (non blanchie) des Éboulements, farine blanche (non blanchie) cultivé au Québec • eau levain • seigle • sarrasin • sel de mer
+                                </p>
+                        </div>
+                    </div>
+
+                    <div class="row mt-1">
+                        <div class="col-sm-auto">
+                            <img src="images/11.jpg" class="img-fluid">
+                        </div>
+                        <div class="col">
+                            <p><b>Pain Montagnard</b><br>
+                                farine blanche (non blanchie) cultivée au Québec • eau • sel de mer • levure fraiche 
+                            </p>          
+                        </div>
+                    </div>
+
+                    <div class="row mt-1">
+                        <div class="col-sm-auto mb-1">
+                            <img src="images/12.jpg" class="img-fluid">
+                        </div>
+                        <div class="col">
+                            <p><b>Pain Multi-grains</b><br>
+                                farine blanche (non blanchie) cultivé au Québec • eau • sel de mer • levure fraiche • malt • mélange de 9 grains (blé •maîs •orge • millet • lin • amandes • avoine • tournesol • sésame
+                            </p>          
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produits -->
+                <div v-if="page === 'produits'">
+                    <div class="row" style="background-color: black;">
+                        <div class="col-sm-5 nopadding">
+                            <a href="https://goo.gl/maps/RSw197U94JeaTAh98" target="_blank">
+                                <img src="images/accueil_bsp.jpg" style="width:100%;">
+                            </a>
+                            <a href="https://goo.gl/maps/EKrdCmVRuCjQPZnk7" target="_blank">
+                                <img src="images/accueil_beaupre.jpg" style="width:100%;">
+                            </a>
+                        </div>
+                        <div class="col-sm-7 nopadding">
+                            <img src="images/soupe.jpg" style="width:100%;" alt="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 v-html="$t('produits.title2')"></h1>
+                            <p class="lead" v-html="$t('produits.text1')"></p>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-auto">
+                            <img src="images/6.jpg" class="img-fluid">
+                        </div>
+                        <div class="col">
+                            <p><b>Pain blanc à l'ancienne</b><br>
+                            farine blanche (non blanchie) cultivée au Québec • eau • sel de mer • levure fraiche • malt
+                            </p>          
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizzeria -->
+                <div v-if="page === 'pizzeria'">
+                    <div class="row" style="background-color: black;">
+                        <div class="col-sm-5 nopadding">
+                            <a href="https://goo.gl/maps/RSw197U94JeaTAh98" target="_blank">
+                                <img src="images/accueil_bsp.jpg" style="width:100%;">
+                            </a>
+                            <a href="https://goo.gl/maps/EKrdCmVRuCjQPZnk7" target="_blank">
+                                <img src="images/accueil_beaupre.jpg" style="width:100%;">
+                            </a>
+                        </div>
+                        <div class="col-sm-7 nopadding">
+                            <img src="images/four.jpg" style="width:100%;" alt="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 v-html="$t('pizzeria.title2')"></h1>
+                            <p class="lead" v-html="$t('pizzeria.text1')"></p>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-auto">
+                            <img src="images/6.jpg" class="img-fluid">
+                        </div>
+                        <div class="col">
+                            <p><b>Pain blanc à l'ancienne</b><br>
+                            farine blanche (non blanchie) cultivée au Québec • eau • sel de mer • levure fraiche • malt
+                            </p>          
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Qui sommes-nous? -->
+                <div v-if="page === 'qui_sommes_nous'">
+                    <div class="row" style="background-color: black;">
+                        <div class="col-sm-5 nopadding">
+                            <a href="https://goo.gl/maps/RSw197U94JeaTAh98" target="_blank">
+                                <img src="images/accueil_bsp.jpg" style="width:100%;">
+                            </a>
+                            <a href="https://goo.gl/maps/EKrdCmVRuCjQPZnk7" target="_blank">
+                                <img src="images/accueil_beaupre.jpg" style="width:100%;">
+                            </a>
+                        </div>
+                        <div class="col-sm-7 nopadding">
+                            <img src="images/four.jpg" style="width:100%;" alt="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 v-html="$t('pizzeria.title2')"></h1>
+                            <p class="lead" v-html="$t('pizzeria.text1')"></p>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-auto">
+                            <img src="images/6.jpg" class="img-fluid">
+                        </div>
+                        <div class="col">
+                            <p><b>Pain blanc à l'ancienne</b><br>
+                            farine blanche (non blanchie) cultivée au Québec • eau • sel de mer • levure fraiche • malt
+                            </p>          
+                        </div>
+                    </div>
+                </div>
+
+                <!-- On nous aime! -->
+                <div v-if="page === 'on_nous_aime'">
+                    <div class="row" style="background-color: black;">
+                        <div class="col-sm-5 nopadding">
+                            <a href="https://goo.gl/maps/RSw197U94JeaTAh98" target="_blank">
+                                <img src="images/accueil_bsp.jpg" style="width:100%;">
+                            </a>
+                            <a href="https://goo.gl/maps/EKrdCmVRuCjQPZnk7" target="_blank">
+                                <img src="images/accueil_beaupre.jpg" style="width:100%;">
+                            </a>
+                        </div>
+                        <div class="col-sm-7 nopadding">
+                            <img src="images/parlenous.jpg" style="width:100%;" alt="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 v-html="$t('on_nous_aime.title2')"></h1>
+                            <p>
+                                <a href="https://www.lecharlevoisien.com/2016/09/01/on-introduit-farine-depeautre-a-chacun-pain/" target="_blank">On introduit la farine d’épeautre à Chacun son pain</a>, 
+                                Le Charlevoisien, 1er septembre 2016
+                            </p>
+
+                            <p>
+                                <a href="http://www.decapsule.com/boire-local/chacun" target="_blank">On est des maîtres bakers avec "À chacun son pain"</a>, La Décapusule
+                            </p>
+
+                            <p>
+                                <a href="http://www.lapresse.ca/voyage/destinations/quebec/charlevoix/201501/16/01-4835769-apres-neige-a-baie-saint-paul.php" target="_blank">Après-neige à Baie-Saint-Paul</a>, La Presse, 16 janvier 2015
+                            </p>
+
+<!--
+• Donnez-leur tous du pain!
+
+http://www.lapresse.ca/le-soleil/vivre-ici/alimentation/201410/26/01-4812799-donnez-leur-tous-du-pain.php
+
+ Le Soleil , Publié le 27 octobre 2014
+
+ 
+
+• Virée gourmande dans Charlevoix
+
+Magasine Je cuisine, 29 mai 2014
+
+Volume 10, no 3
+
+ 
+
+• Produits découverts au marché public
+
+http://www.lapresse.ca
+
+Publié le 18 août 2015
+
+ 
+
+• Les jeunes découvrent le métier de boulanger
+
+http://www.lecharlevoisien.com/actualites/general/228354/les-jeunes-decouvrent-le-metier-de-boulanger
+
+Le Charlevoisien, 9 mars 2012
+
+PRÈS DE 336 000$ POUR CINQ PROJETS DANS LA MRC DE CHARLEVOIX
+
+ 
+
+• La boulangerie À Chacun Son Pain présente ses produits
+
+http://www.lecharlevoisien.com/actualites/economie/226919/la-boulangerie-a-chacun-son-pain-presente-ses-produits
+
+Le Charlevoisien, 23 juin 2011
+
+ 
+
+• À la découverte des saveurs du pain artisanal
+
+http://creatifsdelerable.ca/creatif/a-chacun-son-pain-0
+
+  
+
+• La boulangerie À Chacun Son Pain s'installe à l'Hôtel Le Germain de Baie-St-Paul
+
+http://www.cihofm.com/nouvelles/A-Chacun-son-Pain-s-installe-au-Cafe-de-la-Gare-2016-05-13-10-04
+
+CIHO FM, 13 mai 2016
+
+ 
+
+• Checking in in Charlevoix, what to eat
+
+http://montrealgazette.com/travel/checking-in-wildnerness-and-cozy-chalets-at-charlevoixs-repere-boreal
+
+Montréal Gazette, Ottawa citizen, Vancouver Sun, Windsor Star et Edmonton Journal, 1 novembre 2017
+
+ 
+
+• Savour, page 10 
+
+https://issuu.com/vitalifemag/docs/vita_november_2017_final_print
+
+Magazine Vitalifemag, novembre 2017
+
+ 
+
+• 7 bonnes raison d'aller à Baie-St-Paul
+
+http://www.journaldequebec.com/2017/08/10/7-bonnes-raisons-daller-a-baie-saint-paul
+
+Journal de Québec, 10 août 2017
+
+ 
+
+ • Ver Sepasi, Weekend in Charlevoix
+
+http://www.versepasi.com/charlevoix
+
+ Véronique Sepasi blogueuse, 15 novembre 2017
+
+• Coup de coeur de Charlevoix
+
+https://www.pressreader.com/canada/le-soleil/20180504/281994673115847
+
+Journal Le Soleil, 4 mai 2018
+
+
+
+• Nouvelle gamme de pain : Terroir Charlevoix
+
+http://cihofm.com/nouvelles/Pres-de-336-000-pour-cinq-projets-dans-la-MRC-de-Charlevoix-2018-12-12-16-40
+
+CIHO
+
+
+
+• Nouvelle gamme de pain : Terroir Charlevoix
+
+http://www.photopierrerochette.com/sept-nouveaux-produits-a-decouvrir-aujourdhui-a-la-boulangerie-a-chacun-son-pain/
+
+Charlevoix d'Est en Ouest, 21 décembre 2018
+
+
+
+• Des pain 100% charlevoisien
+
+https://www.lecharlevoisien.com/2018/12/20/des-pains-100-charlevoix/
+
+Le Charlevoisien, 20 décembre 2018
+
+
+
+• 5 raisons de se lancer en affaires en région
+
+ https://www.journaldemontreal.com/2019/01/25/5-entrepreneurs-revelent-pourquoi-entreprendre-en-region
+
+Journal de Montréal, 13 février 2019
+
+
+
+• Des pain charlevoisien, du grain à la mie
+
+https://www.laterre.ca/actualites/alimentation/des-pains-charlevoisiens-du-grain-a-la-mie
+
+La terre de chez nous, 21 mars 2019
+-->
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="images/photocarre1.png" style="width:100%;">
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="lead" v-html="$t('text2')"></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="lead" v-html="$t('text3')"></p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="images/photocarre4.png" style="width:100%;">
+                            
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="images/photocarre2.png" style="width:100%;">
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="lead" v-html="$t('text2')"></p>
+                    </div>
+                </div>
+                -->
+            
+                <!--
+                <a title="Facebook Baie-St-Paul" href="https://www.facebook.com/achacunsonpain?fref=ts" target="_blank">
+                    <svg id="facebook-icon" viewBox="0 0 64 64"><path d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z"></path></svg>
+                </a>
+                <a title="TripAdvisor Baie-St-Paul" href="http://www.tripadvisor.fr/Restaurant_Review-g316031-d2459080-Reviews-A_Chacun_Son_Pain-Baie_St_Paul_Quebec.html" target="_blank">
+                    <img id="trip-icon" src="images/trip.jpg">
+                </a>
+
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary" v-on:click="changeLanguage('fr')">Français</button>
+                    <button type="button" class="btn btn-secondary" v-on:click="changeLanguage('en')">English</button>
+                    <button type="button" class="btn btn-secondary" v-on:click="changeLanguage('zh')">中文网</button>
+                    <button type="button" class="btn btn-secondary" v-on:click="changeLanguage('es')">Espanol</button>
+                </div>
+                -->
+            
+                <!--
+                    See https://www.mercedes-benz-vans.ca/fr/sprinter/passenger-van?fbclid=IwAR2Q0guzxSLEoHwrLWVAx8kFc7wA8dQoFDvXQa6OFcstWasFZNAUuVDeu3U
+                -->
+                <!--
+                <p class="mb-1">
+                    <strong>Baie-Saint-Paul</strong> : 1006 Boulevard Mgr de Laval, Baie-Saint-Paul, QC, G3Z 2W2,<br>
+                    <a href="https://goo.gl/maps/eG6jLZ7q5zdK4syC6">Google Maps</a>, <a href="callto:418-760-8777"><font color="c00101">418-760-8777</font></a>,
+                    <a href="mailto:baiestpaul@achacunsonpain.ca">baiestpaul@achacunsonpain.ca</a>.
+                    <br>
+                    <strong>Beaupré</strong> : 10997 Boulevard Sainte-Anne, Beaupré, QC, G0A 1E0,<br>
+                    <a href="https://goo.gl/maps/vtutiLjMBPdAh3eu8">Google Maps</a>,<a href="callto:418-702-3003"><font color="c00101">418-702-3003</font></a>,
+                    <a href="mailto:beaupre@achacunsonpain.ca">beaupre@achacunsonpain.ca</a>.
+                </p>
+                -->
+            </div>
+
+            <footer class="my-3">
+                <div style="padding: 32px; color: white">
+                    <div class="row">
+                        <div class="col-4">
+                            <p>{{ $t("boulangerie.title1") }}</p>
+                            <p>{{ $t("produits.title1") }}</p>
+                            <p>{{ $t("pizzeria.title1") }}</p>
+                            <p>{{ $t("qui_sommes_nous.title1") }}</p>
+                            <p>{{ $t("on_nous_aime.title1") }}</p>
+                        </div>
+                    </div>  
+                </div>  
+            </footer>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+        </div>
+    </body>
+</html>

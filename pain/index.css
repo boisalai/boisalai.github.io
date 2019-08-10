@@ -1,0 +1,101 @@
+/*
+Palette de couleurs
+#E2C99D
+#D5AC7C
+#E7DFCC
+#5C432E
+#281B11
+*/
+
+body { 
+    background-color: #E7DFCC; /* https://www.canva.com/colors/color-palette-generator/ */
+}
+
+p {
+    font-size: 115%;
+}
+
+.navbar {
+    max-width: 1200px; 
+    margin: 0 auto;
+    background-color: #E7DFCC;
+}
+
+.container {
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.row {
+    margin: 16px 0;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+ }
+
+.img-fluid {
+    width: 100%;
+}
+
+#block {
+    margin: 100px 60px 60px 60px;
+}
+
+.lead {
+    font-size: 1.50rem;
+    font-weight: 300;
+}
+
+.a3 {
+    border: 1px solid black;
+}
+
+#email-icon {
+    width: 40px;
+}
+
+#facebook-icon {
+    width: 60px;
+}
+
+#trip-icon {
+    width: 60px;
+}
+
+.c3 {
+    position: relative;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    color: white;
+}
+
+
+.box{
+    position: relative;
+    display: inline-block; /* Make the width of box same as image */
+}
+.text {
+    color: white;
+    font-family: 'PT Sans Narrow', sans-serif;
+    letter-spacing: 0.1em;
+
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 40%; /* Adjust this value to move the positioned div up and down */
+    text-align: center;
+    width: 80%; /* Set the width of the positioned div */
+}
+
+footer {
+    background-color: #1C1D1E;
+}

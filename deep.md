@@ -20,6 +20,7 @@
 
 ### Courses
 
+- [Need Help Getting Started with Applied Machine Learning?](https://machinelearningmastery.com/start-here/)
 - IVADO
   - [École d’été francophone en apprentissage profond 2017](https://ivado.ca/formations/ecole-dete-francophone-apprentissage-profond/)
   - [École IVADO/MILA en apprentissage profond (2e édition)](https://ivado.ca/formations/ecole-ivado-mila-apprentissage-profond/)
@@ -69,6 +70,9 @@
   - [Ten Techniques Learned From fast.ai](https://blog.floydhub.com/ten-techniques-from-fast-ai/)
 - Udemy
   - [Practical Deep Learning with PyTorch](https://www.udemy.com/practical-deep-learning-with-pytorch/)
+- Berkeley
+  - https://sites.google.com/view/berkeley-cs294-158-sp19/home?fbclid=IwAR2ROHxMVSt6vD97rmdH3TiuBGaO6x4SHU0b15QveJBbes70Dph2bAEpZSI
+  - [CS294-158 Deep Unsupervised Learning Spring 2019](https://sites.google.com/view/berkeley-cs294-158-sp19/home) 
 - Stanford University
   - [Lecture Collection, Convolutional Neural Networks for Visual Recognition (Spring 2017)](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) and [here](https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)
   - [Lecture Collection | Natural Language Processing with Deep Learning (Winter 2017)](https://www.youtube.com/playlist?list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6)
@@ -76,6 +80,8 @@
     - [Home Page](http://web.stanford.edu/class/cs224n/)
     - [CS224n Videos](https://www.youtube.com/watch?v=OQQ-W_63UgQ&list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6)
     - [CS224n Reddit](https://www.reddit.com/r/CS224n/)
+    - https://www.youtube.com/playlist?list=PLoROMvodv4rObpMCir6rNNUlFAn56Js20
+    - https://www.youtube.com/playlist?list=PLU40WL8Ol94IJzQtileLTqGZuXtGlLMP_&fbclid=IwAR34EJ1vzYt30OZGVh__v6O7c_RkRp7QE1ZcExz7czu9CxLWPYqZxIjxYyI
   - CS229
     - [CS229: Machine Learning](http://cs229.stanford.edu/)
     - [Resources for CS229 - Machine Learning](https://stanford.edu/~shervine/teaching/cs-229.html)
@@ -90,8 +96,10 @@
     - http://cs231n.github.io/neural-networks-2/#datapre
     - http://cs231n.github.io/neural-networks-3/#sanitycheck
     - [Youtube CS231n Winter 2016](https://www.youtube.com/watch?v=NfnWJUyUJYU&list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC)
+    - [Youtube CS231n](https://www.youtube.com/playlist?list=PLzUTmXVwsnXod6WNdg57Yc3zFx_f-RYsq&fbclid=IwAR2XUEY11KRH_hkn2pIxN1MNI1q-W478VXj2fgOnSgE_zH1jsLMm9SEIK0s)
   - CS234: Reinforcement Learning
     - [Youtube](http://onlinehub.stanford.edu/cs234/stanford-cs234-reinforcement-learning-winter-2019-lecture-1-introduction)
+    - http://web.stanford.edu/class/cs234/index.html?fbclid=IwAR3i-W1TL84jgca-J0Ab3VI_aX4pXJc8CNtFardmMsGVYsNu48H-657NSqo
   - CS294
     - [CS294-112 at UC Berkeley, Deep Reinforcement Learning](http://rail.eecs.berkeley.edu/deeprlcourse/)
     - [CS294: Fairness in Machine Learning](https://fairmlclass.github.io/#statistical)
@@ -157,6 +165,9 @@
 - [Glossary of Machine Learning Terms](https://semanti.ca/blog/?glossary-of-machine-learning-terms)
 - [ML Resources](https://sgfin.github.io/learning-resources/)
 - [A curated list of awesome computer vision resources](https://github.com/jbhuang0604/awesome-computer-vision)
+- [Glossaire du machine learning](https://developers.google.com/machine-learning/glossary/)
+- [Glossary of common Machine Learning, Statistics and Data Science terms](https://www.analyticsvidhya.com/glossary-of-common-statistics-and-machine-learning-terms/)
+- [Cheat Sheets for AI, Neural Networks, Machine Learning, Deep Learning & Big Data](https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-678c51b4b463)
 
 ### Conferences
 
@@ -381,6 +392,7 @@ Notions:
 - [Attention? Attention!](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html)
 - [Attention Is All You Need](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)
 - [Transformers: Attention in Disguise](https://www.mihaileric.com/posts/transformers-attention-in-disguise/)
+- [Attention and Augmented Recurrent Neural Networks](https://distill.pub/2016/augmented-rnns/)
 
 ### Recurrent Neural Network (RNN)
 
@@ -436,6 +448,10 @@ Notions:
 - [UMLFit](https://arxiv.org/abs/1801.06146)
 - [BERT](https://arxiv.org/abs/1810.04805)
 - [A Review of the Neural History of Natural Language Processing](http://ruder.io/a-review-of-the-recent-history-of-nlp/), 1er octobre 2018.
+- [Transfer Learning in NLP](https://docs.google.com/presentation/d/1DJI1yX4U5IgApGwavt0AmOCLWwso7ou1Un93sMuAWmA/edit?fbclid=IwAR2N46ezkUkZyEEBKAg7EiBbLjRouIMZKat_kZGqc67XynRrSJUAAX3OJeI#slide=id.p)
+- [End To End Guide For NLP Project, Explains How To Build A Successful NLP Project](https://medium.com/fintechexplained/end-to-end-guide-for-nlp-project-55e6765f63b5?fbclid=IwAR2mQssbjo0EN9B2bxUioNjn-FS8UTulyXMQuAUsCVMJo95MNE8NDgDzzGU)
+- [How to use NLP to Analyze WhatsApp Messages](https://towardsdatascience.com/how-to-use-nlp-to-analyze-whatsapp-messages-1adf0e85907c)
+- [How to Preprocess Text Data in Python ? 4 Processes](https://www.datasciencelearner.com/how-to-preprocess-text-data-in-python/)
 
 ### Variational autoencoders (VAEs)
 
@@ -444,6 +460,7 @@ Notions:
 - Lectures suggérées
   - [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)
   - [Generative Adversarial Networks — A Theoretical Walk-Through](https://medium.com/@samramasinghe/generative-adversarial-networks-a-theoretical-walk-through-5889d5a8f2bb)
+- [Google](https://developers.google.com/machine-learning/gan/)
 - [Ian Goodfellow: Generative Adversarial Networks (NIPS 2016 tutorial)](https://www.youtube.com/watch?v=HGYYEUSm-0Q)
 - [Introduction to GANs, NIPS 2016 | Ian Goodfellow, OpenAI](https://www.youtube.com/watch?v=9JpdAg6uMXs)
 - [Teaching Machines to Draw](https://tools.google.com/seedbank/seed/5729313835974656)
@@ -463,6 +480,7 @@ Notions:
 - [GANs from Scratch 1: A deep introduction. With code in PyTorch and TensorFlow](https://github.com/diegoalejogm/gans)
 - [art-DCGAN](https://github.com/robbiebarrat/art-DCGAN)
 - [Training language GANs from Scratch](https://arxiv.org/abs/1905.09922)
+- [ADVANCES IN GENERATIVE ADVERSARIAL NETWORKS (GANS)](https://www.topbots.com/advances-in-gans/)
 
 ### Deep Reinforcement Learning
 
@@ -505,6 +523,10 @@ Notions:
 - RandomFlip
 
 ### Ensemble Methods
+
+### Random Forest
+
+- [Is Random Forest better than Logistic Regression? (a comparison)](https://towardsdatascience.com/is-random-forest-better-than-logistic-regression-a-comparison-7a0f068963e4)
 
 <a name="architectures"></a>
 
@@ -573,6 +595,7 @@ Notions:
 - ImageNet
   - 14M images, 22k classes, classification labels.
   - http://www.image-net.org/
+  - [Image Classification on ImageNet](https://www.paperswithcode.com/sota/image-classification-on-imagenet)
 - Small-ImageNet
   - Small-ImageNet which is a set of tiny 37×37 gray level images dataset computed from the higher-resolution and larger set at http://www.image-net.org, with labels from the WordNet noun hierarchy. We have used 90,000 examples for training, 10,000 for the validation set and 10,000 for testing. There are 10 balanced classes: reptiles, vehicles, birds, mammals, fish, furniture, instruments, tools, flowers and fruits Figure 1 (bottom) shows randomly chosen examples.
   - http://www.iro.umontreal.ca/˜lisa/twiki/bin/view.cgi/Public/DeepGradientsAISTATS2010
@@ -626,6 +649,8 @@ Notions:
 - https://towardsdatascience.com/implementing-spade-using-fastai-6ad86b94030a
 - https://medium.com/huggingface/how-to-build-a-state-of-the-art-conversational-ai-with-transfer-learning-2d818ac26313?fbclid=IwAR28CGRs8SwFh1EIeugkSyEJXv1kV28U7NMeE5eRIPbx3KCk0zoAXbQV88A et https://github.com/huggingface/transfer-learning-conv-ai?fbclid=IwAR1lbTd_5cWIjoQcK1VBGa6rN8t-TL8SWvIzw_BCUnyK8ivMPj0kS7OuMb8
 - [Papers with code](https://paperswithcode.com/?fbclid=IwAR2AE5jLLA9qfodLSxzFXPUDfRz5HdC-Q744VzwRLbFC6kWbnea3ty3hdvw)
+- [You can now speak using someone else’s voice with Deep Learning](https://towardsdatascience.com/you-can-now-speak-using-someone-elses-voice-with-deep-learning-8be24368fa2b)
+- [DeepPiCar — Part 1: How to Build a Deep Learning, Self Driving Robotic Car on a Shoestring Budget](https://towardsdatascience.com/deeppicar-part-1-102e03c83f2c)
 
 <a name="kaggle"></a>
 
@@ -641,6 +666,7 @@ Notions:
 - [Rachael Tatman](https://www.kaggle.com/rtatman/kernels)
 - [How to Win a Data Science Competition: Learn from Top Kagglers](https://www.coursera.org/learn/competitive-data-science)
 - [Deep learning to identify Malaria cells using CNN on Kaggle](https://towardsdatascience.com/deep-learning-to-identify-malaria-cells-using-cnn-on-kaggle-b9a987f55ea5)
+- [Kaggle Past Solutions](http://ndres.me/kaggle-past-solutions/) and [here](http://www.chioka.in/kaggle-competition-solutions/) and [here](https://github.com/ShuaiW/kaggle-classification/)
 
 <a name="tools"></a>
 
@@ -677,6 +703,7 @@ Mais je crois que conda vient avec sa propre machine virtuelle. À vérifier.
 - [Flake8: Your Tool For Style Guide Enforcement](http://flake8.pycqa.org/en/latest/)
 - [Lectures in Quantitative Economics](https://lectures.quantecon.org/)
 - [Python Development in Visual Studio Code](https://realpython.com/python-development-visual-studio-code/)
+- [tqdm, A Fast, Extensible Progress Bar for Python and CLI](https://github.com/tqdm/tqdm)
 
 ### Numpy
 
@@ -688,6 +715,8 @@ Mais je crois que conda vient avec sa propre machine virtuelle. À vérifier.
 - [Pandas Pivot Table Explained](http://pbpython.com/pandas-pivot-table-explained.html)
 - [Pandas by Solutions](http://www.pythonprogramming.in/pandas-examples.html)
 - [Modern Pandas (Part 1)](https://tomaugspurger.github.io/modern-1-intro.html)
+- https://bitbucket.org/hrojas/learn-pandas/src/master/
+- [How to read data using pandas read_csv](https://honingds.com/blog/pandas-read_csv/)
 
 ### Scipy
 
@@ -697,10 +726,15 @@ Mais je crois que conda vient avec sa propre machine virtuelle. À vérifier.
 
 - [Effectively Using Matplotlib](http://pbpython.com/effective-matplotlib.html)
 - [Python Plotting With Matplotlib (Guide)](https://realpython.com/python-matplotlib-guide/)
+- [Good article on @matplotlib history and architecture, by the creators themselves](https://www.aosabook.org/en/matplotlib.html)
 
 ### Seaborn
 
 - [Home page](https://seaborn.pydata.org/)
+
+### Plotly
+
+- [Home page](https://plot.ly/python/)
 
 ### Anaconda
 
@@ -727,6 +761,17 @@ conda update anaconda
 ### C++
 
 - [A curated list of awesome C++ things](https://github.com/fffaraz/awesome-cpp)
+- [JetBrains CLion](https://www.jetbrains.com/clion/)
+- [The Definitive C++ Book Guide and List](https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list)
+
+### Java
+
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+
+### Swift
+
+- [Swift.org](https://swift.org/)
+- [Swift Development with Visual Studio Code](https://nshipster.com/vscode/)
 
 ### Hadoop
 
@@ -736,6 +781,7 @@ conda update anaconda
 
 - [An Introduction to Apache, PySpark and Dataframe Transformations](https://towardsdatascience.com/an-introduction-to-apache-pyspark-and-dataframe-transformations-2a6d4229f0e3)
 - [A Neanderthal’s Guide to Apache Spark in Python](https://towardsdatascience.com/a-neanderthals-guide-to-apache-spark-in-python-9ef1f156d427)
+- https://towardsdatascience.com/the-hitchhikers-guide-to-handle-big-data-using-spark-90b9be0fe89a
 
 ### Shell Scripting
 
@@ -820,6 +866,13 @@ Pour installer PyTorch, faire ```conda install pytorch torchvision -c pytorch```
 
 ### scikit-learn
 
+- [Home page](https://scikit-learn.org/stable/index.html)
+- [Biclustering algorithms for sorting corrplots](https://scikit-learn.org/stable/auto_examples/bicluster/plot_spectral_biclustering.html)
+
+### Vowpal Wabbit
+
+- [Home page](https://github.com/VowpalWabbit/vowpal_wabbit/wiki)
+
 ### TensorFlow
 
 - [Get Started with TensorFlow](https://www.tensorflow.org/tutorials/)
@@ -832,6 +885,10 @@ Pour installer PyTorch, faire ```conda install pytorch torchvision -c pytorch```
 - [A collection of datasets ready to use with TensorFlow](https://github.com/tensorflow/datasets)
 - [I ranked the Best TensorFlow Courses on the internet, based on your reviews](https://sinxloud.com/best-tensorflow-courses-beginners-experts/)
 - [CS20: Tensorflow for Deep Learning Research](http://web.stanford.edu/class/cs20si/index.html)
+
+### TensorFlow.js
+
+- [Predicting Diabetes using Logistic Regression with TensorFlow.js](https://towardsdatascience.com/diabetes-prediction-using-logistic-regression-with-tensorflow-js-35371e47c49d)
 
 ### TensorboardX
 

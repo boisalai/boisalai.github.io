@@ -204,3 +204,21 @@ Links:
 - [lesson7-superres.ipynb](https://colab.research.google.com/drive/1iqbGch_ys6R0bbVFIRDHwhyZG3p31DjY)
 - [jantic/DeOldify](https://github.com/jantic/DeOldify)
 - [lesson7-human-numbers.ipynb](https://colab.research.google.com/drive/1qm3CM4HevHoao9Brxz2iHchsGJifXGtl). 
+
+## So what now? Watch the videos again, and___
+
+- Write
+  - Code
+  - Papers
+  - Blog posts
+- Help
+  - Forum
+  - Success stories
+- Gather
+  - Book club
+  - Meetups
+  - Study groups
+- Build
+  - Apps
+  - Work projets
+  - Librairies
