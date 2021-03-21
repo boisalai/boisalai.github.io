@@ -6,7 +6,12 @@ Gestionnaire ayant réalisé plusieurs mandats stratégiques au gouvernement du 
 
 ## Expériences professionnelles
 
-**Directeur de la gouvernance des projets d’infrastructures** (depuis 2017/09)<br>
+
+**Directeur général des infrastructures** (depuis 2020/10)<br>
+[Ministère de l’Enseignement supérieur](http://www.education.gouv.qc.ca/)
+
+
+**Directeur de la gouvernance des projets d’infrastructures** (2017/09 - 2010/09)<br>
 [Ministère de l’Éducation et de l’Enseignement supérieur](http://www.education.gouv.qc.ca/)
 
 - Suivre les projets majeurs d‘infrastructure (> 50 M$, totalisant près de 6 G$) et le Fonds fédéral d'investissement stratégique pour les établissements postsecondaires.
