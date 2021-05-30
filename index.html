@@ -3,10 +3,12 @@
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <!-- Vue.js -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- Awesome fonts -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
@@ -14,9 +16,10 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-  <title>My first Vue app</title>
+  <title>Alain Boisvert</title>
 
   <style>
+    body { font-family: 'Poppins', sans-serif !important; }
     a i { color:#000; }
   </style>
 </head>
@@ -55,209 +58,197 @@
   </nav>
 
   <div class="container mt-5 mb-5">
-    <div id="app">
-      {{ message2 }}
-    </div>
-
-    <div id="app-2">
-      <span v-bind:title="message">
-        Hover your mouse over me for a few seconds
-        to see my dynamically bound title!
-      </span>
-    </div>
-
     <h1>Curriculum vitae</h1>
 
-  <p>Gestionnaire ayant réalisé plusieurs mandats stratégiques au gouvernement du Québec. Persévérant, esprit d’équipe analytique, 
-    rigoureux et « touche à tout ». Cherche à créer des choses utiles et rendre simple ce qui est compliqué.</p>
+    <p>
+      <a href="https://github.com/boisalai" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/alain-boisvert-98b058156/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </p> 
 
+    <p>Gestionnaire ayant réalisé plusieurs mandats stratégiques au gouvernement du Québec. Persévérant, esprit d’équipe analytique, 
+      rigoureux et « touche à tout ». Cherche à créer des choses utiles et rendre simple ce qui est compliqué.</p>
+
+    <h2>Expériences professionnelles</h2>
+
+    <p>
+      <b>Directeur général des infrastructures</b> (depuis 2020/10)<br>
+      Ministère de l'Enseignement supérieur
+    </p>
+
+    <p>
+      <b>Directeur de la gouvernance des projets d’infrastructures</b> (2017/09 – 2020/09)<br>
+      Ministère de l’Éducation et de l'Enseignement supérieur
+    </p>
+    <ul>
+      <li>Assurer le suivi de projets majeurs d‘infrastructure (> 50 M$) et le Fonds fédéral d'investissement stratégique pour les établissements postsecondaires.</li>
+      <li>Proposer des améliorations en matière de gouvernance, d’organisation du travail et d’optimisation des processus.</li>
+    </ul>
+
+    <p>
+      <b>Directeur du bureau de projets</b> (2017/04 – 2017/08)<br>
+      <b>Conseiller-cadre à la Direction générale des acquisitions</b> (2016/06 – 2017/03)<br>
+      Centre de services partagés du Québec
+    </p>
+    <ul>
+      <li>Élaborer un plan de consolidation et d’amélioration des services en acquisition.</li>
+      <li>Prendre en charge divers dossiers stratégiques (communications, recommandations du VGQ, développement durable, relations fédérales-provinciales).</li>
+    </ul>
+
+    <p>
+      <b>Directeur des projets spéciaux et de la modélisation</b> (2009/01 – 2016/05)<br>
+      Ministère des Finances du Québec
+    </p>
+    <ul>
+      <li>Appuyer le <a href="https://www.groupes.finances.gouv.qc.ca/santefinancementactivite/travaux/rapports-et-recommandations/index.html" target="_blank">Groupe d’experts pour un financement axé sur les patients</a> 
+        et le <a href="https://www.groupes.finances.gouv.qc.ca/Consultprebudg/2010-2011/" atrget="_blank">Comité consultatif sur l’économie et les finances publiques</a>.</li>
+      <li>Prendre en charge divers projets spéciaux, dont l’élaboration de la première édition des 
+        <a href="https://publications.msss.gouv.qc.ca/msss/sujets/comptes-de-la-sante" target="_blank">Comptes de la santé</a> 
+        pour le ministère de la Santé et des Services sociaux et la projection à long terme du cadre financier du gouvernement.</li>
+    </ul>
+
+    <p>
+      <b>Analyste expert</b> (2001/04 – 2008/12)<br>
+      Politiques budgétaires, fiscales et finances publiques<br>
+      Ministère des Finances du Québec
+    </p>
+    <ul>
+      <li>Conseiller le ministère sur divers sujets de politique budgétaire, politique fiscale et finance publique.</li>
+      <li>Appuyer le <a href="https://www.groupes.finances.gouv.qc.ca/financementsante/fr/groupe/index.asp" target="_blank">Groupe de travail sur le financement du système de santé</a>.</li>
+      <li>Élaborer la position gouvernementale lors des négociations sur la rémunération des médecins spécialistes.</li>
+      <li>Proposer le premier plan de retour à l'équilibre budgétaire en 2008.</li>
+      <li>Développer un modèle de simulation du revenu disponible (après transferts, impôts et cotisations) des ménages de toutes les provinces canadiennes (VBA/Excel).</li>
+    </ul>
+
+    <p>
+      <b>Analyste de données, expert</b> (1992/02 – 2001/04)<br>
+      Ministère de la Solidarité sociale, Québec
+    </p>
+    <ul>
+      <li>Produire les statistiques officielles sur les prestataires de l'aide sociale.</li>
+      <li>Mettre en place un entrepôt de données et développer diverses macros pour faciliter son exploitation (SAS, JCL).</li>
+    </ul>
+
+    <p>
+      <b>Analyste en informatique</b> (1991/02 – 1992/02)<br>
+      Ministère de l’Enseignement supérieur et de la science, Québec
+    </p>
+    <ul>
+      <li>Maintenir l'infrastructure bureautique d'une équipe et développer des applications en milieu utilisateur.</li>
+    </ul>
+
+    <p>
+      <b>Analyste en informatique</b> (1990/08 – 1991/02)<br>
+      SOBECO, Montréal
+    </p>
+    <ul>
+      <li>Développer des applications dans le domaine actuariel (Fortran).</li>
+    </ul>
+
+    <p>
+      <b>Analyste en actuariat</b> (1989/06 – 1990/06)<br>
+      Société nationale d’assurances, Montréal
+    </p>
+    <ul>
+      <li>Implanter SAS au département d'actuariat et convertir des programmes PL/1 en SAS.</li>
+      <li>Comparer les primes d'assurance IARD auto et habitation des concurrents.</li>
+      <li>Contribuer à établir l'IBNR (<i>Incurred But Not Reported</i>).</li>
+    </ul>
+
+    <p>
+      <b>Professeur suppléant</b> (1988/10 – 1989/02)<br>
+      École secondaire Louis-Philippe-Paré, Commission scolaire des Grandes-Seigneuries, Chateauguay
+    </p>
+    <ul>
+      <li>Professeur suppléant de mathématique de niveau secondaire 3 et 5.</li>
+    </ul>
+
+    <p>
+      <b>Stagiaire de recherche</b> (1988/05 – 1988/08)<br>
+      Defence Research Establishment Pacific, Victoria, Colombie-Britannique
+    </p>
+    <ul>
+      <li>Optimiser un programme informatique déterminant la trajectoire d'un sous-marin ou d'une torpille à partir des données d'un nouveau 
+        type de sonar (Fortran).</li>
+    </ul>
+
+    <p>
+      <b>Stagiaire de recherche</b> (1987/01 – 1987/04)<br>
+      Hydro-Québec, Montréal
+    </p>
+    <ul>
+      <li>Recenser les modèles mathématiques (méthodes des éléments finis) sur la dispersion des polluants dans l'eau.</li>
+    </ul>
+
+    <p>
+      <b>Stagiaire</b> (1986/05 – 1986/08)<br>
+      Énergie, Mines et Ressources Canada, Ottawa
+    </p>
+    <ul>
+      <li>Poursuivre le développement d'un logiciel déterminant des fractures possibles d'une pièce métallique à partir des données d'un 
+        microscope électronique (Fortran sur DEC PDP-11).</li>
+    </ul>
+
+    <p>
+      <b>Réserviste</b> (1982 – 1985)<br>
+      Les Fusiliers de Sherbrooke, Forces Canadiennes
+    </p>
+    <ul>
+      <li>Caporal d'infanterie, exercices militaires, certifié « armes antichars » et « communication radio ».</li>
+    </ul>
+
+    <h2>Conseil d'administration et activités communautaires</h2>
+
+    <p>
+      <b>Administrateur à l'Ordre des dentistes du Québec</b> (depuis 2016/11)<br>
+      Ordre des dentistes du Québec
+    </p>
+    <ul>
+      <li>Membre du conseil d’administration à titre de représentant du public (2016/11 – 2024/10)</li>
+      <li>Membre du comité exécutif (2018/11 - 2020/11)</li>
+      <li>Président du comité d'audit (2019/02 - 2023/01)</li>
+      <li>Membre du comité d'audit (2017/01 – 2019/01)</li>
+    </ul>
+
+    <p>
+      <b>Président</b> (1986 – 1987)<br>
+      Association des étudiant(e)s en mathématiques de l’Université de Sherbrooke
+    </p>
+
+    <h2>Formations</h2>
+
+    <p>
+      <b>MBA, Gestion des technologies de l’information</b>, Université Laval (1999 – 2006)<br>
+      Mention d'excellence des Facultés des études supérieures et des sciences de l’administration
+    </p>
+
+    <p>
+      <b>B. Sc., Mathématiques appliquées</b>, Université de Sherbrooke (1985 – 1988)
+    </p>
     
-  <a href="https://github.com/boisalai" target="_blank"><i class="fab fa-github"></i></a>
+    <p>Quatre examens de la <a href="https://www.casact.org/" target="_blank">Casualty Actuarial Society</a> (1986 – 1991)</p>
 
-  <a href="https://www.linkedin.com/in/alain-boisvert-98b058156/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <h2>Formations continues</h2>
 
-  <h2>Expériences professionnelles</h2>
+    <ul>
+      <li>MIT, <a href="http://introtodeeplearning.com/" target="_blank">6.S191 Introduction to Deep Learning</a> (En cours)</li>
+      <li>fast.ai, <a href="https://course19.fast.ai/" target="_blank">Practical Depep Learning for Coders, v3</a> (En cours)</li>
+      <li>Coursera, How to Win a Data Science Competition (2019)</li>
+      <li>Udacity, Intro to Deep Learning with PyTorch (2019)</li>
+      <li>Coursera, Deep Learning Specialization (2018)</li>
+      <li>Udacity, Full Stack Web Developer Nanodegree (2017)</li>
+    </ul>
 
-  <p>
-    <b>Directeur général des infrastructures</b> (depuis 2020/10)<br>
-    Ministère de l'Enseignement supérieur
-  </p>
+    <h2>Connaissances informatiques</h2>
 
-  <p>
-    <b>Directeur de la gouvernance des projets d’infrastructures</b> (2017/09 – 2020/09)<br>
-    Ministère de l’Éducation et de l'Enseignement supérieur
-  </p>
-  <ul>
-    <li>Assurer le suivi de projets majeurs d‘infrastructure (> 50 M$) et le Fonds fédéral d'investissement stratégique pour les établissements postsecondaires.</li>
-    <li>Proposer des améliorations en matière de gouvernance, d’organisation du travail et d’optimisation des processus.</li>
-  </ul>
-
-  <p>
-    <b>Directeur du bureau de projets</b> (2017/04 – 2017/08)<br>
-    <b>Conseiller-cadre à la Direction générale des acquisitions</b> (2016/06 – 2017/03)<br>
-    Centre de services partagés du Québec
-  </p>
-  <ul>
-    <li>Élaborer un plan de consolidation et d’amélioration des services en acquisition.</li>
-    <li>Prendre en charge divers dossiers stratégiques (communications, recommandations du VGQ, développement durable, relations fédérales-provinciales).</li>
-  </ul>
-
-**Directeur des projets spéciaux et de la modélisation** (2009/01 – 2016/05)<br>
-[Ministère des Finances du Québec](http://www.finances.gouv.qc.ca/), Québec
-
-- Appuyer le Groupe d’experts pour un financement axé sur les patients et le Comité consultatif sur l’économie et les finances publiques.
-- Prendre en charge divers projets spéciaux, dont l’élaboration de la première édition des Comptes de la santé pour le ministère de la Santé et des Services sociaux et la projection à long terme du cadre financier du gouvernement.
-
-**Analyste expert** (2001/04 – 2008/12)<br>
-Politiques budgétaires, fiscales et finances publiques<br>
-[Ministère des Finances du Québec](http://www.finances.gouv.qc.ca/), Québec
-
-- Conseiller le ministère sur divers sujets de politique budgétaire, politique fiscale et finance publique.
-- Appuyer le Groupe de travail sur le financement du système de santé (Rapport Castonguay).
-- Élaborer la position gouvernementale lors des négociations sur la rémunération des médecins spécialistes.
-- Proposer le premier plan de retour à l'équilibre budgétaire.
-- Développer un modèle de simulation du revenu disponible (après transferts, impôts et cotisations) des ménages de toutes les provinces canadiennes (VBA/Excel).
-
-**Analyste expert** (1992/02 – 2001/04)<br>
-Ministère de la Solidarité sociale, Québec
-
-- Produire les statistiques officielles sur les prestataires de l'aide sociale.
-- Mettre en place un entrepôt de données (SAS) et développer diverses macros pour faciliter son exploitation (SAS, JCL).
-- Agir comme « analyste de données » pour le secteur des politiques.
-
-**Analyste en informatique** (1991/02 – 1992/02)<br>
-Ministère de l’Enseignement supérieur et de la science, Québec
-
-- Maintenir l'infrastructure bureautique d'une équipe et développer des applications en milieu utilisateur.
-
-**Analyste en informatique** (1990/08 – 1991/02)<br>
-SOBECO, Montréal
-
-- Développer des applications en Fortran dans le domaine actuariel.
-
-**Analyste en actuariat** (1989/06 – 1990/06)<br>
-Société nationale d’assurances, Montréal
-
-- Introduire SAS au département d'actuariat et convertir des programmes PL/1 en SAS.
-- Comparer les primes d'assurance IARD auto et habitation des concurrents.
-- Contribuer à établir l'IBNR (*Incurred But Not Reported*).
-
-**Professeur** (1988/10 – 1989/02)<br>
-École secondaire Louis-Philippe-Paré, Commission scolaire des Grandes-Seigneuries, Chateauguay
-
-- Professeur suppléant de mathématique de niveau secondaire 3 et 5.
-
-**Stagiaire** (1988/05 – 1988/08)<br>
-Defence Research Establishment Pacific, Victoria, Colombie-Britannique
-
-- Optimiser un programme informatique déterminant la trajectoire d'un sous-marin ou d'une torpille à partir des données d'un nouveau type de sonar (Fortran).
-
-**Stagiaire** (1987/01 – 1987/04)<br>
-Hydro-Québec, Montréal
-
-- Recenser les modèles mathématiques (méthodes des éléments finis) sur la dispersion des polluants dans l'eau.
-
-**Stagiaire** (1986/05 – 1986/08)<br>
-Énergie, Mines et Ressources Canada, Ottawa
-
-- Poursuivre le développement d'un logiciel déterminant des fractures possibles d'une pièce métallique à partir des données d'un microscope électronique (Fortran sur DEC PDP-11).
-
-**Réserviste** (1982 – 1985)<br>
-[Les Fusiliers de Sherbrooke](http://www.army-armee.forces.gc.ca/fr/fus-sherbrooke/index.page), Forces Canadiennes
-
-- Caporal d'infanterie, exercices militaires, certifié « armes antichars » et « communication radio ».
-
-## Conseil d'administration et activités communautaires
-
-**Administrateur à l'Ordre des dentistes du Québec** (depuis 2016/11)<br>
-[Ordre des dentistes du Québec](http://www.odq.qc.ca/)
-
-- Membre du conseil d’administration à titre de représentant du public (2016/11 – 2024/10)
-- Membre du comité exécutif (2018/11 - 2019/11)
-- Président du comité d'audit (2019/02 - 2023/01)
-- Membre du comité d'audit (2017/01 – 2019/01)
-- Membre du comité des communications (2017/09 – 2019/05)
-
-**Association des étudiant(e)s en mathématiques de l’Université de Sherbrooke**<br>
-
-- Président (1986 – 1987)
-
-## Formation académique
-
-- **MBA, Gestion des technologies de l’information**, [Université Laval](https://www.ulaval.ca/) (1999 – 2006)<br>
-Mention d'excellence des Facultés des études supérieures et des sciences de l’administration
-- **B. Sc., Mathématiques appliquées**, [Université de Sherbrooke](https://www.usherbrooke.ca/) (1985 – 1988)
-- Quatre examens de la [Casualty Actuarial Society](https://www.casact.org/) (1986 – 1991)
-
-## Formation continue
-
-- IVADO, SDS-230 Science des données et santé (2021/04)
-- Udacity, [Intro to TensorFlow for Deep Learning](https://www.udacity.com/course/intro-to-tensorflow-for-deep-learning--ud187) (2020/04) ??
-- MIT, [6.S191 Introduction to Deep Learning ](http://introtodeeplearning.com/) (depuis 2020/04) ??
-- fast.ai, [Cutting Edge Deep Learning For Coders, Part 2, v2](learning/2019_fastai_part2.md) (En cours)
-- Coursera, How to Win a Data Science Competition (2019)
-- fast.ai, [Practical Deep Learning For Coders, Part 1, v3](learning/2019_fastai_part1.md) (2019)
-- Udacity, Intro to Deep Learning with PyTorch (2019)
-- Coursera, [Deep Learning Specialization](learning/2018_coursera.md) (2018)
-- Udacity, [Full Stack Web Developer Nanodegree](learning/2017_udacity.md) (2017)
-
-<!-- Pick one project. Do it really well. Make it fantastic.
-## Projets
-
-## RÉALISATIONS
-Canadian Provinces Income Tax Calculator for Individuals. Web application built with Javascript, [Vue.js](https://vuejs.org/), [Bootstrap](https://getbootstrap.com/) and a Javascript Chart Library (not yet chosen).
--->
-
-## Connaissances informatiques
-
-**Développement Web** :
-  HTML5/CSS, JavaScript,
-  [Angular](https://angular.io/),
-  [Backbone.js](http://backbonejs.org/),
-  [Knockout.js](http://knockoutjs.com/),
-  [Vue.js](https://vuejs.org/),
-  [Flask](http://flask.pocoo.org/),
-  [Bootstrap](https://getbootstrap.com/),
-  Markdown,
-  [MathJax](https://www.mathjax.org/).<br>
-**Environnement de développement** :
-  TSO/ISPF,
-  [Colab](https://colab.research.google.com/notebooks/intro.ipynb),
-  [Jupyter](http://jupyter.org/),
-  [VSCode](https://code.visualstudio.com/),
-  [Eclipse](https://www.eclipse.org/ide/).<br>
-**Programmation** :
-  JCL, Fortran, Java,
-  [Python](https://www.python.org/),
-  [SAS](https://www.sas.com/) et %macro SAS,
-  SQL,
-  [VBA](https://msdn.microsoft.com/vba/office-vba-reference).<br>
-**Librairies Python** :
-  [Numpy](http://www.numpy.org/),
-  [SciPy](https://www.scipy.org/),
-  [Pandas](https://pandas.pydata.org/),
-  [Matplotlib](https://matplotlib.org/),
-  [PyTorch](https://pytorch.org/).
-
-
-    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
-    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
-    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
-    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
-    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
-    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
+    <p>
+      <b>Développement Web</b> : HTML5/CSS, JavaScript, Angular, Vue.js, Bootstrap.<br>
+      <b>Environnement de développement</b> : TSO/ISPF, Jupyter/Colab, VSCode.<br>
+      <b>Programmation</b> : JCL OS, Fortran, Java, Python (NumPy, Pandas, Matplotlib), SAS, VBA.<br>
+      <b>Biliothèques ML/DL</b> : Scikit-Learn, Pytorch, TensorFlow.
+    </p>
   </div>
 
-  <script>
-    var app = new Vue({
-      el: '#app-2',
-      data: {
-        message: 'Hello Vue2!'
-      }
-    })
-  </script>
-
-  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
