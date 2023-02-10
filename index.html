@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html leng="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alain Boisvert</title>
+    <meta name="description" content="Alain Boisvert">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome. -->
+    <script src="https://kit.fontawesome.com/bbc4f78c58.js" crossorigin="anonymous"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">  
+    
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="assets/highlight/styles/vs2015.min.css">
+
+    <!-- My css file. -->
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#/">Alain Boisvert</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#/cv">CV</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#/formations">{{ $t("formations") }}</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{ $t("projets") }}
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#/revDisp">{{ $t("revdisp.title") }}</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/boisalai" target="_blank">Code</a>
+              </li>
+            </ul>
+            <span class="navbar-text click" @click="changeLanguage">{{ $t("otherLanguage") }}</span>
+          </div>
+        </div>
+      </nav>
+
+      <div id="z1" class="mt-2">&nbsp;</div>
+
+      <router-view></router-view>
+    </div>
+
+    <!-- Vue.js -->
+    <script src="assets/js/vue.global.prod.js" defer></script>
+    <script src="assets/js/vue-router.global.prod.js" defer></script>
+    <script src="assets/js/vue-i18n.global.prod.js" defer></script>
+    
+    <!-- Bootstrap -->
+    <script src="assets/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- My scripts -->
+    <script src="assets/js/utils.js" defer></script>
+    <script src="assets/js/vue-home.js" defer></script>
+    <script src="assets/js/vue-cv.js" defer></script>
+    <script src="assets/js/vue-formations.js" defer></script>
+
+    <!-- https://obfuscator.io/ -->
+    <script src="assets/js/tax-calculator-obfuscated.js" defer></script>
+    <script src="assets/js/vue-tax-calculator-obfuscated.js" defer></script>    
+    <script src="assets/js/vue-app.js" defer></script>
+
+    <!-- highlight.js -->
+    <script src="assets/highlight/highlight.min.js"></script>
+    <script src="assets/highlight/languages/bash.min.js"></script>
+    <script src="assets/highlight/languages/java.min.js"></script>
+    <script src="assets/highlight/languages/plaintext.min.js"></script>
+    <script src="assets/highlight/languages/python.min.js"></script>
+    <script src="assets/highlight/languages/scala.min.js"></script>
+    <script src="assets/highlight/languages/yaml.min.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>

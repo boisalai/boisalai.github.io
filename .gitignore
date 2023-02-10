@@ -1,0 +1,6 @@
+copy.sh
+git.sh
+**/js/*.pdf
+**/js/*.html
+**/js/tax-calculator.js
+**/js/vue-tax-calculator.js
