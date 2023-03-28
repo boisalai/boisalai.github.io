@@ -10,9 +10,14 @@
 }
 
 h1, h2, h3, h4, h5, h6 { 
-    font-family: "Lato", serif; 
+    font-family: "Lato", serif;
+    margin-bottom: 1rem;
 }
   
+pre {
+    margin-top: 6px;
+}
+
 a, .link { 
     text-decoration-line: underline;
     text-decoration-thickness: max(1px, 0.0625rem);
@@ -106,17 +111,13 @@ table.footnote tbody tr td { text-align: left; vertical-align: top; padding: 0px
 /* Pour ajuster la couleur des ligens dans tax calculator */
 div.tax a, .link {
     text-decoration-line: none;
-    color: #1060FF;
 }
-  
+
 div.tax a:hover, .link:hover {
     text-decoration-line: underline;
     text-decoration-thickness: max(3px, 0.1875rem);
     text-underline-offset: 0.1em;
-    color: #1060FF;
 }
-
-
 
 /* Bootstrap 5.0 */
 span.badge.bg-light.text-dark { border: 1px solid #e1e1e1; }

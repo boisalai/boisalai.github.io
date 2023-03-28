@@ -14,7 +14,12 @@ const routes = [
     { path: "/", component: Home },
     { path: "/cv", component: CurriculumVitae },
     { path: "/formations", component: Formations },
-    { path: "/revDisp", component: RevDisp }
+    { path: "/revDisp", component: RevDisp },
+    { path: "/deZoomcamp", component: DeZoomcamp },
+    { path: "/dlsCoursera", component: DlsCoursera },
+    { path: "/webUdacity", component: WebUdacity },
+    { path: "/sas", component: SAS }
+
 ];
 
 // 3. Create the router instance and pass the `routes` option
@@ -39,6 +44,7 @@ const messages = {
     fr: {
         locale: "fr",
         otherLanguage: "English",
+        cheatSheat: "Aide-mémoire",
         about: {
             text1: "<p>Gestionnaire ayant réalisé plusieurs mandats stratégiques pour le gouvernement du Québec. "
             + "Curieux, passionné, persévérant, rigoureux, esprit d'équipe, orienté résultats.</p>"
@@ -48,10 +54,187 @@ const messages = {
             download_cv: "Vous pouvez télécharger un PDF de mon CV <a href='assets/pdf/cv.pdf' target='_blank'>ici</a>."
         },
         cv: {
-            intro:
-                "Gestionnaire ayant réalisé plusieurs mandats stratégiques au gouvernement du Québec. Curieux, passionné, persévérant, " +
-                "rigoureux, esprit d'équipe, orienté client et sur les résultats. " +
-                "Après une carrière bien remplie, il est temps d'essayer quelque chose de nouveau.",
+            content: `<h1>Curriculum vit&#230;</h1>
+
+            <p>
+                Alain Boisvert, MBA, <a href="mailto:ay.boisvert&#64;gmail.com" target="_blank">ay.boisvert&#64;gmail.com</a><br>
+                Vous pouvez télécharger un PDF de mon CV <a href="assets/pdf/cv.pdf" target="_blank">ici</a>.
+            </p>
+    
+            <h2>Expérience professionnelle</h2>
+        
+            <div class="mb-3">
+                <b>Conseiller stratégique</b> (réorientation planifiée depuis 2021/06)<br>
+                Direction générale des infrastructures<br>
+                Ministère de l'Enseignement supérieur
+                <ul>
+                    <li>Conseiller le directeur général des infrastructures, les gestionnaires et les professionnels dans les dossiers 
+                    d'infrastructures collégiaux et universitaires, les échanges avec le Secrétariat du Conseil du trésor, etc.</li>
+                </ul>
+            </div>
+    
+            <div class="mb-3">
+                <b>Directeur général</b> (2020/10 – 2021/05)<br>
+                Direction générale des infrastructures<br>
+                Ministère de l'Enseignement supérieur
+                <ul>
+                    <li>Mettre en place la nouvelle direction générale des infrastructures.</li>
+                    <li>Gérer près de 6,5 G$ d'investissement par année dans les infrastructures.</li>
+                </ul>
+            </div>
+        
+            <div class="mb-3">
+                <b>Directeur de la gouvernance des projets d'infrastructures</b> (2017/09 – 2020/09)<br>
+                Direction générale des infrastructures<br>
+                Ministère de l'Éducation et de l'Enseignement supérieur
+                <ul>
+                    <li>Suivre les projets majeurs d'infrastructure (50&nbsp;M$ et plus) des réseaux de l'éducation et de l'enseignement supérieur.</li>
+                    <li>Obtenir les autorisations pour démarrer près de 30 projets majeurs de construction d'écoles secondaires 
+                    et d'agrandissements de cégeps et d'universités, totalisant plus de 5 G$.</li>
+                    <li>Accompagner les établissements et rendre compte aux autorités gouvernementales du dépôt du projet au Ministère jusqu'à la mise en service et la clôture du projet.</li>
+                </ul>
+            </div>
+    
+            <div class="mb-3">
+                <b>Conseiller-cadre et Directeur du bureau de projets</b> (2016/06 – 2017/08)<br>
+                Direction générale des acquisitions<br>
+                Centre de services partagés du Québec
+            </div>
+        
+            <div class="mb-3">
+                <b>Directeur des projets spéciaux et de la modélisation</b> (2009/01 – 2016/05)<br>
+                Ministère des Finances du Québec
+                <ul>
+                <li>Appuyer le <a href="https://www.groupes.finances.gouv.qc.ca/santefinancementactivite/travaux/rapports-et-recommandations/index.html" target="_blank">Groupe d'experts pour un financement axé sur les patients</a> 
+                    et le <a href="https://www.groupes.finances.gouv.qc.ca/Consultprebudg/2010-2011/" target="_blank">Comité consultatif sur l'économie et les finances publiques</a>.</li>
+                <li>Prendre en charge divers projets spéciaux, dont l'élaboration de la première édition des 
+                    <a href="https://publications.msss.gouv.qc.ca/msss/sujets/comptes-de-la-sante" target="_blank">Comptes de la santé</a> 
+                    pour le ministère de la Santé et des Services sociaux et les projections à long terme du cadre financier du gouvernement du Québec.</li>
+                </ul>
+            </div>
+    
+            <div class="mb-3">
+                <b>Analyste expert</b> (2001/04 – 2008/12)<br>
+                Politiques budgétaires, fiscales et finances publiques<br>
+                Ministère des Finances du Québec
+                <ul>
+                <li>Conseiller sur divers sujets de politique budgétaire, politique fiscale et finance publique.</li>
+                <li>Appuyer le <a href="https://www.groupes.finances.gouv.qc.ca/financementsante/fr/groupe/index.asp" target="_blank">Groupe de travail sur le financement du système de santé</a>.</li>
+                <li>Élaborer la position gouvernementale lors des négociations sur la rémunération des médecins spécialistes.</li>
+                <li>Proposer un plan de retour à l'équilibre budgétaire en 2008.</li>
+                <li>Développer un modèle de simulation du revenu disponible (après transferts, impôts et cotisations) des ménages de toutes les provinces canadiennes (VBA/Excel).</li>
+                </ul>
+            </div>
+    
+            <div class="mb-3">
+                <b>Analyste expert</b> (1992/02 – 2001/04)<br>
+                Ministère de la Solidarité sociale, Québec
+                <ul>
+                <li>Produire les statistiques officielles sur les prestataires de l'aide sociale.</li>
+                <li>Mettre en place un entrepôt de données et développer des outils pour faciliter son exploitation (SAS, JCL).</li>
+                </ul>
+            </div>
+        
+            <div class="mb-3">
+                <b>Analyste en informatique</b> (1991/02 – 1992/02)<br>
+                Ministère de l'Enseignement supérieur et de la science, Québec
+                <ul>
+                    <li>Assurer la responsabilité du maintien du parc informatique et du développement des applications informatiques d'une unité administrative.</li>
+                </ul>
+            </div>
+        
+            <div class="mb-3">
+                <b>Analyste en informatique</b> (1990/08 – 1991/02)<br>
+                SOBECO, Montréal
+                <ul>
+                <li>Développer des programmes informatiques dans le domaine actuariel (Fortran).</li>
+                </ul>
+            </div>
+        
+            <div class="mb-3">
+                <b>Analyste en actuariat</b> (1989/06 – 1990/06)<br>
+                Société nationale d'assurances, Montréal
+                <ul>
+                <li>Implanter SAS au département d'actuariat et convertir des applications actuarielles PL/I en SAS.</li>
+                <li>Comparer les primes d'assurance IARD auto et habitation des concurrents.</li>
+                </ul>
+            </div>
+    
+            <h2>Conseils d'administration</h2>
+    
+            <div class="mb-3">
+                <b>Administrateur nommé par l'Office des professions</b> (depuis 2016/11)<br>
+                <a href="http://www.odq.qc.ca/" target="_blank">Ordre des dentistes du Québec</a>
+                <ul>
+                <li>Membre du conseil d'administration (2016/11 – 2024/10).</li>
+                <li>Membre du comité exécutif (2018/11 - 2020/10, 2022/11 - 2023/10).</li>
+                <li>Président du comité d'audit (2019/02 - 2024/01).</li>
+                <li>Membre du comité d'audit (2017/01 – 2019/01).</li>
+                </ul>
+            </div>
+        
+            <div class="mb-3">
+                <b>Membre externe invité au comité des finances</b> (depuis 2022/10)<br>
+                <a href="https://souriressolidaires.com/" target="_blank">Sourires Solidaires</a>
+            </div>
+    
+            <div class="mb-3">
+                <b>Président</b> (1986 – 1987)<br>
+                Association des étudiant(e)s en mathématiques<br>
+                Université de Sherbrooke
+            </div>
+    
+            <h2>Formations</h2>
+    
+            <div class="mb-3"> 
+                <b>
+                    <a href="https://www.fsg.ulaval.ca/etudes/programmes-detudes/microprogramme-de-deuxieme-cycle-en-traitement-de-donnees-massives" target="_blank">Microprogramme de deuxième cycle en traitement des données massives</a>
+                </b> (en cours)<br>
+                Université Laval
+            </div>
+    
+            <div class="mb-3"><b>MBA, Gestion des technologies de l'information</b> (1999 – 2006)<br>
+                Mention d'excellence des Facultés des études supérieures et des sciences de l'administration<br>
+                Université Laval
+            </div>
+        
+            <div class="mb-3"><b>B. Sc., Mathématiques appliquées</b> (1985 – 1988)<br>
+                Université de Sherbrooke
+            </div>
+    
+            <div class="mb-3"><b>Quatre examens</b> de la Casualty Actuarial Society (1986 - 1991)</div>
+    
+            <div class="mb-3"><b>
+                <a href="#/deZoomcamp">Data Engineering Zoomcamp</a></b> (en cours)<br>
+                DataTalks.Club
+            </div>
+    
+            <div class="mb-3"><b>
+                <a href="#/dlsCoursera">Spécialisation Deep Learning</a></b> (2018)<br>
+                Coursera
+            </div>
+    
+            <div class="mb-3"><b>
+                <a href="#/webUdacity">Full Stack Web Developer Nanodegree</a></b> (2017)<br>
+                Udacity
+            </div>
+    
+            <h2>Compétences techniques</h2>
+    
+            <div class="mb-3">
+                <b>Expérience de travail</b> : SAS, VBA/Excel, Fortran, SQL, Mainframe JCL/MVS/TSO/ISPF.<br>
+                <b>Familiarité</b> :
+                <ul style="margin:0">
+                    <li><b>Langages</b> : Java, Scala, Apache Spark, R, Python (NumPy, pandas, Matplotlib), <a href="https://code.kx.com/q/" target="_blank">q/kdb+</a>.</li>
+                    <li><b>Environnements de développement</b> : IntelliJ, PyCharm, VS Code, Jupyter.</li>
+                    <li><b>Infonuagique</b> : Google Cloud.</li>
+                    <li><b>Bases de données</b> : PostgreSQL, MongoDB.</li>
+                    <li><b>Apprentissage automatique</b> : scikit-learn, PyTorch, fast.ai, XGBoost.</li>
+                    <li><b>Autres</b> : Git, Antora, Databricks, Snowflake, Docker, Apache Airflow, Prefect.</li>
+                </ul>
+            </div>
+    
+            <div class="mb-3">Dernière révision : 26 mars 2023.</div>`,
         },
         formations: "Formations",
         projets: "Projets",
@@ -214,11 +397,89 @@ const messages = {
             },
             cce: "Frais de garde",
             di: "Revenu disponible"
+        },
+        de_zoomcamp: {
+            status: "en cours",
+            content: `<p>Je commence mon année 2023 avec
+                <a href="https://github.com/DataTalksClub/data-engineering-zoomcamp" target="_blank">Zoomcamp sur l'ingénierie des données</a>
+                par <a href="https://datatalks.club/" target="_blank">DataTalksClub</a>.
+                </p>
+                <p>Consultez mon <i class="fa fa-github" style="font-size:24px"></i> <a href="https://github.com/boisalai/de-zoomcamp-2023" target="_blank">dépôt GitHub</a>.</p>
+                <p>Ce cours de 9 semaines est axé sur l'ingénierie des données et couvre les sujets suivants&nbsp;:
+                <ul>
+                    <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/week1.md" target="_blank">Semaine&nbsp;1</a>&nbsp;: Introduction et prérequis
+                        (<a href="https://www.docker.com/" target="_blank">Docker</a>, <a href="https://www.terraform.io/" target="_blank">Terraform</a>,
+                        <a href="https://cloud.google.com/" target="_blank">Google Cloud Platform</a>).</li>
+                        <ul>
+                            <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/homeworks/week_1_docker_sql/homework1.md" target="_blank">Travail pratique 1.1</a>,
+                            <a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/homeworks/week_1_terraform/homework1.md" target="_blank">Travail pratique 1.2</a>.</li>
+                        </ul>
+                    <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/week2.md" target="_blank">Semaine&nbsp;2</a>&nbsp;: Orchestration du flux de travail
+                        avec <a href="https://www.prefect.io/" target="_blank">Prefect</a>.</li>
+                        <ul>
+                            <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/homeworks/week_2/homework.md" target="_blank">Travail pratique 2</a>.</li>
+                        </ul>
+                    <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/week3.md" target="_blank">Semaine&nbsp;3</a>&nbsp;: Entrepôt de données
+                        avec <a href="https://cloud.google.com/bigquery" target="_blank">BigQuery</a>.</li>
+                        <ul>
+                            <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/homeworks/week_3/homework.md" target="_blank">Travail pratique 3</a>.</li>
+                        </ul>
+                    <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/week4.md" target="_blank">Semaine&nbsp;4</a>&nbsp;: Ingénierie analytique avec 
+                        <a href="https://docs.getdbt.com/" target="_blank">dbt</a>.</li>
+                    <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/week5.md" target="_blank">Semaine&nbsp;5</a>&nbsp;: Traitement par lots avec <a href="https://spark.apache.org/" target="_blank">Spark</a> (Spark Dataframes et SQL).</li>
+                    <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/week6.md" target="_blank">Semaine&nbsp;6</a>&nbsp;: Streaming avec <a href="https://kafka.apache.org/" target="_blank">Kafka</a> (Kafka Connect et ksqlDB, schéma Avro).</li>
+                    <li>Semaines&nbsp;7, 8 et 9&nbsp;: Mettre en pratique tout ce que nous avons appris dans un projet.</li>
+                    <li>Semaines 7 et 8&nbsp;: Travailler sur notre projet.</li>
+                    <li>Semaine&nbsp;9&nbsp;: Passez en revue nos pairs.</li>
+                </ul>
+                </p>
+                <p>L'architecture du projet que nous aurons à faire devra ressembler à ceci&nbsp;:</p>
+                <img src="assets/img/arch_1.jpg" style="width: 100%; max-width: 500px;">
+                <p>Dernière mise à jour&nbsp;: 7&nbsp;mars&nbsp;2023.</p>`
+        },
+        dls_coursera: {
+            content: `<p>En 2018, j'ai suivi le cours 
+            <a href="https://www.coursera.org/specializations/deep-learning" target="_blank">Deep Learning Specialization</a> 
+            de Coursera.
+            J'ai notamment construit et entraîné des réseaux de neurones telles que les réseaux de neurones convolutifs, 
+            les réseaux de neurones récurrents, les LSTM et appris à les améliorer avec des techniques de régularisation telles que 
+            Dropout, BatchNorm, etc.
+            Je compte bien un jour retrouver mes notes et les présenter ici.
+            
+            <p><img src="assets/img/coursera-1.jpg" style="border: solid 1px #212529; width: 100%; max-width: 700px;"><br>
+            Vérifiez ce certificat à&nbsp;: <a href="https://coursera.org/verify/specialization/UHH4Y7VAF8EA" target="_blank">coursera.org/verify/specialization/UHH4Y7VAF8EA</a>.</p>
+
+            <p>Dernière mise à jour: 19 février 2023.</p>`
+        },
+        web_udacity: {
+            content: `<p>En 2017, j'ai suivi le cours 
+            <a href="https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd0044" target="_blank">Full Stack Web Developer Nanodegree</a> 
+            de Udacity. J'ai notamment configuré un serveur Linux (Ubuntu, 
+                <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a>), développé une application Web (Python, 
+                <a href="https://flask.palletsprojects.com/" target="_blank">Flask</a>, SQL), utilisé un framework 
+            (<a href="https://knockoutjs.com/" target="_blank">Knockout.js</a>) et des APIs
+            (<a href="https://developers.google.com/maps" target="_blank">Google Maps API</a>, <a href="https://location.foursquare.com/developer/" target="_blank">Foursquate API</a>).
+
+            <p>Consultez mes <i class="fa fa-github" style="font-size:24px"></i> dépôts GitHub&nbsp;:
+            <ul>
+                <li><a href="https://github.com/boisalai/udacity-movie-trailer-website" target="_blank">Movie Trailer Website</a>.</li>
+                <li><a href="https://github.com/boisalai/udacity-portfolio-site" target="_blank">Build a Portfolio Site</a>.</li>
+                <li><a href="https://github.com/boisalai/udacity-logs-analysis-project" target="_blank">Logs Analysis Project</a>.</li>
+                <li><a href="https://github.com/boisalai/udacity-catalog-app" target="_blank">Catalog App</a>.</li>
+                <li><a href="https://github.com/boisalai/udacity-neighborhood-map" target="_blank">Neighborhood map</a>.</li>
+                <li><a href="https://github.com/boisalai/udacity-linux-server-configuration" target="_blank">Linux Server Configuration</a>.</li>
+            </ul>
+            </p>
+            
+            <p><img src="assets/img/udacity-1.jpg" style="border: solid 1px #212529; width: 100%; max-width: 700px;"><br>
+            Vérifiez ce certificat à&nbsp;: <a href="https://confirm.udacity.com/R34KM6FP" target="_blank">confirm.udacity.com/R34KM6FP</a>.</p>
+            <p>Dernière mise à jour: 19 février 2023.</p>`
         }
     },
     en: {
         locale: "en",
         otherLanguage: "Français",
+        cheatSheat: "Cheat sheet",
         about: {
             text1: "<p>Manager having carried out several strategic mandates for the Government of Quebec. Curious, passionate, persevering, "
             + "rigorous, team spirit, results oriented.</p>" 
@@ -227,10 +488,188 @@ const messages = {
             download_cv: "You can download a PDF of my CV <a href='' target='_blank'>here</a>."
         },
         cv: {
-            intro:
-                "Manager having carried out several strategic mandates for the Government of Quebec. Curious, passionate, "
-                + "persevering, rigorous, team spirit, client-oriented and results-oriented. "
-                + " After a busy career, it's time to try something new.",
+            content: `<h1>Resume</h1>
+
+            <p>
+                Alain Boisvert, MBA, <a href="mailto:ay.boisvert&#64;gmail.com" target="_blank">ay.boisvert&#64;gmail.com</a><br>
+                You can download a PDF of my resume <a href="assets/pdf/cv.pdf" target="_blank">here</a>.
+             </p>
+    
+            <h2>Professional experience</h2>
+        
+            <div class="mb-3">
+                <b>Senior Advisor</b> (reorientation planned since 2021/06)<br>
+                Direction générale des infrastructures<br>
+                Ministère de l'Enseignement supérieur (Canada)
+                <ul>
+                    <li>Advise the general director of infrastructure, managers and professionals on college and university infrastructure 
+                    projects, exchanges with the Secretariat of the Treasury Board, etc.</li>
+                </ul>
+            </div>
+    
+            <div class="mb-3">
+                <b>General Director of Infrastructure</b> (2020/10 – 2021/05)<br>
+                Direction générale des infrastructures<br>
+                Ministère de l'Enseignement supérieur (Canada)
+                <ul>
+                <li>Establish the new directorate general for infrastructure.</li>
+                <li>Managing nearly $6.5 billion in infrastructure investment annually</li>
+                </ul>
+            </div>
+        
+            <div class="mb-3">
+                <b>Director of Infrastructure Project Governance</b> (2017/09 – 2020/09)<br>
+                Direction générale des infrastructures<br>
+                Ministère de l'Éducation et de l'Enseignement supérieur (Canada)
+                <ul>
+                <li>Follow major infrastructure projects ($50M or more) in the education and higher education networks.</li>
+                <li>Obtaining authorizations to start nearly 30 major secondary school construction projects
+                and expansions of post-secondary schools, totaling more than $5 billion.</li>
+                <li>Supporting post-secondary schools and reporting to government authorities on the submission of the project to the Ministry
+                until the closure of the project.</li>
+                </ul>
+            </div>
+    
+            <div class="mb-3">
+                <b>Senior Advisor and Director of the Project Office</b> (2016/06 – 2017/08)<br>
+                Procurement Department<br>
+                Centre de services partagés du Québec (Canada)
+            </div>
+        
+            <div class="mb-3">
+                <b>Director of Special Projects and Modeling</b> (2009/01 – 2016/05)<br>
+                Ministry of Finance of Québec (Canada)
+                <ul>
+                <li>Support the <a href="https://www.groupes.finances.gouv.qc.ca/santefinancementactivite/en/works/documents-papers/index.html" target="_blank">Expert Panel for Patient-Based Funding</a>
+                    and the <a href="https://www.groupes.finances.gouv.qc.ca/Consultprebudg/2010-2011/" target="_blank">Advisory Committee on the Economy and Public Finances</a>.</li>
+                <li>Support various special projects, including the development of the first edition of the
+                    <a href="https://publications.msss.gouv.qc.ca/msss/sujets/comptes-de-la-sante" target="_blank">Health accounts</a>
+                    for the Ministry of Health and Social Services and the long-term projections of the financial framework of the Government of Quebec.</li>
+                </ul>
+            </div>
+    
+            <div class="mb-3">
+                <b>Expert Analyst</b> (2001/04 – 2008/12)<br>
+                Budgetary, tax and public finance policies<br>
+                Ministry of Finance of Québec (Canada)
+                <ul>
+                <li>Advise on various subjects of budgetary policy, tax policy and public finance.</li>
+                <li>Support the <a href="https://www.groupes.finances.gouv.qc.ca/financementsante/en/groupe/index.asp" target="_blank">Task Force on the Funding of the Health System</a>.</li>
+                <li>Develop the government's position during negotiations on the remuneration of medical specialists.</li>
+                <li>Proposing a plan to return to balanced budgets in 2008.</li>
+                <li>Develop a simulation model of disposable income (after transfers, taxes and contributions) of households in all Canadian provinces (VBA/Excel).</li>
+                </ul>
+            </div>
+    
+            <div class="mb-3">
+                <b>Expert Analyst</b> (1992/02 – 2001/04)<br>
+                Ministère de la Solidarité sociale, Québec (Canada)
+                <ul>
+                <li>Produce official statistics on social assistance recipients.</li>
+                <li>Set up a data warehouse and develop tools to facilitate its use (SAS, JCL).</li>
+                </ul>
+            </div>
+        
+            <div class="mb-3">
+                <b>IT Analyst</b> (1991/02 – 1992/02)<br>
+                Ministère de l'Enseignement supérieur et de la science, Québec (Canada)
+                <ul>
+                    <li>Ensure responsibility for maintaining the computer park and developing computer applications of an administrative unite.</li>
+                </ul>
+            </div>
+        
+            <div class="mb-3">
+                <b>IT Analyst</b> (1990/08 – 1991/02)<br>
+                SOBECO, Montréal (Canada)
+                <ul>
+                <li>Develop computer programs in the actuarial field (Fortran).</li>
+                </ul>
+            </div>
+        
+            <div class="mb-3">
+                <b>Actuarial Analyst</b> (1989/06 – 1990/06)<br>
+                Société nationale d'assurances, Montréal (Canada)
+                <ul>
+                <li>Implement SAS in the actuarial department and convert PL/I actuarial applications to SAS.</li>
+                 <li>Compare the property and casualty home and auto insurance premiums of competitors.</li>
+                </ul>
+            </div>
+    
+            <h2>Boards of Directors</h2>
+    
+            <div class="mb-3">
+                <b>Director appointed by the Office des professions</b> (since 2016/11)<br>
+                <a href="http://www.odq.qc.ca/" target="_blank">Ordre des dentistes du Québec</a>
+                <ul>
+                <li>Member of the board of directors (2016/11 – 2024/10).</li>
+                <li>Member of the executive committee (2018/11 - 2020/10, 2022/11 - 2023/10).</li>
+                <li>Chair of the audit committee (2019/02 - 2024/01).</li>
+                <li>Member of the audit committee  (2017/01 – 2019/01).</li>
+                </ul>
+            </div>
+        
+            <div class="mb-3">
+                <b>External member invited to the finance committee</b> (depuis 2022/10)<br>
+                <a href="https://souriressolidaires.com/" target="_blank">Sourires Solidaires</a>
+            </div>
+    
+            <div class="mb-3">
+                <b>President</b> (1986 – 1987)<br>
+                Association of mathematics students<br>
+                University of Sherbrooke
+            </div>
+    
+            <h2>Education</h2>
+    
+            <div class="mb-3"> 
+                <b>
+                    <a href="https://www.fsg.ulaval.ca/etudes/programmes-detudes/microprogramme-de-deuxieme-cycle-en-traitement-de-donnees-massives" target="_blank">Graduate microprogram in massive data processing</a>
+                </b> (in progress)<br>
+                Laval University
+            </div>
+    
+            <div class="mb-3"><b>MBA, Information Technology Management</b> (1999 – 2006)<br>
+            Mention of Excellence from the Faculties of Graduate Studies and Administrative Sciences<br>
+            Laval University
+            </div>
+        
+            <div class="mb-3"><b>B. Sc., Applied Mathematics</b> (1985 – 1988)<br>
+                University of Sherbrooke
+            </div>
+    
+            <div class="mb-3"><b>Four exams</b> of Casualty Actuarial Society (1986 - 1991)</div>
+    
+            <div class="mb-3"><b>
+                <a href="#/deZoomcamp">Data Engineering Zoomcamp</a></b> (in progress)<br>
+                DataTalks.Club
+            </div>
+    
+            <div class="mb-3"><b>
+                <a href="#/dlsCoursera">Deep Learning Specialization</a></b> (2018)<br>
+                Coursera
+            </div>
+    
+            <div class="mb-3"><b>
+                <a href="#/webUdacity">Full Stack Web Developer Nanodegree</a></b> (2017)<br>
+                Udacity
+            </div>
+    
+            <h2>Technical skills</h2>
+    
+            <div class="mb-3">
+                <b>Work Experience</b>: SAS, VBA/Excel, Fortran, SQL, Mainframe JCL/MVS/TSO/ISPF.<br>
+                <b>Familiarity</b>:
+                <ul style="margin:0">
+                    <li><b>Languages</b> : Java, Scala, Apache Spark, R, Python (NumPy, pandas, Matplotlib), <a href="https://code.kx.com/q/" target="_blank">q/kdb+</a>.</li>
+                    <li><b>IDE</b> : IntelliJ, PyCharm, VS Code, Jupyter.</li>
+                    <li><b>Cloud</b> : Google Cloud.</li>
+                    <li><b>Databases</b> : PostgreSQL, MongoDB.</li>
+                    <li><b>Machine Learning</b> : scikit-learn, PyTorch, fast.ai, XGBoost.</li>
+                    <li><b>Others</b> : Git, Antora, Databricks, Snowflake, Docker, Apache Airflow, Prefect.</li>
+                </ul>
+            </div>
+    
+            <div class="mb-3">Last revised: March 26, 2023.</div>`,
         },
         formations: "Learning",
         projets: "Projects",
@@ -393,8 +832,82 @@ const messages = {
             },
             cce: "Childcare expenses",
             di: "Disposable income"
+        },
+        de_zoomcamp: {
+            status: "in progress", 
+            content: `<p>I'm starting my year 2023 with  
+                <a href="https://github.com/DataTalksClub/data-engineering-zoomcamp" target="_blank">Data Engineering Zoomcamp</a>
+                by <a href="https://datatalks.club/" target="_blank">DataTalksClub</a>.
+                </p>
+                <p>See my <i class="fa fa-github" style="font-size:24px"></i> <a href="https://github.com/boisalai/de-zoomcamp-2023" target="_blank">GitHub repository</a>.</p>
+                <p>This 9-week course focuses on data engineering and covers the following topics:
+                <ul>
+                    <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/week1.md" target="_blank">Week 1</a>: Introduction & Prerequisites 
+                        (<a href="https://www.docker.com/" target="_blank">Docker</a>, <a href="https://www.terraform.io/" target="_blank">Terraform</a>, 
+                        <a href="https://cloud.google.com/" target="_blank">Google Cloud Platform</a>).</li>
+                        <ul>
+                            <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/homeworks/week_1_docker_sql/homework1.md" target="_blank">Homework 1.1</a>,
+                            <a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/homeworks/week_1_terraform/homework1.md" target="_blank">Homework 1.2</a>.</li>
+                        </ul>
+                    <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/week2.md" target="_blank">Week 2</a>: Workflow Orchestration 
+                        with <a href="https://www.prefect.io/" target="_blank">Prefect</a>.</li>
+                        <ul>
+                            <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/homeworks/week_2/homework.md" target="_blank">Homework 2</a>.</li>
+                        </ul>
+                    <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/week3.md" target="_blank">Week 3</a>: Data Warehouse 
+                        with <a href="https://cloud.google.com/bigquery" target="_blank">BigQuery</a>.</li>
+                        <ul>
+                            <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/homeworks/week_3/homework.md" target="_blank">Homework 3</a>.</li>
+                        </ul>
+                    <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/week4.md" target="_blank">Week 4</a>: Analytics engineering with 
+                        <a href="https://docs.getdbt.com/" target="_blank">dbt</a>.</li>
+                    <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/week5.md" target="_blank">Week 5</a>: Batch processing with <a href="https://spark.apache.org/" target="_blank">Spark</a> (Spark Dataframes & SQL).</li>
+                    <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/week6.md" target="_blank">Week 6</a>: Streaming with <a href="https://kafka.apache.org/" target="_blank">Kafka</a> (Kafka Connect and ksqlDB, Avro schema).</li>
+                    <li>Weeks 7, 8 & 9: Putting everything we learned to practice into a project.</li>
+                    <li>Weeks 7 and 8: Working on our project.</li>
+                    <li>Week 9: Reviewing your peers.</li>
+                </ul>
+                </p>        
+                <p>The architecture of the project that we will have to do will have to look like this:</p>
+                <img src="assets/img/arch_1.jpg" style="width: 100%; max-width: 500px;">
+                <p>Last update: February 19, 2023.</p>`
+        },
+        dls_coursera: {
+            content: `<p>In 2018, I took Coursera's 
+                <a href="https://www.coursera.org/specializations/deep-learning" target="_blank">Deep Learning Specialization</a>.
+                In particular, I have built and trained neural networks such as convolutional neural networks,
+                recurrent neural networks, LSTMs and learned how to improve them with regularization techniques such as
+                Dropout, BatchNorm, etc.
+                I hope one day to find my notes and present them here.
+                <p><img src="assets/img/coursera-1.jpg" style="border: solid 1px #212529; width: 100%; max-width: 700px;"><br>
+                Verify this certificate at: <a href="https://coursera.org/verify/specialization/UHH4Y7VAF8EA" target="_blank">coursera.org/verify/specialization/UHH4Y7VAF8EA</a>.</p>
+                <p>Last update: February 19, 2023.</p>`
+        },
+        web_udacity: {
+            content: `<p>In 2017, I took the course
+                <a href="https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd0044" target="_blank">Full Stack Web Developer Nanodegree</a>
+                by Udacity. In particular, I configured a Linux server (Ubuntu,
+                    <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a>), developed a web application (Python,
+                    <a href="https://flask.palletsprojects.com/" target="_blank">Flask</a>, SQL), used a framework
+                (<a href="https://knockoutjs.com/" target="_blank">Knockout.js</a>) and APIs
+                (<a href="https://developers.google.com/maps" target="_blank">Google Maps API</a>, <a href="https://location.foursquare.com/developer/" target="_blank">Foursquate API</a>).
+
+                <p>See my <i class="fa fa-github" style="font-size:24px"></i> GitHub repositories&nbsp;:
+                <ul>
+                    <li><a href="https://github.com/boisalai/udacity-movie-trailer-website" target="_blank">Movie Trailer Website</a>.</li>
+                    <li><a href="https://github.com/boisalai/udacity-portfolio-site" target="_blank">Build a Portfolio Site</a>.</li>
+                    <li><a href="https://github.com/boisalai/udacity-logs-analysis-project" target="_blank">Logs Analysis Project</a>.</li>
+                    <li><a href="https://github.com/boisalai/udacity-catalog-app" target="_blank">Catalog App</a>.</li>
+                    <li><a href="https://github.com/boisalai/udacity-neighborhood-map" target="_blank">Neighborhood map</a>.</li>
+                    <li><a href="https://github.com/boisalai/udacity-linux-server-configuration" target="_blank">Linux Server Configuration</a>.</li>
+                </ul>
+                </p>
+                
+                <p><img src="assets/img/udacity-1.jpg" style="border: solid 1px #212529; width: 100%; max-width: 700px;"><br>
+                    Verify this certificate at: <a href="https://confirm.udacity.com/R34KM6FP" target="_blank">confirm.udacity.com/R34KM6FP</a>.</p>
+                    <p>Last update: February 19, 2023.</p>`
         }
-    },
+    }
 };
 
 const numberFormats = {
