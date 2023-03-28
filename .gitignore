@@ -2,5 +2,6 @@ copy.sh
 git.sh
 **/js/*.pdf
 **/js/*.html
+**/js/tax-app.js
 **/js/tax-calculator.js
 **/js/vue-tax-calculator.js
