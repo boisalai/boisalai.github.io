@@ -205,7 +205,7 @@ const messages = {
             <div class="mb-3"><b>Quatre examens</b> de la Casualty Actuarial Society (1986 - 1991)</div>
     
             <div class="mb-3"><b>
-                <a href="#/deZoomcamp">Data Engineering Zoomcamp</a></b> (en cours)<br>
+                <a href="#/deZoomcamp">Data Engineering Zoomcamp</a></b> (2023)<br>
                 DataTalks.Club
             </div>
     
@@ -234,7 +234,7 @@ const messages = {
                 </ul>
             </div>
     
-            <div class="mb-3">Dernière révision : 26 mars 2023.</div>`,
+            <div class="mb-3">Dernière révision : 27 avril 2023.</div>`,
         },
         formations: "Formations",
         projets: "Projets",
@@ -399,8 +399,7 @@ const messages = {
             di: "Revenu disponible"
         },
         de_zoomcamp: {
-            status: "en cours",
-            content: `<p>Je commence mon année 2023 avec
+            content: `<p>J'ai commencé mon année 2023 avec
                 <a href="https://github.com/DataTalksClub/data-engineering-zoomcamp" target="_blank">Zoomcamp sur l'ingénierie des données</a>
                 par <a href="https://datatalks.club/" target="_blank">DataTalksClub</a>.
                 </p>
@@ -428,14 +427,10 @@ const messages = {
                         <a href="https://docs.getdbt.com/" target="_blank">dbt</a>.</li>
                     <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/week5.md" target="_blank">Semaine&nbsp;5</a>&nbsp;: Traitement par lots avec <a href="https://spark.apache.org/" target="_blank">Spark</a> (Spark Dataframes et SQL).</li>
                     <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/week6.md" target="_blank">Semaine&nbsp;6</a>&nbsp;: Streaming avec <a href="https://kafka.apache.org/" target="_blank">Kafka</a> (Kafka Connect et ksqlDB, schéma Avro).</li>
-                    <li>Semaines&nbsp;7, 8 et 9&nbsp;: Mettre en pratique tout ce que nous avons appris dans un projet.</li>
-                    <li>Semaines 7 et 8&nbsp;: Travailler sur notre projet.</li>
-                    <li>Semaine&nbsp;9&nbsp;: Passez en revue nos pairs.</li>
+                    <li><a href="https://github.com/boisalai/twitter-dashboard" target="_blank">Semaines&nbsp;7 à 9</a>&nbsp;: Mettre en pratique tout ce que nous avons appris dans un projet.</li>
                 </ul>
-                </p>
-                <p>L'architecture du projet que nous aurons à faire devra ressembler à ceci&nbsp;:</p>
-                <img src="assets/img/arch_1.jpg" style="width: 100%; max-width: 500px;">
-                <p>Dernière mise à jour&nbsp;: 7&nbsp;mars&nbsp;2023.</p>`
+                <p><img src="assets/img/Data-Enginerring-Zoomcamp-2023.jpg" style="border: solid 1px #212529; width: 100%; max-width: 700px;"></p>
+                <p>Dernière mise à jour&nbsp;: 27&nbsp;avril&nbsp;2023.</p>`
         },
         dls_coursera: {
             content: `<p>En 2018, j'ai suivi le cours 
@@ -640,7 +635,7 @@ const messages = {
             <div class="mb-3"><b>Four exams</b> of Casualty Actuarial Society (1986 - 1991)</div>
     
             <div class="mb-3"><b>
-                <a href="#/deZoomcamp">Data Engineering Zoomcamp</a></b> (in progress)<br>
+                <a href="#/deZoomcamp">Data Engineering Zoomcamp</a></b> (2023)<br>
                 DataTalks.Club
             </div>
     
@@ -669,7 +664,7 @@ const messages = {
                 </ul>
             </div>
     
-            <div class="mb-3">Last revised: March 26, 2023.</div>`,
+            <div class="mb-3">Last revised: April 27, 2023.</div>`,
         },
         formations: "Learning",
         projets: "Projects",
@@ -835,7 +830,7 @@ const messages = {
         },
         de_zoomcamp: {
             status: "in progress", 
-            content: `<p>I'm starting my year 2023 with  
+            content: `<p>I started my year 2023 with  
                 <a href="https://github.com/DataTalksClub/data-engineering-zoomcamp" target="_blank">Data Engineering Zoomcamp</a>
                 by <a href="https://datatalks.club/" target="_blank">DataTalksClub</a>.
                 </p>
@@ -863,14 +858,10 @@ const messages = {
                         <a href="https://docs.getdbt.com/" target="_blank">dbt</a>.</li>
                     <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/week5.md" target="_blank">Week 5</a>: Batch processing with <a href="https://spark.apache.org/" target="_blank">Spark</a> (Spark Dataframes & SQL).</li>
                     <li><a href="https://github.com/boisalai/de-zoomcamp-2023/blob/main/week6.md" target="_blank">Week 6</a>: Streaming with <a href="https://kafka.apache.org/" target="_blank">Kafka</a> (Kafka Connect and ksqlDB, Avro schema).</li>
-                    <li>Weeks 7, 8 & 9: Putting everything we learned to practice into a project.</li>
-                    <li>Weeks 7 and 8: Working on our project.</li>
-                    <li>Week 9: Reviewing your peers.</li>
+                    <li><a href="https://github.com/boisalai/twitter-dashboard" target="_blank">Weeks 7 to 9</a>: Putting everything we learned to practice into a project.</li>
                 </ul>
-                </p>        
-                <p>The architecture of the project that we will have to do will have to look like this:</p>
-                <img src="assets/img/arch_1.jpg" style="width: 100%; max-width: 500px;">
-                <p>Last update: February 19, 2023.</p>`
+                <p><img src="assets/img/Data-Enginerring-Zoomcamp-2023.jpg" style="border: solid 1px #212529; width: 100%; max-width: 700px;"></p>
+                <p>Last update: April 27, 2023.</p>`
         },
         dls_coursera: {
             content: `<p>In 2018, I took Coursera's 

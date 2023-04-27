@@ -12,7 +12,7 @@ const Formations = {
             -->
             
             <li><b>DataTalks.Club</b>, <a href="https://github.com/DataTalksClub/data-engineering-zoomcamp" target="_blank">Data Engineering Zoomcamp</a> 
-            (Docker, Terraform, GCP, BigQuery, PostgreSQL, SQLAlchemy, Prefect, etc.) (en cours).</li>
+            (Docker, Terraform, GCP, BigQuery, PostgreSQL, SQLAlchemy, Prefect, etc.).</li>
             <li><b>Université Laval</b>, <a href="https://www.ulaval.ca/etudes/cours/ift-7025-techniques-avancees-en-intelligence-artificielle" target="_blank">IFT-7025 Techniques avancées en intelligence artificielle</a> (en cours).</li>
         </ul>
 
