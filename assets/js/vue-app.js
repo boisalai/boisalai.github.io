@@ -79,7 +79,7 @@ const messages = {
                 Ministère de l'Enseignement supérieur
                 <ul>
                     <li>Mettre en place la nouvelle direction générale des infrastructures.</li>
-                    <li>Gérer près de 6,5 G$ d'investissement par année dans les infrastructures.</li>
+                    <li>Gérer près de 6,5 G$ d'investissement sur 10 ans dans les infrastructures.</li>
                 </ul>
             </div>
         
