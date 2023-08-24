@@ -1,112 +1,16 @@
-<!DOCTYPE html>
-<html leng="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alain Boisvert</title>
-    <meta name="description" content="Alain Boisvert">
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="assets/bootstrap-5.2.3-dist/css/bootstrap.min.css">
-
-    <!-- Font Awesome. -->
-    <script src="https://kit.fontawesome.com/bbc4f78c58.js" crossorigin="anonymous"></script>
-
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">  
-    
-    <!-- highlight.js -->
-    <link rel="stylesheet" href="assets/highlight/styles/vs2015.min.css">
-
-    <!-- My css file. -->
-    <link rel="stylesheet" href="assets/css/style.css">
-  </head>
-  <body>
-    <div id="app">
-      <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand" href="#/">Alain Boisvert</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#/cv">CV</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#/formations">{{ $t("formations") }}</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  {{ $t("projets") }}
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#/revDisp">{{ $t("revdisp.title") }}</a></li>
-                  <li><a class="dropdown-item" href="#/deZoomcamp">Data Engineering Zoomcamp (2023)</a></li>
-                  <li><a class="dropdown-item" href="#/dlsCoursera">Deep Learning Specialization (2018)</a></li>
-                  <li><a class="dropdown-item" href="#/webUdacity">Full Stack Web Developer Nanodegree (2017)</a></li>
-                </ul>
-              </li>
-              <!--
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  {{ $t("cheatSheat") }}
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#/sas">SAS</a></li>
-                </ul>
-              </li>
-              -->
-              <li class="nav-item">
-                <a class="nav-link" href="https://github.com/boisalai" target="_blank">Code</a>
-              </li>
-            </ul>
-            <span class="navbar-text click" @click="changeLanguage">{{ $t("otherLanguage") }}</span>
-          </div>
-        </div>
-      </nav>
-
-      <div id="z1" class="mt-2">&nbsp;</div>
-
-      <router-view></router-view>
-    </div>
-
-    <!-- Vue.js -->
-    <script src="assets/js/vue.global.prod.js" defer></script>
-    <script src="assets/js/vue-router.global.prod.js" defer></script>
-    <script src="assets/js/vue-i18n.global.prod.js" defer></script>
-    
-    <!-- Bootstrap -->
-    <script src="assets/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- My scripts -->
-    <script src="assets/js/utils.js" defer></script>
-    <script src="assets/js/vue-home.js" defer></script>
-    <script src="assets/js/vue-cv.js" defer></script>
-    <script src="assets/js/vue-formations.js" defer></script>
-    <script src="assets/js/vue-de-zoomcamp.js" defer></script>
-    <script src="assets/js/vue-dls-coursera.js" defer></script>
-    <script src="assets/js/vue-web-udacity.js" defer></script>
-    <script src="assets/js/vue-sas.js" defer></script>
-
-    <!-- https://obfuscator.io/ -->
-    <script src="assets/js/tax-calculator-obfuscated.js" defer></script>
-    <script src="assets/js/vue-tax-calculator-obfuscated.js" defer></script>    
-    <script src="assets/js/vue-app.js" defer></script>
-
-    <!-- highlight.js -->
-    <script src="assets/highlight/highlight.min.js"></script>
-    <script src="assets/highlight/languages/bash.min.js"></script>
-    <script src="assets/highlight/languages/java.min.js"></script>
-    <script src="assets/highlight/languages/plaintext.min.js"></script>
-    <script src="assets/highlight/languages/python.min.js"></script>
-    <script src="assets/highlight/languages/scala.min.js"></script>
-    <script src="assets/highlight/languages/yaml.min.js"></script>
-    <script>hljs.highlightAll();</script>
-  </body>
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v2.4.1">
+<title data-rh="true">Alain Boisvert</title><meta data-rh="true" property="og:title" content="Alain Boisvert"><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://boisalai.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://boisalai.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://boisalai.github.io/"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://boisalai.github.io/"><link data-rh="true" rel="alternate" href="https://boisalai.github.io/" hreflang="en"><link data-rh="true" rel="alternate" href="https://boisalai.github.io/" hreflang="x-default"><script data-rh="true">function maybeInsertBanner(){window.__DOCUSAURUS_INSERT_BASEURL_BANNER&&insertBanner()}function insertBanner(){var n=document.getElementById("__docusaurus-base-url-issue-banner-container");if(n){n.innerHTML='\n<div id="__docusaurus-base-url-issue-banner" style="border: thick solid red; background-color: rgb(255, 230, 179); margin: 20px; padding: 20px; font-size: 20px;">\n   <p style="font-weight: bold; font-size: 30px;">Your Docusaurus site did not load properly.</p>\n   <p>A very common reason is a wrong site <a href="https://docusaurus.io/docs/docusaurus.config.js/#baseUrl" style="font-weight: bold;">baseUrl configuration</a>.</p>\n   <p>Current configured baseUrl = <span style="font-weight: bold; color: red;">/</span>  (default value)</p>\n   <p>We suggest trying baseUrl = <span id="__docusaurus-base-url-issue-banner-suggestion-container" style="font-weight: bold; color: green;"></span></p>\n</div>\n';var e=document.getElementById("__docusaurus-base-url-issue-banner-suggestion-container"),s=window.location.pathname,r="/"===s.substr(-1)?s:s+"/";e.innerHTML=r}}window.__DOCUSAURUS_INSERT_BASEURL_BANNER=!0,document.addEventListener("DOMContentLoaded",maybeInsertBanner)</script><link rel="stylesheet" href="/assets/css/styles.fd05d7bb.css">
+<link rel="preload" href="/assets/js/runtime~main.2ef1e21b.js" as="script">
+<link rel="preload" href="/assets/js/main.0ed2da7e.js" as="script">
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}return t}()||function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
+<div id="__docusaurus-base-url-issue-banner-container"></div></div>
+<script src="/assets/js/runtime~main.2ef1e21b.js"></script>
+<script src="/assets/js/main.0ed2da7e.js"></script>
+</body>
 </html>
