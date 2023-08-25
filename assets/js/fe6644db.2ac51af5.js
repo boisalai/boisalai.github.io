@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[554],{8478:l=>{l.exports=JSON.parse('{"label":"LLM","permalink":"/docs/tags/llm","allTagsPath":"/docs/tags","count":1,"items":[{"id":"notes/llm/llama","title":"Llama","description":"Llama 2","permalink":"/docs/notes/llm/llama"}]}')}}]);

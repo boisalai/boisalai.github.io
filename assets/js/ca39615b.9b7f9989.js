@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[458],{6501:e=>{e.exports=JSON.parse('{"label":"Copyright","permalink":"/docs/tags/copyright","allTagsPath":"/docs/tags","count":1,"items":[{"id":"mooc/deepLearningAI","title":"ChatGPT Prompt Engineering for Developers","description":"2023-08-23","permalink":"/docs/mooc/deepLearningAI"}]}')}}]);
