@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[8104],{1840:e=>{e.exports=JSON.parse('{"label":"SAS","permalink":"/docs/tags/sas","allTagsPath":"/docs/tags","count":1,"items":[{"id":"references/sas","title":"SAS","description":"Created 2023-08-26. Last updated 2023-08-26.","permalink":"/docs/references/sas"}]}')}}]);

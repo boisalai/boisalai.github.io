@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-courses/ift-7022/week-10" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.0.0">
+<title data-rh="true">10. Deep NLP - Plongements contextuels et modèles encodeurs pré-entraînés | Alain Boisvert</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://boisalai.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://boisalai.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://boisalai.github.io/docs/courses/ift-7022/week-10"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="10. Deep NLP - Plongements contextuels et modèles encodeurs pré-entraînés | Alain Boisvert"><meta data-rh="true" name="description" content="Transformers encodeurs, plongements contextuels et modèles préentraînés."><meta data-rh="true" property="og:description" content="Transformers encodeurs, plongements contextuels et modèles préentraînés."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://boisalai.github.io/docs/courses/ift-7022/week-10"><link data-rh="true" rel="alternate" href="https://boisalai.github.io/docs/courses/ift-7022/week-10" hreflang="en"><link data-rh="true" rel="alternate" href="https://boisalai.github.io/docs/courses/ift-7022/week-10" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Alain Boisvert RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Alain Boisvert Atom Feed">
+
+
+
+<link rel="stylesheet" href="/fonts/font-awesome/fontawesome.css">
+<link rel="stylesheet" href="/fonts/font-awesome/solid.css">
+<link rel="stylesheet" href="/fonts/font-awesome/regular.css">
+<link rel="stylesheet" href="/fonts/font-awesome/brands.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.b5c999da.css">
+<script src="/assets/js/runtime~main.e6737288.js" defer="defer"></script>
+<script src="/assets/js/main.a09b2bce.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Alain Boisvert</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" target="" href="/docs/courses/ift-7022">IFT-7022</a><a class="navbar__item navbar__link" target="" href="/docs/courses/gif-7005">GIF-7005</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/boisalai" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link fa-brands fa-github"> </a><a href="https://www.linkedin.com/in/alain-boisvert-98b058156/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link fa-brands fa-linkedin-in"> </a><a href="mailto:ay.boisvert@gmail.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link fa-solid fa-envelope"> </a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro">Alain Boisvert</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/cv">Curriculum vitæ</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/learning">Learning path</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/certificates">Certificates</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" href="/docs/category/courses">Courses</a><button aria-label="Collapse sidebar category &#x27;Courses&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/docs/courses/gif-7005">GIF-7005 Introduction à l&#x27;apprentissage automatique</a><button aria-label="Expand sidebar category &#x27;GIF-7005 Introduction à l&#x27;apprentissage automatique&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" tabindex="0" href="/docs/courses/ift-7022">IFT-7022 Traitement automatique de la langue naturelle</a><button aria-label="Collapse sidebar category &#x27;IFT-7022 Traitement automatique de la langue naturelle&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-01">1 Expressions régulières</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-02">2 Prétraitement de textes et distance minimale d&#x27;édition</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-03">3 Modèles de langue N-grammes</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-04">4 Classification de textes</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-05">5 Sémantique vectorielle (représentation des mots)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-06">6 Deep NLP + Plongements de mots (word embeddings) + intro aux réseaux de neurones</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-07">7 Étiquetage de séquences - analyse grammaticale (Part of speech tagging) et reconnaissance d&#x27;entités nommées</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-08-partie-1">8 Deep NLP - Réseaux récurrents pour le traitement de séquences (RNN, GRU, LSTM)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-08-partie-2">8 Notions de base pour les RNN, GRU et LSTM</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-09">9 Deep NLP - Introduction aux modèles Transformers</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/courses/ift-7022/week-10">10 Deep NLP - Plongements contextuels et modèles encodeurs pré-entraînés</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-11">11 Deep NLP - Traduction automatique et modèle encodeur-décodeur</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-12">12 Deep NLP - Systèmes question-réponse (QA)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item hidden"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/travail-1">Travail pratique 1</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item hidden"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/travail-2">Travail pratique 2</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item hidden"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/travail-3">Travail pratique 3</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item hidden"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/exam-intra">Examen de mi-session</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item hidden"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/exam-final">Examen final</a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/chatgpt-building-systems">Building Systems with the ChatGPT API</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/chatgpt-prompt-engineering">ChatGPT Prompt Engineering for Developers</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item hidden"><a class="menu__link" tabindex="0" href="/docs/courses/fine-tuning-llms">Training and fine-tuning LLMs</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/langchain-1">LangChain for LLM Application Development</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/pair-prog-with-llm">Pair Programming with a Large Language Model</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/chat-with-your-data">LangChain Chat with Your Data</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/docs/category/references">References</a><button aria-label="Expand sidebar category &#x27;References&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/docs/category/code-snippets">Code Snippets</a><button aria-label="Expand sidebar category &#x27;Code Snippets&#x27;" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/docs/category/courses"><span itemprop="name">Courses</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/docs/courses/ift-7022"><span itemprop="name">IFT-7022 Traitement automatique de la langue naturelle</span></a><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">10 Deep NLP - Plongements contextuels et modèles encodeurs pré-entraînés</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>10. Deep NLP - Plongements contextuels et modèles encodeurs pré-entraînés</h1>
+<p>Transformers encodeurs, plongements contextuels et modèles préentraînés.</p>
+<p>Références :</p>
+<ul>
+<li>Jurafsky &amp; Martin 3e édition, <a href="https://web.stanford.edu/~jurafsky/slp3/11.pdf" target="_blank" rel="noopener noreferrer">Chapitre 11</a>, sections 11.1 à 11.3 (sauf 11.2.2 et 11.3.4)</li>
+<li><a href="https://arxiv.org/pdf/1810.04805.pdf" target="_blank" rel="noopener noreferrer">Article original</a> sur BERT</li>
+<li><a href="https://arxiv.org/pdf/1904.00962.pdf" target="_blank" rel="noopener noreferrer">Large Batch Optimization for Deep learning: Training BERT in 76 minutes</a></li>
+<li>Article sur <a href="https://arxiv.org/pdf/1907.11692.pdf" target="_blank" rel="noopener noreferrer">RoBERTa</a></li>
+<li>Article sur <a href="https://arxiv.org/pdf/1911.03894.pdf" target="_blank" rel="noopener noreferrer">CamemBERT</a></li>
+<li>Article sur <a href="https://arxiv.org/pdf/1912.05372.pdf" target="_blank" rel="noopener noreferrer">FlauBERT</a></li>
+<li>Article sur <a href="https://arxiv.org/pdf/1910.01108.pdf" target="_blank" rel="noopener noreferrer">DistillBERT</a></li>
+<li>Article sur <a href="https://openreview.net/pdf?id=r1xMH1BtvB" target="_blank" rel="noopener noreferrer">ELECTRA</a></li>
+<li>Un modèle <a href="https://arxiv.org/pdf/1906.01502.pdf" target="_blank" rel="noopener noreferrer">BERT multilingue</a></li>
+<li>Article sur <a href="https://arxiv.org/pdf/1801.06146.pdf" target="_blank" rel="noopener noreferrer">ULMFit</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="encodeur-bidirectionne">Encodeur bidirectionne<a href="#encodeur-bidirectionne" class="hash-link" aria-label="Direct link to Encodeur bidirectionne" title="Direct link to Encodeur bidirectionne">​</a></h2>
+<ul>
+<li>La couche de self-attention a accès à tous les mots du texte<!-- -->
+<ul>
+<li>Bidirectionnel – autant à gauche qu’à droite</li>
+</ul>
+</li>
+<li>Encodage - Construit une représentation des mots/jetons</li>
+</ul>
+<p><img loading="lazy" alt="s87" src="/assets/images/s87-36a015fe818881fd7fffc699204385a9.png" width="1662" height="478" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="plongements-contextuels">Plongements contextuels<a href="#plongements-contextuels" class="hash-link" aria-label="Direct link to Plongements contextuels" title="Direct link to Plongements contextuels">​</a></h2>
+<ul>
+<li>Plongements <strong>statiques</strong>
+<ul>
+<li>Ceux de Word2Vec, Glove, FastText…</li>
+<li>Une seule représentation par mot</li>
+<li>Ne varient pas en fonction du sens ou du contexte</li>
+</ul>
+</li>
+<li>Plongements <strong>contextuels</strong>
+<ul>
+<li>Le vecteur d’embedding prend en compte les mots environnants du texte</li>
+<li>C’est ce que font les <strong>transformers encodeurs</strong>
+<ul>
+<li>Un vecteur (embedding) en sortie pour chaque mot</li>
+<li>Le mécanisme d’attention ajoute le contexte</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Questions<!-- -->
+<ul>
+<li><strong>Comment les entraîner</strong> ?</li>
+<li><strong>Embeddings génériques ou spécifiques</strong> ?<!-- -->
+<ul>
+<li>Refaire tout le travail pour chaque application ?</li>
+<li>Où prendre les données ?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="bert--un-encodeur">BERT – Un encodeur<a href="#bert--un-encodeur" class="hash-link" aria-label="Direct link to BERT – Un encodeur" title="Direct link to BERT – Un encodeur">​</a></h2>
+<ul>
+<li>Proposé en 2018 par Google<!-- -->
+<ul>
+<li>Bidirectional Encoder for Representation Transformer</li>
+</ul>
+</li>
+<li>Tout simplement un transformer encodeur</li>
+<li>Idées principales<!-- -->
+<ul>
+<li>Construit avec des grands volumes de textes :<!-- -->
+<ul>
+<li>Préentraînement</li>
+</ul>
+</li>
+<li>Réutiliser le modèle pour obtenir des embeddings contextuels<!-- -->
+<ul>
+<li>Transfert de paramètres - <em>fine-tuning</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Idées similaires avec des LSTMs<!-- -->
+<ul>
+<li>ELMo et ULMFiT</li>
+<li>Moins efficace</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="bert---version-de-base">BERT - Version de base<a href="#bert---version-de-base" class="hash-link" aria-label="Direct link to BERT - Version de base" title="Direct link to BERT - Version de base">​</a></h2>
+<p><img loading="lazy" alt="s88" src="/assets/images/s88-b22e5a7a14675d5674ec6384a3a0a13b.png" width="1682" height="1074" class="img_ev3q"></p>
+<p><img loading="lazy" alt="s89" src="/assets/images/s89-fdd429a2e0990cb5b27e959e027109cf.png" width="1658" height="914" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="bert-base-vs-bert-large">BERT Base vs BERT Large<a href="#bert-base-vs-bert-large" class="hash-link" aria-label="Direct link to BERT Base vs BERT Large" title="Direct link to BERT Base vs BERT Large">​</a></h2>
+<p><img loading="lazy" alt="s90" src="/assets/images/s90-1ba98d79b2b0bac416a11d3bf4109395.png" width="1606" height="810" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="bert--préentraînement">BERT – Préentraînement<a href="#bert--préentraînement" class="hash-link" aria-label="Direct link to BERT – Préentraînement" title="Direct link to BERT – Préentraînement">​</a></h2>
+<ul>
+<li>Entraînement sur 2 tâches non supervisées<!-- -->
+<ul>
+<li>Modèle de langue masqué (MLM)</li>
+<li>Prédiction de la prochaine phrase (NSP)</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="bert--entraînement-mlm">BERT – Entraînement MLM<a href="#bert--entraînement-mlm" class="hash-link" aria-label="Direct link to BERT – Entraînement MLM" title="Direct link to BERT – Entraînement MLM">​</a></h2>
+<ul>
+<li>Modèle de langue caché<!-- -->
+<ul>
+<li><em>Masked language model</em> (MLM)</li>
+</ul>
+</li>
+<li><strong>Pourquoi caché</strong> ?<!-- -->
+<ul>
+<li>Avec un transformer décodeur, on a accès à tous les mots en entrée<!-- -->
+<ul>
+<li>Trop facile…</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Idée: remplacer des mots par un <strong>masque</strong>
+<ul>
+<li>Jeton [MASK]</li>
+</ul>
+</li>
+</ul>
+<p><img loading="lazy" alt="s91" src="/assets/images/s91-547fde5f60fe5838e59d2db3a8836479.png" width="1640" height="902" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="bert--entraînement-nsp">BERT – Entraînement NSP<a href="#bert--entraînement-nsp" class="hash-link" aria-label="Direct link to BERT – Entraînement NSP" title="Direct link to BERT – Entraînement NSP">​</a></h2>
+<ul>
+<li>Prédire si 2 phrases se suivent dans un texte</li>
+</ul>
+<p><img loading="lazy" alt="s92" src="/assets/images/s92-dfe65fb24fbc806eb65e5dee3e79ca6b.png" width="1744" height="864" class="img_ev3q"></p>
+<ul>
+<li>Ajout de jetons spéciaux</li>
+</ul>
+<p><img loading="lazy" alt="s93" src="/assets/images/s93-1b54e1fd8bd9ae701bc502ae2ad7c135.png" width="1844" height="650" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="bert--entraînement">BERT – Entraînement<a href="#bert--entraînement" class="hash-link" aria-label="Direct link to BERT – Entraînement" title="Direct link to BERT – Entraînement">​</a></h2>
+<ul>
+<li>Entraînement non supervisé sur de gros corpus<!-- -->
+<ul>
+<li>BooksCorpus (800M mots)</li>
+<li>Wikipedia anglais (2,5 milliards de mots)</li>
+</ul>
+</li>
+<li>Les 2 tâches sont exécutées conjointement</li>
+<li>Pertes: la somme des pertes sur chaque tâche</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="bert--fine-tuning">BERT – Fine-tuning<a href="#bert--fine-tuning" class="hash-link" aria-label="Direct link to BERT – Fine-tuning" title="Direct link to BERT – Fine-tuning">​</a></h2>
+<ul>
+<li>Réutilisation du modèle pour accomplir des tâches langagières<!-- -->
+<ul>
+<li>Compréhension de texte</li>
+</ul>
+</li>
+<li>Apprentissage par transfert</li>
+</ul>
+<p><img loading="lazy" alt="s94" src="/assets/images/s94-ba8d5c268202b89ffe60973b8807e72a.png" width="1288" height="894" class="img_ev3q"></p>
+<ul>
+<li>Tâche de classification de texte</li>
+<li>Classification de 2 séquences de texte</li>
+<li>Tâche d’étiquetage de séquences</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="bert---autres-modèles">BERT - Autres modèles<a href="#bert---autres-modèles" class="hash-link" aria-label="Direct link to BERT - Autres modèles" title="Direct link to BERT - Autres modèles">​</a></h2>
+<ul>
+<li>Quelques-uns des successeurs :<!-- -->
+<ul>
+<li><strong>RoBERTa</strong> : Entraîné plus longtemps avec d’autres hyperparamètres sur plus de textes.<!-- -->
+<ul>
+<li>Pas de NSP, MLM seulement.</li>
+<li>BPE au lieu de WordPiece.</li>
+</ul>
+</li>
+<li><strong>DistilBERT</strong> : Distillation de BERT sur un modèle de plus petite taille.<!-- -->
+<ul>
+<li>97% de la performance de Bert avec 40% moins de mémoire et 60% plus rapide.</li>
+</ul>
+</li>
+<li><strong>CamemBERT</strong> et <strong>FlauBERT</strong> : Des modèles entraînés sur des textes français.</li>
+<li><strong>ELECTRA</strong> : Préentraînement différent</li>
+<li><strong>XLM</strong> et <strong>XLM-RoBERTa</strong> : versions multilingues (+100 langues)</li>
+</ul>
+</li>
+<li>La liste est longue...<!-- -->
+<ul>
+<li>Voir la section <strong>Models</strong> de HuggingFace</li>
+</ul>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Définitions</div><div class="admonitionContent_BuS1"><ul>
+<li><strong>NSP (Next Sentence Prediction)</strong> : Il s&#x27;agit d&#x27;une tâche de prévision où le modèle est entraîné à prédire si une
+phrase B suit logiquement une phrase A. Cette technique est utilisée pour aider les modèles à comprendre la relation
+entre deux phrases, ce qui est utile pour des tâches telles que la compréhension de texte et la réponse aux questions.
+Par exemple, dans le modèle BERT de Google, NSP est utilisé pour améliorer la compréhension du contexte.</li>
+<li><strong>MLM (Masked Language Model)</strong> : Cette technique consiste à masquer aléatoirement certains mots d&#x27;une phrase et à
+entraîner le modèle à prédire les mots masqués en se basant sur le contexte fourni par les autres mots non masqués de la
+phrase. C&#x27;est une méthode courante pour entraîner des modèles de langue profonde en NLP. Le MLM est également une
+composante clé de l&#x27;architecture BERT.</li>
+<li><strong>BPE (Byte Pair Encoding)</strong> : C&#x27;est une méthode de tokenisation où les paires de bytes (ou caractères) les plus fréquentes
+dans un ensemble de données sont progressivement fusionnées pour créer un dictionnaire de morceaux de mots ou de tokens
+plus grands. BPE est utilisé pour gérer efficacement un grand vocabulaire en permettant au modèle de décomposer les mots
+inconnus en sous-mots connus. Cela permet aux modèles de NLP d&#x27;être plus robustes lorsqu&#x27;ils traitent des mots rares ou inconnus.</li>
+</ul></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tokenisation">Tokenisation<a href="#tokenisation" class="hash-link" aria-label="Direct link to Tokenisation" title="Direct link to Tokenisation">​</a></h2>
+<ul>
+<li>Les modèles utilisent habituellement un vocabulaire fixe V<!-- -->
+<ul>
+<li>Par ex. 32 000 jetons</li>
+</ul>
+</li>
+<li>Cependant<!-- -->
+<ul>
+<li>On veut limiter le nombre de <strong>mots inconnus</strong></li>
+<li>En traduction automatique, on aimerait utiliser un <strong>même vocabulaire</strong> pour les langues source et cible</li>
+</ul>
+</li>
+<li>Solution : utiliser un tokeniseur qui donne :<!-- -->
+<ul>
+<li>des mots complets</li>
+<li>des sous-séquences de caractères</li>
+</ul>
+</li>
+<li>Algorithme souvent utilisé – <strong>WordPiece</strong>
+<ul>
+<li>Texte : My name is Lamontagne</li>
+<li>Jetons : [My, name, is, Lam, ##ont, ##ag, ##ne]</li>
+</ul>
+</li>
+<li>Autres options similaires :<!-- -->
+<ul>
+<li>BPE - Byte pair encoding</li>
+<li>SentencePiece</li>
+</ul>
+</li>
+<li>Tokenisation vorace<!-- -->
+<ul>
+<li>Trouver <strong>le plus long <em>wordpiece</em></strong> du vocabulaire qui correspond au début de notre texte</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tokenisation---wordpiece">Tokenisation - WordPiece<a href="#tokenisation---wordpiece" class="hash-link" aria-label="Direct link to Tokenisation - WordPiece" title="Direct link to Tokenisation - WordPiece">​</a></h2>
+<ul>
+<li>Entraînement :<!-- -->
+<ul>
+<li>wordpieces_0 = des caractères individuels</li>
+<li>En utilisant un corpus, répéter jusqu’à ce qu’on ait |V| wordpieces :<!-- -->
+<ul>
+<li>Entraîner un modèle de langue sur le corpus en utilisant les wordpieces</li>
+<li>On prend des paires de wordpieces et on évalue leur probabilité avec le modèle de langue.</li>
+<li>Nouveau wordpiece = concaténation de la paire de wordpieces qui augmente le plus la probabilité du modèle de langue sur le corpus</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Exemple d’entraînement :<!-- -->
+<ul>
+<li>Corpus = [belle, balle, miel, cieux]</li>
+<li>Vocabulaire = b, ##e, ##l, ##a, m, ##i, c, ##u, ##x</li>
+<li>Comptes unigrammes: b : 2, ##e : 5, ##l : 5, ##a : 1, m : 1, ##i : 2, c : 1, ##u : 1, ##x : 1</li>
+<li>Comptes bigrammes:<!-- -->
+<ul>
+<li>(b, ##e): 1, (##e, ##l): 2, (##l, ##l): 2, (&#x27;##l, ##e): 2, (b, ##a): 1, (##a, ##l) (m, ##i): 1 … (##u, ##x): 1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img loading="lazy" alt="s95" src="/assets/images/s95-b817b807c63ebf4c0b7ff1ab4c1b6539.png" width="1680" height="1130" class="img_ev3q"></p>
+<p><img loading="lazy" alt="s96" src="/assets/images/s96-f88d954242f6268f601fc8f11bc31312.png" width="1666" height="1086" class="img_ev3q"></p>
+<p><img loading="lazy" alt="s97" src="/assets/images/s97-ac1e0a23c27482324622ece76a95728c.png" width="1660" height="916" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
+<ul>
+<li>Les encodeurs bidirectionnels sont utilisés pour générer des représentations de mots contextualisées<!-- -->
+<ul>
+<li><em>Contextual embeddings</em></li>
+</ul>
+</li>
+<li>Un encodeur bidirectionnel de type transformer est préentraîné comme un modèle de langue masqué<!-- -->
+<ul>
+<li>Parfois avec d’autres tâches auxiliaires comme le NSP</li>
+</ul>
+</li>
+<li>On peut réutiliser le modèle pour une application:<!-- -->
+<ul>
+<li>En ajoutant une tête de prédiction et</li>
+<li>En ajustant les paramètres sur des exemples du domaine (<em>fine-tuning</em>)</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="logiciel">Logiciel<a href="#logiciel" class="hash-link" aria-label="Direct link to Logiciel" title="Direct link to Logiciel">​</a></h2>
+<ul>
+<li><a href="https://huggingface.co/docs/transformers/v4.24.0/en/quicktour" target="_blank" rel="noopener noreferrer">Tutorial</a> HuggingFace</li>
+<li>Quelques modèles sur HuggingFace:<!-- -->
+<ul>
+<li><a href="https://huggingface.co/docs/transformers/model_doc/bert" target="_blank" rel="noopener noreferrer">BERT</a></li>
+<li><a href="https://huggingface.co/docs/transformers/v4.24.0/en/model_doc/roberta#overview" target="_blank" rel="noopener noreferrer">RoBERTa</a></li>
+<li><a href="https://huggingface.co/docs/transformers/v4.24.0/en/model_doc/distilbert" target="_blank" rel="noopener noreferrer">DistillBERT</a></li>
+<li><a href="https://huggingface.co/docs/transformers/v4.24.0/en/model_doc/electra" target="_blank" rel="noopener noreferrer">ELECTRA</a></li>
+<li><a href="https://huggingface.co/docs/transformers/v4.24.0/en/model_doc/camembert#overview" target="_blank" rel="noopener noreferrer">CamemBERT</a></li>
+<li><a href="https://huggingface.co/docs/transformers/v4.24.0/en/model_doc/flaubert#overview" target="_blank" rel="noopener noreferrer">FlauBERT</a></li>
+<li><a href="https://huggingface.co/docs/transformers/v4.24.0/en/multilingual#xlm" target="_blank" rel="noopener noreferrer">Modèles multilingues</a></li>
+</ul>
+</li>
+<li><a href="https://huggingface.co/docs/transformers/tasks/sequence_classification" target="_blank" rel="noopener noreferrer">Classification de textes</a> - HuggingFace</li>
+<li><a href="https://huggingface.co/docs/transformers/tasks/token_classification" target="_blank" rel="noopener noreferrer">Étiquetage de mots</a> - HuggingFace</li>
+<li>Modèles de langues masqués (<a href="https://huggingface.co/docs/transformers/tasks/masked_language_modeling" target="_blank" rel="noopener noreferrer">MLM</a>) avec modèles de HuggingFace</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/courses/ift-7022/week-10.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/courses/ift-7022/week-09"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">9 Deep NLP - Introduction aux modèles Transformers</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/courses/ift-7022/week-11"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">11 Deep NLP - Traduction automatique et modèle encodeur-décodeur</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#encodeur-bidirectionne" class="table-of-contents__link toc-highlight">Encodeur bidirectionne</a></li><li><a href="#plongements-contextuels" class="table-of-contents__link toc-highlight">Plongements contextuels</a></li><li><a href="#bert--un-encodeur" class="table-of-contents__link toc-highlight">BERT – Un encodeur</a></li><li><a href="#bert---version-de-base" class="table-of-contents__link toc-highlight">BERT - Version de base</a></li><li><a href="#bert-base-vs-bert-large" class="table-of-contents__link toc-highlight">BERT Base vs BERT Large</a></li><li><a href="#bert--préentraînement" class="table-of-contents__link toc-highlight">BERT – Préentraînement</a></li><li><a href="#bert--entraînement-mlm" class="table-of-contents__link toc-highlight">BERT – Entraînement MLM</a></li><li><a href="#bert--entraînement-nsp" class="table-of-contents__link toc-highlight">BERT – Entraînement NSP</a></li><li><a href="#bert--entraînement" class="table-of-contents__link toc-highlight">BERT – Entraînement</a></li><li><a href="#bert--fine-tuning" class="table-of-contents__link toc-highlight">BERT – Fine-tuning</a></li><li><a href="#bert---autres-modèles" class="table-of-contents__link toc-highlight">BERT - Autres modèles</a></li><li><a href="#tokenisation" class="table-of-contents__link toc-highlight">Tokenisation</a></li><li><a href="#tokenisation---wordpiece" class="table-of-contents__link toc-highlight">Tokenisation - WordPiece</a></li><li><a href="#conclusion" class="table-of-contents__link toc-highlight">Conclusion</a></li><li><a href="#logiciel" class="table-of-contents__link toc-highlight">Logiciel</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 Alain Boisvert. Construit avec Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

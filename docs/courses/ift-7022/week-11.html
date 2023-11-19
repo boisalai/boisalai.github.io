@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-courses/ift-7022/week-11" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.0.0">
+<title data-rh="true">11. Deep NLP - Traduction automatique et modèle encodeur-décodeur | Alain Boisvert</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://boisalai.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://boisalai.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://boisalai.github.io/docs/courses/ift-7022/week-11"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="11. Deep NLP - Traduction automatique et modèle encodeur-décodeur | Alain Boisvert"><meta data-rh="true" name="description" content="Références :"><meta data-rh="true" property="og:description" content="Références :"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://boisalai.github.io/docs/courses/ift-7022/week-11"><link data-rh="true" rel="alternate" href="https://boisalai.github.io/docs/courses/ift-7022/week-11" hreflang="en"><link data-rh="true" rel="alternate" href="https://boisalai.github.io/docs/courses/ift-7022/week-11" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Alain Boisvert RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Alain Boisvert Atom Feed">
+
+
+
+<link rel="stylesheet" href="/fonts/font-awesome/fontawesome.css">
+<link rel="stylesheet" href="/fonts/font-awesome/solid.css">
+<link rel="stylesheet" href="/fonts/font-awesome/regular.css">
+<link rel="stylesheet" href="/fonts/font-awesome/brands.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.b5c999da.css">
+<script src="/assets/js/runtime~main.e6737288.js" defer="defer"></script>
+<script src="/assets/js/main.a09b2bce.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Alain Boisvert</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" target="" href="/docs/courses/ift-7022">IFT-7022</a><a class="navbar__item navbar__link" target="" href="/docs/courses/gif-7005">GIF-7005</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/boisalai" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link fa-brands fa-github"> </a><a href="https://www.linkedin.com/in/alain-boisvert-98b058156/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link fa-brands fa-linkedin-in"> </a><a href="mailto:ay.boisvert@gmail.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link fa-solid fa-envelope"> </a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro">Alain Boisvert</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/cv">Curriculum vitæ</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/learning">Learning path</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/certificates">Certificates</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" href="/docs/category/courses">Courses</a><button aria-label="Collapse sidebar category &#x27;Courses&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/docs/courses/gif-7005">GIF-7005 Introduction à l&#x27;apprentissage automatique</a><button aria-label="Expand sidebar category &#x27;GIF-7005 Introduction à l&#x27;apprentissage automatique&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" tabindex="0" href="/docs/courses/ift-7022">IFT-7022 Traitement automatique de la langue naturelle</a><button aria-label="Collapse sidebar category &#x27;IFT-7022 Traitement automatique de la langue naturelle&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-01">1 Expressions régulières</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-02">2 Prétraitement de textes et distance minimale d&#x27;édition</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-03">3 Modèles de langue N-grammes</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-04">4 Classification de textes</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-05">5 Sémantique vectorielle (représentation des mots)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-06">6 Deep NLP + Plongements de mots (word embeddings) + intro aux réseaux de neurones</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-07">7 Étiquetage de séquences - analyse grammaticale (Part of speech tagging) et reconnaissance d&#x27;entités nommées</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-08-partie-1">8 Deep NLP - Réseaux récurrents pour le traitement de séquences (RNN, GRU, LSTM)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-08-partie-2">8 Notions de base pour les RNN, GRU et LSTM</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-09">9 Deep NLP - Introduction aux modèles Transformers</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-10">10 Deep NLP - Plongements contextuels et modèles encodeurs pré-entraînés</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/courses/ift-7022/week-11">11 Deep NLP - Traduction automatique et modèle encodeur-décodeur</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-12">12 Deep NLP - Systèmes question-réponse (QA)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item hidden"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/travail-1">Travail pratique 1</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item hidden"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/travail-2">Travail pratique 2</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item hidden"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/travail-3">Travail pratique 3</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item hidden"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/exam-intra">Examen de mi-session</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item hidden"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/exam-final">Examen final</a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/chatgpt-building-systems">Building Systems with the ChatGPT API</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/chatgpt-prompt-engineering">ChatGPT Prompt Engineering for Developers</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item hidden"><a class="menu__link" tabindex="0" href="/docs/courses/fine-tuning-llms">Training and fine-tuning LLMs</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/langchain-1">LangChain for LLM Application Development</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/pair-prog-with-llm">Pair Programming with a Large Language Model</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/chat-with-your-data">LangChain Chat with Your Data</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/docs/category/references">References</a><button aria-label="Expand sidebar category &#x27;References&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/docs/category/code-snippets">Code Snippets</a><button aria-label="Expand sidebar category &#x27;Code Snippets&#x27;" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/docs/category/courses"><span itemprop="name">Courses</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/docs/courses/ift-7022"><span itemprop="name">IFT-7022 Traitement automatique de la langue naturelle</span></a><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">11 Deep NLP - Traduction automatique et modèle encodeur-décodeur</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>11. Deep NLP - Traduction automatique et modèle encodeur-décodeur</h1>
+<p>Références :</p>
+<ul>
+<li>Jurafsky et Martin, <a href="https://web.stanford.edu/~jurafsky/slp3/13.pdf" target="_blank" rel="noopener noreferrer">chapitre 13</a> de l&#x27;édition actuelle<!-- -->
+<ul>
+<li>Chapitre 10 dans la version précédente.</li>
+</ul>
+</li>
+<li>Traduction automatique vec des modèles de <a href="https://huggingface.co/docs/transformers/tasks/translation" target="_blank" rel="noopener noreferrer">HuggingFace</a></li>
+<li>Quelques modèles encodeur-décodeur (Seq2seq) sur HuggingFace:<!-- -->
+<ul>
+<li><a href="https://huggingface.co/docs/transformers/v4.35.0/en/model_doc/bart" target="_blank" rel="noopener noreferrer">Bart</a></li>
+<li><a href="https://huggingface.co/docs/transformers/v4.35.0/en/model_doc/barthez" target="_blank" rel="noopener noreferrer">Barthez</a> - Bart entraîné en français</li>
+<li><a href="https://huggingface.co/docs/transformers/v4.35.0/en/model_doc/t5" target="_blank" rel="noopener noreferrer">T5</a></li>
+<li><a href="https://huggingface.co/docs/transformers/v4.35.0/en/model_doc/mt5" target="_blank" rel="noopener noreferrer">mT5</a> - T5 multilingue</li>
+</ul>
+</li>
+<li><a href="http://opennmt.net/" target="_blank" rel="noopener noreferrer">OpenNMT</a></li>
+<li><a href="https://www.deepl.com/translator" target="_blank" rel="noopener noreferrer">DeepL</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="traduction-automatique">Traduction automatique<a href="#traduction-automatique" class="hash-link" aria-label="Direct link to Traduction automatique" title="Direct link to Traduction automatique">​</a></h2>
+<ul>
+<li>Difficile de créer manuellement des ressources pour faire de la traduction<!-- -->
+<ul>
+<li>Dictionnaires bilingues</li>
+<li>Règles de transfert</li>
+</ul>
+</li>
+<li>Traduction par apprentissage machine<!-- -->
+<ul>
+<li>Permet de construire automatiquement ces modèles à partir de corpus parallèles (bitextes)</li>
+</ul>
+</li>
+<li>Utile pour :<!-- -->
+<ul>
+<li>Avoir accès à des documents en langue étrangère</li>
+<li>Faciliter le travail de traducteurs humains</li>
+<li>Traduire en direct</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="traduction--divergences-linguistiques">Traduction – Divergences linguistiques<a href="#traduction--divergences-linguistiques" class="hash-link" aria-label="Direct link to Traduction – Divergences linguistiques" title="Direct link to Traduction – Divergences linguistiques">​</a></h2>
+<ul>
+<li>Langue SVO vs. SOV vs. OV<!-- -->
+<ul>
+<li>Typologie syntaxique – ordre des mots dans les différentes langues.</li>
+<li>Ex. la position des mots et des adjtectifs</li>
+<li>Mots polysémiques</li>
+<li>Cadrage verbal/satellitaire</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="traduction---différences-lexicales">Traduction - Différences lexicales<a href="#traduction---différences-lexicales" class="hash-link" aria-label="Direct link to Traduction - Différences lexicales" title="Direct link to Traduction - Différences lexicales">​</a></h2>
+<ul>
+<li>l&#x27;utilisation des pronons</li>
+<li>La morphologie des mots</li>
+<li>Agglutination (des mots sont comme agglutinés en un seul mot)</li>
+<li>Mots sans équivalent</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="une-bonne-traduction">Une bonne traduction?<a href="#une-bonne-traduction" class="hash-link" aria-label="Direct link to Une bonne traduction?" title="Direct link to Une bonne traduction?">​</a></h2>
+<ul>
+<li>Les traducteus doivent trouver in compromis entre deux facteurs:<!-- -->
+<ul>
+<li>Fidélité (<em>Faithfulness</em>)</li>
+<li>Fluidité (<em>Fluency or naturalness</em>)</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="modèles-phrase-based">Modèles <em>phrase-based</em><a href="#modèles-phrase-based" class="hash-link" aria-label="Direct link to modèles-phrase-based" title="Direct link to modèles-phrase-based">​</a></h2>
+<ul>
+<li>Proposé par Koehn et al. 2003.</li>
+<li>On utilise comme unités de traduction :<!-- -->
+<ul>
+<li>des séquences de mots (phrases ou groupes de mots)</li>
+<li>et des mots individuels</li>
+</ul>
+</li>
+<li>On segmente la phrase en groupes de mots qu&#x27;on traduit.</li>
+<li>Donne de meilleurs résultats que les modèles de traduction de mots individuels.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="traduction-automatique-avec-réseau-de-neurones">Traduction automatique avec réseau de neurones<a href="#traduction-automatique-avec-réseau-de-neurones" class="hash-link" aria-label="Direct link to Traduction automatique avec réseau de neurones" title="Direct link to Traduction automatique avec réseau de neurones">​</a></h2>
+<ul>
+<li>La traduction statistique nécessite plusieurs modèles construits séparément<!-- -->
+<ul>
+<li>Traduction des mots (ou groupes de mots)</li>
+<li>Longueurs des phrases</li>
+<li>Alignement des positions</li>
+</ul>
+</li>
+<li>Traduction neuronale<!-- -->
+<ul>
+<li>Neural Machine Translation (NMT)</li>
+<li>On construit un seul réseau qui<!-- -->
+<ul>
+<li>Prend la phrase source et génère une phrase correspondante dans la langue cible</li>
+<li>Entraînement simultané de tout le réseau (end-to-end)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modèle encodeur-décodeur<!-- -->
+<ul>
+<li>Sequence-to-sequence (Seq2Seq)</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="encodeur-décodeur">Encodeur-décodeur<a href="#encodeur-décodeur" class="hash-link" aria-label="Direct link to Encodeur-décodeur" title="Direct link to Encodeur-décodeur">​</a></h2>
+<ul>
+<li>Utilisé pour plusieurs applications dont:<!-- -->
+<ul>
+<li>La traduction automatique</li>
+<li>Le résumé de texte</li>
+<li>Les systèmes de dialogue</li>
+</ul>
+</li>
+<li>Conditionnement<!-- -->
+<ul>
+<li>Le décodeur est un générateur de texte</li>
+<li>Le contexte permet de contrôler les séquences qui sont générées</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="encodeur-décodeur-rnn">Encodeur-décodeur RNN<a href="#encodeur-décodeur-rnn" class="hash-link" aria-label="Direct link to Encodeur-décodeur RNN" title="Direct link to Encodeur-décodeur RNN">​</a></h2>
+<ul>
+<li>Entraînement end-to-end</li>
+</ul>
+<p><img loading="lazy" alt="s98" src="/assets/images/s98-3b5072538fe1689e87654d23075b9895.png" width="1654" height="892" class="img_ev3q"></p>
+<ul>
+<li>Une limitation importante (goulot d&#x27;étranglement)<!-- -->
+<ul>
+<li>L&#x27;encodeur emmagasine tout l&#x27;information dans un seul vecteur de longueur fixe</li>
+<li>La longueur des phrases peut varier grandement (entre 1 et 100 mots)</li>
+<li>Difficile d&#x27;encoder l&#x27;information des phrases longues</li>
+</ul>
+</li>
+<li>Idée<!-- -->
+<ul>
+<li>On conserve des vecteurs pour chacun des mots de la phrase source<!-- -->
+<ul>
+<li>On a plusieurs vecteurs pour les phrases longues</li>
+<li>On en a moins pour les plus courtes</li>
+</ul>
+</li>
+<li>On réfère à ces vecteurs à chaque étape du décodage</li>
+<li>Les références varient en fonction du contexte</li>
+</ul>
+</li>
+<li>Mécanisme d&#x27;attention</li>
+</ul>
+<p><img loading="lazy" alt="s99" src="/assets/images/s99-e58cd52db995ed3092dd0530ea074804.png" width="1662" height="804" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="décodage-beam-search">Décodage <em>Beam Search</em><a href="#décodage-beam-search" class="hash-link" aria-label="Direct link to décodage-beam-search" title="Direct link to décodage-beam-search">​</a></h2>
+<ul>
+<li>Lire le livre...</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="encodeur-décodeur-avec-transformers">Encodeur-décodeur avec <em>Transformers</em><a href="#encodeur-décodeur-avec-transformers" class="hash-link" aria-label="Direct link to encodeur-décodeur-avec-transformers" title="Direct link to encodeur-décodeur-avec-transformers">​</a></h2>
+<ul>
+<li>Implémentation similaire à celle avec des RNNs<!-- -->
+<ul>
+<li>Mêmes composantes: encodeur, contexte, décodeur</li>
+</ul>
+</li>
+<li>L&#x27;encodeur construit une représentation des mots de la phrase source</li>
+<li>Le décodeur transformer est autorégressif<!-- -->
+<ul>
+<li>On génère un mot à la fois</li>
+</ul>
+</li>
+<li>Principale différence:<!-- -->
+<ul>
+<li>Comment communiquer le contexte de l&#x27;encodeur vers le décodeur?</li>
+</ul>
+</li>
+<li>On utilise un mécanisme d&#x27;attention...</li>
+</ul>
+<p><img loading="lazy" alt="s100" src="/assets/images/s100-97cec55e5d24cff0a1e53ed89338bafa.png" width="1674" height="672" class="img_ev3q"></p>
+<p><img loading="lazy" alt="s101" src="/assets/images/s101-206d1caeb4e7b9b95ef2f1f7e97a63d9.png" width="1730" height="1060" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="évaluer-automatique-des-traductions">Évaluer automatique des traductions<a href="#évaluer-automatique-des-traductions" class="hash-link" aria-label="Direct link to Évaluer automatique des traductions" title="Direct link to Évaluer automatique des traductions">​</a></h2>
+<ul>
+<li>On utilise des traductions de référence fournies par des humains.</li>
+<li>On compare les traductions proposées par le système avec les traductions de référence.</li>
+<li>L&#x27;évaluation est basée sur la similarité avec les traductions de référence.</li>
+<li>Différentes mesures : BLEU, METEOR, chrF.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="évaluation---bleu">Évaluation - BLEU<a href="#évaluation---bleu" class="hash-link" aria-label="Direct link to Évaluation - BLEU" title="Direct link to Évaluation - BLEU">​</a></h2>
+<ul>
+<li>Détermine le nombre de n-grammes de différentes tailles que le résultat de la traduction a en commun avec les traductions de référence.</li>
+<li>Calcule une mesure de précision modifiée à partir des n-grammes dans la traduction.<!-- -->
+<ul>
+<li>On identifie tous les n-grammes de la traduction</li>
+<li>On compte le nombre de ces n-grammes dans la traduction de référence.</li>
+<li>La précision est le nombre de n-grammes dans la référence sur le nombre total de n-grammes.</li>
+</ul>
+</li>
+<li>Dans l&#x27;illustration ci-dessous, on considère seulement les unigrammes et les bi-grammes.</li>
+</ul>
+<p><img loading="lazy" alt="s102" src="/assets/images/s102-0c82f51fb44ad58671d955b5803e3a1b.png" width="1706" height="1040" class="img_ev3q"></p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>BLEU</div><div class="admonitionContent_BuS1"><p>La métrique BLEU (Bilingual Evaluation Understudy) est expliquée dans le document comme suit :</p><ul>
+<li><strong>1. Définition :</strong>
+<ul>
+<li>BLEU est une métrique basée sur le recouvrement de mots, utilisée pour évaluer la qualité des traductions automatiques. Contrairement à chrF, qui combine précision et rappel, BLEU est purement basée sur la précision.</li>
+</ul>
+</li>
+<li><strong>2. Fonctionnement :</strong>
+<ul>
+<li>Le score BLEU pour un corpus de phrases traduites est une fonction de la précision des n-grammes de mots sur toutes les phrases, combinée à une pénalité de brièveté calculée sur l&#x27;ensemble du corpus.</li>
+</ul>
+</li>
+<li><strong>3. Précision des n-grammes :</strong>
+<ul>
+<li>La précision des n-grammes est calculée en évaluant le pourcentage de tokens unigrammes, bigrammes, trigrammes, et 4-grammes dans la traduction candidate qui se trouvent également dans la traduction de référence.</li>
+<li>Pour un corpus composé d&#x27;une seule phrase, la précision unigramme est le pourcentage de tokens unigrammes dans la traduction candidate qui se trouvent également dans la traduction de référence. Ce principe est étendu aux bigrammes, trigrammes et 4-grammes.</li>
+</ul>
+</li>
+<li><strong>4. Calcul du score :</strong>
+<ul>
+<li>La précision des n-grammes pour les unigrammes, bigrammes, trigrammes et 4-grammes est calculée et la moyenne géométrique de ces précisions est prise pour obtenir le score final.</li>
+<li>BLEU inclut également une pénalité de brièveté pour pénaliser les traductions candidates qui sont trop courtes. En outre, les comptes de n-grammes sont « clipés » d&#x27;une manière spécifique pour le calcul.</li>
+</ul>
+</li>
+<li><strong>5. Sensibilité et Limitations :</strong>
+<ul>
+<li>Étant une métrique basée sur les mots, BLEU est très sensible à la tokenisation des mots. Cela rend difficile la comparaison entre différents systèmes s&#x27;ils reposent sur différents standards de tokenisation.</li>
+<li>BLEU peut ne pas fonctionner aussi bien dans les langues avec une morphologie complexe.</li>
+</ul>
+</li>
+<li><strong>6. Utilisation et Standardisation :</strong>
+<ul>
+<li>Malgré ces limitations, BLEU est parfois encore utilisé, en particulier pour l&#x27;évaluation de la traduction vers l&#x27;anglais. Dans de tels cas, il est important d&#x27;utiliser des packages qui imposent une standardisation pour la tokenisation, comme SACREBLEU.</li>
+</ul>
+</li>
+</ul><p>Cette explication détaille le fonctionnement et les particularités de la métrique BLEU, en soulignant son utilité et ses limites dans l&#x27;évaluation des traductions automatiques.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="évaluation---chrf">Évaluation - chrF<a href="#évaluation---chrf" class="hash-link" aria-label="Direct link to Évaluation - chrF" title="Direct link to Évaluation - chrF">​</a></h2>
+<ul>
+<li>Évaluation au niveau des caractères<!-- -->
+<ul>
+<li>Character F-score</li>
+</ul>
+</li>
+<li>Approche robuste</li>
+</ul>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>chrF</mtext><mi>β</mi><mo>=</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><msup><mi>β</mi><mn>2</mn></msup><mo stretchy="false">)</mo><mfrac><mrow><mtext>chrP</mtext><mo>⋅</mo><mtext>chrR</mtext></mrow><mrow><msup><mi>β</mi><mn>2</mn></msup><mo>⋅</mo><mtext>chrP</mtext><mo>+</mo><mtext>chrR</mtext></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{chrF} \beta = (1+\beta^2) \frac{\text{chrP}\cdot\text{chrR}}{\beta^2 \cdot \text{chrP} + \text{chrR}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em"></span><span class="mord text"><span class="mord">chrF</span></span><span class="mord mathnormal" style="margin-right:0.05278em">β</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span></span><span class="base"><span class="strut" style="height:2.2519em;vertical-align:-0.8804em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em">β</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em"><span style="top:-3.113em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em">β</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em"><span style="top:-2.989em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord text"><span class="mord">chrP</span></span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord text"><span class="mord">chrR</span></span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord text"><span class="mord">chrP</span></span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord text"><span class="mord">chrR</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span>
+<ul>
+<li>Pour <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\beta=2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em"></span><span class="mord mathnormal" style="margin-right:0.05278em">β</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:0.6444em"></span><span class="mord">2</span></span></span></span></li>
+</ul>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>chrF2</mtext><mo>=</mo><mfrac><mrow><mn>5</mn><mo>⋅</mo><mtext>chrP</mtext><mo>⋅</mo><mtext>chrR</mtext></mrow><mrow><mn>4</mn><mo>⋅</mo><mtext>chrP</mtext><mo>+</mo><mtext>chrR</mtext></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{chrF2} = \frac{5 \cdot \text{chrP}\cdot\text{chrR}}{4 \cdot \text{chrP} + \text{chrR}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em"></span><span class="mord text"><span class="mord">chrF2</span></span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:2.1408em;vertical-align:-0.7693em"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord">4</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord text"><span class="mord">chrP</span></span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord text"><span class="mord">chrR</span></span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord">5</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord text"><span class="mord">chrP</span></span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord text"><span class="mord">chrR</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span>
+<p><img loading="lazy" alt="s103" src="/assets/images/s103-e17886396178dc95301cd2916bd03f74.png" width="1796" height="1160" class="img_ev3q"></p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>chrF, une métrique d&#x27;évaluation pour la traduction automatique</div><div class="admonitionContent_BuS1"><p>chrF est la métrique la plus simple et la plus robuste pour l&#x27;évaluation de la traduction automatique. Elle est basée sur un score de caractères (Popovic, 2015). Comme d&#x27;autres métriques telles que BLEU, METEOR, TER, etc., chrF s&#x27;appuie sur l&#x27;intuition qu&#x27;une bonne traduction automatique contiendra des caractères et des mots qui se trouvent dans une traduction humaine de la même phrase. Pour évaluer une traduction automatique, chrF classe chaque phrase traduite par une machine en fonction du nombre de recouvrements de n-grammes de caractères avec la traduction humaine.</p><p>Pour calculer chrF, on utilise un paramètre <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em"></span><span class="mord mathnormal" style="margin-right:0.03148em">k</span></span></span></span> qui indique la longueur des n-grammes de caractères à considérer. La métrique calcule ensuite la moyenne des <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em"></span><span class="mord mathnormal" style="margin-right:0.03148em">k</span></span></span></span> précisions (précision unigramme, bigramme, etc.) et des <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em"></span><span class="mord mathnormal" style="margin-right:0.03148em">k</span></span></span></span> rappels (rappel unigramme, bigramme, etc.).</p><ul>
+<li>chrP représente le pourcentage de 1-grammes, 2-grammes, ..., k-grammes dans l&#x27;hypothèse qui se trouvent également dans la référence, et</li>
+<li>chrR représente le pourcentage de 1-grammes, 2-grammes, ..., k-grammes dans la référence qui se trouvent dans l&#x27;hypothèse.</li>
+</ul><p>Ces valeurs sont ensuite combinées pour calculer un score F en utilisant un paramètre de pondération <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em"></span><span class="mord mathnormal" style="margin-right:0.05278em">β</span></span></span></span>. Il est courant de fixer <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\beta = 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em"></span><span class="mord mathnormal" style="margin-right:0.05278em">β</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:0.6444em"></span><span class="mord">2</span></span></span></span>, donnant ainsi plus de poids au rappel qu&#x27;à la précision.</p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.25em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mtext>chrF</mtext><mi>β</mi></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><msup><mi>β</mi><mn>2</mn></msup><mo stretchy="false">)</mo><mfrac><mrow><mtext>chrP</mtext><mo>⋅</mo><mtext>chrR</mtext></mrow><mrow><msup><mi>β</mi><mn>2</mn></msup><mo>⋅</mo><mtext>chrP</mtext><mo>+</mo><mtext>chrR</mtext></mrow></mfrac></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mtext>chrF2</mtext></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mfrac><mrow><mn>5</mn><mo>⋅</mo><mtext>chrP</mtext><mo>⋅</mo><mtext>chrR</mtext></mrow><mrow><mn>4</mn><mo>⋅</mo><mtext>chrP</mtext><mo>+</mo><mtext>chrR</mtext></mrow></mfrac><mo separator="true">,</mo><mtext> avec </mtext><mi>β</mi><mo>=</mo><mn>2</mn></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align*}
+\text{chrF} \beta &amp; = (1+\beta^2) \frac{\text{chrP}\cdot\text{chrR}}{\beta^2 \cdot \text{chrP} + \text{chrR}} \\
+\text{chrF2} &amp; = \frac{5 \cdot \text{chrP}\cdot\text{chrR}}{4 \cdot \text{chrP} + \text{chrR}}, \text{ avec } \beta=2
+\end{align*}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:4.9927em;vertical-align:-2.2463em"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.7463em"><span style="top:-4.7463em"><span class="pstrut" style="height:3.3714em"></span><span class="mord"><span class="mord text"><span class="mord">chrF</span></span><span class="mord mathnormal" style="margin-right:0.05278em">β</span></span></span><span style="top:-2.1944em"><span class="pstrut" style="height:3.3714em"></span><span class="mord"><span class="mord text"><span class="mord">chrF2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.2463em"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.7463em"><span style="top:-4.7463em"><span class="pstrut" style="height:3.3714em"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em">β</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em"><span style="top:-3.113em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em">β</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em"><span style="top:-2.989em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord text"><span class="mord">chrP</span></span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord text"><span class="mord">chrR</span></span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord text"><span class="mord">chrP</span></span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord text"><span class="mord">chrR</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-2.1944em"><span class="pstrut" style="height:3.3714em"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord">4</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord text"><span class="mord">chrP</span></span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord text"><span class="mord">chrR</span></span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span class="mord"><span class="mord">5</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord text"><span class="mord">chrP</span></span><span class="mspace" style="margin-right:0.2222em"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em"></span><span class="mord text"><span class="mord">chrR</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693em"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord text"><span class="mord"> avec </span></span><span class="mord mathnormal" style="margin-right:0.05278em">β</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mord">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.2463em"><span></span></span></span></span></span></span></span></span></span></span></span><p>Par exemple, pour évaluer deux hypothèses par rapport à une traduction de référence, on calcule d&#x27;abord le nombre de unigrammes et de bigrammes qui correspondent entre la référence et l&#x27;hypothèse. Ensuite, on utilise ces données pour calculer les précisions et les rappels unigramme et bigramme, et on moyenne ces valeurs pour obtenir chrP et chrR. Finalement, on utilise ces valeurs pour calculer le score F chrF.</p><p>Voici un exemple de calcul de la métrique chrF pour l&#x27;évaluation de la traduction automatique :</p><p>Supposons que nous avons une phrase de référence (traduction humaine) et une phrase hypothèse (traduction automatique) comme suit :</p><ul>
+<li>Référence : &quot;La maison est belle.&quot;</li>
+<li>Hypothèse : &quot;La belle maison.&quot;</li>
+</ul><p>Nous allons calculer le score chrF pour cette paire. Supposons que nous utilisons des unigrammes et des bigrammes (k = 2) et fixons β = 2. Les étapes sont les suivantes :</p><p><strong>1. Calcul des recouvrements de n-grammes de caractères :</strong></p><ul>
+<li>Unigrammes communs : &#x27;L&#x27;, &#x27;a&#x27;, &#x27; &#x27;, &#x27;m&#x27;, &#x27;i&#x27;, &#x27;s&#x27;, &#x27;o&#x27;, &#x27;n&#x27;, &#x27;e&#x27;, &#x27;b&#x27;, &#x27;e&#x27;, &#x27;l&#x27;</li>
+<li>Bigrammes communs : &#x27;La&#x27;, &#x27;ma&#x27;, &#x27;ai&#x27;, &#x27;is&#x27;, &#x27;so&#x27;, &#x27;on&#x27;, &#x27;n &#x27;, &#x27; e&#x27;, &#x27;es&#x27;, &#x27;be&#x27;, &#x27;el&#x27;, &#x27;le&#x27;</li>
+</ul><p><strong>2. Calcul de chrP (Précision) :</strong></p><ul>
+<li>Précision unigramme : Nombre d&#x27;unigrammes communs / Nombre total d&#x27;unigrammes dans l&#x27;hypothèse</li>
+<li>Précision bigramme : Nombre de bigrammes communs / Nombre total de bigrammes dans l&#x27;hypothèse</li>
+<li>chrP = Moyenne des précisions unigramme et bigramme</li>
+</ul><p><strong>3. Calcul de chrR (Rappel) :</strong></p><ul>
+<li>Rappel unigramme : Nombre d&#x27;unigrammes communs / Nombre total d&#x27;unigrammes dans la référence</li>
+<li>Rappel bigramme : Nombre de bigrammes communs / Nombre total de bigrammes dans la référence</li>
+<li>chrR = Moyenne des rappels unigramme et bigramme</li>
+</ul><p><strong>4. Calcul du score F chrF :</strong></p><ul>
+<li>chrF = (1 + β²) × (chrP × chrR) / (β² × chrP + chrR)</li>
+<li>Avec β = 2, cela donne plus de poids au rappel.</li>
+</ul><p>Dans cet exemple, les calculs précis de précision et de rappel dépendent du nombre total d&#x27;unigrammes et de bigrammes dans la phrase de référence et dans l&#x27;hypothèse. Ensuite, ces valeurs sont utilisées pour calculer le score final chrF, qui évalue la qualité de la traduction automatique par rapport à la traduction humaine de référence.</p><p>chrF est simple, robuste et corrèle très bien avec les jugements humains dans de nombreuses langues.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="évaluation---embeddings">Évaluation - Embeddings<a href="#évaluation---embeddings" class="hash-link" aria-label="Direct link to Évaluation - Embeddings" title="Direct link to Évaluation - Embeddings">​</a></h2>
+<ul>
+<li>Utilisation de plongements de mots<!-- -->
+<ul>
+<li>On n&#x27;est plus limité à la correspondance exacte de mots</li>
+<li>Un exemple - BertScore</li>
+</ul>
+</li>
+</ul>
+<p><img loading="lazy" alt="s104" src="/assets/images/s104-db0cefbec7cc346603cb6a64a314771d.png" width="1814" height="464" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
+<ul>
+<li>La traduction automatique est l&#x27;une des applications les plus répandues du NLP</li>
+<li>C&#x27;est une problème difficile en raison de la différence des langages</li>
+<li>Les approches précédentes reposaient sur des modèles statistiques (modèles IBM et phrase-based)</li>
+<li>Les réseaux encodeur-décodeur sont maintenant utilisées (Seq2Seq)</li>
+<li>Les mécanismes d&#x27;attention permettent de générer un texte cible en tenant compte de l&#x27;état caché de chacun des mots sources</li>
+<li>L&#x27;algorithme Beam Search permet de choisir la séquence de mots qui a le meilleur score</li>
+<li>La meilleure évaluation est celle faite par des humains.</li>
+<li>Des métriques permettent de faire des évaluations automatiques</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/courses/ift-7022/week-11.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/courses/ift-7022/week-10"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">10 Deep NLP - Plongements contextuels et modèles encodeurs pré-entraînés</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/courses/ift-7022/week-12"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">12 Deep NLP - Systèmes question-réponse (QA)</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#traduction-automatique" class="table-of-contents__link toc-highlight">Traduction automatique</a></li><li><a href="#traduction--divergences-linguistiques" class="table-of-contents__link toc-highlight">Traduction – Divergences linguistiques</a></li><li><a href="#traduction---différences-lexicales" class="table-of-contents__link toc-highlight">Traduction - Différences lexicales</a></li><li><a href="#une-bonne-traduction" class="table-of-contents__link toc-highlight">Une bonne traduction?</a></li><li><a href="#modèles-phrase-based" class="table-of-contents__link toc-highlight">Modèles <em>phrase-based</em></a></li><li><a href="#traduction-automatique-avec-réseau-de-neurones" class="table-of-contents__link toc-highlight">Traduction automatique avec réseau de neurones</a></li><li><a href="#encodeur-décodeur" class="table-of-contents__link toc-highlight">Encodeur-décodeur</a></li><li><a href="#encodeur-décodeur-rnn" class="table-of-contents__link toc-highlight">Encodeur-décodeur RNN</a></li><li><a href="#décodage-beam-search" class="table-of-contents__link toc-highlight">Décodage <em>Beam Search</em></a></li><li><a href="#encodeur-décodeur-avec-transformers" class="table-of-contents__link toc-highlight">Encodeur-décodeur avec <em>Transformers</em></a></li><li><a href="#évaluer-automatique-des-traductions" class="table-of-contents__link toc-highlight">Évaluer automatique des traductions</a></li><li><a href="#évaluation---bleu" class="table-of-contents__link toc-highlight">Évaluation - BLEU</a></li><li><a href="#évaluation---chrf" class="table-of-contents__link toc-highlight">Évaluation - chrF</a></li><li><a href="#évaluation---embeddings" class="table-of-contents__link toc-highlight">Évaluation - Embeddings</a></li><li><a href="#conclusion" class="table-of-contents__link toc-highlight">Conclusion</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 Alain Boisvert. Construit avec Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-courses/ift-7022/week-02" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.0.0">
+<title data-rh="true">2 Prétraitement de textes et distance minimale d&#x27;édition | Alain Boisvert</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://boisalai.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://boisalai.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://boisalai.github.io/docs/courses/ift-7022/week-02"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="2 Prétraitement de textes et distance minimale d&#x27;édition | Alain Boisvert"><meta data-rh="true" name="description" content="Cours du 12 septembre 2023 :"><meta data-rh="true" property="og:description" content="Cours du 12 septembre 2023 :"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://boisalai.github.io/docs/courses/ift-7022/week-02"><link data-rh="true" rel="alternate" href="https://boisalai.github.io/docs/courses/ift-7022/week-02" hreflang="en"><link data-rh="true" rel="alternate" href="https://boisalai.github.io/docs/courses/ift-7022/week-02" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Alain Boisvert RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Alain Boisvert Atom Feed">
+
+
+
+<link rel="stylesheet" href="/fonts/font-awesome/fontawesome.css">
+<link rel="stylesheet" href="/fonts/font-awesome/solid.css">
+<link rel="stylesheet" href="/fonts/font-awesome/regular.css">
+<link rel="stylesheet" href="/fonts/font-awesome/brands.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.b5c999da.css">
+<script src="/assets/js/runtime~main.e6737288.js" defer="defer"></script>
+<script src="/assets/js/main.a09b2bce.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Alain Boisvert</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" target="" href="/docs/courses/ift-7022">IFT-7022</a><a class="navbar__item navbar__link" target="" href="/docs/courses/gif-7005">GIF-7005</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/boisalai" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link fa-brands fa-github"> </a><a href="https://www.linkedin.com/in/alain-boisvert-98b058156/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link fa-brands fa-linkedin-in"> </a><a href="mailto:ay.boisvert@gmail.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link fa-solid fa-envelope"> </a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro">Alain Boisvert</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/cv">Curriculum vitæ</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/learning">Learning path</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/certificates">Certificates</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" href="/docs/category/courses">Courses</a><button aria-label="Collapse sidebar category &#x27;Courses&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/docs/courses/gif-7005">GIF-7005 Introduction à l&#x27;apprentissage automatique</a><button aria-label="Expand sidebar category &#x27;GIF-7005 Introduction à l&#x27;apprentissage automatique&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" tabindex="0" href="/docs/courses/ift-7022">IFT-7022 Traitement automatique de la langue naturelle</a><button aria-label="Collapse sidebar category &#x27;IFT-7022 Traitement automatique de la langue naturelle&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-01">1 Expressions régulières</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/courses/ift-7022/week-02">2 Prétraitement de textes et distance minimale d&#x27;édition</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-03">3 Modèles de langue N-grammes</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-04">4 Classification de textes</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-05">5 Sémantique vectorielle (représentation des mots)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-06">6 Deep NLP + Plongements de mots (word embeddings) + intro aux réseaux de neurones</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-07">7 Étiquetage de séquences - analyse grammaticale (Part of speech tagging) et reconnaissance d&#x27;entités nommées</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-08-partie-1">8 Deep NLP - Réseaux récurrents pour le traitement de séquences (RNN, GRU, LSTM)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-08-partie-2">8 Notions de base pour les RNN, GRU et LSTM</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-09">9 Deep NLP - Introduction aux modèles Transformers</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-10">10 Deep NLP - Plongements contextuels et modèles encodeurs pré-entraînés</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-11">11 Deep NLP - Traduction automatique et modèle encodeur-décodeur</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/week-12">12 Deep NLP - Systèmes question-réponse (QA)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item hidden"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/travail-1">Travail pratique 1</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item hidden"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/travail-2">Travail pratique 2</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item hidden"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/travail-3">Travail pratique 3</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item hidden"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/exam-intra">Examen de mi-session</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item hidden"><a class="menu__link" tabindex="0" href="/docs/courses/ift-7022/exam-final">Examen final</a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/chatgpt-building-systems">Building Systems with the ChatGPT API</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/chatgpt-prompt-engineering">ChatGPT Prompt Engineering for Developers</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item hidden"><a class="menu__link" tabindex="0" href="/docs/courses/fine-tuning-llms">Training and fine-tuning LLMs</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/langchain-1">LangChain for LLM Application Development</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/pair-prog-with-llm">Pair Programming with a Large Language Model</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/courses/chat-with-your-data">LangChain Chat with Your Data</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/docs/category/references">References</a><button aria-label="Expand sidebar category &#x27;References&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/docs/category/code-snippets">Code Snippets</a><button aria-label="Expand sidebar category &#x27;Code Snippets&#x27;" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/docs/category/courses"><span itemprop="name">Courses</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/docs/courses/ift-7022"><span itemprop="name">IFT-7022 Traitement automatique de la langue naturelle</span></a><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">2 Prétraitement de textes et distance minimale d&#x27;édition</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>2 Prétraitement de textes et distance minimale d&#x27;édition</h1>
+<p>Cours du 12 septembre 2023 :</p>
+<ul>
+<li>Lecture de Jurafski et Martin, 3e édition, chapitre 2, sections 2.2 à 2.5</li>
+<li>La partie sur la distance minimale d&#x27;édition est présentée uniquement à titre informatif. Elle ne sera pas évaluée à l&#x27;examen.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="mots">Mots<a href="#mots" class="hash-link" aria-label="Direct link to Mots" title="Direct link to Mots">​</a></h2>
+<p><strong>Mot</strong> : Plus petit élément pouvant être prononcé/écrit en isolation avec un contenu sémantique.</p>
+<p><strong>Loi de Heaps</strong> : <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>V</mi><mi mathvariant="normal">∣</mi><mo>=</mo><mi>k</mi><msup><mi>N</mi><mi>β</mi></msup></mrow><annotation encoding="application/x-tex">|V| = k N^\beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.22222em">V</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:0.8491em"></span><span class="mord mathnormal" style="margin-right:0.03148em">k</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em">N</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em"><span style="top:-3.063em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05278em">β</span></span></span></span></span></span></span></span></span></span></span>. Nous avons <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.67</mn><mo>&lt;</mo><mi>β</mi><mo>&lt;</mo><mn>0.75</mn></mrow><annotation encoding="application/x-tex">0.67 &lt; \beta &lt; 0.75</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6835em;vertical-align:-0.0391em"></span><span class="mord">0.67</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em"></span><span class="mord mathnormal" style="margin-right:0.05278em">β</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:0.6444em"></span><span class="mord">0.75</span></span></span></span> pour les corpus Shakespeare, Brown corpus, Swithboard telephone conversations,
+COCA, Google N-grams.</p>
+<p><a href="https://en.wikipedia.org/wiki/Heaps%27_law" target="_blank" rel="noopener noreferrer">Wikipedia</a> :
+In linguistics, <strong>Heaps&#x27; law</strong> (also called Herdan&#x27;s law) is an empirical law which describes the number of distinct
+words in a document (or set of documents) as a function of the document length (so called type-token relation).
+It can be formulated as:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>V</mi><mi>R</mi></msub><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mi>K</mi><msup><mi>n</mi><mi>β</mi></msup></mrow><annotation encoding="application/x-tex">V_{R}(n)=Kn^{\beta }</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.00773em">R</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:0.8991em"></span><span class="mord mathnormal" style="margin-right:0.07153em">K</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em"><span style="top:-3.113em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05278em">β</span></span></span></span></span></span></span></span></span></span></span></span></span>
+<p><img loading="lazy" alt="Heaps&amp;#39;Law_on__War_and_Peace.svg.png" src="/assets/images/Heaps&#x27;_Law_on__War_and_Peace_.svg-1390eac765f2f02f7cf081874c81069d.png" width="1920" height="1424" class="img_ev3q"></p>
+<p>Combien de mots y a-t-il en anglais ?</p>
+<ul>
+<li>Oxford English : plus de 600 000 mots.</li>
+<li>Petit Larousse/Petit Robert : environ 60 000 mots.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tokenisation">Tokenisation<a href="#tokenisation" class="hash-link" aria-label="Direct link to Tokenisation" title="Direct link to Tokenisation">​</a></h2>
+<p>En traitement automatique du langage naturel (TALN), la <strong>tokenisation</strong> permet de diviser des paragraphes et des phrases en unités plus petites afin d&#x27;en faciliter l&#x27;attribution de sens.</p>
+<p>Déterminer quels sont les mots d&#x27;un texte?</p>
+<ul>
+<li>Utilisation de délimiteurs (ponctuation, espaces)</li>
+<li>Quelques difficultés (apostrophes, traits d&#x27;union, acronymes, mots composés et noms propres, nombres et termes spéciaux)</li>
+</ul>
+<p>Tokeniseurs : Split, Whitespace, WordPunct, Treebank, Tweet, Regexp avec NLTK.</p>
+<p>Logiciels : Disponible dans toutes les librairies NLP.</p>
+<p>Doit être efficace :</p>
+<ul>
+<li>Utilisation d&#x27;espressions régulières</li>
+<li>On peut faire une passe supplémentaire, avec un dictionnaire, pour corriger les &quot;erreurs&quot;.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="normalisation">Normalisation de mots<a href="#normalisation" class="hash-link" aria-label="Direct link to Normalisation de mots" title="Direct link to Normalisation de mots">​</a></h2>
+<p>Pour quelques applications, il n&#x27;est pas nécessaires de conserver tous les termes (ex. pluriels).</p>
+<p>On veut définir des classes d&#x27;équivalence.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Normalisation de mots</div><div class="admonitionContent_BuS1"><p>La normalisation de mots en traitement automatique du langage naturel (NLP) fait référence au processus de conversion d&#x27;un mot en une forme canonique ou standard. Cela signifie que des mots qui apparaissent sous différentes formes, mais qui sont essentiellement les mêmes du point de vue du contenu ou du sens, sont convertis en une seule forme typique ou &quot;normale&quot;.</p><p>Voici quelques composantes courantes de la normalisation des mots:</p><ul>
+<li><strong>Conversion en minuscules</strong>: Transformer tous les caractères d&#x27;un mot en minuscules pour éviter que des mots comme &quot;Chat&quot; et &quot;chat&quot; ne soient traités comme des entités distinctes.</li>
+<li><strong>Stemming (élagage)</strong>: Réduire un mot à sa racine ou à sa forme de base. Par exemple, &quot;courir&quot;, &quot;courant&quot;, &quot;couru&quot; pourraient tous être réduits à &quot;cour&quot;. Il existe différents algorithmes d&#x27;élagage, tels que l&#x27;algorithme de Porter, qui sont spécifiques à chaque langue.</li>
+<li><strong>Lemmatisation</strong>: Contrairement à l&#x27;élagage, la lemmatisation consiste à réduire un mot à sa forme de base en utilisant le dictionnaire et l&#x27;analyse morphologique. Ainsi, &quot;couru&quot; serait converti en &quot;courir&quot; (qui est son lemme) plutôt qu&#x27;en &quot;cour&quot;.</li>
+<li><strong>Suppression des caractères non alphanumériques</strong>: Dans certains contextes, il peut être utile de ne conserver que les caractères alphanumériques, éliminant ainsi les ponctuations ou autres symboles.</li>
+<li><strong>Correction orthographique</strong>: Corriger les fautes de frappe ou d&#x27;orthographe pour transformer un mot mal orthographié en sa forme correcte.</li>
+<li><strong>Standardisation des termes</strong>: Dans certains domaines, différents mots ou acronymes peuvent avoir le même sens. La normalisation standardiserait ces termes en une forme unique. Par exemple, &quot;Mme&quot; et &quot;Madame&quot; pourraient être normalisés en &quot;Madame&quot;.</li>
+</ul><p>La normalisation aide à réduire la dimensionnalité du texte et facilite l&#x27;analyse ultérieure, car elle permet de traiter des variantes d&#x27;un même mot comme une seule entité. Cela peut être crucial pour de nombreuses tâches en NLP, comme la recherche d&#x27;information, l&#x27;analyse de sentiments ou la classification de textes.</p></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="morphologique">Analyse morphologique<a href="#morphologique" class="hash-link" aria-label="Direct link to Analyse morphologique" title="Direct link to Analyse morphologique">​</a></h3>
+<p>La morphologie est l&#x27;étude de la composition des mots. On peut diviser les morphènes en deux groupes :</p>
+<ul>
+<li>Racines (stems) : les morphèmes lexicaux</li>
+<li>Affixes : les morphèmes grammaticaux adhèrent aux racines pour changer leur signification et leurs fonctions lexicales.<!-- -->
+<ul>
+<li>Préfixe : avant le radical (au début du mot)</li>
+<li>Suffixe : après le radical (à la fin du mot)</li>
+<li>Infixe : au milieu du radical ou de part et d&#x27;autre (rare!)</li>
+</ul>
+</li>
+<li>Deux grandes classes de morphènes grammaticaux - Affixes:<!-- -->
+<ul>
+<li>Dérivatifs (<em>derivational</em>):<!-- -->
+<ul>
+<li>Change verbes ou adjectifs en noms.</li>
+<li>Change noms ou verbes verbe ou un adjectif en un nom.</li>
+<li>Ex. &quot;-ment&quot; change les adjectifs en adverbes</li>
+</ul>
+</li>
+<li>Flexionnels (<em>inflexctional</em>)<!-- -->
+<ul>
+<li>Ex. Plusieur ou féminin</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>L&#x27;analyse morphologique ne serait pas souvent utilisée en NLP.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Analyse morphologique</div><div class="admonitionContent_BuS1"><p>L&#x27;analyse morphologique est l&#x27;étude des structures internes des mots et de la manière dont ils se forment à partir de morphèmes, qui sont les plus petites unités sémantiques de la langue. Elle examine comment les mots sont construits à partir de ces unités de base et comment ils se combinent pour former des mots plus complexes. Cette analyse est essentielle pour comprendre la structure, le sens et la formation des mots dans une langue.</p></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lemmatisation">Lemmatisation<a href="#lemmatisation" class="hash-link" aria-label="Direct link to Lemmatisation" title="Direct link to Lemmatisation">​</a></h3>
+<ul>
+<li>Alternative à l&#x27;analyse morphologique.</li>
+<li>Réduire les formes de surface à une seule forme de base<!-- -->
+<ul>
+<li>est, suis, somme &gt; être</li>
+<li>l&#x27;, le, la, les &gt; le</li>
+<li>beau, bel, belle &gt; beau</li>
+</ul>
+</li>
+<li>Approches de lemmatisation à l&#x27;aide de règles et d&#x27;un lexique<!-- -->
+<ul>
+<li>Par ex. la fonction <code>morphy</code> de <a href="https://www.nltk.org/howto/wordnet.html" target="_blank" rel="noopener noreferrer">WordNet</a>.</li>
+<li>Utilise des suffixes pour transformer le mot.</li>
+<li>Tente de le trouver dans le lexique.</li>
+<li>Exemple<!-- -->
+<ul>
+<li>abilitie<strong>s</strong> &gt; abilitie: No</li>
+<li>abiliti<strong>es</strong> &gt; abilitie: No</li>
+<li>abilit<strong>ies</strong> &gt; ability: Yes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Les approches les plus efficaces utilisent des approches probabilistes<!-- -->
+<ul>
+<li>Par ex. les Hidden Markov Model (HMM)</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="stemming">Stemming<a href="#stemming" class="hash-link" aria-label="Direct link to Stemming" title="Direct link to Stemming">​</a></h3>
+<ul>
+<li>Pour certaines tâches langagières, il n&#x27;est pas nécessaire de faire une analyse complexe.</li>
+<li>Stemming (racinisation)<!-- -->
+<ul>
+<li>Une approche plus simple que la lemmatisation et l&#x27;analyse morphologique</li>
+<li>Ne nécessite pas de connaissance lexicale.</li>
+<li>Vise seulement à trouver une racine (stem) pour le mot.</li>
+</ul>
+</li>
+<li>Approche<!-- -->
+<ul>
+<li>Tronquer la fin d&#x27;un mot à l&#x27;aide de règles de réécriture.</li>
+<li>Aucun lexique.</li>
+<li>Dépend de la langue.<!-- -->
+<ul>
+<li>Pour l&#x27;anglais : Lovins, Porter, Snowball</li>
+<li>Pour le français : Snowball</li>
+</ul>
+</li>
+<li>Exemples<!-- -->
+<ul>
+<li>EN: automate, automatic, automation &gt; automat</li>
+<li>FR: continuité, continuait, continuation &gt; continue</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Voir <a href="http://text-processing.com/demo/stem" target="_blank" rel="noopener noreferrer">Python NLTK Demos for Natural Language Text Processing</a>.</p>
+<ul>
+<li><a href="http://tartarus.org/~martin/PorterStemmer/index.html" target="_blank" rel="noopener noreferrer">Porter stemmer</a>
+<ul>
+<li>L&#x27;algorithme le plus courant.</li>
+<li>Cascade de règles simples pour convertir la terminaison du mot.</li>
+<li>Ex. organizers &gt; organizer &gt; organize &gt; organ</li>
+<li>Ce traitement est très rapide mais peut faire des erreurs.</li>
+</ul>
+</li>
+</ul>
+<p><img loading="lazy" alt="s02" src="/assets/images/s02-7781336fd4c77be38be45bd0b194f2c1.png" width="2356" height="1492" class="img_ev3q"></p>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">import nltk</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">from nltk.stem import PorterStemmer</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">ps = PorterStemmer()</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">print(ps.stem(&#x27;code&#x27;))</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">print(ps.stem(&#x27;coding&#x27;))</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">print(ps.stem(&#x27;coder&#x27;))</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">print(ps.stem(&#x27;coded&#x27;))</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Voir <a href="https://www.nltk.org/howto/stem.html" target="_blank" rel="noopener noreferrer">Sample usage for stem</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="pos-tagging--parsing">POS tagging &amp; Parsing<a href="#pos-tagging--parsing" class="hash-link" aria-label="Direct link to POS tagging &amp; Parsing" title="Direct link to POS tagging &amp; Parsing">​</a></h2>
+<p><img loading="lazy" alt="s03" src="/assets/images/s03-2747b25b19d0689333c0a21d7c27601e.png" width="2354" height="1296" class="img_ev3q"></p>
+<p>Il semble que les nouveaux modèles n&#x27;utilisent plus la normalisation, le POS tagging et le parsing.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="segmentation">Segmentation de phrases<a href="#segmentation" class="hash-link" aria-label="Direct link to Segmentation de phrases" title="Direct link to Segmentation de phrases">​</a></h2>
+<ul>
+<li>Découper un texte en phrases.</li>
+<li>Délimitées par un symbole de ponctuation.<!-- -->
+<ul>
+<li><code>!</code> et <code>?</code> : assez fiable, sauf que...</li>
+<li>Point <code>.</code> : quelques ambiguïtés (ex. ing., Ph.D., 3.141592)</li>
+<li>Point de suspension ... Interruption de phrase ou hésitation?</li>
+</ul>
+</li>
+<li>On peut approximer à l&#x27;aide de règles.</li>
+<li>Quelle information devrait-on utiliser?<!-- -->
+<ul>
+<li>Le mot après débute par une majuscule</li>
+<li>Le mot avant est tout en majuscule</li>
+<li>Précédé d&#x27;une abréviation</li>
+<li>Précédé et suivi de caractères sans espace</li>
+<li>Suivi de plusieurs espaces</li>
+<li>Précédé/suivi de signes de ponctuation</li>
+<li>Suivi de guillemets <code>&quot;</code></li>
+</ul>
+</li>
+<li>Approches<!-- -->
+<ul>
+<li>Décision prise pour chaque signe de ponctuation.</li>
+<li>Décision prise selon le contexte.</li>
+<li>Les approches les plus efficaces utilisent des techniques d&#x27;apprentissage automatique (classification binaire).</li>
+</ul>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Segmentation de phrases</div><div class="admonitionContent_BuS1"><p>La segmentation de phrases, également connue sous le nom de découpage de phrases ou &quot;sentence splitting&quot;, est une étape du
+traitement automatique du langage naturel (NLP) qui consiste à diviser un texte en phrases individuelles. Elle est souvent
+réalisée avant d&#x27;autres étapes de traitement telles que la tokenisation (division en mots) et l&#x27;analyse syntaxique.</p><p>Dans de nombreuses langues, notamment en français et en anglais, les points de fin de phrase comme les points (.), les points
+d&#x27;interrogation (?) et les points d&#x27;exclamation (!) peuvent servir d&#x27;indices pour la segmentation. Cependant, la tâche n&#x27;est
+pas toujours aussi simple qu&#x27;il n&#x27;y paraît. Par exemple, le point peut être utilisé dans d&#x27;autres contextes, tels que les
+abréviations ou les nombres décimaux, sans indiquer la fin d&#x27;une phrase.</p><p>Les algorithmes de segmentation de phrases doivent donc souvent prendre en compte le contexte autour des points de ponctuation
+pour prendre des décisions correctes. Les approches basées sur des règles, les modèles statistiques et les approches basées sur
+le deep learning ont tous été utilisés pour aborder cette tâche.</p><p>La segmentation correcte des phrases est cruciale car elle influence directement les étapes de traitement suivantes. Une mauvaise
+segmentation peut entraîner une analyse incorrecte du texte par les étapes ultérieures du pipeline NLP.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="distance-minimale-dédition">Distance minimale d&#x27;édition<a href="#distance-minimale-dédition" class="hash-link" aria-label="Direct link to Distance minimale d&#x27;édition" title="Direct link to Distance minimale d&#x27;édition">​</a></h2>
+<p><img loading="lazy" alt="s04" src="/assets/images/s04-70ee23a19ae75332cc6f4cb267f82e9f.png" width="2302" height="1574" class="img_ev3q"></p>
+<ul>
+<li>On tente de déterminer la distance entre deux mots.</li>
+<li>Distance = Le nombre minimal d&#x27;opérations nécessaire pour transformer un mot en un autre.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="logiciels-et-ressources">Logiciels et ressources<a href="#logiciels-et-ressources" class="hash-link" aria-label="Direct link to Logiciels et ressources" title="Direct link to Logiciels et ressources">​</a></h2>
+<ul>
+<li>Tokenisation, segmentation et lemmatisation avec <a href="https://spacy.io/api/lemmatizer" target="_blank" rel="noopener noreferrer">Spacy</a>.</li>
+<li>Tokenisation avec <a href="https://www.nltk.org/api/nltk.tokenize.html" target="_blank" rel="noopener noreferrer">NLTK</a>.</li>
+<li>Spacy s&#x27;avère habituellement un meilleur choix que NLTK pour analyser des textes. Les modèles de Spacy sont plus performants et habituellement plus rapide d&#x27;exécution. Ils sont disponibles pour plus de 60 langues. Toutefois NLTK s&#x27;avère une ressource intéressante d&#x27;un point de vue pédagogique.</li>
+<li>Tokeniseur, segmenteur de phrase et lemmatiseur de <a href="http://nlp.stanford.edu/software/corenlp.shtml" target="_blank" rel="noopener noreferrer">Stanford NLP</a> (populaire au début des années 2000).</li>
+<li>Des implémentations de <em>stemmers</em> : <a href="http://tartarus.org/~martin/PorterStemmer/index.html" target="_blank" rel="noopener noreferrer">Porter</a>, <a href="http://www.cs.waikato.ac.nz/~eibe/stemmers/index.html" target="_blank" rel="noopener noreferrer">Lovins</a>, <a href="https://www.nltk.org/_modules/nltk/stem/lancaster.html" target="_blank" rel="noopener noreferrer">Lancaster</a>, <a href="http://snowball.tartarus.org/" target="_blank" rel="noopener noreferrer">SnowBall</a>.</li>
+<li>Des sites en ligne pour la distance d&#x27;édition<!-- -->
+<ul>
+<li><a href="http://www.let.rug.nl/~kleiweg/lev/" target="_blank" rel="noopener noreferrer">Levenshtein demo</a></li>
+<li><a href="https://phiresky.github.io/levenshtein-demo/" target="_blank" rel="noopener noreferrer">Levenshtein demo</a></li>
+</ul>
+</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/courses/ift-7022/week-02.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/courses/ift-7022/week-01"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">1 Expressions régulières</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/courses/ift-7022/week-03"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">3 Modèles de langue N-grammes</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#mots" class="table-of-contents__link toc-highlight">Mots</a></li><li><a href="#tokenisation" class="table-of-contents__link toc-highlight">Tokenisation</a></li><li><a href="#normalisation" class="table-of-contents__link toc-highlight">Normalisation de mots</a><ul><li><a href="#morphologique" class="table-of-contents__link toc-highlight">Analyse morphologique</a></li><li><a href="#lemmatisation" class="table-of-contents__link toc-highlight">Lemmatisation</a></li><li><a href="#stemming" class="table-of-contents__link toc-highlight">Stemming</a></li></ul></li><li><a href="#pos-tagging--parsing" class="table-of-contents__link toc-highlight">POS tagging &amp; Parsing</a></li><li><a href="#segmentation" class="table-of-contents__link toc-highlight">Segmentation de phrases</a></li><li><a href="#distance-minimale-dédition" class="table-of-contents__link toc-highlight">Distance minimale d&#39;édition</a></li><li><a href="#logiciels-et-ressources" class="table-of-contents__link toc-highlight">Logiciels et ressources</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 Alain Boisvert. Construit avec Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
