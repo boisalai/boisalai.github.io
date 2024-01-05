@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_doc=self.webpackChunkmy_doc||[]).push([[3108],{31189:s=>{s.exports=JSON.parse('{"label":"Agents","permalink":"/docs/tags/agents","allTagsPath":"/docs/tags","count":1,"items":[{"id":"courses/langchain-1","title":"LangChain for LLM Application Development","description":"2023-08-25","permalink":"/docs/courses/langchain-1"}],"unlisted":false}')}}]);
